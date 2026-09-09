@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Missed Call Recovery — Demo</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23123a5c'/><path d='M9 11h14v9H16l-4 3v-3H9z' fill='%23f0a500'/></svg>">
+</head>
+<body>
+
+<!-- ══ TOP BAR ══ -->
+<header class="topbar">
+  <div class="topbar-in">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-txt">
+        <strong>Missed&nbsp;Call Recovery</strong>
+        <span class="brand-sub">Interactive demo</span>
+      </span>
+    </div>
+
+    <div class="topbar-actions">
+      <div class="speed" id="speedWrap" title="Playback speed">
+        <button class="speed-btn is-on" data-speed="1" type="button">1×</button>
+        <button class="speed-btn" data-speed="2" type="button">2×</button>
+      </div>
+      <button class="btn btn-ghost" type="button" data-action="manual">Manual mode</button>
+      <button class="btn btn-ghost" type="button" data-action="present">Sales mode</button>
+      <button class="btn btn-ghost" type="button" data-action="reset">Reset demo</button>
+      <button class="btn btn-primary" type="button" data-action="run">▶ Run demo</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ══ VIEW 1 · LANDING ══ -->
+  <section class="view view-landing is-active" id="view-landing">
+    <div class="hero">
+      <p class="eyebrow">A worked example — plumbing &amp; heating</p>
+      <h1>Never lose a good enquiry just because you couldn’t answer the phone.</h1>
+      <p class="hero-sub">We respond immediately, collect the job details and get the opportunity back to you.</p>
+
+      <div class="hero-cta">
+        <button class="btn btn-primary btn-xl" type="button" data-action="run">▶ Run demo</button>
+        <button class="btn btn-outline btn-xl" type="button" data-action="manual">Try it yourself</button>
+      </div>
+      <p class="hero-note">The automatic demo runs in about a minute. Nothing is sent anywhere — everything happens in this browser.</p>
+
+      <ol class="steps">
+        <li><span class="step-n">1</span><h3>The call is missed</h3><p>You’re under a sink, up a ladder, or already on a job. The phone rings out.</p></li>
+        <li><span class="step-n">2</span><h3>We reply straight away</h3><p>The caller gets a message within seconds and is asked for the job details.</p></li>
+        <li><span class="step-n">3</span><h3>You get a qualified lead</h3><p>Name, postcode, job type, urgency, callback time and any photo — in one place, ready to action.</p></li>
+        <li><span class="step-n">4</span><h3>Nothing goes cold</h3><p>If nobody follows up, we remind you and keep the customer warm.</p></li>
+      </ol>
+
+      <p class="fiction">A concept demo, not a live product. It uses a fictional business, <strong>Guildford Heating &amp; Plumbing</strong>, with fictional customers, and shows one trade only — plumbing and heating. No real company, customer or call data appears anywhere.</p>
+    </div>
+  </section>
+
+  <!-- ══ VIEW 2 · LIVE SPLIT SCREEN ══ -->
+  <section class="view view-live" id="view-live">
+
+    <div class="stage-head">
+      <div class="stage-title">
+        <span class="dot" id="stageDot"></span>
+        <span id="stageLabel">Ready</span>
+      </div>
+      <div class="segmented" id="segmented" role="tablist" aria-label="Choose side">
+        <button class="seg is-on" data-side="customer" type="button" role="tab">Customer</button>
+        <button class="seg" data-side="business" type="button" role="tab">Business</button>
+      </div>
+    </div>
+
+    <div class="split" id="split">
+
+      <!-- ── CUSTOMER SIDE ── -->
+      <div class="col col-customer" id="colCustomer">
+        <div class="col-cap">Customer’s phone</div>
+
+        <div class="phone">
+          <div class="phone-screen">
+
+            <!-- incoming call overlay -->
+            <div class="callscreen" id="callScreen" hidden>
+              <div class="call-status" id="callStatus">Calling…</div>
+              <div class="call-name">Guildford Heating &amp; Plumbing</div>
+              <div class="call-num">01483 000 000</div>
+              <div class="call-ring" id="callRing"><span></span><span></span><span></span></div>
+              <div class="call-missed" id="callMissed" hidden>No answer</div>
+            </div>
+
+            <!-- chat -->
+            <div class="chat-head">
+              <div class="chat-avatar" aria-hidden="true">GH</div>
+              <div class="chat-who">
+                <strong>Guildford Heating &amp; Plumbing</strong>
+                <span id="chatPresence">SMS</span>
+              </div>
+            </div>
+
+            <div class="chat" id="chat" aria-live="polite"></div>
+
+            <div class="composer" id="composer" hidden>
+              <div class="chips" id="chips" hidden></div>
+              <div class="composer-row" id="composerRow">
+                <input class="composer-input" id="composerInput" type="text" placeholder="Type your reply…" autocomplete="off">
+                <button class="composer-send" id="composerSend" type="button" aria-label="Send">➤</button>
+              </div>
+              <div class="composer-photo" id="composerPhoto" hidden>
+                <button class="btn btn-sample btn-sm" type="button" id="photoSample">📷 Use sample photo</button>
+                <button class="btn btn-quiet btn-sm" type="button" id="photoSkip">No photo</button>
+                <label class="photo-own" for="photoInput" title="Optional — stays on your device">or upload your own</label>
+                <input type="file" id="photoInput" accept="image/*" hidden>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ── BUSINESS SIDE ── -->
+      <div class="col col-business" id="colBusiness">
+        <div class="col-cap">Your dashboard</div>
+
+        <div class="dash">
+          <div class="dash-head">
+            <div>
+              <strong>Guildford Heating &amp; Plumbing</strong>
+              <span class="dash-sub">Enquiries — <span id="leadCount">0</span></span>
+            </div>
+            <span class="badge-demo">Fictional demo business</span>
+          </div>
+
+          <div class="dash-body">
+            <ul class="leadlist" id="leadList"></ul>
+            <div class="detail" id="detail"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="toast-wrap" id="toastWrap" aria-live="polite"></div>
+  </section>
+
+  <!-- ══ VIEW 3 · PRESENTATION ══ -->
+  <section class="view view-present" id="view-present">
+    <div class="slide" id="slide"></div>
+    <div class="slide-bar">
+      <button class="btn btn-ghost btn-invert" type="button" id="slidePrev">← Back</button>
+      <div class="slide-dots" id="slideDots"></div>
+      <button class="btn btn-primary" type="button" id="slideNext">Next →</button>
+      <button class="btn btn-ghost btn-invert" type="button" data-action="exit-present">Exit</button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  Demo only · fictional business and customers · no calls, messages or payments are real · everything runs locally in your browser.
+</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
