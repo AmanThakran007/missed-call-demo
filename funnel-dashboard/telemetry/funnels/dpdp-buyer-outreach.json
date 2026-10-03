@@ -2,8 +2,8 @@
   "id": "dpdp-buyer-outreach",
   "name": "DPDP Buyer Outreach",
   "category": "DPDP",
-  "firstEmailsSent": 14,
-  "followUpsSent": 3,
+  "firstEmailsSent": 15,
+  "followUpsSent": 9,
   "humanReplies": 0,
   "positiveReplies": 0,
   "checklistRequests": 0,
@@ -14,5 +14,5 @@
   "bounces": 1,
   "optOuts": 0,
   "freshness": "LIVE",
-  "lastChecked": "2026-10-03T15:44:58+01:00"
+  "lastChecked": "2026-10-03T16:42:59+01:00"
 }
