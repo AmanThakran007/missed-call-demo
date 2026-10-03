@@ -57,7 +57,7 @@ function drawFunnels(data){
 let nextRefreshAt=Date.now()+REFRESH_MS;
 function updateCountdowns(){const left=Math.max(0,nextRefreshAt-Date.now());set('refreshCountdown',Math.ceil(left/1000)+'s');const adNext=nextScheduledRun('webscan-general-sme');set('nextAdsSync',fmtTime(adNext)+' · '+humanUntil(adNext));set('adExpectedSync',humanUntil(adNext));if(left<=0)nextRefreshAt=Date.now()+REFRESH_MS}
 async function refresh(){try{const data=await buildData();set('activeFunnels',(data.activeFunnels||15)+' Active Funnels');drawGlance(data);drawMilestones(data);drawAttention(data);drawAds(data);drawCategoryGrid(data);drawSummary(data);drawTimeline(data);drawFunnels(data);nextRefreshAt=Date.now()+REFRESH_MS}catch(e){console.error(e);set('lastUpdated','Telemetry refresh failed — retrying automatically')}}
-refresh();setInterval(refresh,REFRESH_MS);setInterval(updateCountdowns,1000);updateCountdowns();
+setInterval(updateCountdowns,1000);updateCountdowns();
 
 async function loadHistory(){
   return (await loadJson('history.json')) || {points:[]};
@@ -170,3 +170,6 @@ refresh=async function(){
     set('lastUpdated','Telemetry refresh failed — retrying automatically');
   }
 };
+
+refresh();
+setInterval(refresh,REFRESH_MS);
