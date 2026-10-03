@@ -10,22 +10,25 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T18:34:09+01:00",
-  "nextRun": "2026-10-03T19:39:00+01:00",
+  "lastRun": "2026-10-03T19:41:59+01:00",
+  "nextRun": "2026-10-03T20:39:00+01:00",
   "freshness": "LIVE",
   "blocker": "OUTBOUND_SAFETY_REVIEW_REQUIRED: Ten previously approved send attempts were blocked by the mail-action safety gate. Sending was not retested because this run was outside the permitted outreach hour; monitoring remains active.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-03T18:34:09+01:00",
-      "account": "amanthakran.dreams@gmail.com",
-      "scope": "Recent UK recruitment-resourcer campaign terms, inbound events, and buying-intent topics",
-      "result": "No campaign message, human reply, bounce, opt-out, pricing/contract question, ATS-access question, pilot request, or call request found. Unrelated recruitment alerts and general inbox traffic were excluded."
+      "checkedAt": "2026-10-03T19:41:59+01:00",
+      "accounts": [
+        "amanthakran.dreams@gmail.com",
+        "aman.thakran.consulting@gmail.com"
+      ],
+      "scope": "All mail since the prior run, including campaign replies, bounces, opt-outs, pricing/contract questions, ATS-access questions, pilot requests and call requests",
+      "result": "No UK resourcer campaign message, human reply, bounce, opt-out, pricing/contract question, ATS-access question, pilot request, or call request found. Five unrelated WebScan General SME sent messages and one promotional email were excluded."
     },
     "github": {
-      "checkedAt": "2026-10-03T18:34:09+01:00",
+      "checkedAt": "2026-10-03T19:41:59+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/uk-resourcer-outreach.json",
-      "priorBlobSha": "f9e799dd906cd2797783c310006ff9001e24c415"
+      "priorBlobSha": "2da6af5884c84828c3f1a9fcf9f9b21b05ed136c"
     }
   }
 }
