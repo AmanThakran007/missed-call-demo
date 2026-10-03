@@ -16,7 +16,7 @@
     "FIRST_SPEND",
     "FIRST_CLICK"
   ],
-  "lastChecked": "2026-10-03T21:05:11+01:00",
+  "lastChecked": "2026-10-03T21:27:43+01:00",
   "freshness": "LIVE",
   "blocker": "AD_ACCOUNT_THRESHOLD_PAYMENT_FAILED",
   "reportingWindow": {
@@ -27,26 +27,26 @@
   },
   "sourceChecks": {
     "campaignDelivery": {
-      "checkedAt": "2026-10-03T21:05:11+01:00",
+      "checkedAt": "2026-10-03T21:27:43+01:00",
       "result": "Campaign remains paused and inactive. Account billing issue ad_account_threshold_payment_failed is blocking delivery; campaign_not_active is also present. Current delivery coverage was partial because descendant checks were skipped."
     },
     "performanceApi": {
-      "checkedAt": "2026-10-03T21:05:11+01:00",
+      "checkedAt": "2026-10-03T21:27:43+01:00",
       "result": "No performance row returned for the trailing 24 completed account-local hours; preserved the directly observed preliminary Ads Manager UI values without recalculation."
     },
     "ad": {
-      "checkedAt": "2026-10-03T21:05:11+01:00",
+      "checkedAt": "2026-10-03T21:27:43+01:00",
       "result": "Creative remains active and approved, with campaign_not_active and ad_account_threshold_payment_failed serving issues."
     },
     "gmail": {
-      "checkedAt": "2026-10-03T21:05:11+01:00",
-      "result": "No new billing or campaign-delivery email was found. The latest verified billing alert still states that payment failed and ad serving was paused pending a payment-method update."
+      "checkedAt": "2026-10-03T21:27:43+01:00",
+      "result": "No new billing or campaign-delivery email was found across the six authorized WebScan inboxes. The latest verified billing alert still states that payment failed and ad serving was paused pending a payment-method update."
     },
     "github": {
-      "checkedAt": "2026-10-03T21:05:11+01:00",
+      "checkedAt": "2026-10-03T21:27:43+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/ads/webscan-agency-white-label-36-test.json",
-      "priorBlobSha": "9018b3f38e3aa235ae3248df3e19c8a93c939824"
+      "priorBlobSha": "3195a0ea34d5e9900904c5baeea696d4cb505346"
     }
   }
 }
