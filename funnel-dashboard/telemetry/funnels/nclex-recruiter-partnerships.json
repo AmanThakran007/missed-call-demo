@@ -13,5 +13,5 @@
   "lastRun": "2026-10-03T11:42:34+01:00",
   "nextRun": null,
   "freshness": "STALE",
-  "blocker": "Automation currently disabled, verified 2026-10-03. Previous LIVE record is stale. Earlier runs reported blocked email sends and telemetry writes; exact rejection reasons unavailable. Historical metrics retained; no campaign completion claimed by this status correction."
+  "blocker": "Disabled: resume rejected on 2026-10-03 at 16:06 UK time with too_many_active_automations (15 active / 15 plan limit). OUTREACH_REVIEW_REQUIRED: earlier email safety rejection remains unresolved. Recovery instructions saved; historical metrics retained."
 }
