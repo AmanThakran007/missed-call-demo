@@ -10,29 +10,49 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T20:36:03+01:00",
-  "nextRun": "2026-10-03T20:39:00+01:00",
+  "lastRun": "2026-10-03T22:18:42+01:00",
+  "nextRun": "2026-10-03T22:39:00+01:00",
   "freshness": "LIVE",
-  "blocker": "OUTREACH_SEND_BLOCKED: An earlier run verified 10 qualified prospects, but all 10 personalized email sends were denied by safety controls. No sends were retried outside the permitted outreach hour; monitoring remains active.",
+  "blocker": "HOLD_REASON_UNAVAILABLE: Earlier personalized send attempts were rejected by safety controls, but the original rejection output is unavailable in the current execution context. No provider error or missing-business-information defect is independently evidenced, and the affected scope cannot be classified as action-specific versus campaign-wide. Sending remains held pending original rejection evidence or a separately authorized, read-back-verified send.",
+  "sendingPolicy": {
+    "mode": "FIXED_CAP",
+    "capPerInbox": 50,
+    "totalCap": 300,
+    "effectiveDate": "2026-10-04",
+    "stagedCapsPerInbox": [
+      50
+    ],
+    "funnelCapPerInbox": 10,
+    "workflowTested": false
+  },
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-03T20:36:30+01:00",
+      "checkedAt": "2026-10-03T22:19:05+01:00",
       "accounts": [
+        "amanthakranengland@gmail.com",
+        "helpme.ecommerce@gmail.com",
+        "bharatfare@gmail.com",
+        "amanthakran8891@gmail.com",
         "amanthakran.dreams@gmail.com",
         "aman.thakran.consulting@gmail.com"
       ],
-      "scope": "All new mail since 2026-10-03T19:35:26+01:00, including Professional Services replies, bounces, opt-outs, buying-intent questions, and call requests",
-      "result": "No Professional Services campaign send, human reply, bounce, opt-out, follow-up, question, call request, or buying-intent event found. A self-submitted BharatFare scan, TravClan authentication message, and unrelated promotion were excluded."
+      "scope": "All new mail since 2026-10-03T20:36:30+01:00 across all six authorized inboxes, including Professional Services replies, bounces, opt-outs, buying-intent questions, call requests, and cross-inbox ownership evidence",
+      "result": "No Professional Services campaign send, human reply, bounce, opt-out, follow-up, buying-intent question, or call request found. Google account security notices and BharatFare supplier messages were excluded. No outreach was sent outside the permitted hour."
     },
     "verifiedResearch": {
       "recordedAt": "2026-10-03T16:35:02+01:00",
       "result": "Preserved the verified cumulative total of 10 researched prospects; no email send was counted."
     },
+    "holdDiagnosis": {
+      "checkedAt": "2026-10-03T22:19:05+01:00",
+      "status": "HOLD_REASON_UNAVAILABLE",
+      "publicSummary": "Prior safety-control rejections remain unresolved. The original rejection output is missing, so the hold was not reclassified, corrected, retried, or marked recovered."
+    },
     "github": {
-      "checkedAt": "2026-10-03T20:36:30+01:00",
+      "checkedAt": "2026-10-03T22:19:05+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/webscan-professional-services.json",
-      "priorBlobSha": "8bda9d2b0d0d409386399133004f452481098566"
+      "priorBlobSha": "e34f3c4294871004970f0ca67b9c1ad9e1d56ab5"
     },
     "sixInboxReconciliation": {
       "checkedAt": "2026-10-03T20:27:05.172Z",
