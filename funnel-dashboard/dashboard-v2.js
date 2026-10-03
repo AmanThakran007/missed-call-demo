@@ -158,12 +158,46 @@ function drawTrends(history){
   panel.innerHTML='<div class="trend-head"><div><strong>Recent verified snapshots</strong><div class="sub">'+p7.length+' points shown</div></div><div class="trend-tabs"><span class="trend-tab active">7D</span><span class="trend-tab">30D</span></div></div><svg class="trend-chart" viewBox="0 0 '+width+' '+height+'" preserveAspectRatio="none"><path d="'+pathEmails+'" fill="none" stroke="currentColor" stroke-width="3" opacity=".95"/><path d="'+pathReplies+'" fill="none" stroke="currentColor" stroke-width="2" opacity=".55"/><path d="'+pathRevenue+'" fill="none" stroke="currentColor" stroke-width="2" opacity=".3"/></svg><div class="trend-legend"><span>Primary line: First emails</span><span>Secondary: Human replies</span><span>Faint: Revenue</span></div>';
 }
 
+
+function drawWebscanMailboxes(snapshot){
+  const host=document.getElementById('webscanMailboxes');
+  if(!host)return;
+  host.replaceChildren();
+  const note=document.createElement('p');note.className='sub';host.appendChild(note);
+  if(!snapshot||!Array.isArray(snapshot.rows)||snapshot.rows.length!==6){
+    note.textContent='Six-inbox telemetry unavailable. Counts and limits are not verified.';return;
+  }
+  const age=Date.now()-Date.parse(snapshot.checkedAt);
+  const stale=!Number.isFinite(age)||age>2*60*60*1000;
+  note.textContent=(stale?'STALE SNAPSHOT — ':'')+'Gmail checked '+snapshot.checkedAt+
+    '. Snapshot date: '+snapshot.date+' (UK). Sent records do not prove delivery. Limits effective '+snapshot.effectiveDate+'.';
+  const wrap=document.createElement('div');wrap.style.overflowX='auto';host.appendChild(wrap);
+  const table=document.createElement('table');table.style.cssText='width:100%;border-collapse:collapse;text-align:left';
+  wrap.appendChild(table);
+  const headers=['Inbox','All sent','WebScan first emails','WebScan follow-ups','Inbound messages','Configured daily cap'];
+  const head=table.createTHead().insertRow();
+  headers.forEach(text=>{const th=document.createElement('th');th.textContent=text;th.style.padding='12px 8px';head.appendChild(th)});
+  const body=table.createTBody();
+  const keys=['mailbox','allSentToday','webscanFirstTouchesToday','webscanFollowUpsToday','webscanInboundMessagesToday','configuredDailyCap'];
+  snapshot.rows.forEach(row=>{
+    const tr=body.insertRow();
+    keys.forEach(key=>{const td=tr.insertCell();td.style.cssText='padding:12px 8px;border-top:1px solid #334155';td.textContent=row[key]??'Unverified'});
+  });
+  const total=document.createElement('p');total.className='sub';
+  const t=snapshot.totals||{};
+  total.textContent='Verified snapshot: '+(t.allSentToday??'—')+' total sent; '+(t.webscanTotalSentToday??'—')+
+    ' WebScan sent. Configured WebScan allowance: '+(t.configuredDailyCap??'—')+
+    '/day including cold follow-ups. Scheduled six-inbox sending: '+(snapshot.verification?.futureScheduledSending||'UNVERIFIED')+'.';
+  host.appendChild(total);
+  (snapshot.blockers||[]).forEach(text=>{const p=document.createElement('p');p.className='sub';p.textContent=text;host.appendChild(p)});
+}
+
 const originalRefresh=refresh;
 refresh=async function(){
   try{
-    const [data,history]=await Promise.all([buildData(),loadHistory()]);
+    const [data,history,mailboxes]=await Promise.all([buildData(),loadHistory(),loadJson('telemetry/webscan-mailboxes.json')]);
     set('activeFunnels',(data.activeFunnels||15)+' Active Funnels');
-    drawGlance(data);drawMilestones(data);drawAttention(data);drawAds(data);drawGoals(data);drawConversionFunnel(data);drawReplyCentre(data);drawPriorities(data);drawCategoryGrid(data);drawSummary(data);drawTimeline(data);drawFunnels(data);drawTrends(history);
+    drawGlance(data);drawMilestones(data);drawAttention(data);drawAds(data);drawGoals(data);drawConversionFunnel(data);drawReplyCentre(data);drawPriorities(data);drawCategoryGrid(data);drawSummary(data);drawTimeline(data);drawFunnels(data);drawTrends(history);drawWebscanMailboxes(mailboxes);
     nextRefreshAt=Date.now()+REFRESH_MS;
   }catch(e){
     console.error(e);
