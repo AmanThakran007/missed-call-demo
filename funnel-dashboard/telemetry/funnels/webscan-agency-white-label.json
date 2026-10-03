@@ -2,7 +2,7 @@
   "id": "webscan-agency-white-label",
   "name": "WebScan Agency White Label",
   "category": "WebScan / Agency White Label",
-  "prospectsResearched": 0,
+  "prospectsResearched": 20,
   "firstEmailsSent": 0,
   "followUpsSent": 0,
   "humanReplies": 0,
@@ -10,8 +10,8 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T10:32:12+01:00",
-  "nextRun": "2026-10-03T11:30:00+01:00",
+  "lastRun": "2026-10-03T11:28:03+01:00",
+  "nextRun": "2026-10-03T12:30:00+01:00",
   "freshness": "LIVE",
-  "blocker": null
+  "blocker": "OUTREACH_SEND_BLOCKED_BY_SAFETY_CHECKS"
 }
