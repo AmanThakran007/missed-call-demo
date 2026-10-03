@@ -2,6 +2,7 @@
   "id": "nclex-growth-core",
   "name": "NCLEX Growth Core",
   "category": "NCLEX",
+  "prospectsResearched": 20,
   "firstEmailsSent": 0,
   "followUpsSent": 0,
   "humanReplies": 0,
@@ -9,8 +10,24 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T15:50:35+01:00",
+  "lastRun": "2026-10-03T16:44:09+01:00",
+  "nextRun": "2026-10-03T17:49:00+01:00",
   "freshness": "LIVE",
   "blocker": null,
-  "prospectsResearched": 20
+  "sourceChecks": {
+    "gmail": {
+      "checkedAt": "2026-10-03T16:44:09+01:00",
+      "accounts": [
+        "amanthakran.dreams@gmail.com",
+        "aman.thakran.consulting@gmail.com"
+      ],
+      "result": "No Growth Core campaign send, human reply, bounce, opt-out, referral/demo question, access/pricing request, call, customer or attributable revenue event found. Facebook notifications were excluded; the WorldWide HealthStaff thread belongs to Nurse Referral."
+    },
+    "github": {
+      "checkedAt": "2026-10-03T16:44:09+01:00",
+      "repository": "AmanThakran007/missed-call-demo",
+      "path": "funnel-dashboard/telemetry/funnels/nclex-growth-core.json",
+      "priorBlobSha": "58882428c216fa6b4d5a0dbcf2a29cbac8993a9b"
+    }
+  }
 }
