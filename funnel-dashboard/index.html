@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aman Live Funnel Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="app">
+<header class="topbar">
+<div><div class="eyebrow">AMAN OPERATIONS</div><h1>Live Funnel Dashboard</h1><p>Auto-refreshes every 60 seconds.</p></div>
+<div class="pill" id="activeFunnels">15 Active Funnels</div>
+</header>
+<section class="notice">Live data only. Unsynced values show <b>Awaiting first sync</b>.</section>
+<section>
+<div class="section-head"><div><div class="eyebrow">CHATGPT ADS</div><h2>Live Ads Delivery</h2></div><div class="pill" id="adDeliveryBadge">Loading</div></div>
+<div class="card">
+<h3 id="adCampaignName">WebScan Agency White Label - £36 Test</h3>
+<div class="metrics">
+<div><span>Status</span><strong id="adStatus">—</strong></div>
+<div><span>Delivery</span><strong id="adDelivery">—</strong></div>
+<div><span>Budget</span><strong id="adBudget">—</strong></div>
+<div><span>Spend</span><strong id="adSpend">—</strong></div>
+<div><span>Impressions</span><strong id="adImpressions">—</strong></div>
+<div><span>Clicks</span><strong id="adClicks">—</strong></div>
+<div><span>CTR</span><strong id="adCtr">—</strong></div>
+<div><span>CPC</span><strong id="adCpc">—</strong></div>
+<div><span>Review</span><strong id="adReview">—</strong></div>
+<div><span>Milestone</span><strong id="adMilestone">—</strong></div>
+</div>
+<p class="helper">Impressions &gt; 0 = serving · Spend &gt; £0 = delivery confirmed · Clicks &gt; 0 = engagement</p>
+<p class="helper" id="lastUpdated">Last updated: —</p>
+</div>
+</section>
+<section><div class="eyebrow">OVERVIEW</div><h2>Performance Summary</h2><div id="summaryGrid" class="summary-grid"></div></section>
+<section><div class="eyebrow">FUNNELS</div><h2>All Active Funnels</h2><div id="funnels" class="funnel-list"></div></section>
+<footer>Europe/London · GBP · Accurate values only</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
