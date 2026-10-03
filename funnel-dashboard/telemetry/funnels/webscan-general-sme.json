@@ -22,28 +22,76 @@
     "Lost": 0
   },
   "freshness": "LIVE",
-  "lastChecked": "2026-10-03T20:06:36+01:00",
+  "lastChecked": "2026-10-03T21:05:11+01:00",
   "blocker": null,
   "inboundLeads": 1,
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-03T20:06:36+01:00",
-      "account": "amanthakran.dreams@gmail.com",
-      "result": "No new WebScan General SME human reply, positive reply, bounce or opt-out. A repeat BharatFare scan submitted with Aman's own sender address was treated as a duplicate self-submission and did not increase distinct inbound leads; the unrelated Belair Travel delivery failure was excluded. No outreach was sent during this monitoring-only pass."
+      "checkedAt": "2026-10-03T21:05:11+01:00",
+      "accounts": [
+        "amanthakran.dreams@gmail.com",
+        "aman.thakran.consulting@gmail.com"
+      ],
+      "result": "Both authorized inboxes were readable. No new WebScan General SME human reply, positive reply, bounce or opt-out was found. A repeat BharatFare scan submitted with Aman's own address was excluded as a duplicate self-submission, and the unrelated Belair Travel delivery failure was excluded. No outreach was sent during this monitoring-only pass."
     },
     "verifiedResearch": {
       "checkedAt": "2026-10-03T19:11:52+01:00",
       "result": "Five new distinct UK SMEs were verified with public business contact routes and at least two current website/conversion issues each before the latest outreach window."
     },
     "googleDrive": {
-      "checkedAt": "2026-10-03T20:06:36+01:00",
+      "checkedAt": "2026-10-03T21:05:11+01:00",
       "result": "No WebScan file was found in connected Google Drive; Gmail and GitHub remain the verified campaign and telemetry sources."
     },
     "github": {
-      "checkedAt": "2026-10-03T20:06:36+01:00",
+      "checkedAt": "2026-10-03T21:05:11+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/webscan-general-sme.json",
-      "priorBlobSha": "7cbbf61c867ba2a5f6912a7efd121ceaf2fbb4c8"
+      "priorBlobSha": "e7c7851d6aa05599dfb62c9153d416166649e521"
+    },
+    "twoInboxPolicy": {
+      "checkedAt": "2026-10-03T21:05:11+01:00",
+      "effectiveDate": "2026-10-04",
+      "status": "CONFIGURED_UNTESTED",
+      "result": "Both explicit Gmail links were readable. The two-inbox WebScan ramp is recorded but remains untested until sends and immediate read-back verification occur on or after 4 October 2026.",
+      "stagedCapsPerInbox": [
+        25,
+        30,
+        40,
+        50
+      ],
+      "mailboxLoadGuardAtStage25": 70,
+      "inboxes": {
+        "amanthakran.dreams@gmail.com": {
+          "linkId": "link_6a8b1352dd5c819189efdcf584a3979b",
+          "stage": 25,
+          "generalSmeDailyQuota": 13,
+          "qualifyingDaysAtStage": 0,
+          "remainingGeneralSmeQuotaForEffectiveDate": 13,
+          "actualFirstTouchesToday": 0,
+          "noReplyFollowUpsToday": 0,
+          "inboundHumanRepliesToday": 0,
+          "bouncesToday": 0,
+          "optOutsToday": 0,
+          "sendEvidence": "NOT_YET_APPLICABLE_BEFORE_EFFECTIVE_DATE"
+        },
+        "aman.thakran.consulting@gmail.com": {
+          "linkId": "link_6a9c54ec20988191a97a868e52e6d925",
+          "stage": 25,
+          "generalSmeDailyQuota": 13,
+          "qualifyingDaysAtStage": 0,
+          "remainingGeneralSmeQuotaForEffectiveDate": 13,
+          "actualFirstTouchesToday": 0,
+          "noReplyFollowUpsToday": 0,
+          "inboundHumanRepliesToday": 0,
+          "bouncesToday": 0,
+          "optOutsToday": 0,
+          "sendEvidence": "NOT_YET_APPLICABLE_BEFORE_EFFECTIVE_DATE"
+        }
+      },
+      "skippedSendReasons": [
+        "OUTSIDE_ALLOWED_OUTREACH_HOUR",
+        "TWO_INBOX_POLICY_NOT_EFFECTIVE_UNTIL_2026-10-04"
+      ]
     }
   }
 }
