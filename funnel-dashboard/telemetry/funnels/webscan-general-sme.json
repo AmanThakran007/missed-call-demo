@@ -51,8 +51,8 @@
     "twoInboxPolicy": {
       "checkedAt": "2026-10-03T21:05:11+01:00",
       "effectiveDate": "2026-10-04",
-      "status": "CONFIGURED_UNTESTED",
-      "result": "Both explicit Gmail links were readable. The two-inbox WebScan ramp is recorded but remains untested until sends and immediate read-back verification occur on or after 4 October 2026.",
+      "status": "SUPERSEDED",
+      "result": "Historical two-inbox configuration superseded by sixInboxReconciliation and the six-inbox automation policy; do not treat historical Today fields as current counts.",
       "stagedCapsPerInbox": [
         25,
         30,
@@ -92,6 +92,17 @@
         "OUTSIDE_ALLOWED_OUTREACH_HOUR",
         "TWO_INBOX_POLICY_NOT_EFFECTIVE_UNTIL_2026-10-04"
       ]
+    },
+    "sixInboxReconciliation": {
+      "checkedAt": "2026-10-03T20:27:05.172Z",
+      "date": "2026-10-03",
+      "scope": "Daily Sent reconciliation and targeted received checks across all six inboxes; does not certify future sends or all historical campaign metrics.",
+      "accountsChecked": 6,
+      "status": "SOURCE_RECONCILED",
+      "dailyFirstTouches": 21,
+      "dailyFollowUps": 0,
+      "mailboxSnapshotPath": "funnel-dashboard/telemetry/webscan-mailboxes.json",
+      "scheduledSendingStatus": "NOT_YET_RUN"
     }
   }
 }
