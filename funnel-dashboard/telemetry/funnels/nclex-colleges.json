@@ -12,6 +12,6 @@
   "revenueGbp": 0,
   "lastRun": "2026-10-03T12:41:09+01:00",
   "nextRun": null,
-  "freshness": "LIVE",
-  "blocker": "OUTREACH_SEND_BLOCKED_BY_SAFETY_CHECK"
+  "freshness": "STALE",
+  "blocker": "Automation currently disabled, verified 2026-10-03. Previous LIVE record is stale. Recorded outreach safety block remains unresolved. Historical metrics retained; no campaign completion claimed by this status correction."
 }
