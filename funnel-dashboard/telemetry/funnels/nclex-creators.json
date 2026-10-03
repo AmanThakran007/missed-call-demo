@@ -10,8 +10,8 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T12:43:17+01:00",
-  "nextRun": "2026-10-03T13:44:00+01:00",
+  "lastRun": "2026-10-03T15:48:59+01:00",
+  "nextRun": "2026-10-03T16:44:00+01:00",
   "freshness": "LIVE",
   "blocker": "OUTREACH_SEND_BLOCKED_BY_SAFETY_CHECK"
 }
