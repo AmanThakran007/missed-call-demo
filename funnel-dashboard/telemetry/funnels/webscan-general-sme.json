@@ -2,6 +2,17 @@
   "id": "webscan-general-sme",
   "name": "WebScan General SME",
   "category": "WebScan",
+  "prospectsResearched": 10,
+  "firstEmailsSent": 10,
+  "followUpsSent": 0,
+  "humanReplies": 0,
+  "positiveReplies": 0,
+  "callsDemosRequested": 0,
+  "customersWon": 0,
+  "revenueGbp": 0,
+  "bounces": 0,
+  "optOuts": 0,
   "freshness": "LIVE",
-  "lastChecked": "2026-10-03T08:00:39+01:00"
+  "lastChecked": "2026-10-03T09:11:48+01:00",
+  "blocker": null
 }
