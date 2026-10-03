@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#07111f">
 <title>Aman Live Funnel Dashboard</title>
-<link rel="stylesheet" href="dashboard-v2.css?v=20261003-4">
+<link rel="stylesheet" href="dashboard-v2.css?v=20261003-ops-2">
 </head>
 <body>
 <div class="ambient ambient-a"></div>
@@ -18,7 +18,7 @@
       <p class="sub">Verified telemetry only. No sample figures.</p>
     </div>
     <div class="header-status">
-      <div class="pill success" id="activeFunnels">15 Active Funnels</div>
+      <div class="pill success" id="activeFunnels">Checking automations…</div>
       <div class="refresh-chip">
         <span class="pulse"></span>
         <div>
@@ -50,6 +50,14 @@
     <div class="eyebrow">VERIFIED EMAIL SNAPSHOT</div>
     <h2>WebScan: Six Inboxes</h2>
     <div id="webscanMailboxes" class="panel glass"><p class="sub">Loading verified inbox counts…</p></div>
+  </section>
+
+  <section class="section">
+    <div class="eyebrow">OUTREACH READINESS</div>
+    <div class="section-head"><h2>Verified Prospect Queue</h2>
+      <label class="ops-filter">Queue &amp; replies: <select id="opsInboxFilter" aria-label="Filter queue and replies by inbox"><option value="all">All six inboxes</option><option>England inbox</option><option>Ecommerce inbox</option><option>BharatFare inbox</option><option>8891 inbox</option><option>Dreams inbox</option><option>Consulting inbox</option></select></label>
+    </div>
+    <div id="prospectQueue" class="panel glass"><p class="sub">Checking queue evidence…</p></div>
   </section>
 
   <section class="section visual-grid">
@@ -135,7 +143,7 @@
   <section class="section action-priority-grid">
     <div class="panel glass">
       <div class="eyebrow">REPLY / ACTION CENTRE</div>
-      <h2>What Needs a Response</h2>
+      <h2>WebScan Reply Centre</h2>
       <div id="replyCentre" class="reply-centre"></div>
     </div>
     <div class="panel glass">
@@ -183,7 +191,7 @@
     <div class="section-head">
       <div>
         <div class="eyebrow">FUNNELS</div>
-        <h2>All Active Funnels</h2>
+        <h2>All Tracked Funnels</h2>
       </div>
       <div class="legend-inline">
         <span><i class="dot live-dot"></i>Live</span>
@@ -200,6 +208,6 @@
     <span>Accurate values only</span>
   </footer>
 </main>
-<script src="dashboard-v2.js?v=20261003-six-inbox-1"></script>
+<script src="dashboard-v2.js?v=20261003-ops-2"></script>
 </body>
 </html>
