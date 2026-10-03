@@ -20,7 +20,7 @@ function drawAttention(data){const {fs,sums}=aggregate(data);const items=[];cons
 function drawCategoryGrid(data){const groups={};for(const f of Object.values(data.funnels||{})){const c=f.category||'Other';if(!groups[c])groups[c]=[];groups[c].push(f)}document.getElementById('categoryGrid').innerHTML=Object.entries(groups).map(([name,arr])=>{const live=arr.filter(f=>f.freshness==='LIVE').length;const replies=arr.reduce((a,f)=>a+(Number(f.humanReplies)||0),0);const calls=arr.reduce((a,f)=>a+(Number(f.callsDemosRequested)||0),0);const revenue=arr.reduce((a,f)=>a+(Number(f.revenueGbp)||0),0);const pct=Math.round((live/arr.length)*100);return '<div class="category-card"><div class="category-top"><div class="category-name">'+name+'</div><div class="category-count">'+arr.length+' funnel'+(arr.length>1?'s':'')+'</div></div><div class="health-bar"><div class="health-fill" style="width:'+pct+'%"></div></div><div class="category-stats"><div class="category-stat"><span>Live</span><strong>'+live+'/'+arr.length+'</strong></div><div class="category-stat"><span>Replies</span><strong>'+replies+'</strong></div><div class="category-stat"><span>Calls</span><strong>'+calls+'</strong></div></div>'+(revenue?'<div class="category-stat" style="margin-top:8px"><span>Revenue</span><strong>'+money(revenue)+'</strong></div>':'')+'</div>'}).join('')}
 function drawTimeline(data){const events=[];const ad=data.ads&&data.ads['webscan-agency-white-label-36-test'];if(ad&&ad.lastChecked)events.push({t:new Date(ad.lastChecked),title:'Ads telemetry checked',sub:(ad.deliveryStatus||'Unknown')+' · '+(Number(ad.impressions)||0)+' impressions · '+money(Number(ad.spendGbp)||0)+' spend'});for(const f of Object.values(data.funnels||{})){if(f.lastRun){const d=new Date(f.lastRun);if(!isNaN(d))events.push({t:d,title:f.name+' ran',sub:(f.freshness||'').replaceAll('_',' ')})}}events.sort((a,b)=>b.t-a.t);document.getElementById('activityTimeline').innerHTML=(events.length?events.slice(0,8):[{t:null,title:'Waiting for first verified activity',sub:'Events will appear here after successful telemetry writes'}]).map(e=>'<div class="timeline-item"><div class="timeline-time">'+(e.t?new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/London',day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit',hour12:false}).format(e.t)+' UK':'—')+'</div><div class="timeline-title">'+e.title+'</div><div class="timeline-sub">'+e.sub+'</div></div>').join('')}
 function drawAds(data){const ad=data.ads&&data.ads['webscan-agency-white-label-36-test'];if(!ad)return;set('adCampaignName',ad.campaignName);set('adStatus',ad.status);set('adDelivery',ad.deliveryStatus);set('adBudget',money(ad.lifetimeBudgetGbp));set('adSpend',money(ad.spendGbp));set('adImpressions',ad.impressions);set('adClicks',ad.clicks);set('adCtr',ad.ctr==null?'—':ad.ctr+'%');set('adCpc',ad.cpcGbp==null?'—':money(ad.cpcGbp));set('adReview',ad.reviewStatus||'—');set('adMilestone',(ad.milestone||'—').replaceAll('_',' '));set('adDeliveryBadge',ad.deliveryStatus||'—');set('lastUpdated','Last updated: '+(ad.lastChecked||data.generatedAt||'—'))}
-function drawSummary(data){const {fs,sums}=aggregate(data);const has=Object.values(sums).some(v=>v>0);const rows=[['Active Funnels',data.activeFunnels||fs.length],['Data Freshness',fs.some(f=>f.freshness==='LIVE')?'Partially live':'Awaiting first sync'],['First Emails Sent',has?sums.firstEmailsSent:'Awaiting first sync'],['Human Replies',has?sums.humanReplies:'Awaiting first sync'],['Positive Replies',has?sums.positiveReplies:'Awaiting first sync'],['Calls / Demos',has?sums.callsDemosRequested:'Awaiting first sync'],['Customers Won',has?sums.customersWon:'Awaiting first sync'],['Revenue (£)',has?money(sums.revenueGbp):'Awaiting first sync']];document.getElementById('summaryGrid').innerHTML=rows.map(r=>'<div class="summary-card"><span>'+r[0]+'</span><strong>'+r[1]+'</strong></div>').join('')}
+function drawSummary(data){const {fs,sums}=aggregate(data);const has=Object.values(sums).some(v=>v>0);const rows=[['Tracked Funnel Records',fs.length],['Data Freshness',fs.some(f=>f.freshness==='LIVE')?'Partially live':'Awaiting first sync'],['First Emails Sent',has?sums.firstEmailsSent:'Awaiting first sync'],['Human Replies',has?sums.humanReplies:'Awaiting first sync'],['Positive Replies',has?sums.positiveReplies:'Awaiting first sync'],['Calls / Demos',has?sums.callsDemosRequested:'Awaiting first sync'],['Customers Won',has?sums.customersWon:'Awaiting first sync'],['Revenue (£)',has?money(sums.revenueGbp):'Awaiting first sync']];document.getElementById('summaryGrid').innerHTML=rows.map(r=>'<div class="summary-card"><span>'+r[0]+'</span><strong>'+r[1]+'</strong></div>').join('')}
 function statusClass(fresh){if(fresh==='LIVE')return 'live-status';if(fresh==='STALE'||fresh==='TELEMETRY_SYNC_BLOCKED')return 'stale-status';return ''}
 function drawFunnels(data){
   const root=document.getElementById('funnels');root.innerHTML='';
@@ -43,10 +43,12 @@ function drawFunnels(data){
     const id=x.id,f=x.f,next=x.next;
     const card=document.createElement('article');card.className='funnel-card';
     const rawFresh=f.freshness||'AWAITING_FIRST_SYNC',fresh=rawFresh.replaceAll('_',' ');
-    const nextText=fmtTime(next)+' · '+humanUntil(next);
-    let rows='<div class="row next-sync-row"><span>Next sync #'+(index+1)+'</span><strong>'+nextText+'</strong></div>';
+    const nextText='See Funnel Health for scheduler evidence';
+    let rows='<div class="row next-sync-row"><span>Automation schedule</span><strong>'+nextText+'</strong></div>';
     labels.forEach(pair=>{
       let v=f[pair[1]];
+      if(pair[1]==='blocker'&&!v)v='None recorded (not a health certification)';
+      if(pair[1]==='lastRun'&&!v)v=f.lastChecked||'Not recorded';
       if(pair[1]==='revenueGbp'&&typeof v==='number')v=money(v);
       rows+='<div class="row"><span>'+pair[0]+'</span><strong>'+val(v)+'</strong></div>';
     });
@@ -209,12 +211,32 @@ function drawWebscanOperations(s,data){
  noteAt(reply,'Reply categories can overlap. Missing audits are shown as unverified, never as an empty inbox. Contact details and message content stay outside this public dashboard.');
 }
 
+function evidenceRecent(at){const age=Date.now()-Date.parse(at);return Number.isFinite(age)&&age>=-300000&&age<=7200000}
+function funnelHealthState(f,record){
+ if(record?.enabled===false)return 'Paused';
+ if(/safety|denied|OUTREACH_REVIEW_REQUIRED|OUTBOUND.*BLOCKED|OUTREACH_SEND_BLOCKED/i.test(f?.blocker||''))return 'Sending hold recorded';
+ if(f?.blocker)return 'Needs attention';
+ if(!f)return 'Shared / missing telemetry';
+ const checked=f.sourceChecks?.gmail?.checkedAt||f.sourceChecks?.gmailPrimary?.checkedAt||f.lastChecked||f.lastRun;
+ if(!evidenceRecent(checked))return 'Source check stale / unknown';
+ if((f.firstEmailsSent||0)+(f.followUpsSent||0)>0)return 'Sends recorded; audit below';
+ return 'No sends recorded';
+}
+function drawFunnelHealth(data,health){
+ const root=document.getElementById('funnelHealth');root.replaceChildren();
+ if(!health||!Array.isArray(health.rows)){noteAt(root,'Funnel health evidence unavailable. No healthy status can be inferred.');return}
+ noteAt(root,(evidenceRecent(health.checkedAt)?'Scheduler snapshot':'STALE scheduler snapshot')+' · '+health.checkedAt+'. Email totals below are recorded cumulative campaign metrics, not today’s volume. LIVE telemetry does not mean outreach is working.');
+ opsTable(root,['Funnel','Automation','Outreach health','First emails / follow-ups','Due / overdue','Follow-up audit'],health.rows.map(r=>{const f=data.funnels?.[r.id],a=r.followUpAudit||{};const recent=evidenceRecent(a.checkedAt);return [r.name,r.enabled===true?'Enabled':r.enabled===false?'Paused':'Unverified',funnelHealthState(f,r),f?shown(f.firstEmailsSent)+' / '+shown(f.followUpsSent):'Shared telemetry',recent?shown(a.due)+' / '+shown(a.overdue):'Unverified',(!recent&&a.checkedAt?'STALE · ':'')+(a.status||'UNVERIFIED').replaceAll('_',' ')]}));
+ noteAt(root,'Due/overdue numbers apply only to each audit’s stated cohort. Unverified does not mean zero. Conversation responses can be included in older follow-up totals.');
+ for(const r of health.rows){const f=data.funnels?.[r.id],a=r.followUpAudit||{};const details=node('details');details.appendChild(node('summary',r.name+' — evidence and next action'));noteAt(details,'Last scheduler run: '+(r.lastAutomationRun||'Unverified')+'. Next scheduler run: '+(r.enabled===false?'Paused':r.nextAutomationRun||'Not supplied by scheduler')+'.');noteAt(details,'Follow-up audit: '+(a.checkedAt||'Not recorded')+'. '+(a.summary||'Not audited.'));if(a.scope)noteAt(details,'Scope: '+a.scope);if(a.nextWindow)noteAt(details,'Next follow-up window: '+a.nextWindow);if(f?.blocker)noteAt(details,'Recorded blocker: '+f.blocker);root.appendChild(details)}
+}
+
 const originalRefresh=refresh;
 refresh=async function(){
   try{
-    const [data,history,mailboxes]=await Promise.all([buildData(),loadHistory(),loadJson('telemetry/webscan-mailboxes.json')]);
+    const [data,history,mailboxes,health]=await Promise.all([buildData(),loadHistory(),loadJson('telemetry/webscan-mailboxes.json'),loadJson('telemetry/funnel-health.json')]);
     set('activeFunnels',mailboxes?.automation ? mailboxes.automation.enabledTasks+' Enabled Automations · snapshot' : 'Automation count unverified');
-    drawGlance(data);drawMilestones(data);drawAttention(data);drawAds(data);drawGoals(data);drawConversionFunnel(data);drawReplyCentre(data);drawPriorities(data);drawCategoryGrid(data);drawSummary(data);drawTimeline(data);drawFunnels(data);drawTrends(history);drawWebscanMailboxes(mailboxes);drawWebscanOperations(mailboxes,data);
+    drawGlance(data);drawMilestones(data);drawAttention(data);drawAds(data);drawGoals(data);drawConversionFunnel(data);drawReplyCentre(data);drawPriorities(data);drawCategoryGrid(data);drawSummary(data);drawTimeline(data);drawFunnels(data);drawTrends(history);drawWebscanMailboxes(mailboxes);drawWebscanOperations(mailboxes,data);drawFunnelHealth(data,health);
     document.getElementById('opsInboxFilter').onchange=()=>drawWebscanOperations(mailboxes,data);
     nextRefreshAt=Date.now()+REFRESH_MS;
   }catch(e){
