@@ -2,5 +2,16 @@
   "id": "uk-resourcer-outreach",
   "name": "UK Resourcer Outreach",
   "category": "Recruitment",
-  "freshness": "AWAITING_FIRST_SYNC"
+  "prospectsResearched": null,
+  "firstEmailsSent": 0,
+  "followUpsSent": 0,
+  "humanReplies": 0,
+  "positiveReplies": 0,
+  "callsDemosRequested": 0,
+  "customersWon": 0,
+  "revenueGbp": 0,
+  "lastRun": "2026-10-03T07:38:46+01:00",
+  "nextRun": "2026-10-03T08:39:00+01:00",
+  "freshness": "LIVE",
+  "blocker": null
 }
