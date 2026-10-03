@@ -10,25 +10,34 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T21:52:55+01:00",
-  "nextRun": "2026-10-03T22:49:00+01:00",
+  "lastRun": "2026-10-03T22:54:15+01:00",
+  "nextRun": "2026-10-03T23:49:00+01:00",
   "freshness": "LIVE",
   "blocker": "OUTBOUND_SEND_BLOCKED_BY_SAFETY: Previous first-touch attempts to the 20 verified Growth Core prospects were blocked by the email safety layer. No retry was attempted outside the permitted outreach hour; monitoring remains active.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-03T21:53:20+01:00",
+      "checkedAt": "2026-10-03T22:54:15+01:00",
       "accounts": [
         "amanthakran.dreams@gmail.com",
         "aman.thakran.consulting@gmail.com"
       ],
-      "scope": "All new mail since 2026-10-03T20:54:06+01:00, including NCLEX Growth Core replies, bounces, opt-outs, access or pricing questions, referral or partnership questions, demo requests, and call requests",
-      "result": "No Growth Core campaign send, human reply, campaign bounce, opt-out, referral or partnership question, access or pricing request, demo or call request, customer, or attributable revenue event found. Google account security alerts and BharatFare supplier messages were excluded; no outreach was sent outside the permitted hour."
+      "scope": "All new mail since 2026-10-03T21:53:20+01:00, including NCLEX Growth Core replies, bounces, opt-outs, access or pricing questions, referral or partnership questions, demo requests, and call requests",
+      "result": "No Growth Core campaign send, human reply, campaign bounce, opt-out, referral or partnership question, access or pricing request, demo or call request, customer, or attributable revenue event found; no outreach was sent outside the permitted hour."
     },
     "github": {
-      "checkedAt": "2026-10-03T21:53:20+01:00",
+      "checkedAt": "2026-10-03T22:54:15+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/nclex-growth-core.json",
-      "priorBlobSha": "e1626ae938d5febc108547ebaae3220ebcf0ca18"
+      "priorBlobSha": "5aa08ee97296894378dfd348c303cb329f4dc41e"
+    },
+    "sendingHoldDiagnosis": {
+      "checkedAt": "2026-10-03T22:54:15+01:00",
+      "status": "HOLD_REASON_UNAVAILABLE",
+      "classification": "Historical action-specific safety/approval denial reported for the blocked first-touch attempts; original rejection output is unavailable in the current execution context.",
+      "affectedScope": "Previously attempted first touches to the 20 verified Growth Core prospects only; read-only monitoring remains permitted.",
+      "correctiveStep": "Recover the original rejection output or direct resolution evidence before retrying rejected actions; do not switch inboxes or infer recovery.",
+      "resolution": "UNRESOLVED",
+      "sendingConfirmed": false
     }
   }
 }
