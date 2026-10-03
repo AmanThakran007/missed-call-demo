@@ -8,9 +8,6 @@
   "scope": "London calendar-day and rolling-24-hour Sent counts are verified from Gmail. WebScan first touches and follow-ups are reconciled from Gmail Sent and all four funnel records. Received checks cover campaign replies, delivery notices and opt-outs; sent means present in Gmail Sent, not confirmed delivered.",
   "effectiveDate": "2026-10-04",
   "stagedCapsPerInbox": [
-    25,
-    30,
-    40,
     50
   ],
   "rows": [
@@ -23,12 +20,12 @@
       "webscanHumanRepliesToday": 0,
       "webscanBouncesToday": 0,
       "webscanOptOutsToday": 0,
-      "configuredDailyCap": 25,
+      "configuredDailyCap": 50,
       "qualifyingDaysAtStage": 0,
       "sourceRead": "VERIFIED",
       "sixInboxSendTest": "NOT_YET_RUN",
       "allSentRolling24h": 0,
-      "remainingQuotaForEffectiveDate": 25,
+      "remainingQuotaForEffectiveDate": 50,
       "prospectQueue": {
         "status": "UNVERIFIED",
         "checkedAt": null,
@@ -55,12 +52,12 @@
       "webscanHumanRepliesToday": 0,
       "webscanBouncesToday": 0,
       "webscanOptOutsToday": 0,
-      "configuredDailyCap": 25,
+      "configuredDailyCap": 50,
       "qualifyingDaysAtStage": 0,
       "sourceRead": "VERIFIED",
       "sixInboxSendTest": "NOT_YET_RUN",
       "allSentRolling24h": 0,
-      "remainingQuotaForEffectiveDate": 25,
+      "remainingQuotaForEffectiveDate": 50,
       "prospectQueue": {
         "status": "UNVERIFIED",
         "checkedAt": null,
@@ -87,12 +84,12 @@
       "webscanHumanRepliesToday": 0,
       "webscanBouncesToday": 0,
       "webscanOptOutsToday": 0,
-      "configuredDailyCap": 25,
+      "configuredDailyCap": 50,
       "qualifyingDaysAtStage": 0,
       "sourceRead": "VERIFIED",
       "sixInboxSendTest": "NOT_YET_RUN",
       "allSentRolling24h": 0,
-      "remainingQuotaForEffectiveDate": 25,
+      "remainingQuotaForEffectiveDate": 50,
       "prospectQueue": {
         "status": "UNVERIFIED",
         "checkedAt": null,
@@ -119,12 +116,12 @@
       "webscanHumanRepliesToday": 0,
       "webscanBouncesToday": 0,
       "webscanOptOutsToday": 0,
-      "configuredDailyCap": 25,
+      "configuredDailyCap": 50,
       "qualifyingDaysAtStage": 0,
       "sourceRead": "VERIFIED",
       "sixInboxSendTest": "NOT_YET_RUN",
       "allSentRolling24h": 0,
-      "remainingQuotaForEffectiveDate": 25,
+      "remainingQuotaForEffectiveDate": 50,
       "prospectQueue": {
         "status": "UNVERIFIED",
         "checkedAt": null,
@@ -151,12 +148,12 @@
       "webscanHumanRepliesToday": 0,
       "webscanBouncesToday": 0,
       "webscanOptOutsToday": 0,
-      "configuredDailyCap": 25,
+      "configuredDailyCap": 50,
       "qualifyingDaysAtStage": 0,
       "sourceRead": "VERIFIED",
       "sixInboxSendTest": "NOT_YET_RUN",
       "allSentRolling24h": 43,
-      "remainingQuotaForEffectiveDate": 25,
+      "remainingQuotaForEffectiveDate": 50,
       "prospectQueue": {
         "status": "UNVERIFIED",
         "checkedAt": null,
@@ -183,12 +180,12 @@
       "webscanHumanRepliesToday": 0,
       "webscanBouncesToday": 0,
       "webscanOptOutsToday": 0,
-      "configuredDailyCap": 25,
+      "configuredDailyCap": 50,
       "qualifyingDaysAtStage": 0,
       "sourceRead": "VERIFIED",
       "sixInboxSendTest": "NOT_YET_RUN",
       "allSentRolling24h": 7,
-      "remainingQuotaForEffectiveDate": 25,
+      "remainingQuotaForEffectiveDate": 50,
       "prospectQueue": {
         "status": "UNVERIFIED",
         "checkedAt": null,
@@ -217,8 +214,8 @@
     "webscanBouncesToday": 0,
     "webscanOptOutsToday": 0,
     "webscanTotalSentToday": 24,
-    "configuredDailyCap": 150,
-    "remainingQuotaForEffectiveDate": 150,
+    "configuredDailyCap": 300,
+    "remainingQuotaForEffectiveDate": 300,
     "webscanOutboundToday": 22
   },
   "funnelFirstTouchesToday": {
@@ -232,7 +229,7 @@
     "sentPagination": "COMPLETE",
     "funnelFirstTouchReconciliation": "PASSED",
     "aggregateSumCheck": "PASSED",
-    "mailboxLoadGuardEvidence": "VERIFIED_BELOW_70_PER_INBOX",
+    "mailboxLoadGuardEvidence": "RECHECK_BEFORE_SENDING",
     "futureScheduledSending": "NOT_YET_RUN",
     "senderHeaderChecks": "NOT_YET_RUN",
     "unrelatedCampaignCumulativeMetrics": "NOT_AUDITED",
@@ -248,5 +245,13 @@
     "enabledTasks": 15,
     "enabledWebscanTasks": 5,
     "lastCoordinatorRun": "2026-10-03T20:33:54.424778+00:00"
+  },
+  "sendingPolicy": {
+    "mode": "FIXED_CAP",
+    "capPerInbox": 50,
+    "totalCap": 300,
+    "effectiveDate": "2026-10-04",
+    "configuredAt": "2026-10-03T21:00:45.031Z",
+    "note": "User-selected starting ceiling; existing sending holds and eligibility checks remain. No ramp."
   }
 }
