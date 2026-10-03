@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#07111f">
 <title>Aman Live Funnel Dashboard</title>
-<link rel="stylesheet" href="dashboard-v2.css?v=20261003-1">
+<link rel="stylesheet" href="dashboard-v3.css?v=20261003-2">
 </head>
 <body>
 <div class="ambient ambient-a"></div>
@@ -41,6 +41,37 @@
   </section>
 
   <section class="section">
+    <div class="eyebrow">AT A GLANCE</div>
+    <h2>Operating Snapshot</h2>
+    <div id="glanceStrip" class="glance-strip"></div>
+  </section>
+
+  <section class="section visual-grid">
+    <div class="panel glass">
+      <div class="panel-head">
+        <div>
+          <div class="eyebrow">MILESTONES</div>
+          <h2>Progress Journey</h2>
+        </div>
+        <div class="ring-wrap">
+          <svg class="progress-ring" width="76" height="76" viewBox="0 0 76 76">
+            <circle class="ring-bg" cx="38" cy="38" r="31"></circle>
+            <circle class="ring-fg" id="milestoneRing" cx="38" cy="38" r="31"></circle>
+          </svg>
+          <div class="ring-label"><strong id="milestoneCount">0/0</strong><span>done</span></div>
+        </div>
+      </div>
+      <div id="milestones" class="milestones"></div>
+    </div>
+
+    <div class="panel glass">
+      <div class="eyebrow">NEEDS ATTENTION</div>
+      <h2>Operator Focus</h2>
+      <div id="attentionList" class="attention-list"></div>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="section-head">
       <div>
         <div class="eyebrow">CHATGPT ADS</div>
@@ -59,7 +90,6 @@
           <strong id="adExpectedSync">—</strong>
         </div>
       </div>
-
       <div class="metrics">
         <div class="metric"><span>Status</span><strong id="adStatus">—</strong></div>
         <div class="metric"><span>Delivery</span><strong id="adDelivery">—</strong></div>
@@ -72,13 +102,11 @@
         <div class="metric"><span>Review</span><strong id="adReview">—</strong></div>
         <div class="metric wide"><span>Milestone</span><strong id="adMilestone">—</strong></div>
       </div>
-
       <div class="helper-grid">
         <div class="helper-item"><span class="signal green"></span><span>Impressions &gt; 0 = ad serving</span></div>
         <div class="helper-item"><span class="signal teal"></span><span>Spend &gt; £0 = delivery confirmed</span></div>
         <div class="helper-item"><span class="signal blue"></span><span>Clicks &gt; 0 = engagement</span></div>
       </div>
-
       <div class="card-footer">
         <span id="lastUpdated">Last updated: —</span>
         <a class="button" href="https://ads.openai.com/manage/campaigns?act=adacct_6abed53f0290819c85d4a21d0542021b&campaignIds=cmpn_6402243baa2c819899283a91583b4735" target="_blank" rel="noopener">Open Ads Manager</a>
@@ -87,9 +115,26 @@
   </section>
 
   <section class="section">
+    <div class="eyebrow">CATEGORY INFOGRAPHICS</div>
+    <h2>Portfolio Health</h2>
+    <div id="categoryGrid" class="category-grid"></div>
+  </section>
+
+  <section class="section">
     <div class="eyebrow">OVERVIEW</div>
     <h2>Performance Summary</h2>
     <div id="summaryGrid" class="summary-grid"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">ACTIVITY</div>
+        <h2>Recent Timeline</h2>
+      </div>
+      <div class="pill neutral">Verified events only</div>
+    </div>
+    <div id="activityTimeline" class="timeline glass"></div>
   </section>
 
   <section class="section">
@@ -113,6 +158,6 @@
     <span>Accurate values only</span>
   </footer>
 </main>
-<script src="dashboard-v2.js?v=20261003-1"></script>
+<script src="dashboard-v3.js?v=20261003-2"></script>
 </body>
 </html>
