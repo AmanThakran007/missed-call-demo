@@ -10,8 +10,8 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T09:34:31+01:00",
-  "nextRun": "2026-10-03T10:39:00+01:00",
+  "lastRun": "2026-10-03T10:38:56+01:00",
+  "nextRun": "2026-10-03T11:39:00+01:00",
   "freshness": "LIVE",
   "blocker": "OUTREACH_SEND_BLOCKED_BY_SAFETY_CHECKS; 4 verified prospects researched, 0 sent, 2 Gmail drafts created for manual review"
 }
