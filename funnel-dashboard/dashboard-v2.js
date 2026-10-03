@@ -58,3 +58,115 @@ let nextRefreshAt=Date.now()+REFRESH_MS;
 function updateCountdowns(){const left=Math.max(0,nextRefreshAt-Date.now());set('refreshCountdown',Math.ceil(left/1000)+'s');const adNext=nextScheduledRun('webscan-general-sme');set('nextAdsSync',fmtTime(adNext)+' · '+humanUntil(adNext));set('adExpectedSync',humanUntil(adNext));if(left<=0)nextRefreshAt=Date.now()+REFRESH_MS}
 async function refresh(){try{const data=await buildData();set('activeFunnels',(data.activeFunnels||15)+' Active Funnels');drawGlance(data);drawMilestones(data);drawAttention(data);drawAds(data);drawCategoryGrid(data);drawSummary(data);drawTimeline(data);drawFunnels(data);nextRefreshAt=Date.now()+REFRESH_MS}catch(e){console.error(e);set('lastUpdated','Telemetry refresh failed — retrying automatically')}}
 refresh();setInterval(refresh,REFRESH_MS);setInterval(updateCountdowns,1000);updateCountdowns();
+
+async function loadHistory(){
+  return (await loadJson('history.json')) || {points:[]};
+}
+
+function drawGoals(data){
+  const {sums}=aggregate(data);
+  const configs=[
+    ['Positive Replies',sums.positiveReplies,null],
+    ['Calls / Demos',sums.callsDemosRequested,null],
+    ['Customers Won',sums.customersWon,null],
+    ['Revenue (£)',sums.revenueGbp,null]
+  ];
+  document.getElementById('goalsGrid').innerHTML=configs.map(([label,current,target])=>{
+    const pct=target&&target>0?Math.min(100,Math.round((current/target)*100)):0;
+    const shown=label==='Revenue (£)'?money(current):current;
+    return '<div class="goal-card"><span>'+label+'</span><strong>'+shown+'</strong><div class="goal-progress"><i style="width:'+pct+'%"></i></div><div class="goal-foot"><span>Actual</span><span>'+(target==null?'Target not set':target)+'</span></div></div>';
+  }).join('');
+}
+
+function drawConversionFunnel(data){
+  const {sums}=aggregate(data);
+  const rows=[
+    ['Prospects',sums.prospectsResearched],
+    ['First emails',sums.firstEmailsSent],
+    ['Human replies',sums.humanReplies],
+    ['Positive replies',sums.positiveReplies],
+    ['Calls / demos',sums.callsDemosRequested],
+    ['Customers',sums.customersWon]
+  ];
+  const max=Math.max(1,...rows.map(r=>Number(r[1])||0));
+  document.getElementById('conversionFunnel').innerHTML=rows.map((r,i)=>{
+    const n=Number(r[1])||0;
+    const pct=Math.round((n/max)*100);
+    const prev=i>0?(Number(rows[i-1][1])||0):null;
+    const rate=prev&&prev>0?Math.round((n/prev)*100)+'%':'—';
+    return '<div class="funnel-step"><div class="funnel-step-label">'+r[0]+'</div><div class="funnel-bar"><div class="funnel-bar-fill" style="width:'+pct+'%"></div></div><strong>'+n+(i>0?' · '+rate:'')+'</strong></div>';
+  }).join('');
+}
+
+function drawReplyCentre(data){
+  const {fs}=aggregate(data);
+  const items=[];
+  for(const f of fs){
+    const replies=Number(f.humanReplies)||0;
+    const pos=Number(f.positiveReplies)||0;
+    const calls=Number(f.callsDemosRequested)||0;
+    if(calls>0)items.push([f.name,calls+' call/demo request'+(calls>1?'s':'')]);
+    else if(pos>0)items.push([f.name,pos+' positive repl'+(pos>1?'ies':'y')]);
+    else if(replies>0)items.push([f.name,replies+' human repl'+(replies>1?'ies':'y')]);
+    if(f.freshness==='TELEMETRY_SYNC_BLOCKED')items.push([f.name,'Telemetry sync blocked']);
+  }
+  document.getElementById('replyCentre').innerHTML=(items.length?items.slice(0,8):[['No reply action yet','Waiting for verified human replies or calls']]).map(x=>'<div class="reply-item"><strong>'+x[0]+'</strong><span>'+x[1]+'</span></div>').join('');
+}
+
+function buildPriorities(data){
+  const {fs,sums}=aggregate(data);
+  const out=[];
+  const blocked=fs.filter(f=>f.freshness==='TELEMETRY_SYNC_BLOCKED');
+  if(blocked.length)out.push(['Fix blocked telemetry',blocked.length+' funnel'+(blocked.length>1?'s':'')+' cannot report live data']);
+  const positive=fs.filter(f=>(Number(f.positiveReplies)||0)>0 && !(Number(f.callsDemosRequested)||0));
+  if(positive.length)out.push(['Follow positive replies',positive.length+' funnel'+(positive.length>1?'s have':' has')+' interest but no call yet']);
+  const calls=fs.filter(f=>(Number(f.callsDemosRequested)||0)>0 && !(Number(f.customersWon)||0));
+  if(calls.length)out.push(['Convert active calls',calls.length+' funnel'+(calls.length>1?'s have':' has')+' calls but no customer yet']);
+  const ad=data.ads&&data.ads['webscan-agency-white-label-36-test']||{};
+  if(!(Number(ad.impressions)>0))out.push(['Watch first ad delivery','Campaign is eligible; first impression is still pending']);
+  const waiting=fs.filter(f=>!f.freshness||f.freshness==='AWAITING_FIRST_SYNC');
+  if(waiting.length)out.push(['Get first telemetry sync',waiting.length+' funnel'+(waiting.length>1?'s are':' is')+' still waiting']);
+  if(!sums.positiveReplies)out.push(['Generate first positive reply','No verified positive commercial reply recorded yet']);
+  return out.slice(0,3);
+}
+function drawPriorities(data){
+  const items=buildPriorities(data);
+  document.getElementById('priorityList').innerHTML=(items.length?items:[['No urgent action','Everything currently looks synced and monitored']]).map((x,i)=>'<div class="priority-item"><strong><span class="priority-num">'+(i+1)+'</span>'+x[0]+'</strong><span>'+x[1]+'</span></div>').join('');
+}
+
+function linePath(points,width,height,key){
+  const vals=points.map(p=>Number(p[key])||0);
+  const max=Math.max(1,...vals);
+  return points.map((p,i)=>{
+    const x=points.length===1?width/2:(i/(points.length-1))*width;
+    const y=height-(vals[i]/max)*(height-18)-9;
+    return (i===0?'M':'L')+x.toFixed(1)+' '+y.toFixed(1);
+  }).join(' ');
+}
+function drawTrends(history){
+  const panel=document.getElementById('trendPanel');
+  const pts=(history&&Array.isArray(history.points)?history.points:[]).slice(-30);
+  if(pts.length<2){
+    panel.innerHTML='<div class="trend-empty">Collecting history. Trend charts will appear after at least 2 verified snapshots.</div>';
+    return;
+  }
+  const width=900,height=170;
+  const p7=pts.slice(-7);
+  const pathEmails=linePath(p7,width,height,'firstEmailsSent');
+  const pathReplies=linePath(p7,width,height,'humanReplies');
+  const pathRevenue=linePath(p7,width,height,'revenueGbp');
+  panel.innerHTML='<div class="trend-head"><div><strong>Recent verified snapshots</strong><div class="sub">'+p7.length+' points shown</div></div><div class="trend-tabs"><span class="trend-tab active">7D</span><span class="trend-tab">30D</span></div></div><svg class="trend-chart" viewBox="0 0 '+width+' '+height+'" preserveAspectRatio="none"><path d="'+pathEmails+'" fill="none" stroke="currentColor" stroke-width="3" opacity=".95"/><path d="'+pathReplies+'" fill="none" stroke="currentColor" stroke-width="2" opacity=".55"/><path d="'+pathRevenue+'" fill="none" stroke="currentColor" stroke-width="2" opacity=".3"/></svg><div class="trend-legend"><span>Primary line: First emails</span><span>Secondary: Human replies</span><span>Faint: Revenue</span></div>';
+}
+
+const originalRefresh=refresh;
+refresh=async function(){
+  try{
+    const [data,history]=await Promise.all([buildData(),loadHistory()]);
+    set('activeFunnels',(data.activeFunnels||15)+' Active Funnels');
+    drawGlance(data);drawMilestones(data);drawAttention(data);drawAds(data);drawGoals(data);drawConversionFunnel(data);drawReplyCentre(data);drawPriorities(data);drawCategoryGrid(data);drawSummary(data);drawTimeline(data);drawFunnels(data);drawTrends(history);
+    nextRefreshAt=Date.now()+REFRESH_MS;
+  }catch(e){
+    console.error(e);
+    set('lastUpdated','Telemetry refresh failed — retrying automatically');
+  }
+};
