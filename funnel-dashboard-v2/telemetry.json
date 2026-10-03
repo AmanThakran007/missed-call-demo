@@ -1,0 +1,97 @@
+{
+  "generatedAt": "2026-10-03T03:55:00+01:00",
+  "activeFunnels": 15,
+  "ads": {
+    "webscan-agency-white-label-36-test": {
+      "campaignName": "WebScan Agency White Label - £36 Test",
+      "status": "ACTIVE",
+      "deliveryStatus": "ELIGIBLE",
+      "lifetimeBudgetGbp": 36,
+      "spendGbp": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": null,
+      "cpcGbp": null,
+      "reviewStatus": "IN_REVIEW",
+      "milestone": "WAITING_FOR_FIRST_DELIVERY",
+      "lastChecked": "2026-10-03T03:45:00+01:00"
+    }
+  },
+  "funnels": {
+    "dpdp-buyer-outreach": {
+      "name": "DPDP Buyer Outreach",
+      "category": "DPDP",
+      "freshness": "AWAITING_FIRST_SYNC"
+    },
+    "b2b-appointment-setting": {
+      "name": "B2B Appointment Setting",
+      "category": "Appointment Setting",
+      "freshness": "AWAITING_FIRST_SYNC"
+    },
+    "webscan-general-sme": {
+      "name": "WebScan General SME",
+      "category": "WebScan",
+      "freshness": "AWAITING_FIRST_SYNC"
+    },
+    "webscan-healthcare": {
+      "name": "WebScan Healthcare",
+      "category": "WebScan",
+      "freshness": "AWAITING_FIRST_SYNC"
+    },
+    "webscan-professional-services": {
+      "name": "WebScan Professional Services",
+      "category": "WebScan",
+      "freshness": "AWAITING_FIRST_SYNC"
+    },
+    "webscan-agency-white-label": {
+      "name": "WebScan Agency White Label",
+      "category": "WebScan",
+      "freshness": "AWAITING_FIRST_SYNC"
+    },
+    "uk-resourcer-outreach": {
+      "name": "UK Resourcer Outreach",
+      "category": "Recruitment",
+      "freshness": "AWAITING_FIRST_SYNC"
+    },
+    "nurse-referral-uk": {
+      "name": "Nurse Referral UK",
+      "category": "Nurse Referral",
+      "freshness": "AWAITING_FIRST_SYNC"
+    },
+    "nurse-referral-us": {
+      "name": "Nurse Referral US",
+      "category": "Nurse Referral",
+      "freshness": "AWAITING_FIRST_SYNC"
+    },
+    "nclex-growth-core": {
+      "name": "NCLEX Growth Core",
+      "category": "NCLEX",
+      "freshness": "AWAITING_FIRST_SYNC"
+    },
+    "nclex-colleges": {
+      "name": "NCLEX Colleges",
+      "category": "NCLEX",
+      "freshness": "AWAITING_FIRST_SYNC"
+    },
+    "nclex-creators": {
+      "name": "NCLEX Creators",
+      "category": "NCLEX",
+      "freshness": "AWAITING_FIRST_SYNC"
+    },
+    "nclex-recruiter-partnerships": {
+      "name": "NCLEX Recruiter Partnerships",
+      "category": "NCLEX",
+      "freshness": "AWAITING_FIRST_SYNC"
+    },
+    "bharatfare-supplier-outreach": {
+      "name": "BharatFare Supplier Outreach",
+      "category": "BharatFare",
+      "freshness": "AWAITING_FIRST_SYNC"
+    },
+    "bharatfare-agent-partnerships": {
+      "name": "BharatFare Agent Partnerships",
+      "category": "BharatFare",
+      "freshness": "AWAITING_FIRST_SYNC"
+    }
+  }
+}
