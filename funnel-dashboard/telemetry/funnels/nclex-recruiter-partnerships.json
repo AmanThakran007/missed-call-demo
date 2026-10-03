@@ -11,7 +11,7 @@
   "customersWon": 0,
   "revenueGbp": 0,
   "lastRun": "2026-10-03T11:42:34+01:00",
-  "nextRun": "2026-10-03T12:41:00+01:00",
-  "freshness": "LIVE",
-  "blocker": null
+  "nextRun": null,
+  "freshness": "STALE",
+  "blocker": "Automation currently disabled, verified 2026-10-03. Previous LIVE record is stale. Earlier runs reported blocked email sends and telemetry writes; exact rejection reasons unavailable. Historical metrics retained; no campaign completion claimed by this status correction."
 }
