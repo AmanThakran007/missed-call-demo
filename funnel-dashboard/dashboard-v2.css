@@ -56,3 +56,33 @@ footer{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;color:var(--m
 @media(max-width:950px){.glance-strip{grid-template-columns:repeat(3,1fr)}.category-grid{grid-template-columns:repeat(2,1fr)}.visual-grid{grid-template-columns:1fr}}
 @media(max-width:800px){.app{padding:13px}.topbar{align-items:flex-start;padding:18px;border-radius:18px}.header-status{flex-direction:column;align-items:flex-end}.refresh-chip{padding:7px 10px}.sync-strip{align-items:flex-start}.metrics{grid-template-columns:repeat(2,1fr)}.metric.wide{grid-column:span 2}.summary-grid{grid-template-columns:repeat(2,1fr)}.funnel-list{grid-template-columns:1fr}.hero-card{padding:15px}.hero-card-top{align-items:flex-start}.mini-sync{min-width:120px}.category-grid{grid-template-columns:1fr}}
 @media(max-width:480px){.topbar{display:block}.header-status{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;align-items:stretch}.header-status .pill,.refresh-chip{justify-content:center;text-align:center}.sync-strip{display:block}.sync-right{text-align:left;margin-top:8px}.section{margin:23px 0}.section-head{align-items:flex-start}.legend-inline{display:none}.hero-card-top{display:block}.mini-sync{text-align:left;margin-top:12px}.metrics{gap:8px}.metric{min-height:72px;padding:11px}.summary-card{padding:14px}.funnel-card{padding:14px}.row{gap:12px}.row strong{max-width:52%}.card-footer{display:block}.button{width:100%;margin-top:12px}.glance-strip{grid-template-columns:repeat(2,1fr)}.panel{padding:14px}.milestone{grid-template-columns:28px 1fr}.milestone-state{grid-column:2}.category-stats{grid-template-columns:repeat(3,1fr)}}
+
+.goals-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
+.goal-card{padding:16px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(180deg,rgba(15,30,49,.9),rgba(10,22,38,.9))}
+.goal-card span{display:block;color:var(--muted);font-size:10px}
+.goal-card strong{display:block;font-size:18px;margin-top:5px}
+.goal-progress{height:7px;background:rgba(148,163,184,.11);border-radius:999px;margin-top:12px;overflow:hidden}
+.goal-progress i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),var(--blue));border-radius:999px}
+.goal-foot{display:flex;justify-content:space-between;gap:8px;margin-top:7px;color:var(--muted);font-size:9px}
+.conversion-funnel{padding:18px;border-radius:20px;display:grid;gap:10px}
+.funnel-step{display:grid;grid-template-columns:minmax(110px,1fr) 3fr auto;align-items:center;gap:12px}
+.funnel-step-label{font-size:11px;color:var(--muted)}
+.funnel-bar{height:28px;border-radius:9px;background:rgba(148,163,184,.08);overflow:hidden;border:1px solid var(--line)}
+.funnel-bar-fill{height:100%;background:linear-gradient(90deg,var(--teal),var(--blue));border-radius:8px}
+.funnel-step strong{font-size:12px}
+.action-priority-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.reply-centre,.priority-list{display:grid;gap:10px;margin-top:14px}
+.reply-item,.priority-item{padding:12px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.02)}
+.reply-item strong,.priority-item strong{display:block;font-size:12px}
+.reply-item span,.priority-item span{display:block;font-size:10px;color:var(--muted);margin-top:4px}
+.priority-num{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:rgba(45,212,191,.12);color:#99f6e4;font-size:10px;font-weight:900;margin-right:7px}
+.trend-panel{padding:18px;border-radius:20px}
+.trend-head{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:13px}
+.trend-tabs{display:flex;gap:6px}
+.trend-tab{border:1px solid var(--line);background:rgba(255,255,255,.02);color:var(--muted);padding:6px 9px;border-radius:999px;font-size:10px}
+.trend-tab.active{color:#ccfbf1;border-color:rgba(45,212,191,.3);background:rgba(45,212,191,.07)}
+.trend-chart{width:100%;height:180px;display:block}
+.trend-legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px;color:var(--muted);font-size:10px}
+.trend-empty{padding:28px 12px;text-align:center;color:var(--muted);font-size:12px}
+@media(max-width:950px){.goals-grid{grid-template-columns:repeat(2,1fr)}.action-priority-grid{grid-template-columns:1fr}}
+@media(max-width:480px){.goals-grid{grid-template-columns:1fr}.funnel-step{grid-template-columns:90px 1fr auto}.trend-panel{padding:14px}}
