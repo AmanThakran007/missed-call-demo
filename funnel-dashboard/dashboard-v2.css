@@ -86,3 +86,7 @@ footer{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;color:var(--m
 .trend-empty{padding:28px 12px;text-align:center;color:var(--muted);font-size:12px}
 @media(max-width:950px){.goals-grid{grid-template-columns:repeat(2,1fr)}.action-priority-grid{grid-template-columns:1fr}}
 @media(max-width:480px){.goals-grid{grid-template-columns:1fr}.funnel-step{grid-template-columns:90px 1fr auto}.trend-panel{padding:14px}}
+
+
+/* Six-inbox operations */
+.ops-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}.ops-card{padding:16px;border:1px solid var(--line);border-radius:14px}.ops-card span,.ops-card small{display:block;color:var(--muted);font-size:12px}.ops-card strong{display:block;margin:8px 0;font-size:16px}.ops-note{color:var(--muted);font-size:13px;line-height:1.6;margin:12px 0;overflow-wrap:anywhere}.ops-scroll{overflow-x:auto;max-width:100%}.ops-table{width:100%;border-collapse:collapse;text-align:left;font-size:13px}.ops-table th,.ops-table td{padding:13px 10px;border-bottom:1px solid var(--line);vertical-align:top}.ops-table th{color:var(--muted);font-size:11px}.ops-filter{font-size:12px;color:var(--muted)}.ops-filter select{background:var(--bg2);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:9px}.panel details summary{cursor:pointer;color:var(--amber);padding:12px 0}.action-priority-grid>*,.section-head>*{min-width:0}@media(max-width:700px){.ops-cards{grid-template-columns:1fr}.ops-filter{display:block}.section-head{flex-wrap:wrap}}
