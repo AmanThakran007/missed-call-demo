@@ -11,5 +11,30 @@
   "cpcGbp": null,
   "reviewStatus": "approved",
   "milestone": "WAITING_FOR_FIRST_DELIVERY",
-  "lastChecked": "2026-10-03T17:05:08+01:00"
+  "lastChecked": "2026-10-03T17:30:11+01:00",
+  "reportingWindow": {
+    "type": "trailing_completed_account_local_days",
+    "days": 7,
+    "result": "No performance row returned; impression, click, CTR and CPC values remain unavailable."
+  },
+  "sourceChecks": {
+    "campaignDelivery": {
+      "checkedAt": "2026-10-03T17:30:11+01:00",
+      "result": "Active, eligible, £0 recent spend, no campaign issues; readiness, low-bid and descendant checks complete."
+    },
+    "adGroup": {
+      "checkedAt": "2026-10-03T17:30:11+01:00",
+      "result": "Active; no serving issues; bid not flagged as too low."
+    },
+    "ad": {
+      "checkedAt": "2026-10-03T17:30:11+01:00",
+      "result": "Active and approved; no serving issues."
+    },
+    "github": {
+      "checkedAt": "2026-10-03T17:30:11+01:00",
+      "repository": "AmanThakran007/missed-call-demo",
+      "path": "funnel-dashboard/telemetry/ads/webscan-agency-white-label-36-test.json",
+      "priorBlobSha": "1b679f6ffa9da429b2bda9811cb63d10c450086b"
+    }
+  }
 }
