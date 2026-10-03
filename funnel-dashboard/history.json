@@ -1,7 +1,13 @@
 {
   "points": [
     {
-      "date": "2026-10-03"
+      "date": "2026-10-03",
+      "firstEmailsSent": 31,
+      "humanReplies": 4,
+      "positiveReplies": 4,
+      "callsDemosRequested": 1,
+      "customersWon": 0,
+      "revenueGbp": 0
     }
   ]
 }
