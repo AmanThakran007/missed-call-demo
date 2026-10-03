@@ -1,0 +1,260 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-03T20:44:08.478Z",
+  "scope": "Scheduler snapshot plus targeted Gmail thread audit. Cumulative funnel metrics remain separately sourced; enabled and fresh telemetry do not prove successful sends.",
+  "rows": [
+    {
+      "id": "dpdp-buyer-outreach",
+      "name": "DPDP Buyer Outreach",
+      "enabled": true,
+      "lastAutomationRun": "2026-10-03T20:41:07.082567+00:00",
+      "nextAutomationRun": null,
+      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "followUpAudit": {
+        "status": "TIMING_REVIEW",
+        "checkedAt": "2026-10-03T20:44:08.478Z",
+        "due": null,
+        "overdue": null,
+        "summary": "9 first follow-ups verified in the original Gmail threads: 1 on Day 3, 3 on Day 4, 5 on Day 5. Day 5 differs from the current Day 3–4 rule; historical policy timing is not established. No received messages in these 9 threads. Known bounced address has no later send in the inspected Sent range. Global overdue and cross-thread suppression checks remain unverified.",
+        "scope": "Nine first-follow-up threads sent on 2–3 October; not the complete historical campaign.",
+        "checkedThreads": 9,
+        "verifiedFollowUps": 9,
+        "day5FollowUps": 5
+      }
+    },
+    {
+      "id": "b2b-appointment-setting",
+      "name": "B2B Appointment Setting",
+      "enabled": true,
+      "lastAutomationRun": "2026-10-03T19:38:10.717146+00:00",
+      "nextAutomationRun": null,
+      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "followUpAudit": {
+        "status": "UNVERIFIED",
+        "checkedAt": null,
+        "due": null,
+        "overdue": null,
+        "summary": "No complete due/overdue thread audit recorded."
+      }
+    },
+    {
+      "id": "webscan-general-sme",
+      "name": "WebScan General SME",
+      "enabled": true,
+      "lastAutomationRun": "2026-10-03T20:33:54.424778+00:00",
+      "nextAutomationRun": null,
+      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "followUpAudit": {
+        "status": "NOT_DUE",
+        "checkedAt": "2026-10-03T20:44:08.478Z",
+        "due": 0,
+        "overdue": 0,
+        "summary": "21 first touches verified in Sent on 3 October; no follow-ups due yet. First window 6–7 October, final window 10–11 October if still eligible. Read all replies and suppression history again before sending. This does not certify older trades campaigns.",
+        "scope": "21 current WebScan first-touch threads dated 3 October only; older trades outreach excluded.",
+        "checkedThreads": 21,
+        "nextWindow": "2026-10-06 to 2026-10-07"
+      }
+    },
+    {
+      "id": "webscan-healthcare",
+      "name": "WebScan Healthcare",
+      "enabled": true,
+      "lastAutomationRun": "2026-10-03T19:53:08.683376+00:00",
+      "nextAutomationRun": null,
+      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "followUpAudit": {
+        "status": "NOT_DUE",
+        "checkedAt": "2026-10-03T20:44:08.478Z",
+        "due": 0,
+        "overdue": 0,
+        "summary": "One first-touch thread from 3 October; first follow-up window 6–7 October, final window 10–11 October if no human reply, bounce or opt-out.",
+        "checkedThreads": 1,
+        "nextWindow": "2026-10-06 to 2026-10-07"
+      }
+    },
+    {
+      "id": "webscan-professional-services",
+      "name": "WebScan Professional Services",
+      "enabled": true,
+      "lastAutomationRun": "2026-10-03T20:37:07.282321+00:00",
+      "nextAutomationRun": null,
+      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "followUpAudit": {
+        "status": "UNVERIFIED",
+        "checkedAt": null,
+        "due": null,
+        "overdue": null,
+        "summary": "No complete due/overdue thread audit recorded."
+      }
+    },
+    {
+      "id": "webscan-agency-white-label",
+      "name": "WebScan Agency White Label",
+      "enabled": true,
+      "lastAutomationRun": "2026-10-03T20:29:05.592036+00:00",
+      "nextAutomationRun": null,
+      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "followUpAudit": {
+        "status": "UNVERIFIED",
+        "checkedAt": null,
+        "due": null,
+        "overdue": null,
+        "summary": "No complete due/overdue thread audit recorded."
+      }
+    },
+    {
+      "id": "webscan-inbound-leads",
+      "name": "WebScan Inbound Leads",
+      "enabled": true,
+      "lastAutomationRun": "2026-10-03T19:17:05.954230+00:00",
+      "nextAutomationRun": null,
+      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "followUpAudit": {
+        "status": "NOT_DUE",
+        "checkedAt": "2026-10-03T20:44:08.478Z",
+        "due": 0,
+        "overdue": 0,
+        "summary": "Two outgoing messages to one inbound lead verified on 3 October: clarification then findings. Neither is a cold follow-up. First no-reply follow-up window 6–7 October; deduplicate by lead across both threads.",
+        "checkedThreads": 2
+      }
+    },
+    {
+      "id": "uk-resourcer-outreach",
+      "name": "UK Resourcer Outreach",
+      "enabled": true,
+      "lastAutomationRun": "2026-10-03T20:37:08.101449+00:00",
+      "nextAutomationRun": null,
+      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "followUpAudit": {
+        "status": "UNVERIFIED",
+        "checkedAt": null,
+        "due": null,
+        "overdue": null,
+        "summary": "No complete due/overdue thread audit recorded."
+      }
+    },
+    {
+      "id": "nurse-referral-uk",
+      "name": "Nurse Referral UK",
+      "enabled": true,
+      "lastAutomationRun": "2026-10-03T20:40:59.813808+00:00",
+      "nextAutomationRun": null,
+      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "followUpAudit": {
+        "status": "DRAFT_PENDING",
+        "checkedAt": "2026-10-03T20:44:08.478Z",
+        "due": null,
+        "overdue": null,
+        "summary": "One TPG follow-up exists as an unsent Gmail draft. Initial email 30 September; Day 3–4 window is 3–4 October. Recorded sending hold remains; draft is not counted as sent. Other campaign threads not fully audited.",
+        "checkedThreads": 1
+      }
+    },
+    {
+      "id": "nurse-referral-us",
+      "name": "Nurse Referral US",
+      "enabled": true,
+      "lastAutomationRun": "2026-10-03T19:50:23.627243+00:00",
+      "nextAutomationRun": null,
+      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "followUpAudit": {
+        "status": "CONVERSATION_VERIFIED",
+        "checkedAt": "2026-10-03T20:44:08.478Z",
+        "due": null,
+        "overdue": null,
+        "summary": "WorldWide HealthStaff thread contains 2 human replies and 2 contextual outgoing answers. Latest outgoing answer 2 October asks about advertising/referral rules. These are conversation responses, not cold no-reply follow-ups. Other US prospects remain subject to recorded sending holds.",
+        "checkedThreads": 1
+      }
+    },
+    {
+      "id": "nclex-growth-core",
+      "name": "NCLEX Growth Core",
+      "enabled": true,
+      "lastAutomationRun": "2026-10-03T19:54:52.565909+00:00",
+      "nextAutomationRun": null,
+      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "followUpAudit": {
+        "status": "UNVERIFIED",
+        "checkedAt": null,
+        "due": null,
+        "overdue": null,
+        "summary": "No complete due/overdue thread audit recorded."
+      }
+    },
+    {
+      "id": "nclex-colleges",
+      "name": "NCLEX Colleges",
+      "enabled": false,
+      "lastAutomationRun": "2026-10-03T14:42:23.010420+00:00",
+      "nextAutomationRun": null,
+      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "followUpAudit": {
+        "status": "UNVERIFIED",
+        "checkedAt": null,
+        "due": null,
+        "overdue": null,
+        "summary": "No complete due/overdue thread audit recorded."
+      }
+    },
+    {
+      "id": "nclex-creators",
+      "name": "NCLEX Creators",
+      "enabled": true,
+      "lastAutomationRun": "2026-10-03T19:49:02.902990+00:00",
+      "nextAutomationRun": null,
+      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "followUpAudit": {
+        "status": "UNVERIFIED",
+        "checkedAt": null,
+        "due": null,
+        "overdue": null,
+        "summary": "No complete due/overdue thread audit recorded."
+      }
+    },
+    {
+      "id": "nclex-recruiter-partnerships",
+      "name": "NCLEX Recruiter Partnerships",
+      "enabled": false,
+      "lastAutomationRun": "2026-10-03T14:39:07.905647+00:00",
+      "nextAutomationRun": null,
+      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "followUpAudit": {
+        "status": "UNVERIFIED",
+        "checkedAt": null,
+        "due": null,
+        "overdue": null,
+        "summary": "No complete due/overdue thread audit recorded."
+      }
+    },
+    {
+      "id": "bharatfare-supplier-outreach",
+      "name": "BharatFare Supplier Outreach",
+      "enabled": true,
+      "lastAutomationRun": "2026-10-03T19:48:03.188588+00:00",
+      "nextAutomationRun": null,
+      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "followUpAudit": {
+        "status": "PARTIAL",
+        "checkedAt": "2026-10-03T20:44:08.478Z",
+        "due": null,
+        "overdue": null,
+        "summary": "Two supplier follow-up messages verified in Sent on 2 October; both are separate Gmail threads referencing earlier enquiries. Full recipient-history audit is needed before certifying timing or suppression across threads. Cumulative telemetry records 3 follow-ups.",
+        "checkedThreads": 2
+      }
+    },
+    {
+      "id": "bharatfare-agent-partnerships",
+      "name": "BharatFare Agent Partnerships",
+      "enabled": true,
+      "lastAutomationRun": "2026-10-03T19:49:03.980372+00:00",
+      "nextAutomationRun": null,
+      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "followUpAudit": {
+        "status": "UNVERIFIED",
+        "checkedAt": null,
+        "due": null,
+        "overdue": null,
+        "summary": "No complete due/overdue thread audit recorded."
+      }
+    }
+  ]
+}
