@@ -1,4 +1,17 @@
 {
   "id": "nurse-referral-us",
-  "freshness": "AWAITING_FIRST_SYNC"
+  "name": "Nurse Referral US",
+  "category": "Nurse Referral",
+  "prospectsResearched": 2,
+  "firstEmailsSent": 1,
+  "followUpsSent": 2,
+  "humanReplies": 2,
+  "positiveReplies": 2,
+  "callsDemosRequested": 0,
+  "customersWon": 0,
+  "revenueGbp": 0,
+  "lastRun": "2026-10-03T07:45:23+01:00",
+  "nextRun": "2026-10-03T08:44:00+01:00",
+  "freshness": "LIVE",
+  "blocker": "Awaiting WorldWide HealthStaff reply on paid-advertising/referral-tracking rules; Avant affiliate inquiry remains under review."
 }
