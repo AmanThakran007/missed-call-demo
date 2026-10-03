@@ -16,7 +16,7 @@
     "FIRST_SPEND",
     "FIRST_CLICK"
   ],
-  "lastChecked": "2026-10-03T23:29:14+01:00",
+  "lastChecked": "2026-10-04T00:05:53.602+01:00",
   "freshness": "LIVE",
   "blocker": "AD_ACCOUNT_THRESHOLD_PAYMENT_FAILED",
   "reportingWindow": {
@@ -27,26 +27,26 @@
   },
   "sourceChecks": {
     "campaignDelivery": {
-      "checkedAt": "2026-10-03T23:29:14+01:00",
-      "result": "Campaign remains paused and inactive. Current serving issues are campaign_not_active and ad_account_threshold_payment_failed; recent spend in the delivery check is £0."
+      "checkedAt": "2026-10-04T00:05:53.602+01:00",
+      "result": "Campaign remains paused and inactive. Current serving issues are campaign_not_active and ad_account_threshold_payment_failed; no fresh 24-hour performance metrics were returned."
     },
     "performanceApi": {
-      "checkedAt": "2026-10-03T23:29:14+01:00",
-      "result": "The latest completed account-local day returned no performance row. Preserved the previously verified preliminary Ads Manager UI metrics without recalculation."
+      "checkedAt": "2026-10-04T00:05:53.602+01:00",
+      "result": "The trailing completed 24-hour request returned no spend, impression or click values. Preserved the previously verified preliminary Ads Manager UI metrics without recalculation."
     },
     "ad": {
-      "checkedAt": "2026-10-03T23:29:14+01:00",
+      "checkedAt": "2026-10-04T00:05:53.602+01:00",
       "result": "Ad group and creative remain active. Creative review is approved. No low-bid warning was returned; serving remains blocked by the paused campaign and account threshold payment failure."
     },
     "gmail": {
-      "checkedAt": "2026-10-03T23:29:14+01:00",
-      "result": "No new WebScan Agency White Label reply, bounce, opt-out, billing or delivery email was found across the six authorized inboxes."
+      "checkedAt": "2026-10-04T00:05:53.602+01:00",
+      "result": "No new WebScan ad reply, bounce, opt-out, billing or delivery message was found across the six authorized inboxes. Newly received messages were unrelated security or marketing notices."
     },
     "github": {
-      "checkedAt": "2026-10-03T23:29:14+01:00",
+      "checkedAt": "2026-10-04T00:05:53.602+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/ads/webscan-agency-white-label-36-test.json",
-      "priorBlobSha": "238d7152422a06142205598945d02cd9a2f92342"
+      "priorBlobSha": "588cb847618ef65e9af36f005ed32643d5d7881d"
     }
   }
 }
