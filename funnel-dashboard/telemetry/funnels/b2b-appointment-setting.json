@@ -10,8 +10,18 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T10:38:56+01:00",
+  "stageCounts": {
+    "Prospect": 4,
+    "Contacted": 0,
+    "Engaged": 0,
+    "Qualified": 0,
+    "CallProposal": 0,
+    "Won": 0,
+    "Lost": 0
+  },
+  "draftsPending": 2,
+  "lastRun": "2026-10-03T11:36:06+01:00",
   "nextRun": "2026-10-03T11:39:00+01:00",
   "freshness": "LIVE",
-  "blocker": "OUTREACH_SEND_BLOCKED_BY_SAFETY_CHECKS; 4 verified prospects researched, 0 sent, 2 Gmail drafts created for manual review"
+  "blocker": "OUTREACH_SEND_BLOCKED_BY_SAFETY_CHECKS_ON_PREVIOUS_ALLOWED_RUN; 2 verified Gmail drafts remain unsent"
 }
