@@ -11,7 +11,7 @@
   "customersWon": 0,
   "revenueGbp": 0,
   "lastRun": "2026-10-03T12:47:55+01:00",
-  "nextRun": "2026-10-03T13:48:00+01:00",
-  "freshness": "LIVE",
-  "blocker": "Additional new-outreach sends were blocked by platform safety checks after the first verified send; monitoring and telemetry sync remain operational."
+  "nextRun": null,
+  "freshness": "STALE",
+  "blocker": "Automation disabled as verified on 2026-10-03. Latest scheduler start: 2026-10-03T14:46:19Z; successful completion unverified. Earlier run reported TELEMETRY_SYNC_BLOCKED; additional outreach sends were blocked by platform safety checks. Historical campaign metrics retained; not revalidated by this status correction."
 }
