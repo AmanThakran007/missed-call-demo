@@ -282,7 +282,7 @@
     "The fixed-cap six-inbox workflow is configured but remains untested until a new-policy send and Sent-header readback occur on or after 4 October 2026.",
     "Prospect and reply queues remain UNVERIFIED because a complete cross-six private-ledger and thread audit has not succeeded; no queue count was inferred.",
     "Professional Services and Agency White Label retain recorded send-denial blockers; no blocked send was retried during this sync.",
-    "Repository write/readback is required before marking telemetry synchronized; public GitHub Pages visibility remains unverified in this client environment."
+    "Repository write and source readback passed; the public GitHub Pages JSON could not be fetched from this client, so public deployment visibility remains unverified."
   ],
   "automation": {
     "checkedAt": "2026-10-03T20:37:41.309Z",
