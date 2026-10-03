@@ -9,8 +9,8 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T10:49:28+01:00",
+  "lastRun": "2026-10-03T11:49:20+01:00",
   "freshness": "LIVE",
-  "blocker": "OUTBOUND_SEND_BLOCKED_BY_SAFETY",
+  "blocker": null,
   "prospectsResearched": 20
 }
