@@ -202,8 +202,13 @@ function drawWebscanMailboxes(s){
  card.appendChild(node('strong',!started?shown(r.configuredDailyCap)+' available from '+s.effectiveDate:remaining===null?'Remaining unverified':remaining+' remaining / '+r.configuredDailyCap));
  card.appendChild(node('small',!started?'Daily allowance starts tomorrow':current?shown(sent)+' WebScan outbound sent today':'Waiting for a current-day Gmail sync'));
  const bar=node('progress');bar.max=r.configuredDailyCap||50;bar.value=started&&current&&knownCount(sent)?Math.min(sent,bar.max):0;bar.setAttribute('aria-label',r.mailbox+' confirmed daily outbound sends');bar.style.cssText='width:100%;margin-top:12px;accent-color:var(--teal)';card.appendChild(bar);
+ const stats=node('dl');stats.style.cssText='display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0;font-size:13px';
+ const totalSent=knownCount(sent)&&knownCount(r.webscanInboundMessagesToday)?sent+r.webscanInboundMessagesToday:null;
+ const metrics=[['WebScan sent today',current?shown(totalSent):'Unverified'],['Confirmed delivered','Not tracked'],['Bounces reported today',current?shown(r.webscanBouncesToday):'Unverified'],['Opened','Not tracked'],['Link clicks','Not tracked'],['Human replies today',current?shown(r.webscanHumanRepliesToday):'Unverified'],['Opt-outs today',current?shown(r.webscanOptOutsToday):'Unverified']];
+ metrics.forEach(([label,value])=>{const dt=node('dt',label);dt.style.color='var(--muted)';const dd=node('dd',value);dd.style.cssText='margin:0;text-align:right;font-weight:700';stats.append(dt,dd)});card.appendChild(stats);
  card.appendChild(node('small','Last source sync: '+checked));counters.appendChild(card);
  });host.appendChild(counters);
+ noteAt(host,'Delivery and engagement: Gmail Sent confirms sending only. No bounce does not prove delivery or inbox placement. Delivery, opens and clicks are not tracked by this setup. Bounce, reply and opt-out figures are observed WebScan events for the displayed UK date, and may relate to earlier sends; they are not delivery or conversion rates. Sent today includes inbound responses, which do not consume the cold-outreach allowance.');
  noteAt(host,'Remaining decreases only after confirmed WebScan first touches or cold follow-ups are synced. Drafts and failed attempts do not consume quota. Page refreshes every 60 seconds; Gmail sync may lag. Each London day needs a fresh count before remaining is shown.');
  const details=node('details');details.appendChild(node('summary','Sending blockers and shortfall reasons'));
  s.rows.forEach(r=>{const reasons=Array.isArray(r.skippedReasons)?r.skippedReasons:[];noteAt(details,r.mailbox+': '+(reasons.length?reasons.join('; '):'No per-inbox shortfall explanation recorded.'))});
