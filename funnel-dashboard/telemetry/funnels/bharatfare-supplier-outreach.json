@@ -1,4 +1,17 @@
 {
   "id": "bharatfare-supplier-outreach",
-  "freshness": "AWAITING_FIRST_SYNC"
+  "name": "BharatFare Supplier Outreach",
+  "category": "BharatFare / Supplier Acquisition",
+  "prospectsResearched": 15,
+  "firstEmailsSent": 12,
+  "followUpsSent": 3,
+  "humanReplies": 2,
+  "positiveReplies": 2,
+  "callsDemosRequested": 1,
+  "customersWon": 0,
+  "revenueGbp": 0,
+  "lastRun": "2026-10-03T07:39:32+01:00",
+  "nextRun": "2026-10-03T08:41:00+01:00",
+  "freshness": "LIVE",
+  "blocker": null
 }
