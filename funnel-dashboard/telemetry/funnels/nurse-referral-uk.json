@@ -1,4 +1,17 @@
 {
   "id": "nurse-referral-uk",
-  "freshness": "AWAITING_FIRST_SYNC"
+  "name": "Nurse Referral UK",
+  "category": "Nurse Referral",
+  "prospectsResearched": 4,
+  "firstEmailsSent": 4,
+  "followUpsSent": 0,
+  "humanReplies": 0,
+  "positiveReplies": 0,
+  "callsDemosRequested": 0,
+  "customersWon": 0,
+  "revenueGbp": 0,
+  "lastRun": "2026-10-03T07:42:36+01:00",
+  "nextRun": "2026-10-03T08:39:00+01:00",
+  "freshness": "LIVE",
+  "blocker": null
 }
