@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "date": "2026-10-03",
   "timezone": "Europe/London",
-  "checkedAt": "2026-10-03T20:25:07.151Z",
-  "source": "Gmail Sent plus targeted WebScan received-mail checks across six connected inboxes",
+  "checkedAt": "2026-10-03T20:29:08.000Z",
+  "source": "Fully paginated Gmail Sent checks plus targeted WebScan received-mail checks across six connected inboxes",
   "status": "SOURCE_RECONCILED",
-  "scope": "Today's messages only; sent means in Gmail Sent, not confirmed delivered. Received checks cover WebScan keywords, known contacted senders and delivery notices. Self-tests/form notifications excluded from human replies.",
+  "scope": "London calendar-day and rolling-24-hour Sent counts are verified from Gmail. WebScan first touches and follow-ups are reconciled from Gmail Sent and all four funnel records. Received checks cover campaign replies, delivery notices and opt-outs; sent means present in Gmail Sent, not confirmed delivered.",
   "effectiveDate": "2026-10-04",
   "stagedCapsPerInbox": [
     25,
@@ -26,7 +26,9 @@
       "configuredDailyCap": 25,
       "qualifyingDaysAtStage": 0,
       "sourceRead": "VERIFIED",
-      "sixInboxSendTest": "NOT_YET_RUN"
+      "sixInboxSendTest": "NOT_YET_RUN",
+      "allSentRolling24h": 0,
+      "remainingQuotaForEffectiveDate": 25
     },
     {
       "mailbox": "Ecommerce inbox",
@@ -40,7 +42,9 @@
       "configuredDailyCap": 25,
       "qualifyingDaysAtStage": 0,
       "sourceRead": "VERIFIED",
-      "sixInboxSendTest": "NOT_YET_RUN"
+      "sixInboxSendTest": "NOT_YET_RUN",
+      "allSentRolling24h": 0,
+      "remainingQuotaForEffectiveDate": 25
     },
     {
       "mailbox": "BharatFare inbox",
@@ -54,7 +58,9 @@
       "configuredDailyCap": 25,
       "qualifyingDaysAtStage": 0,
       "sourceRead": "VERIFIED",
-      "sixInboxSendTest": "NOT_YET_RUN"
+      "sixInboxSendTest": "NOT_YET_RUN",
+      "allSentRolling24h": 0,
+      "remainingQuotaForEffectiveDate": 25
     },
     {
       "mailbox": "8891 inbox",
@@ -68,7 +74,9 @@
       "configuredDailyCap": 25,
       "qualifyingDaysAtStage": 0,
       "sourceRead": "VERIFIED",
-      "sixInboxSendTest": "NOT_YET_RUN"
+      "sixInboxSendTest": "NOT_YET_RUN",
+      "allSentRolling24h": 0,
+      "remainingQuotaForEffectiveDate": 25
     },
     {
       "mailbox": "Dreams inbox",
@@ -82,7 +90,9 @@
       "configuredDailyCap": 25,
       "qualifyingDaysAtStage": 0,
       "sourceRead": "VERIFIED",
-      "sixInboxSendTest": "NOT_YET_RUN"
+      "sixInboxSendTest": "NOT_YET_RUN",
+      "allSentRolling24h": 43,
+      "remainingQuotaForEffectiveDate": 25
     },
     {
       "mailbox": "Consulting inbox",
@@ -96,16 +106,23 @@
       "configuredDailyCap": 25,
       "qualifyingDaysAtStage": 0,
       "sourceRead": "VERIFIED",
-      "sixInboxSendTest": "NOT_YET_RUN"
+      "sixInboxSendTest": "NOT_YET_RUN",
+      "allSentRolling24h": 7,
+      "remainingQuotaForEffectiveDate": 25
     }
   ],
   "totals": {
     "allSentToday": 37,
+    "allSentRolling24h": 50,
     "webscanFirstTouchesToday": 22,
     "webscanFollowUpsToday": 0,
     "webscanInboundMessagesToday": 2,
-    "webscanTotalSentToday": 24,
-    "configuredDailyCap": 150
+    "webscanHumanRepliesToday": 0,
+    "webscanBouncesToday": 0,
+    "webscanOptOutsToday": 0,
+    "webscanTotalSentToday": 22,
+    "configuredDailyCap": 150,
+    "remainingQuotaForEffectiveDate": 150
   },
   "funnelFirstTouchesToday": {
     "webscan-general-sme": 21,
@@ -115,12 +132,16 @@
   },
   "verification": {
     "gmailRead": "PASSED",
+    "sentPagination": "COMPLETE",
     "funnelFirstTouchReconciliation": "PASSED",
+    "aggregateSumCheck": "PASSED",
+    "mailboxLoadGuardEvidence": "VERIFIED_BELOW_70_PER_INBOX",
     "futureScheduledSending": "NOT_YET_RUN",
     "senderHeaderChecks": "NOT_YET_RUN",
     "unrelatedCampaignCumulativeMetrics": "NOT_AUDITED"
   },
   "blockers": [
+    "The six-inbox workflow is configured but remains untested until new-policy sends and Sent-header readback occur on or after 4 October 2026.",
     "Professional Services and Agency White Label retain recorded send-denial blockers; no blocked send was retried during this sync."
   ]
 }
