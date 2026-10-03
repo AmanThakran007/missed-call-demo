@@ -10,65 +10,83 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T23:44:23+01:00",
-  "nextRun": "2026-10-04T00:48:00+01:00",
+  "lastRun": "2026-10-04T00:50:49+01:00",
+  "nextRun": "2026-10-04T01:48:00+01:00",
   "freshness": "LIVE",
   "blocker": null,
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-03T23:44:23+01:00",
+      "checkedAt": "2026-10-04T00:50:49+01:00",
       "accounts": [
         "amanthakranengland@gmail.com",
         "helpme.ecommerce@gmail.com",
         "bharatfare@gmail.com",
         "amanthakran8891@gmail.com",
         "amanthakran.dreams@gmail.com",
-        "aman.thakran.consulting@gmail.com"
+        "aman.thakran.consulting@gmail.com",
+        "amanthakranindia@gmail.com",
+        "bharatfare.team@gmail.com"
       ],
-      "scope": "All new mail since 2026-10-03T21:49:55+01:00 across the six authorized inboxes, including the existing healthcare outreach thread and healthcare reply, bounce, opt-out, question, call-request and buying-intent signals",
-      "result": "No healthcare-campaign human reply, bounce, opt-out, follow-up, question, call request or buying-intent event found. Unrelated promotional, security and travel-business messages were excluded; no healthcare outreach was sent outside the permitted hour."
+      "scope": "All new mail since 2026-10-03T23:44:23+01:00 and all Sent mail since 2026-10-04T00:00:00+01:00 across the eight authorized inboxes, including the existing healthcare outreach thread and healthcare reply, bounce, opt-out, question, call-request and buying-intent signals",
+      "result": "No healthcare-campaign human reply, bounce, opt-out, follow-up, question, call request or buying-intent event found. Two duplicated Google account-security notifications were excluded as unrelated. All eight Sent searches returned zero messages for the London day; no healthcare outreach was sent outside the permitted hour."
     },
     "github": {
-      "checkedAt": "2026-10-03T23:44:23+01:00",
+      "checkedAt": "2026-10-04T00:50:49+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/webscan-healthcare.json",
-      "priorBlobSha": "1989b202cec6f19bbb18d5826ea6affb660896e9"
+      "priorBlobSha": "9eeb07746dee3657b12427b99c4e97b53690c596"
     },
     "safetyReview": {
       "checkedAt": "2026-10-03T16:53:39+01:00",
       "result": "Previous task-wide email-safety hold explicitly reviewed and resolved; sending remains restricted to the configured outreach window and prospect-level safeguards."
     },
-    "sixInboxReconciliation": {
-      "checkedAt": "2026-10-03T23:44:23+01:00",
-      "date": "2026-10-03",
-      "scope": "Read-only new-mail reconciliation across all six authorized inboxes. The fixed-cap six-inbox policy begins on 2026-10-04 and has not yet completed a live send and Sent-header read-back cycle.",
-      "accountsChecked": 6,
+    "automation": {
+      "checkedAt": "2026-10-04T00:50:49+01:00",
+      "automationId": "6ac0618063a08191b12c9629a94a214a",
+      "enabled": true,
+      "result": "Continuity monitoring remains enabled."
+    },
+    "eightInboxReconciliation": {
+      "checkedAt": "2026-10-04T00:50:49+01:00",
+      "date": "2026-10-04",
+      "scope": "Read-only new-mail and London-day Sent reconciliation across all eight authorized inboxes. The eight-inbox fixed-cap policy is active; the two newly mapped inboxes still require first-successful-send From-header and provider-restriction verification before the setup can be called tested.",
+      "accountsChecked": 8,
       "status": "SOURCE_RECONCILED",
-      "dailyFirstTouches": 1,
+      "dailyFirstTouches": 0,
       "dailyFollowUps": 0,
+      "dailyOutboundHealthcare": 0,
       "mailboxSnapshotPath": "funnel-dashboard/telemetry/webscan-mailboxes.json",
-      "scheduledSendingStatus": "NOT_YET_RUN"
+      "scheduledSendingStatus": "NOT_YET_RUN",
+      "newlyMappedInboxVerification": {
+        "amanthakranindia@gmail.com": "PENDING_FIRST_SUCCESSFUL_SEND",
+        "bharatfare.team@gmail.com": "PENDING_FIRST_SUCCESSFUL_SEND"
+      },
+      "workflowTested": false
     }
   },
   "sendingPolicy": {
     "mode": "FIXED_CAP",
     "effectiveDate": "2026-10-04",
-    "capPerInbox": null,
-    "capPerInboxMin": 83,
-    "capPerInboxMax": 84,
-    "totalCap": 500,
+    "capPerInbox": 100,
+    "capPerInboxMin": 100,
+    "capPerInboxMax": 100,
+    "totalCap": 800,
     "stagedCapsPerInbox": [],
     "mailboxCaps": {
-      "amanthakranengland@gmail.com": 84,
-      "helpme.ecommerce@gmail.com": 84,
-      "bharatfare@gmail.com": 83,
-      "amanthakran8891@gmail.com": 83,
-      "amanthakran.dreams@gmail.com": 83,
-      "aman.thakran.consulting@gmail.com": 83
+      "amanthakranengland@gmail.com": 100,
+      "helpme.ecommerce@gmail.com": 100,
+      "bharatfare@gmail.com": 100,
+      "amanthakran8891@gmail.com": 100,
+      "amanthakran.dreams@gmail.com": 100,
+      "aman.thakran.consulting@gmail.com": 100,
+      "amanthakranindia@gmail.com": 100,
+      "bharatfare.team@gmail.com": 100
     },
-    "healthcareBudgetPerInbox": 17,
-    "aggregateHealthcareBudget": 102,
+    "healthcareBudgetPerInbox": 20,
+    "aggregateHealthcareBudget": 160,
     "allCampaignSentGuardPerInbox": 120,
-    "note": "Caps are ceilings, not targets. Unused allowance is not transferable; all suppression, ownership, sender-identity, Sent-history and delivery guards remain active."
+    "inboxCount": 8,
+    "workflowTested": false,
+    "note": "Caps are ceilings, not targets. Unused allowance is not transferable; due cold follow-ups use the Healthcare budget first. All suppression, ownership, sender-identity, Sent-history and delivery guards remain active. The two newly mapped inboxes require returned/Sent From-header and provider-restriction verification after their first successful WebScan send."
   }
 }
