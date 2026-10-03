@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-03",
+  "timezone": "Europe/London",
+  "checkedAt": "2026-10-03T20:25:07.151Z",
+  "source": "Gmail Sent plus targeted WebScan received-mail checks across six connected inboxes",
+  "status": "SOURCE_RECONCILED",
+  "scope": "Today's messages only; sent means in Gmail Sent, not confirmed delivered. Received checks cover WebScan keywords, known contacted senders and delivery notices. Self-tests/form notifications excluded from human replies.",
+  "effectiveDate": "2026-10-04",
+  "stagedCapsPerInbox": [
+    25,
+    30,
+    40,
+    50
+  ],
+  "rows": [
+    {
+      "mailbox": "England inbox",
+      "allSentToday": 0,
+      "webscanFirstTouchesToday": 0,
+      "webscanFollowUpsToday": 0,
+      "webscanInboundMessagesToday": 0,
+      "webscanHumanRepliesToday": 0,
+      "webscanBouncesToday": 0,
+      "webscanOptOutsToday": 0,
+      "configuredDailyCap": 25,
+      "qualifyingDaysAtStage": 0,
+      "sourceRead": "VERIFIED",
+      "sixInboxSendTest": "NOT_YET_RUN"
+    },
+    {
+      "mailbox": "Ecommerce inbox",
+      "allSentToday": 0,
+      "webscanFirstTouchesToday": 0,
+      "webscanFollowUpsToday": 0,
+      "webscanInboundMessagesToday": 0,
+      "webscanHumanRepliesToday": 0,
+      "webscanBouncesToday": 0,
+      "webscanOptOutsToday": 0,
+      "configuredDailyCap": 25,
+      "qualifyingDaysAtStage": 0,
+      "sourceRead": "VERIFIED",
+      "sixInboxSendTest": "NOT_YET_RUN"
+    },
+    {
+      "mailbox": "BharatFare inbox",
+      "allSentToday": 0,
+      "webscanFirstTouchesToday": 0,
+      "webscanFollowUpsToday": 0,
+      "webscanInboundMessagesToday": 0,
+      "webscanHumanRepliesToday": 0,
+      "webscanBouncesToday": 0,
+      "webscanOptOutsToday": 0,
+      "configuredDailyCap": 25,
+      "qualifyingDaysAtStage": 0,
+      "sourceRead": "VERIFIED",
+      "sixInboxSendTest": "NOT_YET_RUN"
+    },
+    {
+      "mailbox": "8891 inbox",
+      "allSentToday": 0,
+      "webscanFirstTouchesToday": 0,
+      "webscanFollowUpsToday": 0,
+      "webscanInboundMessagesToday": 0,
+      "webscanHumanRepliesToday": 0,
+      "webscanBouncesToday": 0,
+      "webscanOptOutsToday": 0,
+      "configuredDailyCap": 25,
+      "qualifyingDaysAtStage": 0,
+      "sourceRead": "VERIFIED",
+      "sixInboxSendTest": "NOT_YET_RUN"
+    },
+    {
+      "mailbox": "Dreams inbox",
+      "allSentToday": 30,
+      "webscanFirstTouchesToday": 22,
+      "webscanFollowUpsToday": 0,
+      "webscanInboundMessagesToday": 2,
+      "webscanHumanRepliesToday": 0,
+      "webscanBouncesToday": 0,
+      "webscanOptOutsToday": 0,
+      "configuredDailyCap": 25,
+      "qualifyingDaysAtStage": 0,
+      "sourceRead": "VERIFIED",
+      "sixInboxSendTest": "NOT_YET_RUN"
+    },
+    {
+      "mailbox": "Consulting inbox",
+      "allSentToday": 7,
+      "webscanFirstTouchesToday": 0,
+      "webscanFollowUpsToday": 0,
+      "webscanInboundMessagesToday": 0,
+      "webscanHumanRepliesToday": 0,
+      "webscanBouncesToday": 0,
+      "webscanOptOutsToday": 0,
+      "configuredDailyCap": 25,
+      "qualifyingDaysAtStage": 0,
+      "sourceRead": "VERIFIED",
+      "sixInboxSendTest": "NOT_YET_RUN"
+    }
+  ],
+  "totals": {
+    "allSentToday": 37,
+    "webscanFirstTouchesToday": 22,
+    "webscanFollowUpsToday": 0,
+    "webscanInboundMessagesToday": 2,
+    "webscanTotalSentToday": 24,
+    "configuredDailyCap": 150
+  },
+  "funnelFirstTouchesToday": {
+    "webscan-general-sme": 21,
+    "webscan-healthcare": 1,
+    "webscan-professional-services": 0,
+    "webscan-agency-white-label": 0
+  },
+  "verification": {
+    "gmailRead": "PASSED",
+    "funnelFirstTouchReconciliation": "PASSED",
+    "futureScheduledSending": "NOT_YET_RUN",
+    "senderHeaderChecks": "NOT_YET_RUN",
+    "unrelatedCampaignCumulativeMetrics": "NOT_AUDITED"
+  },
+  "blockers": [
+    "Professional Services and Agency White Label retain recorded send-denial blockers; no blocked send was retried during this sync."
+  ]
+}
