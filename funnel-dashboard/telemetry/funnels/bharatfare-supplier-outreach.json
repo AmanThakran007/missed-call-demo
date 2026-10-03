@@ -10,29 +10,29 @@
   "callsDemosRequested": 2,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T20:45:49+01:00",
-  "nextRun": "2026-10-03T21:41:00+01:00",
+  "lastRun": "2026-10-03T21:44:52+01:00",
+  "nextRun": "2026-10-03T22:41:00+01:00",
   "freshness": "LIVE",
   "blocker": null,
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-03T20:46:14+01:00",
+      "checkedAt": "2026-10-03T21:44:55+01:00",
       "accounts": [
         "amanthakran.dreams@gmail.com",
         "aman.thakran.consulting@gmail.com"
       ],
-      "scope": "All new mail since 2026-10-03T19:46:00+01:00, including supplier replies, bounces, opt-outs, onboarding steps, commercial terms, API/NDC updates, payment or credit questions, and call requests",
-      "result": "No new supplier reply, bounce, opt-out, onboarding question, commercial-term update, API/NDC update, payment or credit question, or call request. A TravClan authentication message, unrelated promotion, and self-submitted BharatFare WebRevenue Scan messages were excluded."
+      "scope": "All new mail since 2026-10-03T20:46:14+01:00, including supplier replies, bounces, opt-outs, onboarding steps, commercial terms, API/NDC updates, payment or credit questions, and call requests",
+      "result": "No new supplier reply, bounce, opt-out, onboarding question, commercial-term update, API/NDC update, payment or credit question, or call request. Google account-connection security alerts were excluded as non-campaign mail. No outreach was sent outside the permitted hour."
     },
     "verifiedResearch": {
       "checkedAt": "2026-10-03T16:39:52+01:00",
       "result": "Preserved 20 verified researched suppliers, including WebBeds, RezLive, Stuba, RateHawk and TripJack."
     },
     "github": {
-      "checkedAt": "2026-10-03T20:46:14+01:00",
+      "checkedAt": "2026-10-03T21:44:55+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/bharatfare-supplier-outreach.json",
-      "priorBlobSha": "3903897c5c8f002b4d813aeacfbf6265febcb1f3"
+      "priorBlobSha": "55199eee63bdc4f9cdc804c905b4db44c5694c6d"
     }
   }
 }
