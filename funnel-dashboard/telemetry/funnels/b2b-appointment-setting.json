@@ -1,0 +1,17 @@
+{
+  "id": "b2b-appointment-setting",
+  "name": "B2B Appointment Setting",
+  "category": "B2B / Appointment Setting",
+  "prospectsResearched": 0,
+  "firstEmailsSent": 0,
+  "followUpsSent": 0,
+  "humanReplies": 0,
+  "positiveReplies": 0,
+  "callsDemosRequested": 0,
+  "customersWon": 0,
+  "revenueGbp": 0,
+  "lastRun": "2026-10-03T07:38:33+01:00",
+  "nextRun": "2026-10-03T08:39:00+01:00",
+  "freshness": "LIVE",
+  "blocker": null
+}
