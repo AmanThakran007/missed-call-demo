@@ -1,22 +1,47 @@
 const source='telemetry.json';
+const funnelIds=[
+'dpdp-buyer-outreach','b2b-appointment-setting','webscan-general-sme','webscan-healthcare',
+'webscan-professional-services','webscan-agency-white-label','uk-resourcer-outreach',
+'nurse-referral-uk','nurse-referral-us','nclex-growth-core','nclex-colleges','nclex-creators',
+'nclex-recruiter-partnerships','bharatfare-supplier-outreach','bharatfare-agent-partnerships'
+];
 
 function money(v){
   if(v===null||v===undefined)return '—';
   return '£'+Number(v).toFixed(2).replace(/\.00$/,'');
 }
-
 function val(v){
   return (v===null||v===undefined||v==='')?'Awaiting first sync':v;
 }
-
 function set(id,v){
   const el=document.getElementById(id);
-  if(el) el.textContent=v;
+  if(el)el.textContent=v;
 }
-
+async function loadJson(url){
+  try{
+    const r=await fetch(url+'?ts='+Date.now(),{cache:'no-store'});
+    if(!r.ok)return null;
+    return await r.json();
+  }catch(e){return null}
+}
+async function buildData(){
+  const base=(await loadJson(source))||{activeFunnels:15,funnels:{},ads:{}};
+  const parts=await Promise.all(funnelIds.map(id=>loadJson('telemetry/funnels/'+id+'.json')));
+  parts.forEach((p,i)=>{
+    if(!p)return;
+    const id=funnelIds[i];
+    base.funnels[id]=Object.assign({},base.funnels[id]||{},p);
+  });
+  const ad=await loadJson('telemetry/ads/webscan-agency-white-label-36-test.json');
+  if(ad){
+    base.ads=base.ads||{};
+    base.ads['webscan-agency-white-label-36-test']=Object.assign({},base.ads['webscan-agency-white-label-36-test']||{},ad);
+  }
+  return base;
+}
 function drawAds(data){
-  const ad=data.ads && data.ads['webscan-agency-white-label-36-test'];
-  if(!ad) return;
+  const ad=data.ads&&data.ads['webscan-agency-white-label-36-test'];
+  if(!ad)return;
   set('adCampaignName',ad.campaignName);
   set('adStatus',ad.status);
   set('adDelivery',ad.deliveryStatus);
@@ -31,15 +56,13 @@ function drawAds(data){
   set('adDeliveryBadge',ad.deliveryStatus||'—');
   set('lastUpdated','Last updated: '+(ad.lastChecked||data.generatedAt||'—'));
 }
-
 function drawSummary(data){
   const fs=Object.values(data.funnels||{});
   const keys=['firstEmailsSent','humanReplies','positiveReplies','callsDemosRequested','customersWon','revenueGbp'];
-  const sums={};
+  const sums={};keys.forEach(k=>sums[k]=0);
   let has=false;
-  keys.forEach(k=>sums[k]=0);
   fs.forEach(f=>keys.forEach(k=>{
-    if(typeof f[k]==='number'){sums[k]+=f[k];has=true;}
+    if(typeof f[k]==='number'){sums[k]+=f[k];has=true}
   }));
   const rows=[
     ['Active Funnels',data.activeFunnels||fs.length],
@@ -53,10 +76,8 @@ function drawSummary(data){
   ];
   document.getElementById('summaryGrid').innerHTML=rows.map(r=>'<div class="summary-card"><span>'+r[0]+'</span><strong>'+r[1]+'</strong></div>').join('');
 }
-
 function drawFunnels(data){
-  const root=document.getElementById('funnels');
-  root.innerHTML='';
+  const root=document.getElementById('funnels');root.innerHTML='';
   const labels=[
     ['Prospects Researched','prospectsResearched'],
     ['First Emails Sent','firstEmailsSent'],
@@ -71,35 +92,31 @@ function drawFunnels(data){
     ['Data Freshness','freshness'],
     ['Current Blocker','blocker']
   ];
-  Object.values(data.funnels||{}).forEach(f=>{
+  funnelIds.forEach(id=>{
+    const f=data.funnels&&data.funnels[id];
+    if(!f)return;
     const card=document.createElement('article');
     card.className='funnel-card';
     const fresh=(f.freshness||'AWAITING_FIRST_SYNC').replaceAll('_',' ');
     let rows='';
     labels.forEach(pair=>{
       let v=f[pair[1]];
-      if(pair[1]==='revenueGbp' && typeof v==='number') v=money(v);
+      if(pair[1]==='revenueGbp'&&typeof v==='number')v=money(v);
       rows+='<div class="row"><span>'+pair[0]+'</span><strong>'+val(v)+'</strong></div>';
     });
     card.innerHTML='<div class="funnel-head"><div><div class="funnel-name">'+f.name+'</div><div class="category">'+f.category+'</div></div><span class="status">'+fresh+'</span></div><div>'+rows+'</div>';
     root.appendChild(card);
   });
 }
-
 async function refresh(){
   try{
-    const r=await fetch(source+'?ts='+Date.now(),{cache:'no-store'});
-    if(!r.ok) throw new Error('HTTP '+r.status);
-    const data=await r.json();
+    const data=await buildData();
     set('activeFunnels',(data.activeFunnels||15)+' Active Funnels');
-    drawAds(data);
-    drawSummary(data);
-    drawFunnels(data);
+    drawAds(data);drawSummary(data);drawFunnels(data);
   }catch(e){
     console.error(e);
     set('lastUpdated','Telemetry refresh failed — retrying automatically');
   }
 }
-
 refresh();
 setInterval(refresh,60000);
