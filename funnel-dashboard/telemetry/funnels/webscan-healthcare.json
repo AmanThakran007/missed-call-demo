@@ -13,5 +13,5 @@
   "lastRun": "2026-10-03T12:47:55+01:00",
   "nextRun": null,
   "freshness": "STALE",
-  "blocker": "Automation disabled as verified on 2026-10-03. Latest scheduler start: 2026-10-03T14:46:19Z; successful completion unverified. Earlier run reported TELEMETRY_SYNC_BLOCKED; additional outreach sends were blocked by platform safety checks. Historical campaign metrics retained; not revalidated by this status correction."
+  "blocker": "Re-enabled 2026-10-03T15:06Z; immediate monitoring run requested, completion not yet verified. OUTREACH_REVIEW_REQUIRED: sending remains on hold pending review of the earlier safety rejection. Manual telemetry write/read succeeded. Historical campaign metrics have not been revalidated."
 }
