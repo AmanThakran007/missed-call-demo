@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "date": "2026-10-03",
+  "date": "2026-10-04",
   "timezone": "Europe/London",
-  "checkedAt": "2026-10-03T22:13:35.284Z",
+  "checkedAt": "2026-10-03T23:05:05.950Z",
   "source": "Fully paginated Gmail Sent checks plus targeted received-mail checks across all six connected inboxes",
   "status": "SOURCE_RECONCILED",
-  "scope": "London calendar-day and rolling-24-hour Sent counts are verified from Gmail. WebScan first touches and follow-ups are reconciled from Gmail Sent and all four funnel records. Received checks cover campaign replies, delivery notices and opt-outs; sent means present in Gmail Sent, not confirmed delivered.",
+  "scope": "London calendar-day and rolling-24-hour Sent counts are verified from Gmail. WebScan counters for the new London day are reconciled as zero from Gmail Sent and all four funnel records. Received checks found only unrelated security and marketing messages; sent means present in Gmail Sent, not confirmed delivered.",
   "effectiveDate": "2026-10-04",
   "stagedCapsPerInbox": [],
   "rows": [
@@ -40,13 +40,13 @@
         "notInterested": null
       },
       "skippedReasons": [
-        "OUTSIDE_ALLOWED_OUTREACH_HOUR",
-        "FIXED_CAP_POLICY_NOT_EFFECTIVE_UNTIL_2026-10-04"
+        "OUTSIDE_ALLOWED_OUTREACH_HOUR"
       ],
-      "date": "2026-10-03",
-      "checkedAt": "2026-10-03T22:13:35.284Z",
+      "date": "2026-10-04",
+      "checkedAt": "2026-10-03T23:05:05.950Z",
       "configuredGeneralSmeDailyCap": 42,
-      "qualificationGateActive": false
+      "qualificationGateActive": false,
+      "remainingQuotaToday": 84
     },
     {
       "mailbox": "Ecommerce inbox",
@@ -79,13 +79,13 @@
         "notInterested": null
       },
       "skippedReasons": [
-        "OUTSIDE_ALLOWED_OUTREACH_HOUR",
-        "FIXED_CAP_POLICY_NOT_EFFECTIVE_UNTIL_2026-10-04"
+        "OUTSIDE_ALLOWED_OUTREACH_HOUR"
       ],
-      "date": "2026-10-03",
-      "checkedAt": "2026-10-03T22:13:35.284Z",
+      "date": "2026-10-04",
+      "checkedAt": "2026-10-03T23:05:05.950Z",
       "configuredGeneralSmeDailyCap": 42,
-      "qualificationGateActive": false
+      "qualificationGateActive": false,
+      "remainingQuotaToday": 84
     },
     {
       "mailbox": "BharatFare inbox",
@@ -118,13 +118,13 @@
         "notInterested": null
       },
       "skippedReasons": [
-        "OUTSIDE_ALLOWED_OUTREACH_HOUR",
-        "FIXED_CAP_POLICY_NOT_EFFECTIVE_UNTIL_2026-10-04"
+        "OUTSIDE_ALLOWED_OUTREACH_HOUR"
       ],
-      "date": "2026-10-03",
-      "checkedAt": "2026-10-03T22:13:35.284Z",
+      "date": "2026-10-04",
+      "checkedAt": "2026-10-03T23:05:05.950Z",
       "configuredGeneralSmeDailyCap": 41,
-      "qualificationGateActive": false
+      "qualificationGateActive": false,
+      "remainingQuotaToday": 83
     },
     {
       "mailbox": "8891 inbox",
@@ -157,20 +157,20 @@
         "notInterested": null
       },
       "skippedReasons": [
-        "OUTSIDE_ALLOWED_OUTREACH_HOUR",
-        "FIXED_CAP_POLICY_NOT_EFFECTIVE_UNTIL_2026-10-04"
+        "OUTSIDE_ALLOWED_OUTREACH_HOUR"
       ],
-      "date": "2026-10-03",
-      "checkedAt": "2026-10-03T22:13:35.284Z",
+      "date": "2026-10-04",
+      "checkedAt": "2026-10-03T23:05:05.950Z",
       "configuredGeneralSmeDailyCap": 41,
-      "qualificationGateActive": false
+      "qualificationGateActive": false,
+      "remainingQuotaToday": 83
     },
     {
       "mailbox": "Dreams inbox",
-      "allSentToday": 32,
-      "webscanFirstTouchesToday": 22,
+      "allSentToday": 0,
+      "webscanFirstTouchesToday": 0,
       "webscanFollowUpsToday": 0,
-      "webscanInboundMessagesToday": 2,
+      "webscanInboundMessagesToday": 0,
       "webscanHumanRepliesToday": 0,
       "webscanBouncesToday": 0,
       "webscanOptOutsToday": 0,
@@ -178,7 +178,7 @@
       "qualifyingDaysAtStage": 0,
       "sourceRead": "VERIFIED",
       "sixInboxSendTest": "NOT_YET_RUN",
-      "allSentRolling24h": 37,
+      "allSentRolling24h": 32,
       "remainingQuotaForEffectiveDate": 83,
       "prospectQueue": {
         "status": "UNVERIFIED",
@@ -196,17 +196,17 @@
         "notInterested": null
       },
       "skippedReasons": [
-        "OUTSIDE_ALLOWED_OUTREACH_HOUR",
-        "FIXED_CAP_POLICY_NOT_EFFECTIVE_UNTIL_2026-10-04"
+        "OUTSIDE_ALLOWED_OUTREACH_HOUR"
       ],
-      "date": "2026-10-03",
-      "checkedAt": "2026-10-03T22:13:35.284Z",
+      "date": "2026-10-04",
+      "checkedAt": "2026-10-03T23:05:05.950Z",
       "configuredGeneralSmeDailyCap": 41,
-      "qualificationGateActive": false
+      "qualificationGateActive": false,
+      "remainingQuotaToday": 83
     },
     {
       "mailbox": "Consulting inbox",
-      "allSentToday": 7,
+      "allSentToday": 0,
       "webscanFirstTouchesToday": 0,
       "webscanFollowUpsToday": 0,
       "webscanInboundMessagesToday": 0,
@@ -235,33 +235,34 @@
         "notInterested": null
       },
       "skippedReasons": [
-        "OUTSIDE_ALLOWED_OUTREACH_HOUR",
-        "FIXED_CAP_POLICY_NOT_EFFECTIVE_UNTIL_2026-10-04"
+        "OUTSIDE_ALLOWED_OUTREACH_HOUR"
       ],
-      "date": "2026-10-03",
-      "checkedAt": "2026-10-03T22:13:35.284Z",
+      "date": "2026-10-04",
+      "checkedAt": "2026-10-03T23:05:05.950Z",
       "configuredGeneralSmeDailyCap": 41,
-      "qualificationGateActive": false
+      "qualificationGateActive": false,
+      "remainingQuotaToday": 83
     }
   ],
   "totals": {
-    "allSentToday": 39,
-    "allSentRolling24h": 44,
-    "webscanFirstTouchesToday": 22,
+    "allSentToday": 0,
+    "allSentRolling24h": 39,
+    "webscanFirstTouchesToday": 0,
     "webscanFollowUpsToday": 0,
-    "webscanInboundMessagesToday": 2,
+    "webscanInboundMessagesToday": 0,
     "webscanHumanRepliesToday": 0,
     "webscanBouncesToday": 0,
     "webscanOptOutsToday": 0,
-    "webscanTotalSentToday": 24,
-    "webscanOutboundToday": 22,
+    "webscanTotalSentToday": 0,
+    "webscanOutboundToday": 0,
     "configuredDailyCap": 500,
     "configuredGeneralSmeDailyCap": 248,
-    "remainingQuotaForEffectiveDate": 500
+    "remainingQuotaForEffectiveDate": 500,
+    "remainingQuotaToday": 500
   },
   "funnelFirstTouchesToday": {
-    "webscan-general-sme": 21,
-    "webscan-healthcare": 1,
+    "webscan-general-sme": 0,
+    "webscan-healthcare": 0,
     "webscan-professional-services": 0,
     "webscan-agency-white-label": 0
   },
@@ -279,10 +280,10 @@
     "replyQueueAudit": "UNVERIFIED"
   },
   "blockers": [
-    "The fixed-cap six-inbox workflow is configured but remains untested until a new-policy send and Sent-header readback occur on or after 4 October 2026.",
+    "The fixed-cap six-inbox workflow is active from 4 October 2026 but remains untested until the first new-policy send and Sent-header readback succeed.",
     "Prospect and reply queues remain UNVERIFIED because a complete cross-six private-ledger and thread audit has not succeeded; no queue count was inferred.",
     "Professional Services and Agency White Label retain recorded send-denial blockers; no blocked send was retried during this sync.",
-    "Repository write and source readback passed; the public GitHub Pages JSON could not be fetched from this client, so public deployment visibility remains unverified."
+    "Public GitHub Pages deployment visibility remains unverified from this client environment."
   ],
   "automation": {
     "checkedAt": "2026-10-03T20:37:41.309Z",
@@ -322,6 +323,7 @@
       "healthcare": 102,
       "professionalServices": 102,
       "agencyWhiteLabel": 48
-    }
+    },
+    "workflowTested": false
   }
 }
