@@ -10,8 +10,27 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T16:30:29+01:00",
-  "nextRun": "2026-10-03T17:30:00+01:00",
+  "lastRun": "2026-10-03T17:28:52+01:00",
+  "nextRun": "2026-10-03T18:30:00+01:00",
   "freshness": "LIVE",
-  "blocker": null
+  "blocker": null,
+  "sourceChecks": {
+    "gmail": {
+      "checkedAt": "2026-10-03T17:30:11+01:00",
+      "account": "amanthakran.dreams@gmail.com",
+      "result": "No verified Agency White Label human reply, bounce, opt-out, demo request, or partnership question; unrelated WebRevenue Scan and other-funnel messages excluded."
+    },
+    "adsManager": {
+      "checkedAt": "2026-10-03T17:30:11+01:00",
+      "account": "WebRevenue Scan",
+      "campaign": "WebScan Agency White Label - £36 Test",
+      "result": "Campaign active and eligible; no serving issues; no performance row returned for trailing 7 completed account-local days."
+    },
+    "github": {
+      "checkedAt": "2026-10-03T17:30:11+01:00",
+      "repository": "AmanThakran007/missed-call-demo",
+      "path": "funnel-dashboard/telemetry/funnels/webscan-agency-white-label.json",
+      "priorBlobSha": "fdffcc2fcf963577f7f3668b3295fa3858d1bea9"
+    }
+  }
 }
