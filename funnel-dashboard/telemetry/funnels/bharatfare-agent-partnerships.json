@@ -1,4 +1,17 @@
 {
   "id": "bharatfare-agent-partnerships",
-  "freshness": "AWAITING_FIRST_SYNC"
+  "name": "BharatFare Agent Partnerships",
+  "category": "BharatFare / B2B Agent Partnerships",
+  "prospectsResearched": 0,
+  "firstEmailsSent": 0,
+  "followUpsSent": 0,
+  "humanReplies": 0,
+  "positiveReplies": 0,
+  "callsDemosRequested": 0,
+  "customersWon": 0,
+  "revenueGbp": 0,
+  "lastRun": "2026-10-03T07:41:59+01:00",
+  "nextRun": "2026-10-03T08:41:00+01:00",
+  "freshness": "LIVE",
+  "blocker": null
 }
