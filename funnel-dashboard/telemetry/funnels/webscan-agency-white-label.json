@@ -10,27 +10,27 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T17:28:52+01:00",
-  "nextRun": "2026-10-03T18:30:00+01:00",
+  "lastRun": "2026-10-03T18:29:39+01:00",
+  "nextRun": "2026-10-03T19:30:00+01:00",
   "freshness": "LIVE",
-  "blocker": null,
+  "blocker": "OUTBOUND_SEND_BLOCKED_BY_SAFETY; ADS_PAUSED_PAYMENT_FAILED: First-touch attempts to the 20 verified agency prospects were previously blocked and not counted as sent. The £36 ad campaign is paused because the account threshold payment failed.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-03T17:30:11+01:00",
+      "checkedAt": "2026-10-03T18:29:39+01:00",
       "account": "amanthakran.dreams@gmail.com",
-      "result": "No verified Agency White Label human reply, bounce, opt-out, demo request, or partnership question; unrelated WebRevenue Scan and other-funnel messages excluded."
+      "result": "No verified Agency White Label human reply, bounce, opt-out, demo request, or partnership question. Unrelated WebRevenue Scan, General SME and other-funnel messages were excluded; no outreach was sent outside the approved hour."
     },
     "adsManager": {
-      "checkedAt": "2026-10-03T17:30:11+01:00",
+      "checkedAt": "2026-10-03T18:29:39+01:00",
       "account": "WebRevenue Scan",
       "campaign": "WebScan Agency White Label - £36 Test",
-      "result": "Campaign active and eligible; no serving issues; no performance row returned for trailing 7 completed account-local days."
+      "result": "Campaign paused and inactive. A failed threshold payment is a blocking account issue; the creative remains active and approved but cannot serve while the campaign is paused and billing is unresolved. No performance row was returned for the trailing 24 completed account-local hours."
     },
     "github": {
-      "checkedAt": "2026-10-03T17:30:11+01:00",
+      "checkedAt": "2026-10-03T18:29:39+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/webscan-agency-white-label.json",
-      "priorBlobSha": "fdffcc2fcf963577f7f3668b3295fa3858d1bea9"
+      "priorBlobSha": "18dfdee9342bf78754edc0506ae287703c9ce5d6"
     }
   }
 }
