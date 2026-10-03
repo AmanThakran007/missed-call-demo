@@ -173,7 +173,7 @@ function progressFor(s,r){
  const outbound=knownCount(r.webscanFirstTouchesToday)&&knownCount(r.webscanFollowUpsToday)?r.webscanFirstTouchesToday+r.webscanFollowUpsToday:null;
  const active=s.date>=s.effectiveDate;
  const remaining=active&&snapshotFresh(s)&&knownCount(outbound)&&knownCount(r.configuredDailyCap)?Math.max(0,r.configuredDailyCap-outbound):null;
- const guard=knownCount(r.configuredDailyCap)?2*r.configuredDailyCap+20:null;
+ const guard=120; // Fixed all-mail load guard; independent of WebScan quota.
  const headroom=snapshotFresh(s)&&knownCount(guard)&&knownCount(r.allSentToday)&&knownCount(r.allSentRolling24h)?Math.max(0,Math.min(guard-r.allSentToday,guard-r.allSentRolling24h)):null;
  return {outbound,remaining,headroom,active};
 }
