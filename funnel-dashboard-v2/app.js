@@ -80,9 +80,9 @@ async function loadJson(url){
 }
 async function buildData(){
   const base=(await loadJson(source))||{activeFunnels:15,funnels:{},ads:{}};
-  const parts=await Promise.all(funnelIds.map(id=>loadJson('telemetry/funnels/'+id+'.json')));
+  const parts=await Promise.all(funnelIds.map(id=>loadJson('../funnel-dashboard/telemetry/funnels/'+id+'.json')));
   parts.forEach((p,i)=>{if(p){const id=funnelIds[i];base.funnels[id]=Object.assign({},base.funnels[id]||{},p)}});
-  const ad=await loadJson('telemetry/ads/webscan-agency-white-label-36-test.json');
+  const ad=await loadJson('../funnel-dashboard/telemetry/ads/webscan-agency-white-label-36-test.json');
   if(ad){base.ads=base.ads||{};base.ads['webscan-agency-white-label-36-test']=Object.assign({},base.ads['webscan-agency-white-label-36-test']||{},ad)}
   return base;
 }
