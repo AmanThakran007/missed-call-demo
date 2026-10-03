@@ -33,6 +33,12 @@
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/bharatfare-supplier-outreach.json",
       "priorBlobSha": "55199eee63bdc4f9cdc804c905b4db44c5694c6d"
+    },
+    "manualConversationReplies": {
+      "checkedAt": "2026-10-03T20:49:16.669Z",
+      "sentAt": "2026-10-03T20:48:42Z",
+      "verifiedConversationResponses": 2,
+      "scope": "Two user-authorized replies in existing supplier conversations verified in Gmail Sent and original threads. Requested call options; no meetings booked or commercial terms accepted. These are contextual replies, not cold follow-ups."
     }
   }
 }
