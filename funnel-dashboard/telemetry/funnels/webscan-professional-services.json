@@ -2,7 +2,7 @@
   "id": "webscan-professional-services",
   "name": "WebScan Professional Services",
   "category": "WebScan / Professional Services",
-  "prospectsResearched": 0,
+  "prospectsResearched": 10,
   "firstEmailsSent": 0,
   "followUpsSent": 0,
   "humanReplies": 0,
@@ -10,8 +10,26 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T15:39:45+01:00",
-  "nextRun": "2026-10-03T16:39:00+01:00",
+  "lastRun": "2026-10-03T16:35:02+01:00",
+  "nextRun": "2026-10-03T17:39:00+01:00",
   "freshness": "LIVE",
-  "blocker": null
+  "blocker": "OUTREACH_SEND_BLOCKED: An earlier run verified 10 qualified prospects, but all 10 personalized email sends were denied by safety controls. No sends were retried in this monitoring-only run; the automation remains active for safe read-only monitoring and permitted telemetry updates.",
+  "sourceChecks": {
+    "gmail": {
+      "checkedAt": "2026-10-03T16:35:02+01:00",
+      "account": "amanthakran.dreams@gmail.com",
+      "scope": "Recent messages matching the verified professional-services prospect names and funnel categories",
+      "result": "No campaign send, human reply, bounce, opt-out, follow-up, question, call request, or buying-intent event found."
+    },
+    "verifiedResearch": {
+      "recordedAt": "2026-10-03T16:35:02+01:00",
+      "result": "Preserved the earlier verified cumulative total of 10 researched prospects; no email send was counted."
+    },
+    "github": {
+      "checkedAt": "2026-10-03T16:35:02+01:00",
+      "repository": "AmanThakran007/missed-call-demo",
+      "path": "funnel-dashboard/telemetry/funnels/webscan-professional-services.json",
+      "priorBlobSha": "53b091e90f4c892b6e9fa27f3b8ebb8672347626"
+    }
+  }
 }
