@@ -10,29 +10,35 @@
   "callsDemosRequested": 2,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T23:41:30+01:00",
-  "nextRun": "2026-10-04T00:41:00+01:00",
+  "lastRun": "2026-10-04T00:37:52+01:00",
+  "nextRun": "2026-10-04T01:41:00+01:00",
   "freshness": "LIVE",
   "blocker": null,
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-03T23:41:30+01:00",
+      "checkedAt": "2026-10-04T00:37:52+01:00",
       "accounts": [
         "amanthakran.dreams@gmail.com",
         "aman.thakran.consulting@gmail.com"
       ],
-      "scope": "All new mail after 2026-10-03T22:42:42+01:00, including supplier replies, bounces, opt-outs, onboarding steps, commercial terms, API/NDC updates, payment or credit questions, and call requests",
-      "result": "No new supplier human reply, bounce, opt-out, onboarding question, commercial-term update, API/NDC update, payment or credit question, or call request. Unrelated WhatsApp-platform, website-platform and account-security messages were excluded. No outreach was sent."
+      "scope": "All new mail after 2026-10-03T23:41:30+01:00, including supplier replies, bounces, opt-outs, onboarding steps, commercial terms, API/NDC updates, payment or credit questions, and call requests",
+      "result": "No new mail was found in either monitored account. Therefore no new supplier human reply, bounce, opt-out, onboarding question, commercial-term update, API/NDC update, payment or credit question, or call request was recorded. No outreach was sent because this run was outside the permitted outreach hour."
     },
     "verifiedResearch": {
       "checkedAt": "2026-10-03T16:39:52+01:00",
       "result": "Preserved 20 verified researched suppliers, including WebBeds, RezLive, Stuba, RateHawk and TripJack."
     },
     "github": {
-      "checkedAt": "2026-10-03T23:41:30+01:00",
+      "checkedAt": "2026-10-04T00:37:52+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/bharatfare-supplier-outreach.json",
-      "priorBlobSha": "eb465ea799bc0554d90be32a6bbf2b7fbd7046cc"
+      "priorBlobSha": "1e3dc35187d90cae4bbd1a9a0e9a53e3fb264530"
+    },
+    "automation": {
+      "checkedAt": "2026-10-04T00:37:52+01:00",
+      "id": "6ac0616fa5008191adfe432561de7eff",
+      "enabled": true,
+      "result": "Automation verified enabled; continuity policy preserved."
     },
     "manualConversationReplies": {
       "checkedAt": "2026-10-03T20:49:16.669Z",
