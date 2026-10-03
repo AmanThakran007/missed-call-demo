@@ -16,7 +16,7 @@
     "FIRST_SPEND",
     "FIRST_CLICK"
   ],
-  "lastChecked": "2026-10-03T22:31:56+01:00",
+  "lastChecked": "2026-10-03T23:14:12.605+01:00",
   "freshness": "LIVE",
   "blocker": "AD_ACCOUNT_THRESHOLD_PAYMENT_FAILED",
   "reportingWindow": {
@@ -27,26 +27,26 @@
   },
   "sourceChecks": {
     "campaignDelivery": {
-      "checkedAt": "2026-10-03T22:31:56+01:00",
-      "result": "Campaign remains paused and inactive. Account billing is blocked by the threshold payment failure; campaign_not_active is present. Downstream campaign-delivery checks were partial."
+      "checkedAt": "2026-10-03T23:14:12.605+01:00",
+      "result": "Campaign remains paused and inactive. Current serving issues are campaign_not_active and ad_account_threshold_payment_failed."
     },
     "performanceApi": {
-      "checkedAt": "2026-10-03T22:31:56+01:00",
-      "result": "No performance row returned for the latest completed account-local day. Preserved the directly observed preliminary Ads Manager UI values without recalculation."
+      "checkedAt": "2026-10-03T23:14:12.605+01:00",
+      "result": "The latest completed 24-hour reporting request returned no spend, impression or click values. Preserved the previously verified preliminary Ads Manager UI metrics without recalculation."
     },
     "ad": {
-      "checkedAt": "2026-10-03T22:31:56+01:00",
-      "result": "Ad group and creative remain active. Creative review is approved. No low-bid warning was returned; serving is blocked by the paused campaign and account payment failure."
+      "checkedAt": "2026-10-03T23:14:12.605+01:00",
+      "result": "Ad group and creative remain active. Creative review is approved. No low-bid warning was returned; serving remains blocked by the paused campaign and account threshold payment failure."
     },
     "gmail": {
-      "checkedAt": "2026-10-03T22:31:56+01:00",
-      "result": "No new billing or campaign-delivery email was found across the six authorized WebScan inboxes. The latest verified billing alert still states that payment failed and ad serving was paused pending a payment-method update."
+      "checkedAt": "2026-10-03T23:14:12.605+01:00",
+      "result": "No new WebScan ad billing or campaign-delivery email was found across the six authorized inboxes during this reconciliation. One new inbox item was an unrelated BharatFare supplier-thread out-of-office notice."
     },
     "github": {
-      "checkedAt": "2026-10-03T22:31:56+01:00",
+      "checkedAt": "2026-10-03T23:14:12.605+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/ads/webscan-agency-white-label-36-test.json",
-      "priorBlobSha": "87d8a121abd633940b6e5526f75e07d185dda687"
+      "priorBlobSha": "ce3bbe1cfd79886039ab97214f06626c73eef840"
     }
   }
 }
