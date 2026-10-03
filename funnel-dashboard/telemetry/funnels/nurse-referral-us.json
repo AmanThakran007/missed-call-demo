@@ -2,7 +2,7 @@
   "id": "nurse-referral-us",
   "name": "Nurse Referral US",
   "category": "Nurse Referral",
-  "prospectsResearched": 2,
+  "prospectsResearched": 9,
   "firstEmailsSent": 1,
   "followUpsSent": 2,
   "humanReplies": 2,
@@ -10,8 +10,26 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T11:53:28+01:00",
-  "nextRun": "2026-10-03T12:49:00+01:00",
+  "lastRun": "2026-10-03T17:48:54+01:00",
+  "nextRun": "2026-10-03T18:49:00+01:00",
   "freshness": "LIVE",
-  "blocker": "Awaiting WorldWide HealthStaff reply on paid-advertising/referral-tracking rules; Avant affiliate inquiry remains under review."
+  "blocker": "Awaiting WorldWide HealthStaff reply on paid-advertising/referral-tracking rules; Avant affiliate inquiry remains under review. Previous outbound attempts to seven researched targets and an Avant follow-up were blocked by the email safety layer and were not retried outside the permitted outreach hour.",
+  "sourceChecks": {
+    "gmail": {
+      "checkedAt": "2026-10-03T17:48:54+01:00",
+      "account": "amanthakran.dreams@gmail.com",
+      "scope": "All incoming mail on 3 October plus WorldWide HealthStaff, Avant, NurseAmerica, MedPro International, Conexus MedStaff, O'Grady Peyton, Connetics/AMN, ID Medical and Greenstaff threads",
+      "result": "No new human reply, bounce, opt-out, referral-term question, call request, customer or revenue event. No outreach was sent outside the permitted hour."
+    },
+    "verifiedResearchReconciliation": {
+      "checkedAt": "2026-10-03T17:48:54+01:00",
+      "result": "Added seven previously verified but omitted prospects: NurseAmerica, MedPro International, Conexus MedStaff, O'Grady Peyton, Connetics/AMN, ID Medical and Greenstaff. No send metrics were incremented because all attempted first touches were blocked."
+    },
+    "github": {
+      "checkedAt": "2026-10-03T17:48:54+01:00",
+      "repository": "AmanThakran007/missed-call-demo",
+      "path": "funnel-dashboard/telemetry/funnels/nurse-referral-us.json",
+      "priorBlobSha": "38e663bd1e6498e55a9b1cfeefca9ecd69dbc9c5"
+    }
+  }
 }
