@@ -10,8 +10,22 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T12:47:55+01:00",
+  "lastRun": "2026-10-03T16:07:07+01:00",
   "nextRun": null,
-  "freshness": "STALE",
-  "blocker": "Re-enabled 2026-10-03T15:06Z; immediate monitoring run requested, completion not yet verified. OUTREACH_REVIEW_REQUIRED: sending remains on hold pending review of the earlier safety rejection. Manual telemetry write/read succeeded. Historical campaign metrics have not been revalidated."
+  "freshness": "LIVE",
+  "blocker": "OUTREACH_REVIEW_REQUIRED: Email sending remains on hold pending explicit review and resolution of the earlier safety rejection. No emails were sent in this run.",
+  "sourceChecks": {
+    "gmail": {
+      "checkedAt": "2026-10-03T16:07:07+01:00",
+      "account": "amanthakran.dreams@gmail.com",
+      "scope": "Stoke Physiotherapy thread and direct sender search",
+      "result": "No human reply, bounce, opt-out, follow-up, question, call request, or buying-intent event found."
+    },
+    "github": {
+      "checkedAt": "2026-10-03T16:07:07+01:00",
+      "repository": "AmanThakran007/missed-call-demo",
+      "path": "funnel-dashboard/telemetry/funnels/webscan-healthcare.json",
+      "priorBlobSha": "bfd179e3a5584e03cb519358e5502b8a77544d4c"
+    }
+  }
 }
