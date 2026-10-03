@@ -13,6 +13,7 @@
   "bounces": 0,
   "optOuts": 0,
   "freshness": "LIVE",
-  "lastChecked": "2026-10-03T09:11:48+01:00",
-  "blocker": null
+  "lastChecked": "2026-10-03T09:31:00+01:00",
+  "blocker": null,
+  "inboundLeads": 1
 }
