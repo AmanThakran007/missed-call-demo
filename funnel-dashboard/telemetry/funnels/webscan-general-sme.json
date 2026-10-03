@@ -2,5 +2,6 @@
   "id": "webscan-general-sme",
   "name": "WebScan General SME",
   "category": "WebScan",
-  "freshness": "AWAITING_FIRST_SYNC"
+  "freshness": "LIVE",
+  "lastChecked": "2026-10-03T05:09:00+01:00"
 }
