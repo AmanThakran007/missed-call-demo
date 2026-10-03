@@ -10,24 +10,25 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T16:44:09+01:00",
-  "nextRun": "2026-10-03T17:49:00+01:00",
+  "lastRun": "2026-10-03T17:52:15+01:00",
+  "nextRun": "2026-10-03T18:49:00+01:00",
   "freshness": "LIVE",
-  "blocker": null,
+  "blocker": "OUTBOUND_SEND_BLOCKED_BY_SAFETY: Previous first-touch attempts to the 20 verified Growth Core prospects were blocked by the email safety layer. No retry was attempted outside the permitted outreach hour; monitoring remains active.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-03T16:44:09+01:00",
+      "checkedAt": "2026-10-03T17:52:15+01:00",
       "accounts": [
         "amanthakran.dreams@gmail.com",
         "aman.thakran.consulting@gmail.com"
       ],
-      "result": "No Growth Core campaign send, human reply, bounce, opt-out, referral/demo question, access/pricing request, call, customer or attributable revenue event found. Facebook notifications were excluded; the WorldWide HealthStaff thread belongs to Nurse Referral."
+      "scope": "NCLEX, nursing, partnership, referral, demo, trial, pricing, access, group, affiliate, educator, academy and community messages",
+      "result": "No Growth Core campaign send, human reply, bounce, opt-out, referral/demo question, access/pricing request, call, customer or attributable revenue event found. Facebook notifications and Nurse Referral threads were excluded; no outreach was sent outside the permitted hour."
     },
     "github": {
-      "checkedAt": "2026-10-03T16:44:09+01:00",
+      "checkedAt": "2026-10-03T17:52:15+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/nclex-growth-core.json",
-      "priorBlobSha": "58882428c216fa6b4d5a0dbcf2a29cbac8993a9b"
+      "priorBlobSha": "4abc2b6f8e52c67341e49802d9670207e17a9e76"
     }
   }
 }
