@@ -138,10 +138,12 @@
     "mailboxLoadGuardEvidence": "VERIFIED_BELOW_70_PER_INBOX",
     "futureScheduledSending": "NOT_YET_RUN",
     "senderHeaderChecks": "NOT_YET_RUN",
-    "unrelatedCampaignCumulativeMetrics": "NOT_AUDITED"
+    "unrelatedCampaignCumulativeMetrics": "NOT_AUDITED",
+    "publicDeploymentVisibility": "BLOCKED_BY_CLIENT"
   },
   "blockers": [
     "The six-inbox workflow is configured but remains untested until new-policy sends and Sent-header readback occur on or after 4 October 2026.",
-    "Professional Services and Agency White Label retain recorded send-denial blockers; no blocked send was retried during this sync."
+    "Professional Services and Agency White Label retain recorded send-denial blockers; no blocked send was retried during this sync.",
+    "Repository write and readback passed, but the public GitHub Pages JSON could not be fetched in this environment (blocked by client); public deployment visibility remains unverified."
   ]
 }
