@@ -10,25 +10,25 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T19:44:16+01:00",
-  "nextRun": "2026-10-03T20:44:00+01:00",
+  "lastRun": "2026-10-03T20:48:29+01:00",
+  "nextRun": "2026-10-03T21:44:00+01:00",
   "freshness": "LIVE",
   "blocker": "OUTREACH_SEND_BLOCKED_BY_SAFETY_CHECK: Earlier first-touch attempts to the 15 verified creator/educator prospects were blocked and were not counted as sent. No send was retried outside the permitted outreach hour; monitoring remains active.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-03T19:44:16+01:00",
+      "checkedAt": "2026-10-03T20:48:31+01:00",
       "accounts": [
         "amanthakran.dreams@gmail.com",
         "aman.thakran.consulting@gmail.com"
       ],
-      "scope": "All mail since the prior run, including creator/community replies, bounces, opt-outs, affiliate or referral questions, demo requests, product-access questions and buying intent",
-      "result": "No NCLEX creator/community send, human reply, bounce, opt-out, affiliate/referral question, demo request, product-access question, call request, or buying-intent event found. WebScan, DPDP, billing and unrelated messages were excluded."
+      "scope": "All mail since 2026-10-03T19:44:16+01:00, including creator/community replies, bounces, opt-outs, affiliate or referral questions, demo requests, product-access questions and buying intent",
+      "result": "No NCLEX creator/community send, human reply, bounce, opt-out, affiliate/referral question, demo request, product-access question, call request, or buying-intent event found. A TravClan authentication message, unrelated promotion, and self-submitted BharatFare WebRevenue Scan messages were excluded."
     },
     "github": {
-      "checkedAt": "2026-10-03T19:44:16+01:00",
+      "checkedAt": "2026-10-03T20:48:31+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/nclex-creators.json",
-      "priorBlobSha": "c069eae170c66e6e66c8c4170b379ebad8175c21"
+      "priorBlobSha": "d14c6dbb0842b5edf7f2e9287ade58a7bbcb8118"
     }
   }
 }
