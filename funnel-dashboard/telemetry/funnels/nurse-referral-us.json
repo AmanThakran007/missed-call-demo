@@ -10,25 +10,34 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T20:49:28+01:00",
-  "nextRun": "2026-10-03T21:49:00+01:00",
+  "lastRun": "2026-10-03T22:47:16+01:00",
+  "nextRun": "2026-10-03T22:49:00+01:00",
   "freshness": "LIVE",
   "blocker": "Awaiting WorldWide HealthStaff reply on paid-advertising/referral-tracking rules; Avant affiliate inquiry remains under review. Previous outbound attempts to seven researched targets and an Avant follow-up were blocked by the email safety layer and were not retried outside the permitted outreach hour.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-03T20:49:38+01:00",
+      "checkedAt": "2026-10-03T22:47:16+01:00",
       "accounts": [
         "amanthakran.dreams@gmail.com",
         "aman.thakran.consulting@gmail.com"
       ],
-      "scope": "All new mail since 2026-10-03T19:51:00+01:00, including WorldWide HealthStaff, Avant, NurseAmerica, MedPro International, Conexus MedStaff, O'Grady Peyton, Connetics/AMN, ID Medical and Greenstaff replies, bounces, opt-outs, referral-term questions, and call requests",
-      "result": "No new human reply, bounce, opt-out, referral-term question, call request, customer, or attributable revenue event. A TravClan authentication message, unrelated promotion, and self-submitted BharatFare WebRevenue Scan messages were excluded; no outreach was sent outside the permitted hour."
+      "scope": "All new mail since 2026-10-03T20:49:38+01:00, including WorldWide HealthStaff, Avant, NurseAmerica, MedPro International, Conexus MedStaff, O'Grady Peyton, Connetics/AMN, ID Medical and Greenstaff replies, bounces, opt-outs, referral-term questions, and call requests",
+      "result": "No new human reply, bounce, opt-out, referral-term question, call request, customer, or attributable revenue event. Unrelated BharatFare supplier mail and Google security alerts were excluded; no outreach was sent outside the permitted hour."
     },
     "github": {
-      "checkedAt": "2026-10-03T20:49:38+01:00",
+      "checkedAt": "2026-10-03T22:47:16+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/nurse-referral-us.json",
-      "priorBlobSha": "f192129351979acaec22e747c3a45cedd6e262e2"
+      "priorBlobSha": "88ab6f1200942e72e7287c8bca61fa413d3c25a9"
+    },
+    "sendingHoldDiagnosis": {
+      "checkedAt": "2026-10-03T22:47:16+01:00",
+      "status": "HOLD_REASON_UNAVAILABLE",
+      "classification": "Historical action-specific safety/approval denial reported for the blocked outbound attempts; original rejection output is unavailable in the current execution context.",
+      "affectedScope": "Previously attempted new outreach to seven researched targets and one Avant follow-up only; read-only monitoring remains permitted.",
+      "correctiveStep": "Recover the original rejection output or direct resolution evidence before retrying any rejected action; do not switch inboxes or infer that the hold is cleared.",
+      "resolution": "UNRESOLVED",
+      "sendingConfirmed": false
     }
   }
 }
