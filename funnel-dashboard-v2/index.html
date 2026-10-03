@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07111f">
+<title>Aman Live Funnel Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="ambient ambient-a"></div>
+<div class="ambient ambient-b"></div>
+<main class="app">
+  <header class="topbar glass">
+    <div>
+      <div class="eyebrow">AMAN OPERATIONS</div>
+      <h1>Live Funnel Dashboard</h1>
+      <p class="sub">Verified telemetry only. No sample figures.</p>
+    </div>
+    <div class="header-status">
+      <div class="pill success" id="activeFunnels">15 Active Funnels</div>
+      <div class="refresh-chip">
+        <span class="pulse"></span>
+        <div>
+          <small>Dashboard refresh</small>
+          <strong id="refreshCountdown">60s</strong>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="sync-strip glass">
+    <div>
+      <span class="sync-label">LIVE DATA MODE</span>
+      <strong>Auto-refresh every 60 seconds</strong>
+    </div>
+    <div class="sync-right">
+      <span>Next ads telemetry check</span>
+      <strong id="nextAdsSync">Calculating…</strong>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">CHATGPT ADS</div>
+        <h2>Live Ads Delivery</h2>
+      </div>
+      <div class="pill neutral" id="adDeliveryBadge">Loading</div>
+    </div>
+    <div class="hero-card glass">
+      <div class="hero-card-top">
+        <div>
+          <div class="ad-kicker">CURRENT TEST</div>
+          <h3 id="adCampaignName">WebScan Agency White Label - £36 Test</h3>
+        </div>
+        <div class="mini-sync">
+          <span>Expected next sync</span>
+          <strong id="adExpectedSync">—</strong>
+        </div>
+      </div>
+
+      <div class="metrics">
+        <div class="metric"><span>Status</span><strong id="adStatus">—</strong></div>
+        <div class="metric"><span>Delivery</span><strong id="adDelivery">—</strong></div>
+        <div class="metric"><span>Budget</span><strong id="adBudget">—</strong></div>
+        <div class="metric"><span>Spend</span><strong id="adSpend">—</strong></div>
+        <div class="metric"><span>Impressions</span><strong id="adImpressions">—</strong></div>
+        <div class="metric"><span>Clicks</span><strong id="adClicks">—</strong></div>
+        <div class="metric"><span>CTR</span><strong id="adCtr">—</strong></div>
+        <div class="metric"><span>CPC</span><strong id="adCpc">—</strong></div>
+        <div class="metric"><span>Review</span><strong id="adReview">—</strong></div>
+        <div class="metric wide"><span>Milestone</span><strong id="adMilestone">—</strong></div>
+      </div>
+
+      <div class="helper-grid">
+        <div class="helper-item"><span class="signal green"></span><span>Impressions &gt; 0 = ad serving</span></div>
+        <div class="helper-item"><span class="signal teal"></span><span>Spend &gt; £0 = delivery confirmed</span></div>
+        <div class="helper-item"><span class="signal blue"></span><span>Clicks &gt; 0 = engagement</span></div>
+      </div>
+
+      <div class="card-footer">
+        <span id="lastUpdated">Last updated: —</span>
+        <a class="button" href="https://ads.openai.com/manage/campaigns?act=adacct_6abed53f0290819c85d4a21d0542021b&campaignIds=cmpn_6402243baa2c819899283a91583b4735" target="_blank" rel="noopener">Open Ads Manager</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="eyebrow">OVERVIEW</div>
+    <h2>Performance Summary</h2>
+    <div id="summaryGrid" class="summary-grid"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">FUNNELS</div>
+        <h2>All Active Funnels</h2>
+      </div>
+      <div class="legend-inline">
+        <span><i class="dot live-dot"></i>Live</span>
+        <span><i class="dot wait-dot"></i>Waiting</span>
+        <span><i class="dot stale-dot"></i>Stale</span>
+      </div>
+    </div>
+    <div id="funnels" class="funnel-list"></div>
+  </section>
+
+  <footer>
+    <span>Europe/London</span>
+    <span>GBP</span>
+    <span>Accurate values only</span>
+  </footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
