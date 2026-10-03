@@ -237,8 +237,14 @@
         "checkedAt": "2026-10-03T20:44:08.478Z",
         "due": null,
         "overdue": null,
-        "summary": "Two supplier follow-up messages verified in Sent on 2 October; both are separate Gmail threads referencing earlier enquiries. Full recipient-history audit is needed before certifying timing or suppression across threads. Cumulative telemetry records 3 follow-ups.",
+        "summary": "Two supplier follow-up messages verified in Sent on 2 October; both are separate Gmail threads referencing earlier enquiries. Full recipient-history audit is needed before certifying timing or suppression across threads. Cumulative telemetry records 3 follow-ups. Two outstanding supplier call-request conversations were answered on 3 October at 21:48 UK; Sent readback verified. Awaiting proposed time slots.",
         "checkedThreads": 2
+      },
+      "conversationReplyAction": {
+        "checkedAt": "2026-10-03T20:49:17.739Z",
+        "sentAt": "2026-10-03T20:48:42Z",
+        "verifiedConversationResponses": 2,
+        "scope": "Two user-authorized replies in existing supplier conversations verified in Gmail Sent and original threads. Requested call options; no meetings booked or commercial terms accepted. These are contextual replies, not cold follow-ups."
       }
     },
     {
