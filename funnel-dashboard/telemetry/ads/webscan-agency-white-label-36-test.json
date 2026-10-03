@@ -1,0 +1,15 @@
+{
+  "id": "webscan-agency-white-label-36-test",
+  "campaignName": "WebScan Agency White Label - £36 Test",
+  "status": "ACTIVE",
+  "deliveryStatus": "ELIGIBLE",
+  "lifetimeBudgetGbp": 36,
+  "spendGbp": 0,
+  "impressions": 0,
+  "clicks": 0,
+  "ctr": null,
+  "cpcGbp": null,
+  "reviewStatus": "IN_REVIEW",
+  "milestone": "WAITING_FOR_FIRST_DELIVERY",
+  "lastChecked": "2026-10-03T03:45:00+01:00"
+}
