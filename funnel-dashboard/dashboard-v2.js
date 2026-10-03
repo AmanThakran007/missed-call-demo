@@ -192,6 +192,19 @@ function drawWebscanMailboxes(s){
  noteAt(host,shown(all)+' all-campaign emails · '+shown(total)+' WebScan emails ('+shown(first)+' first touches + '+shown(follow)+' cold follow-ups + '+shown(inbound)+' inbound responses).');
  opsTable(host,['Inbox','All sent','WebScan outbound','Daily cap','Quota remaining','Load headroom','Volume policy'],s.rows.map(r=>{const p=progressFor(s,r);return [r.mailbox,shown(r.allSentToday),shown(p.outbound),shown(r.configuredDailyCap),p.active?shown(p.remaining):'Starts '+s.effectiveDate,shown(p.headroom),s.sendingPolicy?.mode==='FIXED_CAP'?'Fixed ceiling':shown(r.qualifyingDaysAtStage)+' / 3 qualifying days']}));
  noteAt(host,'Quota includes first touches and cold follow-ups. Load headroom includes all campaigns today and over 24 hours. Both are arithmetic ceilings, not permission to send. '+(s.sendingPolicy?.mode==='FIXED_CAP'?'Fixed starting ceiling: '+s.sendingPolicy.capPerInbox+' per inbox, '+s.sendingPolicy.totalCap+' across six. No ramp.':'Stage progression: 25 → 30 → 40 → 50 per inbox; each increase needs three qualifying sending days.')+'');
+ const counters=node('div',undefined,'ops-cards');
+ s.rows.forEach(r=>{
+ const card=node('div',undefined,'ops-card');card.appendChild(node('span',r.mailbox));
+ const today=ukToday(),started=today>=s.effectiveDate,rd=r.date||s.date,checked=r.checkedAt||s.checkedAt;
+ const current=rd===today&&evidenceRecent(checked)&&r.sourceRead==='VERIFIED';
+ const sent=knownCount(r.webscanFirstTouchesToday)&&knownCount(r.webscanFollowUpsToday)?r.webscanFirstTouchesToday+r.webscanFollowUpsToday:null;
+ const remaining=current&&knownCount(sent)&&knownCount(r.configuredDailyCap)?Math.max(0,r.configuredDailyCap-sent):null;
+ card.appendChild(node('strong',!started?shown(r.configuredDailyCap)+' available from '+s.effectiveDate:remaining===null?'Remaining unverified':remaining+' remaining / '+r.configuredDailyCap));
+ card.appendChild(node('small',!started?'Daily allowance starts tomorrow':current?shown(sent)+' WebScan outbound sent today':'Waiting for a current-day Gmail sync'));
+ const bar=node('progress');bar.max=r.configuredDailyCap||50;bar.value=started&&current&&knownCount(sent)?Math.min(sent,bar.max):0;bar.setAttribute('aria-label',r.mailbox+' confirmed daily outbound sends');bar.style.cssText='width:100%;margin-top:12px;accent-color:var(--teal)';card.appendChild(bar);
+ card.appendChild(node('small','Last source sync: '+checked));counters.appendChild(card);
+ });host.appendChild(counters);
+ noteAt(host,'Remaining decreases only after confirmed WebScan first touches or cold follow-ups are synced. Drafts and failed attempts do not consume quota. Page refreshes every 60 seconds; Gmail sync may lag. Each London day needs a fresh count before remaining is shown.');
  const details=node('details');details.appendChild(node('summary','Sending blockers and shortfall reasons'));
  s.rows.forEach(r=>{const reasons=Array.isArray(r.skippedReasons)?r.skippedReasons:[];noteAt(details,r.mailbox+': '+(reasons.length?reasons.join('; '):'No per-inbox shortfall explanation recorded.'))});
  (s.blockers||[]).forEach(b=>noteAt(details,b));host.appendChild(details);
