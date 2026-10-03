@@ -28,7 +28,23 @@
       "sourceRead": "VERIFIED",
       "sixInboxSendTest": "NOT_YET_RUN",
       "allSentRolling24h": 0,
-      "remainingQuotaForEffectiveDate": 25
+      "remainingQuotaForEffectiveDate": 25,
+      "prospectQueue": {
+        "status": "UNVERIFIED",
+        "checkedAt": null,
+        "ready": null,
+        "awaitingVerification": null,
+        "blocked": null
+      },
+      "replyQueue": {
+        "status": "UNVERIFIED",
+        "checkedAt": null,
+        "needsAnswer": null,
+        "interested": null,
+        "pricingOrCall": null,
+        "notInterested": null
+      },
+      "skippedReasons": []
     },
     {
       "mailbox": "Ecommerce inbox",
@@ -44,7 +60,23 @@
       "sourceRead": "VERIFIED",
       "sixInboxSendTest": "NOT_YET_RUN",
       "allSentRolling24h": 0,
-      "remainingQuotaForEffectiveDate": 25
+      "remainingQuotaForEffectiveDate": 25,
+      "prospectQueue": {
+        "status": "UNVERIFIED",
+        "checkedAt": null,
+        "ready": null,
+        "awaitingVerification": null,
+        "blocked": null
+      },
+      "replyQueue": {
+        "status": "UNVERIFIED",
+        "checkedAt": null,
+        "needsAnswer": null,
+        "interested": null,
+        "pricingOrCall": null,
+        "notInterested": null
+      },
+      "skippedReasons": []
     },
     {
       "mailbox": "BharatFare inbox",
@@ -60,7 +92,23 @@
       "sourceRead": "VERIFIED",
       "sixInboxSendTest": "NOT_YET_RUN",
       "allSentRolling24h": 0,
-      "remainingQuotaForEffectiveDate": 25
+      "remainingQuotaForEffectiveDate": 25,
+      "prospectQueue": {
+        "status": "UNVERIFIED",
+        "checkedAt": null,
+        "ready": null,
+        "awaitingVerification": null,
+        "blocked": null
+      },
+      "replyQueue": {
+        "status": "UNVERIFIED",
+        "checkedAt": null,
+        "needsAnswer": null,
+        "interested": null,
+        "pricingOrCall": null,
+        "notInterested": null
+      },
+      "skippedReasons": []
     },
     {
       "mailbox": "8891 inbox",
@@ -76,7 +124,23 @@
       "sourceRead": "VERIFIED",
       "sixInboxSendTest": "NOT_YET_RUN",
       "allSentRolling24h": 0,
-      "remainingQuotaForEffectiveDate": 25
+      "remainingQuotaForEffectiveDate": 25,
+      "prospectQueue": {
+        "status": "UNVERIFIED",
+        "checkedAt": null,
+        "ready": null,
+        "awaitingVerification": null,
+        "blocked": null
+      },
+      "replyQueue": {
+        "status": "UNVERIFIED",
+        "checkedAt": null,
+        "needsAnswer": null,
+        "interested": null,
+        "pricingOrCall": null,
+        "notInterested": null
+      },
+      "skippedReasons": []
     },
     {
       "mailbox": "Dreams inbox",
@@ -92,7 +156,23 @@
       "sourceRead": "VERIFIED",
       "sixInboxSendTest": "NOT_YET_RUN",
       "allSentRolling24h": 43,
-      "remainingQuotaForEffectiveDate": 25
+      "remainingQuotaForEffectiveDate": 25,
+      "prospectQueue": {
+        "status": "UNVERIFIED",
+        "checkedAt": null,
+        "ready": null,
+        "awaitingVerification": null,
+        "blocked": null
+      },
+      "replyQueue": {
+        "status": "UNVERIFIED",
+        "checkedAt": null,
+        "needsAnswer": null,
+        "interested": null,
+        "pricingOrCall": null,
+        "notInterested": null
+      },
+      "skippedReasons": []
     },
     {
       "mailbox": "Consulting inbox",
@@ -108,7 +188,23 @@
       "sourceRead": "VERIFIED",
       "sixInboxSendTest": "NOT_YET_RUN",
       "allSentRolling24h": 7,
-      "remainingQuotaForEffectiveDate": 25
+      "remainingQuotaForEffectiveDate": 25,
+      "prospectQueue": {
+        "status": "UNVERIFIED",
+        "checkedAt": null,
+        "ready": null,
+        "awaitingVerification": null,
+        "blocked": null
+      },
+      "replyQueue": {
+        "status": "UNVERIFIED",
+        "checkedAt": null,
+        "needsAnswer": null,
+        "interested": null,
+        "pricingOrCall": null,
+        "notInterested": null
+      },
+      "skippedReasons": []
     }
   ],
   "totals": {
@@ -120,9 +216,10 @@
     "webscanHumanRepliesToday": 0,
     "webscanBouncesToday": 0,
     "webscanOptOutsToday": 0,
-    "webscanTotalSentToday": 22,
+    "webscanTotalSentToday": 24,
     "configuredDailyCap": 150,
-    "remainingQuotaForEffectiveDate": 150
+    "remainingQuotaForEffectiveDate": 150,
+    "webscanOutboundToday": 22
   },
   "funnelFirstTouchesToday": {
     "webscan-general-sme": 21,
@@ -145,5 +242,11 @@
     "The six-inbox workflow is configured but remains untested until new-policy sends and Sent-header readback occur on or after 4 October 2026.",
     "Professional Services and Agency White Label retain recorded send-denial blockers; no blocked send was retried during this sync.",
     "Repository write and readback passed, but the public GitHub Pages JSON could not be fetched in this environment (blocked by client); public deployment visibility remains unverified."
-  ]
+  ],
+  "automation": {
+    "checkedAt": "2026-10-03T20:37:41.309Z",
+    "enabledTasks": 15,
+    "enabledWebscanTasks": 5,
+    "lastCoordinatorRun": "2026-10-03T20:33:54.424778+00:00"
+  }
 }
