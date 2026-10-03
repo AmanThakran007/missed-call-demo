@@ -9,6 +9,16 @@
       "customersWon": 0,
       "revenueGbp": 0,
       "inboundLeads": 1
+    },
+    {
+      "date": "2026-10-04",
+      "firstEmailsSent": 55,
+      "humanReplies": 6,
+      "positiveReplies": 6,
+      "callsDemosRequested": 2,
+      "customersWon": 0,
+      "revenueGbp": 0,
+      "inboundLeads": 1
     }
   ]
 }
