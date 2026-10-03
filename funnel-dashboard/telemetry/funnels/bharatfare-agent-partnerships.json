@@ -10,22 +10,25 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T17:46:37+01:00",
-  "nextRun": "2026-10-03T18:44:00+01:00",
+  "lastRun": "2026-10-03T18:48:57+01:00",
+  "nextRun": "2026-10-03T19:44:00+01:00",
   "freshness": "LIVE",
   "blocker": null,
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-03T17:46:37+01:00",
-      "account": "amanthakran.dreams@gmail.com",
-      "scope": "All incoming mail since the prior successful check plus campaign-specific BharatFare agent, agency, trade, referral, partnership and quote history",
-      "result": "No verified agent-partnership human replies, bounces, opt-outs, partnership questions, calls, conversions or revenue. Supplier-acquisition, platform-sales and unrelated messages were excluded; no outreach was sent outside the approved hour."
+      "checkedAt": "2026-10-03T18:48:57+01:00",
+      "accounts": [
+        "amanthakran.dreams@gmail.com",
+        "aman.thakran.consulting@gmail.com"
+      ],
+      "scope": "Campaign-specific BharatFare agent, agency, trade, referral, partnership, trial-quote, bounce and opt-out history",
+      "result": "No verified agent-partnership human replies, bounces, opt-outs, partnership questions, calls, conversions or revenue. Supplier-acquisition, platform-sales, operational and unrelated messages were excluded; no outreach was sent outside the approved hour."
     },
     "github": {
-      "checkedAt": "2026-10-03T17:46:37+01:00",
+      "checkedAt": "2026-10-03T18:48:57+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/bharatfare-agent-partnerships.json",
-      "priorBlobSha": "ca5d980e39ed87ebde98a4291760b73f0a45666c"
+      "priorBlobSha": "971c6a7345e0068aaa0924347edec51e95ac8e04"
     }
   }
 }
