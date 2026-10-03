@@ -5,11 +5,11 @@
   "deliveryStatus": "ELIGIBLE",
   "lifetimeBudgetGbp": 36,
   "spendGbp": 0,
-  "impressions": 0,
-  "clicks": 0,
+  "impressions": null,
+  "clicks": null,
   "ctr": null,
   "cpcGbp": null,
   "reviewStatus": "approved",
   "milestone": "WAITING_FOR_FIRST_DELIVERY",
-  "lastChecked": "2026-10-03T04:03:18+01:00"
+  "lastChecked": "2026-10-03T05:09:00+01:00"
 }
