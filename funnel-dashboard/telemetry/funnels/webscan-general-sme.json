@@ -107,7 +107,9 @@
       "mailboxSnapshotPath": "funnel-dashboard/telemetry/webscan-mailboxes.json",
       "scheduledSendingStatus": "NOT_YET_RUN",
       "senderHeaderChecks": "NOT_YET_RUN",
-      "effectiveDate": "2026-10-04"
+      "effectiveDate": "2026-10-04",
+      "publicDeploymentVisibility": "BLOCKED_BY_CLIENT",
+      "publicDeploymentResult": "Repository source write and readback passed; the GitHub Pages JSON fetch was blocked by the client environment, so public visibility is not confirmed."
     }
   }
 }
