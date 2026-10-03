@@ -5,13 +5,13 @@
   "prospectsResearched": 15,
   "firstEmailsSent": 12,
   "followUpsSent": 3,
-  "humanReplies": 2,
-  "positiveReplies": 2,
-  "callsDemosRequested": 1,
+  "humanReplies": 3,
+  "positiveReplies": 3,
+  "callsDemosRequested": 2,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T09:42:46+01:00",
-  "nextRun": "2026-10-03T10:41:00+01:00",
+  "lastRun": "2026-10-03T15:36:38+01:00",
+  "nextRun": "2026-10-03T16:41:00+01:00",
   "freshness": "LIVE",
   "blocker": null
 }
