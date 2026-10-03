@@ -34,6 +34,17 @@
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/webscan-agency-white-label.json",
       "priorBlobSha": "6a740244145580069b1154fee49ffb126ae53b13"
+    },
+    "sixInboxReconciliation": {
+      "checkedAt": "2026-10-03T20:27:05.172Z",
+      "date": "2026-10-03",
+      "scope": "Daily Sent reconciliation and targeted received checks across all six inboxes; does not certify future sends or all historical campaign metrics.",
+      "accountsChecked": 6,
+      "status": "SOURCE_RECONCILED",
+      "dailyFirstTouches": 0,
+      "dailyFollowUps": 0,
+      "mailboxSnapshotPath": "funnel-dashboard/telemetry/webscan-mailboxes.json",
+      "scheduledSendingStatus": "NOT_YET_RUN"
     }
   }
 }
