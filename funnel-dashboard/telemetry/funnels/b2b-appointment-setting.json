@@ -20,27 +20,44 @@
     "Lost": 0
   },
   "draftsPending": 2,
-  "lastRun": "2026-10-03T21:43:53+01:00",
-  "nextRun": "2026-10-03T22:39:00+01:00",
+  "lastRun": "2026-10-03T23:41:29+01:00",
+  "nextRun": "2026-10-04T00:39:00+01:00",
   "freshness": "LIVE",
-  "blocker": "OUTREACH_SEND_BLOCKED: Earlier first-touch sends were denied by the mail-action safety gate; two verified drafts remain pending in aman.thakran.consulting@gmail.com. No sends were retried outside the permitted outreach hour.",
+  "blocker": "HOLD_REASON_UNAVAILABLE: Historical first-touch send attempts were rejected by mail-action safety controls, but the original rejection output is unavailable in the current execution context. The restriction cannot be classified as action-specific or campaign-wide and remains unresolved; two drafts remain unsent. Monitoring is permitted.",
   "sourceChecks": {
     "gmailPrimary": {
-      "checkedAt": "2026-10-03T21:44:01+01:00",
+      "checkedAt": "2026-10-03T23:41:29+01:00",
       "account": "amanthakran.dreams@gmail.com",
-      "scope": "All mail since 2026-10-03T20:37:30+01:00, including appointment-setting replies, bounces, opt-outs, pricing or pilot questions and call/demo requests",
-      "result": "No appointment-setting reply, bounce, opt-out, pricing or pilot question, call/demo request, or sent first-touch found. Google account-connection security alerts were excluded as non-campaign mail."
+      "scope": "All mail since 2026-10-03T21:44:01+01:00, including appointment-setting replies, bounces, opt-outs, pricing or pilot questions and call/demo requests",
+      "result": "No appointment-setting reply, bounce, opt-out, pricing or pilot question, call/demo request, or sent first-touch found. Unrelated promotional, security and travel-supplier messages were excluded."
     },
     "gmailDrafts": {
-      "checkedAt": "2026-10-03T21:44:01+01:00",
+      "checkedAt": "2026-10-03T23:41:29+01:00",
       "account": "aman.thakran.consulting@gmail.com",
-      "result": "Verified the two unsent drafts still remain: UPP B2B and LinkGen. No new message, campaign reply, relevant bounce, or send was found."
+      "result": "Two verified unsent appointment-setting drafts remain. No new campaign message, relevant bounce, reply or send was found."
     },
     "github": {
-      "checkedAt": "2026-10-03T21:44:01+01:00",
+      "checkedAt": "2026-10-03T23:41:29+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/b2b-appointment-setting.json",
-      "priorBlobSha": "5cb22865ffe72db28e5d089df7a8fb075bb32248"
+      "priorBlobSha": "ae1bbd4db545d20585d337d7d60dddfe6432a81b"
+    },
+    "holdDiagnosis": {
+      "checkedAt": "2026-10-03T23:41:29+01:00",
+      "status": "HOLD_REASON_UNAVAILABLE",
+      "classification": {
+        "providerError": "NOT_EVIDENCED",
+        "missingBusinessInformationOrPartnerPermission": "NOT_EVIDENCED",
+        "actionSpecificApprovalDenial": "UNDETERMINED",
+        "campaignWideHold": "UNDETERMINED"
+      },
+      "affectedScope": "Historical appointment-setting first-touch attempts; existing drafts remain unsent. Read-only monitoring remains permitted.",
+      "publicSummary": "Historical summaries confirm rejected send attempts, but the original rejection output is unavailable. No retry, inbox switch, bypass or recovery claim was made.",
+      "correctiveStep": "Retrieve the original rejection output or direct resolution evidence through the applicable safety-review process before attempting or classifying recovery.",
+      "requiredEvidence": "Original mail-action rejection output or direct evidence that the relevant restriction has been resolved.",
+      "diagnosticsCompleted": true,
+      "correctionVerified": false,
+      "sendingConfirmed": false
     }
   }
 }
