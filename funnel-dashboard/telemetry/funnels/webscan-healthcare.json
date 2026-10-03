@@ -33,6 +33,17 @@
     "safetyReview": {
       "checkedAt": "2026-10-03T16:53:39+01:00",
       "result": "Previous task-wide email-safety hold explicitly reviewed and resolved; sending remains restricted to the configured outreach window and prospect-level safeguards."
+    },
+    "sixInboxReconciliation": {
+      "checkedAt": "2026-10-03T20:27:05.172Z",
+      "date": "2026-10-03",
+      "scope": "Daily Sent reconciliation and targeted received checks across all six inboxes; does not certify future sends or all historical campaign metrics.",
+      "accountsChecked": 6,
+      "status": "SOURCE_RECONCILED",
+      "dailyFirstTouches": 1,
+      "dailyFollowUps": 0,
+      "mailboxSnapshotPath": "funnel-dashboard/telemetry/webscan-mailboxes.json",
+      "scheduledSendingStatus": "NOT_YET_RUN"
     }
   }
 }
