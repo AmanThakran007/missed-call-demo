@@ -20,8 +20,26 @@
     "Lost": 0
   },
   "draftsPending": 2,
-  "lastRun": "2026-10-03T15:41:31+01:00",
-  "nextRun": "2026-10-03T16:39:00+01:00",
+  "lastRun": "2026-10-03T17:42:36+01:00",
+  "nextRun": "2026-10-03T18:39:00+01:00",
   "freshness": "LIVE",
-  "blocker": "2 verified Gmail drafts remain unsent; no new reply, bounce, opt-out, pricing, call/demo, or delivery-status changes detected"
+  "blocker": "OUTREACH_SEND_BLOCKED: Earlier first-touch sends were denied by the mail-action safety gate; two verified drafts remain pending in aman.thakran.consulting@gmail.com. No sends were retried outside the permitted outreach hour.",
+  "sourceChecks": {
+    "gmailPrimary": {
+      "checkedAt": "2026-10-03T17:43:34+01:00",
+      "account": "amanthakran.dreams@gmail.com",
+      "result": "No campaign reply, bounce, opt-out, pricing/pilot question, call request, or sent first-touch found."
+    },
+    "gmailDrafts": {
+      "checkedAt": "2026-10-03T17:43:34+01:00",
+      "account": "aman.thakran.consulting@gmail.com",
+      "result": "Verified two unsent drafts: UPP B2B and LinkGen."
+    },
+    "github": {
+      "checkedAt": "2026-10-03T17:43:34+01:00",
+      "repository": "AmanThakran007/missed-call-demo",
+      "path": "funnel-dashboard/telemetry/funnels/b2b-appointment-setting.json",
+      "priorBlobSha": "517f5eede76859938a753dbdd91d0aa99ed7da96"
+    }
+  }
 }
