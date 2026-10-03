@@ -16,7 +16,7 @@ async function buildData(){const base=(await loadJson(source))||{activeFunnels:1
 function aggregate(data){const fs=Object.values(data.funnels||{});const sums={prospectsResearched:0,firstEmailsSent:0,followUpsSent:0,humanReplies:0,positiveReplies:0,callsDemosRequested:0,customersWon:0,revenueGbp:0};for(const f of fs){for(const k in sums)if(typeof f[k]==='number')sums[k]+=f[k]}return {fs,sums}}
 function drawGlance(data){const {fs,sums}=aggregate(data);const live=fs.filter(f=>f.freshness==='LIVE').length, waiting=fs.filter(f=>!f.freshness||f.freshness==='AWAITING_FIRST_SYNC').length;const ad=data.ads&&data.ads['webscan-agency-white-label-36-test'];const items=[['⚡','Live Funnels',live],['⏳','Awaiting Sync',waiting],['✉️','First Emails',sums.firstEmailsSent||'—'],['💬','Human Replies',sums.humanReplies||'—'],['🤝','Calls / Demos',sums.callsDemosRequested||'—'],['£','Revenue',sums.revenueGbp?money(sums.revenueGbp):'—']];document.getElementById('glanceStrip').innerHTML=items.map(x=>'<div class="glance-card"><div class="glance-icon">'+x[0]+'</div><span>'+x[1]+'</span><strong>'+x[2]+'</strong></div>').join('')}
 function drawMilestones(data){const {sums}=aggregate(data);const ad=data.ads&&data.ads['webscan-agency-white-label-36-test']||{};const ms=[['Campaign created',true,'£36 WebScan test configured'],['Ad eligible',ad.deliveryStatus==='ELIGIBLE'||ad.status==='ACTIVE','Campaign can serve'],['First impression',Number(ad.impressions)>0,'Waiting for first served impression'],['First click',Number(ad.clicks)>0,'Waiting for first click'],['First positive reply',sums.positiveReplies>0,'Across all outreach funnels'],['First call / demo',sums.callsDemosRequested>0,'Across all outreach funnels'],['First customer',sums.customersWon>0,'Confirmed revenue-generating conversion'],['First £1 revenue',sums.revenueGbp>0,'Confirmed attributable revenue']];const done=ms.filter(x=>x[1]).length;set('milestoneCount',done+'/'+ms.length);const circumference=195;const ring=document.getElementById('milestoneRing');if(ring)ring.style.strokeDashoffset=String(circumference-(circumference*done/ms.length));document.getElementById('milestones').innerHTML=ms.map(x=>'<div class="milestone '+(x[1]?'done':'waiting')+'"><div class="milestone-icon">'+(x[1]?'✓':'•')+'</div><div><div class="milestone-title">'+x[0]+'</div><div class="milestone-sub">'+x[2]+'</div></div><div class="milestone-state">'+(x[1]?'Done':'Waiting')+'</div></div>').join('')}
-function drawAttention(data){const {fs,sums}=aggregate(data);const items=[];const blocked=fs.filter(f=>f.freshness==='TELEMETRY_SYNC_BLOCKED');const stale=fs.filter(f=>f.freshness==='STALE');const waiting=fs.filter(f=>!f.freshness||f.freshness==='AWAITING_FIRST_SYNC');if(blocked.length)items.push(['Telemetry blocked',blocked.length+' funnel'+(blocked.length>1?'s':'')+' need a successful write']);if(stale.length)items.push(['Stale telemetry',stale.length+' funnel'+(stale.length>1?'s are':' is')+' overdue']);if(waiting.length)items.push(['Awaiting first sync',waiting.length+' funnel'+(waiting.length>1?'s have':' has')+' not reported yet']);const ad=data.ads&&data.ads['webscan-agency-white-label-36-test']||{};if(!(Number(ad.impressions)>0))items.push(['Ad waiting for first impression','Campaign is eligible but has not served yet']);if(!sums.positiveReplies)items.push(['No positive reply recorded yet','Keep watching outreach funnels for first commercial signal']);document.getElementById('attentionList').innerHTML=(items.length?items:[['Everything synced','No current blockers detected']]).slice(0,5).map(x=>'<div class="attention-item"><strong>'+x[0]+'</strong><span>'+x[1]+'</span></div>').join('')}
+function drawAttention(data){const {fs,sums}=aggregate(data);const items=[];const sendBlocked=fs.filter(f=>f.blocker);if(sendBlocked.length)items.push(['Recorded campaign blockers',sendBlocked.length+' funnels have unresolved blocker fields; inspect their records']);const blocked=fs.filter(f=>f.freshness==='TELEMETRY_SYNC_BLOCKED');const stale=fs.filter(f=>f.freshness==='STALE');const waiting=fs.filter(f=>!f.freshness||f.freshness==='AWAITING_FIRST_SYNC');if(blocked.length)items.push(['Telemetry blocked',blocked.length+' funnel'+(blocked.length>1?'s':'')+' need a successful write']);if(stale.length)items.push(['Stale telemetry',stale.length+' funnel'+(stale.length>1?'s are':' is')+' overdue']);if(waiting.length)items.push(['Awaiting first sync',waiting.length+' funnel'+(waiting.length>1?'s have':' has')+' not reported yet']);const ad=data.ads&&data.ads['webscan-agency-white-label-36-test']||{};if(!(Number(ad.impressions)>0))items.push(['Ad waiting for first impression','Campaign is eligible but has not served yet']);if(!sums.positiveReplies)items.push(['No positive reply recorded yet','Keep watching outreach funnels for first commercial signal']);document.getElementById('attentionList').innerHTML=(items.length?items:[['No telemetry alerts','Sending and reply status require separate evidence']]).slice(0,5).map(x=>'<div class="attention-item"><strong>'+x[0]+'</strong><span>'+x[1]+'</span></div>').join('')}
 function drawCategoryGrid(data){const groups={};for(const f of Object.values(data.funnels||{})){const c=f.category||'Other';if(!groups[c])groups[c]=[];groups[c].push(f)}document.getElementById('categoryGrid').innerHTML=Object.entries(groups).map(([name,arr])=>{const live=arr.filter(f=>f.freshness==='LIVE').length;const replies=arr.reduce((a,f)=>a+(Number(f.humanReplies)||0),0);const calls=arr.reduce((a,f)=>a+(Number(f.callsDemosRequested)||0),0);const revenue=arr.reduce((a,f)=>a+(Number(f.revenueGbp)||0),0);const pct=Math.round((live/arr.length)*100);return '<div class="category-card"><div class="category-top"><div class="category-name">'+name+'</div><div class="category-count">'+arr.length+' funnel'+(arr.length>1?'s':'')+'</div></div><div class="health-bar"><div class="health-fill" style="width:'+pct+'%"></div></div><div class="category-stats"><div class="category-stat"><span>Live</span><strong>'+live+'/'+arr.length+'</strong></div><div class="category-stat"><span>Replies</span><strong>'+replies+'</strong></div><div class="category-stat"><span>Calls</span><strong>'+calls+'</strong></div></div>'+(revenue?'<div class="category-stat" style="margin-top:8px"><span>Revenue</span><strong>'+money(revenue)+'</strong></div>':'')+'</div>'}).join('')}
 function drawTimeline(data){const events=[];const ad=data.ads&&data.ads['webscan-agency-white-label-36-test'];if(ad&&ad.lastChecked)events.push({t:new Date(ad.lastChecked),title:'Ads telemetry checked',sub:(ad.deliveryStatus||'Unknown')+' · '+(Number(ad.impressions)||0)+' impressions · '+money(Number(ad.spendGbp)||0)+' spend'});for(const f of Object.values(data.funnels||{})){if(f.lastRun){const d=new Date(f.lastRun);if(!isNaN(d))events.push({t:d,title:f.name+' ran',sub:(f.freshness||'').replaceAll('_',' ')})}}events.sort((a,b)=>b.t-a.t);document.getElementById('activityTimeline').innerHTML=(events.length?events.slice(0,8):[{t:null,title:'Waiting for first verified activity',sub:'Events will appear here after successful telemetry writes'}]).map(e=>'<div class="timeline-item"><div class="timeline-time">'+(e.t?new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/London',day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit',hour12:false}).format(e.t)+' UK':'—')+'</div><div class="timeline-title">'+e.title+'</div><div class="timeline-sub">'+e.sub+'</div></div>').join('')}
 function drawAds(data){const ad=data.ads&&data.ads['webscan-agency-white-label-36-test'];if(!ad)return;set('adCampaignName',ad.campaignName);set('adStatus',ad.status);set('adDelivery',ad.deliveryStatus);set('adBudget',money(ad.lifetimeBudgetGbp));set('adSpend',money(ad.spendGbp));set('adImpressions',ad.impressions);set('adClicks',ad.clicks);set('adCtr',ad.ctr==null?'—':ad.ctr+'%');set('adCpc',ad.cpcGbp==null?'—':money(ad.cpcGbp));set('adReview',ad.reviewStatus||'—');set('adMilestone',(ad.milestone||'—').replaceAll('_',' '));set('adDeliveryBadge',ad.deliveryStatus||'—');set('lastUpdated','Last updated: '+(ad.lastChecked||data.generatedAt||'—'))}
@@ -131,7 +131,7 @@ function buildPriorities(data){
 }
 function drawPriorities(data){
   const items=buildPriorities(data);
-  document.getElementById('priorityList').innerHTML=(items.length?items:[['No urgent action','Everything currently looks synced and monitored']]).map((x,i)=>'<div class="priority-item"><strong><span class="priority-num">'+(i+1)+'</span>'+x[0]+'</strong><span>'+x[1]+'</span></div>').join('');
+  document.getElementById('priorityList').innerHTML=(items.length?items:[['Review operations evidence','Check queue readiness, open replies and sending blockers above']]).map((x,i)=>'<div class="priority-item"><strong><span class="priority-num">'+(i+1)+'</span>'+x[0]+'</strong><span>'+x[1]+'</span></div>').join('');
 }
 
 function linePath(points,width,height,key){
@@ -159,45 +159,63 @@ function drawTrends(history){
 }
 
 
-function drawWebscanMailboxes(snapshot){
-  const host=document.getElementById('webscanMailboxes');
-  if(!host)return;
-  host.replaceChildren();
-  const note=document.createElement('p');note.className='sub';host.appendChild(note);
-  if(!snapshot||!Array.isArray(snapshot.rows)||snapshot.rows.length!==6){
-    note.textContent='Six-inbox telemetry unavailable. Counts and limits are not verified.';return;
-  }
-  const age=Date.now()-Date.parse(snapshot.checkedAt);
-  const stale=!Number.isFinite(age)||age>2*60*60*1000;
-  note.textContent=(stale?'STALE SNAPSHOT — ':'')+'Gmail checked '+snapshot.checkedAt+
-    '. Snapshot date: '+snapshot.date+' (UK). Sent records do not prove delivery. Limits effective '+snapshot.effectiveDate+'.';
-  const wrap=document.createElement('div');wrap.style.overflowX='auto';host.appendChild(wrap);
-  const table=document.createElement('table');table.style.cssText='width:100%;border-collapse:collapse;text-align:left';
-  wrap.appendChild(table);
-  const headers=['Inbox','All sent','WebScan first emails','WebScan follow-ups','Inbound messages','Configured daily cap'];
-  const head=table.createTHead().insertRow();
-  headers.forEach(text=>{const th=document.createElement('th');th.textContent=text;th.style.padding='12px 8px';head.appendChild(th)});
-  const body=table.createTBody();
-  const keys=['mailbox','allSentToday','webscanFirstTouchesToday','webscanFollowUpsToday','webscanInboundMessagesToday','configuredDailyCap'];
-  snapshot.rows.forEach(row=>{
-    const tr=body.insertRow();
-    keys.forEach(key=>{const td=tr.insertCell();td.style.cssText='padding:12px 8px;border-top:1px solid #334155';td.textContent=row[key]??'Unverified'});
-  });
-  const total=document.createElement('p');total.className='sub';
-  const t=snapshot.totals||{};
-  total.textContent='Verified snapshot: '+(t.allSentToday??'—')+' total sent; '+(t.webscanTotalSentToday??'—')+
-    ' WebScan sent. Configured WebScan allowance: '+(t.configuredDailyCap??'—')+
-    '/day including cold follow-ups. Scheduled six-inbox sending: '+(snapshot.verification?.futureScheduledSending||'UNVERIFIED')+'.';
-  host.appendChild(total);
-  (snapshot.blockers||[]).forEach(text=>{const p=document.createElement('p');p.className='sub';p.textContent=text;host.appendChild(p)});
+// Public dashboard: aggregate operational evidence only, never contact records.
+const inboxAliases=['England inbox','Ecommerce inbox','BharatFare inbox','8891 inbox','Dreams inbox','Consulting inbox'];
+function knownCount(n){return Number.isInteger(n)&&n>=0}
+function sumKnown(rows,key){return rows.every(r=>knownCount(r[key]))?rows.reduce((n,r)=>n+r[key],0):null}
+function shown(n){return knownCount(n)?String(n):'Unverified'}
+function ukToday(){const p=londonParts();return p.year+'-'+p.month+'-'+p.day}
+function snapshotUsable(s){return !!s&&Array.isArray(s.rows)&&s.rows.length===6&&inboxAliases.every(a=>s.rows.filter(r=>r.mailbox===a).length===1)}
+function snapshotFresh(s){const age=Date.now()-Date.parse(s?.checkedAt);return Number.isFinite(age)&&age>=-300000&&age<=7200000&&s.date===ukToday()&&s.status==='SOURCE_RECONCILED'&&s.rows.every(r=>r.sourceRead==='VERIFIED')}
+function progressFor(s,r){
+ const outbound=knownCount(r.webscanFirstTouchesToday)&&knownCount(r.webscanFollowUpsToday)?r.webscanFirstTouchesToday+r.webscanFollowUpsToday:null;
+ const active=s.date>=s.effectiveDate;
+ const remaining=active&&snapshotFresh(s)&&knownCount(outbound)&&knownCount(r.configuredDailyCap)?Math.max(0,r.configuredDailyCap-outbound):null;
+ const guard=knownCount(r.configuredDailyCap)?2*r.configuredDailyCap+20:null;
+ const headroom=snapshotFresh(s)&&knownCount(guard)&&knownCount(r.allSentToday)&&knownCount(r.allSentRolling24h)?Math.max(0,Math.min(guard-r.allSentToday,guard-r.allSentRolling24h)):null;
+ return {outbound,remaining,headroom,active};
+}
+function node(tag,text,cls){const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e}
+function noteAt(root,text){root.appendChild(node('p',text,'ops-note'))}
+function opsTable(root,headers,rows){const wrap=node('div',undefined,'ops-scroll');const table=node('table',undefined,'ops-table');const tr=table.createTHead().insertRow();headers.forEach(h=>{const th=node('th',h);th.scope='col';tr.appendChild(th)});const body=table.createTBody();rows.forEach(row=>{const tr=body.insertRow();row.forEach(v=>tr.appendChild(node('td',v)))});wrap.appendChild(table);root.appendChild(wrap)}
+function drawWebscanMailboxes(s){
+ const host=document.getElementById('webscanMailboxes');host.replaceChildren();
+ if(!snapshotUsable(s)){noteAt(host,'Six-inbox telemetry unavailable or incomplete. Counts and sending headroom are unverified.');return}
+ const fresh=snapshotFresh(s);noteAt(host,(fresh?'SOURCE CHECKED':'STALE / PARTIAL SNAPSHOT')+' · '+s.checkedAt+' · UK date '+s.date+'. Sent records do not prove delivery.');
+ const cards=node('div',undefined,'ops-cards');host.appendChild(cards);
+ const states=[['Automation',s.automation?shown(s.automation.enabledWebscanTasks)+' WebScan tasks enabled':'Task status unverified'],['Data sync',fresh?'Source reconciled; JSON loaded':'Needs a fresh complete source check'],['Sending',s.verification?.futureScheduledSending==='PASSED'?'Verified by recorded send checks':'Six-inbox sending not yet verified']];
+ states.forEach(([title,value])=>{const card=node('div',undefined,'ops-card');card.append(node('span',title),node('strong',value));if(title==='Automation'&&s.automation)card.appendChild(node('small','Checked '+s.automation.checkedAt));cards.appendChild(card)});
+ const all=sumKnown(s.rows,'allSentToday'),first=sumKnown(s.rows,'webscanFirstTouchesToday'),follow=sumKnown(s.rows,'webscanFollowUpsToday'),inbound=sumKnown(s.rows,'webscanInboundMessagesToday');
+ const total=[first,follow,inbound].every(knownCount)?first+follow+inbound:null;
+ noteAt(host,shown(all)+' all-campaign emails · '+shown(total)+' WebScan emails ('+shown(first)+' first touches + '+shown(follow)+' cold follow-ups + '+shown(inbound)+' inbound responses).');
+ opsTable(host,['Inbox','All sent','WebScan outbound','Daily cap','Quota remaining','Load headroom','Ramp progress'],s.rows.map(r=>{const p=progressFor(s,r);return [r.mailbox,shown(r.allSentToday),shown(p.outbound),shown(r.configuredDailyCap),p.active?shown(p.remaining):'Starts '+s.effectiveDate,shown(p.headroom),shown(r.qualifyingDaysAtStage)+' / 3 qualifying days']}));
+ noteAt(host,'Quota includes first touches and cold follow-ups. Load headroom includes all campaigns today and over 24 hours. Both are arithmetic ceilings, not permission to send. Stage progression: 25 → 30 → 40 → 50 per inbox; each increase needs three qualifying sending days.');
+ const details=node('details');details.appendChild(node('summary','Sending blockers and shortfall reasons'));
+ s.rows.forEach(r=>{const reasons=Array.isArray(r.skippedReasons)?r.skippedReasons:[];noteAt(details,r.mailbox+': '+(reasons.length?reasons.join('; '):'No per-inbox shortfall explanation recorded.'))});
+ (s.blockers||[]).forEach(b=>noteAt(details,b));host.appendChild(details);
+}
+function drawWebscanOperations(s,data){
+ const queue=document.getElementById('prospectQueue'),reply=document.getElementById('replyCentre');queue.replaceChildren();reply.replaceChildren();
+ if(!snapshotUsable(s)){noteAt(queue,'Queue evidence unavailable.');noteAt(reply,'Reply evidence unavailable.');return}
+ const selected=document.getElementById('opsInboxFilter').value;
+ const rows=s.rows.filter(r=>selected==='all'||r.mailbox===selected);
+ const freshEvidence=e=>snapshotFresh(s)&&e?.status==='VERIFIED'&&Number.isFinite(Date.parse(e.checkedAt))&&Math.abs(Date.parse(s.checkedAt)-Date.parse(e.checkedAt))<=7200000;
+ noteAt(queue,'Ready means verified contact and business fit, six-inbox duplicate/suppression checks, one assigned sender and no unresolved sending block. Research totals alone do not qualify.');
+ opsTable(queue,['Inbox','Ready','Awaiting verification','Blocked','Last queue check'],rows.map(r=>{const q=r.prospectQueue;const valid=freshEvidence(q);return [r.mailbox,valid?shown(q.ready):'Unverified',valid?shown(q.awaitingVerification):'Unverified',valid?shown(q.blocked):'Unverified',q?.checkedAt||'Not recorded']}));
+ const researched=Object.entries(data.funnels||{}).filter(([id])=>id.startsWith('webscan-')).map(([,f])=>f.prospectsResearched);
+ if(researched.length&&researched.every(knownCount))noteAt(queue,researched.reduce((a,b)=>a+b,0)+' prospects recorded as researched across WebScan funnels (cumulative; not a send-ready queue).');
+ noteAt(reply,'All six inboxes in one view. Open actions require a thread audit; today’s received replies are a separate measure. Automated form alerts and self-tests are excluded.');
+ opsTable(reply,['Inbox','Human replies today','Needs answer','Interested','Pricing / call','Not interested','Last thread audit'],rows.map(r=>{const q=r.replyQueue;const valid=freshEvidence(q);return [r.mailbox,shown(r.webscanHumanRepliesToday),valid?shown(q.needsAnswer):'Unverified',valid?shown(q.interested):'Unverified',valid?shown(q.pricingOrCall):'Unverified',valid?shown(q.notInterested):'Unverified',q?.checkedAt||'Not recorded']}));
+ noteAt(reply,'Reply categories can overlap. Missing audits are shown as unverified, never as an empty inbox. Contact details and message content stay outside this public dashboard.');
 }
 
 const originalRefresh=refresh;
 refresh=async function(){
   try{
     const [data,history,mailboxes]=await Promise.all([buildData(),loadHistory(),loadJson('telemetry/webscan-mailboxes.json')]);
-    set('activeFunnels',(data.activeFunnels||15)+' Active Funnels');
-    drawGlance(data);drawMilestones(data);drawAttention(data);drawAds(data);drawGoals(data);drawConversionFunnel(data);drawReplyCentre(data);drawPriorities(data);drawCategoryGrid(data);drawSummary(data);drawTimeline(data);drawFunnels(data);drawTrends(history);drawWebscanMailboxes(mailboxes);
+    set('activeFunnels',mailboxes?.automation ? mailboxes.automation.enabledTasks+' Enabled Automations · snapshot' : 'Automation count unverified');
+    drawGlance(data);drawMilestones(data);drawAttention(data);drawAds(data);drawGoals(data);drawConversionFunnel(data);drawReplyCentre(data);drawPriorities(data);drawCategoryGrid(data);drawSummary(data);drawTimeline(data);drawFunnels(data);drawTrends(history);drawWebscanMailboxes(mailboxes);drawWebscanOperations(mailboxes,data);
+    document.getElementById('opsInboxFilter').onchange=()=>drawWebscanOperations(mailboxes,data);
     nextRefreshAt=Date.now()+REFRESH_MS;
   }catch(e){
     console.error(e);
@@ -207,3 +225,4 @@ refresh=async function(){
 
 refresh();
 setInterval(refresh,REFRESH_MS);
+
