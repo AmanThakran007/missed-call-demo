@@ -20,26 +20,26 @@
     "Lost": 0
   },
   "draftsPending": 2,
-  "lastRun": "2026-10-03T19:34:31+01:00",
-  "nextRun": "2026-10-03T19:39:00+01:00",
+  "lastRun": "2026-10-03T20:37:08+01:00",
+  "nextRun": "2026-10-03T20:39:00+01:00",
   "freshness": "LIVE",
   "blocker": "OUTREACH_SEND_BLOCKED: Earlier first-touch sends were denied by the mail-action safety gate; two verified drafts remain pending in aman.thakran.consulting@gmail.com. No sends were retried outside the permitted outreach hour.",
   "sourceChecks": {
     "gmailPrimary": {
-      "checkedAt": "2026-10-03T19:34:31+01:00",
+      "checkedAt": "2026-10-03T20:37:30+01:00",
       "account": "amanthakran.dreams@gmail.com",
-      "result": "No appointment-setting reply, bounce, opt-out, pricing/pilot question, call request, or sent first-touch found. Five sent WebScan General SME messages and one unrelated promotional email since the prior run were excluded."
+      "result": "No appointment-setting reply, bounce, opt-out, pricing or pilot question, call request, or sent first-touch found. A self-submitted BharatFare scan, TravClan authentication message, and unrelated promotion were excluded."
     },
     "gmailDrafts": {
-      "checkedAt": "2026-10-03T19:34:31+01:00",
+      "checkedAt": "2026-10-03T20:37:30+01:00",
       "account": "aman.thakran.consulting@gmail.com",
       "result": "Verified two unsent drafts remain: UPP B2B and LinkGen. No new message, campaign reply, or relevant bounce was found."
     },
     "github": {
-      "checkedAt": "2026-10-03T19:34:31+01:00",
+      "checkedAt": "2026-10-03T20:37:30+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/b2b-appointment-setting.json",
-      "priorBlobSha": "572ae1c68904544d7f637d401d702640b242a89d"
+      "priorBlobSha": "c7587c60c1eff9034a12447a34dd304e5d6e9543"
     }
   }
 }
