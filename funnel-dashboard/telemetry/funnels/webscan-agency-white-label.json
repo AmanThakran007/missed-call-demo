@@ -10,13 +10,13 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T22:31:56+01:00",
+  "lastRun": "2026-10-03T23:29:14+01:00",
   "nextRun": "2026-10-03T23:30:00+01:00",
   "freshness": "LIVE",
-  "blocker": "HOLD_REASON_UNAVAILABLE; ADS_PAUSED_PAYMENT_FAILED: Earlier first-touch attempts remain unverified as sent because the original rejection output is unavailable in the current execution context. The £36 ad campaign is paused because the account threshold payment failed.",
+  "blocker": "HOLD_REASON_UNAVAILABLE; ADS_PAUSED_PAYMENT_FAILED: Earlier first-touch attempts remain unverified as sent because the original rejection output is unavailable in the current execution context. The £36 ad campaign remains paused because the account threshold payment failed.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-03T22:31:56+01:00",
+      "checkedAt": "2026-10-03T23:29:14+01:00",
       "accounts": [
         "amanthakranengland@gmail.com",
         "helpme.ecommerce@gmail.com",
@@ -25,25 +25,25 @@
         "amanthakran.dreams@gmail.com",
         "aman.thakran.consulting@gmail.com"
       ],
-      "scope": "All new mail since 2026-10-03T21:27:43+01:00, including Agency White Label replies, bounces, opt-outs, demo requests, partnership questions, billing notices and delivery restrictions",
-      "result": "No new Agency White Label human reply, bounce, opt-out, demo request, partnership question, billing notice or delivery restriction. Unrelated Google account-connection notices and BharatFare supplier mail were excluded. No outreach was sent outside the approved hour."
+      "scope": "All new mail since 2026-10-03T22:31:56+01:00, including Agency White Label replies, bounces, opt-outs, demo requests, partnership questions, billing notices and delivery restrictions",
+      "result": "No new Agency White Label human reply, bounce, opt-out, demo request, partnership question, billing notice or delivery restriction. No outreach was sent outside the approved hour."
     },
     "adsManager": {
-      "checkedAt": "2026-10-03T22:31:56+01:00",
+      "checkedAt": "2026-10-03T23:29:14+01:00",
       "account": "WebRevenue Scan",
       "campaign": "WebScan Agency White Label - £36 Test",
-      "result": "Campaign is paused and inactive. The account threshold payment failure remains a blocking account-billing issue; campaign_not_active is present. The ad group and ad remain active, the creative remains approved, and no low-bid warning was returned. The latest completed account-local day returned no performance row."
+      "result": "Campaign remains paused and inactive. Current serving issues are campaign_not_active and ad_account_threshold_payment_failed. The ad group remains active with no low-bid warning, and the creative remains active and approved. The latest completed account-local day returned no performance row, so previously verified preliminary UI metrics remain preserved in the ad telemetry file."
     },
     "github": {
-      "checkedAt": "2026-10-03T22:31:56+01:00",
+      "checkedAt": "2026-10-03T23:29:14+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/webscan-agency-white-label.json",
-      "priorBlobSha": "ea512f0bdd0de1e15ba221efd8a6bde48694134d"
+      "priorBlobSha": "2105a30d2b2dfd0d3c230be5115ba1c0c1b50e6c"
     },
     "sixInboxReconciliation": {
-      "checkedAt": "2026-10-03T22:31:56+01:00",
+      "checkedAt": "2026-10-03T23:29:14+01:00",
       "date": "2026-10-03",
-      "scope": "Targeted received-message and suppression checks across all six authorized WebScan inboxes. The fixed-cap six-inbox policy starts 2026-10-04 and has not yet been tested by a verified send/read-back cycle.",
+      "scope": "Read-only received-message and suppression checks across all six authorized WebScan inboxes. The mailbox-specific fixed-cap policy starts 2026-10-04 and has not yet completed a verified send and Sent-header read-back cycle.",
       "accountsChecked": 6,
       "status": "SOURCE_RECONCILED",
       "dailyFirstTouches": 0,
@@ -54,20 +54,53 @@
   },
   "sendingPolicy": {
     "mode": "FIXED_CAP",
-    "capPerInbox": 60,
-    "totalCap": 360,
+    "capPerInbox": null,
+    "capPerInboxMin": 83,
+    "capPerInboxMax": 84,
+    "totalCap": 500,
     "effectiveDate": "2026-10-04",
-    "stagedCapsPerInbox": [
-      60
-    ],
-    "funnelCapPerInbox": 6,
+    "stagedCapsPerInbox": [],
+    "aggregateFunnelCap": 48,
+    "funnelCapPerInbox": 8,
     "allMailboxLoadGuard": 120,
-    "workflowTested": false
+    "workflowTested": false,
+    "mailboxCaps": [
+      {
+        "mailbox": "amanthakranengland@gmail.com",
+        "configuredDailyCap": 84,
+        "agencyWhiteLabelCap": 8
+      },
+      {
+        "mailbox": "helpme.ecommerce@gmail.com",
+        "configuredDailyCap": 84,
+        "agencyWhiteLabelCap": 8
+      },
+      {
+        "mailbox": "bharatfare@gmail.com",
+        "configuredDailyCap": 83,
+        "agencyWhiteLabelCap": 8
+      },
+      {
+        "mailbox": "amanthakran8891@gmail.com",
+        "configuredDailyCap": 83,
+        "agencyWhiteLabelCap": 8
+      },
+      {
+        "mailbox": "amanthakran.dreams@gmail.com",
+        "configuredDailyCap": 83,
+        "agencyWhiteLabelCap": 8
+      },
+      {
+        "mailbox": "aman.thakran.consulting@gmail.com",
+        "configuredDailyCap": 83,
+        "agencyWhiteLabelCap": 8
+      }
+    ]
   },
   "holdDiagnosis": {
-    "checkedAt": "2026-10-03T22:31:56+01:00",
+    "checkedAt": "2026-10-03T23:29:14+01:00",
     "status": "HOLD_REASON_UNAVAILABLE",
-    "evidence": "Historical run summaries confirm rejected send attempts, but the original tool rejection output is unavailable in this execution context.",
+    "evidence": "Historical run summaries confirm rejected send attempts, but the original tool rejection output is unavailable in the current execution context.",
     "scope": "Cannot classify the historical send restriction as action-specific versus campaign-wide from currently available direct evidence.",
     "requiredEvidence": "Original rejection output or a separately authorized send during the outreach window with Gmail Sent and From-header read-back verification.",
     "correctionVerified": false,
