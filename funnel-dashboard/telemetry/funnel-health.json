@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-03T20:44:08.478Z",
-  "scope": "Scheduler snapshot plus targeted Gmail thread audit. Cumulative funnel metrics remain separately sourced; enabled and fresh telemetry do not prove successful sends.",
+  "checkedAt": "2026-10-03T21:18:51.643Z",
+  "scope": "Scheduler snapshot plus preserved targeted Gmail thread audits. Corresponding funnel telemetry was read separately; enabled and fresh telemetry do not prove successful sends.",
   "rows": [
     {
       "id": "dpdp-buyer-outreach",
@@ -9,7 +9,7 @@
       "enabled": true,
       "lastAutomationRun": "2026-10-03T20:41:07.082567+00:00",
       "nextAutomationRun": null,
-      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "checkedAt": "2026-10-03T21:18:51.643Z",
       "followUpAudit": {
         "status": "TIMING_REVIEW",
         "checkedAt": "2026-10-03T20:44:08.478Z",
@@ -26,9 +26,9 @@
       "id": "b2b-appointment-setting",
       "name": "B2B Appointment Setting",
       "enabled": true,
-      "lastAutomationRun": "2026-10-03T19:38:10.717146+00:00",
+      "lastAutomationRun": "2026-10-03T20:45:49.774087+00:00",
       "nextAutomationRun": null,
-      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "checkedAt": "2026-10-03T21:18:51.643Z",
       "followUpAudit": {
         "status": "UNVERIFIED",
         "checkedAt": null,
@@ -43,7 +43,7 @@
       "enabled": true,
       "lastAutomationRun": "2026-10-03T20:33:54.424778+00:00",
       "nextAutomationRun": null,
-      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "checkedAt": "2026-10-03T21:18:51.643Z",
       "followUpAudit": {
         "status": "NOT_DUE",
         "checkedAt": "2026-10-03T20:44:08.478Z",
@@ -59,9 +59,9 @@
       "id": "webscan-healthcare",
       "name": "WebScan Healthcare",
       "enabled": true,
-      "lastAutomationRun": "2026-10-03T19:53:08.683376+00:00",
+      "lastAutomationRun": "2026-10-03T20:51:00.639030+00:00",
       "nextAutomationRun": null,
-      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "checkedAt": "2026-10-03T21:18:51.643Z",
       "followUpAudit": {
         "status": "NOT_DUE",
         "checkedAt": "2026-10-03T20:44:08.478Z",
@@ -78,7 +78,7 @@
       "enabled": true,
       "lastAutomationRun": "2026-10-03T20:37:07.282321+00:00",
       "nextAutomationRun": null,
-      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "checkedAt": "2026-10-03T21:18:51.643Z",
       "followUpAudit": {
         "status": "UNVERIFIED",
         "checkedAt": null,
@@ -93,7 +93,7 @@
       "enabled": true,
       "lastAutomationRun": "2026-10-03T20:29:05.592036+00:00",
       "nextAutomationRun": null,
-      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "checkedAt": "2026-10-03T21:18:51.643Z",
       "followUpAudit": {
         "status": "UNVERIFIED",
         "checkedAt": null,
@@ -106,9 +106,9 @@
       "id": "webscan-inbound-leads",
       "name": "WebScan Inbound Leads",
       "enabled": true,
-      "lastAutomationRun": "2026-10-03T19:17:05.954230+00:00",
+      "lastAutomationRun": "2026-10-03T20:53:33.738258+00:00",
       "nextAutomationRun": null,
-      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "checkedAt": "2026-10-03T21:18:51.643Z",
       "followUpAudit": {
         "status": "NOT_DUE",
         "checkedAt": "2026-10-03T20:44:08.478Z",
@@ -124,7 +124,7 @@
       "enabled": true,
       "lastAutomationRun": "2026-10-03T20:37:08.101449+00:00",
       "nextAutomationRun": null,
-      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "checkedAt": "2026-10-03T21:18:51.643Z",
       "followUpAudit": {
         "status": "UNVERIFIED",
         "checkedAt": null,
@@ -139,7 +139,7 @@
       "enabled": true,
       "lastAutomationRun": "2026-10-03T20:40:59.813808+00:00",
       "nextAutomationRun": null,
-      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "checkedAt": "2026-10-03T21:18:51.643Z",
       "followUpAudit": {
         "status": "DRAFT_PENDING",
         "checkedAt": "2026-10-03T20:44:08.478Z",
@@ -153,9 +153,9 @@
       "id": "nurse-referral-us",
       "name": "Nurse Referral US",
       "enabled": true,
-      "lastAutomationRun": "2026-10-03T19:50:23.627243+00:00",
+      "lastAutomationRun": "2026-10-03T20:53:48.358359+00:00",
       "nextAutomationRun": null,
-      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "checkedAt": "2026-10-03T21:18:51.643Z",
       "followUpAudit": {
         "status": "CONVERSATION_VERIFIED",
         "checkedAt": "2026-10-03T20:44:08.478Z",
@@ -169,9 +169,9 @@
       "id": "nclex-growth-core",
       "name": "NCLEX Growth Core",
       "enabled": true,
-      "lastAutomationRun": "2026-10-03T19:54:52.565909+00:00",
+      "lastAutomationRun": "2026-10-03T20:53:49.093334+00:00",
       "nextAutomationRun": null,
-      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "checkedAt": "2026-10-03T21:18:51.643Z",
       "followUpAudit": {
         "status": "UNVERIFIED",
         "checkedAt": null,
@@ -186,7 +186,7 @@
       "enabled": false,
       "lastAutomationRun": "2026-10-03T14:42:23.010420+00:00",
       "nextAutomationRun": null,
-      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "checkedAt": "2026-10-03T21:18:51.643Z",
       "followUpAudit": {
         "status": "UNVERIFIED",
         "checkedAt": null,
@@ -199,9 +199,9 @@
       "id": "nclex-creators",
       "name": "NCLEX Creators",
       "enabled": true,
-      "lastAutomationRun": "2026-10-03T19:49:02.902990+00:00",
+      "lastAutomationRun": "2026-10-03T20:42:21.868392+00:00",
       "nextAutomationRun": null,
-      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "checkedAt": "2026-10-03T21:18:51.643Z",
       "followUpAudit": {
         "status": "UNVERIFIED",
         "checkedAt": null,
@@ -216,7 +216,7 @@
       "enabled": false,
       "lastAutomationRun": "2026-10-03T14:39:07.905647+00:00",
       "nextAutomationRun": null,
-      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "checkedAt": "2026-10-03T21:18:51.643Z",
       "followUpAudit": {
         "status": "UNVERIFIED",
         "checkedAt": null,
@@ -229,9 +229,9 @@
       "id": "bharatfare-supplier-outreach",
       "name": "BharatFare Supplier Outreach",
       "enabled": true,
-      "lastAutomationRun": "2026-10-03T19:48:03.188588+00:00",
+      "lastAutomationRun": "2026-10-03T20:45:49.762526+00:00",
       "nextAutomationRun": null,
-      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "checkedAt": "2026-10-03T21:18:51.643Z",
       "followUpAudit": {
         "status": "PARTIAL",
         "checkedAt": "2026-10-03T20:44:08.478Z",
@@ -251,9 +251,9 @@
       "id": "bharatfare-agent-partnerships",
       "name": "BharatFare Agent Partnerships",
       "enabled": true,
-      "lastAutomationRun": "2026-10-03T19:49:03.980372+00:00",
+      "lastAutomationRun": "2026-10-03T20:45:49.403487+00:00",
       "nextAutomationRun": null,
-      "checkedAt": "2026-10-03T20:44:08.478Z",
+      "checkedAt": "2026-10-03T21:18:51.643Z",
       "followUpAudit": {
         "status": "UNVERIFIED",
         "checkedAt": null,
