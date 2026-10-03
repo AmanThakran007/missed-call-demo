@@ -10,28 +10,28 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T23:45:01+01:00",
-  "nextRun": "2026-10-04T00:49:00+01:00",
+  "lastRun": "2026-10-04T00:45:10+01:00",
+  "nextRun": "2026-10-04T01:49:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE: Two existing partnership enquiries remain awaiting external responses. Historical attempts covering seven researched targets and one follow-up were rejected by mail-action safety controls, but the original rejection output is unavailable, so the restriction cannot be classified or marked resolved. No blocked action was retried.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-03T23:45:01+01:00",
+      "checkedAt": "2026-10-04T00:45:10+01:00",
       "accounts": [
         "amanthakran.dreams@gmail.com",
         "aman.thakran.consulting@gmail.com"
       ],
-      "scope": "All new mail since 2026-10-03T22:47:16+01:00, including nurse-referral replies, bounces, opt-outs, referral-term questions and call requests",
-      "result": "No new human reply, bounce, opt-out, referral-term question, call request, customer or attributable revenue event. Unrelated promotional and security mail was excluded; no outreach was sent outside the permitted hour."
+      "scope": "All new mail after 2026-10-03T23:45:01+01:00, including nurse-referral replies, bounces, opt-outs, referral-term questions and call requests",
+      "result": "No new mail was found in either monitored account. No new human reply, bounce, opt-out, referral-term question, call request, customer or attributable revenue event was recorded. No outreach was sent outside the permitted hour."
     },
     "github": {
-      "checkedAt": "2026-10-03T23:45:01+01:00",
+      "checkedAt": "2026-10-04T00:45:10+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/nurse-referral-us.json",
-      "priorBlobSha": "127d22ee7dd03b12b206e58d884f4f9664cad72c"
+      "priorBlobSha": "b2d5576eb6994cdf307265607a65adef5f9269c7"
     },
     "sendingHoldDiagnosis": {
-      "checkedAt": "2026-10-03T23:45:01+01:00",
+      "checkedAt": "2026-10-04T00:45:10+01:00",
       "status": "HOLD_REASON_UNAVAILABLE",
       "classification": {
         "providerError": "NOT_EVIDENCED",
@@ -48,7 +48,7 @@
       "sendingConfirmed": false
     },
     "automation": {
-      "checkedAt": "2026-10-03T23:45:01+01:00",
+      "checkedAt": "2026-10-04T00:45:10+01:00",
       "id": "6ac0619b4ab081918c170563302ffb24",
       "enabled": true,
       "result": "Monitoring automation is confirmed enabled. The unresolved sending restriction affects only the previously rejected actions."
