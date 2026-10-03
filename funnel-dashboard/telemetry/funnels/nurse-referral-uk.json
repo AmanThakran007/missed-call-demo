@@ -2,7 +2,7 @@
   "id": "nurse-referral-uk",
   "name": "Nurse Referral UK",
   "category": "Nurse Referral",
-  "prospectsResearched": 5,
+  "prospectsResearched": 14,
   "firstEmailsSent": 5,
   "followUpsSent": 0,
   "humanReplies": 1,
@@ -10,8 +10,36 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T15:43:34+01:00",
-  "nextRun": "2026-10-03T16:44:00+01:00",
+  "stageCounts": {
+    "Prospect": 9,
+    "Contacted": 4,
+    "Engaged": 0,
+    "Qualified": 1,
+    "TermsCall": 0,
+    "Won": 0,
+    "Lost": 0
+  },
+  "draftsPending": 1,
+  "lastRun": "2026-10-03T16:43:29+01:00",
+  "nextRun": "2026-10-03T17:44:00+01:00",
   "freshness": "LIVE",
-  "blocker": null
+  "blocker": "One tailored TPG follow-up draft remains unsent. A previous outbound safety rejection was not retested because this run was outside the permitted outreach hour; monitoring remains active.",
+  "sourceChecks": {
+    "gmail": {
+      "checkedAt": "2026-10-03T16:43:29+01:00",
+      "account": "amanthakran.dreams@gmail.com",
+      "scope": "TPG, Daytime Healthcare, Pulse, Concept Care and WorldWide HealthStaff threads",
+      "result": "No new human reply, bounce, opt-out, call request, referral question or terms update. One TPG follow-up remains a draft."
+    },
+    "verifiedResearch": {
+      "checkedAt": "2026-10-03T16:43:29+01:00",
+      "result": "Restored nine previously verified UK targets omitted from the latest file: 360 Medicare, ViaR Recruitment, Koinis Healthcare, WNA Healthcare, MedGen, Clinical24, Cromwell Medical Staffing, Medacs Healthcare and Sir Henry Recruitment."
+    },
+    "github": {
+      "checkedAt": "2026-10-03T16:43:29+01:00",
+      "repository": "AmanThakran007/missed-call-demo",
+      "path": "funnel-dashboard/telemetry/funnels/nurse-referral-uk.json",
+      "priorBlobSha": "cb4dc15023aa8b5acf051396b358b92834222aeb"
+    }
+  }
 }
