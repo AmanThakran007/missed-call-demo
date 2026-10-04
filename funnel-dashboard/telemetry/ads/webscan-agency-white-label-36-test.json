@@ -16,38 +16,38 @@
     "FIRST_SPEND",
     "FIRST_CLICK"
   ],
-  "lastChecked": "2026-10-04T03:31:00+01:00",
+  "lastChecked": "2026-10-04T04:03:26+01:00",
   "freshness": "LIVE",
   "blocker": "AD_ACCOUNT_THRESHOLD_PAYMENT_FAILED",
   "reportingWindow": {
     "type": "absolute_completed_period",
     "startDate": "2026-10-02",
     "endDateExclusive": "2026-10-04",
-    "observedAt": "2026-10-04T03:31:00+01:00",
+    "observedAt": "2026-10-04T04:03:26+01:00",
     "result": "Campaign-level reporting returned 2,438 impressions, 11 clicks, £26.15 spend, 0.45% CTR and £2.38 CPC for the completed account-local period."
   },
   "sourceChecks": {
     "campaignDelivery": {
-      "checkedAt": "2026-10-04T03:31:00+01:00",
-      "result": "Campaign remains paused and inactive. The blocking account issue is ad_account_threshold_payment_failed; campaign_not_active is also reported. Downstream checks were partially skipped."
+      "checkedAt": "2026-10-04T04:03:26+01:00",
+      "result": "Campaign remains paused and inactive. Current serving issues are campaign_not_active and ad_account_threshold_payment_failed; downstream checks were partially skipped."
     },
     "performanceApi": {
-      "checkedAt": "2026-10-04T03:31:00+01:00",
-      "result": "Completed-period campaign insights returned 2,438 impressions, 11 clicks, £26.15 spend, 0.45% CTR and £2.38 CPC; coverage was complete for the one campaign row."
+      "checkedAt": "2026-10-04T04:03:26+01:00",
+      "result": "Completed-period campaign insights returned 2,438 impressions, 11 clicks, £26.15 spend, 0.45% CTR and £2.38 CPC."
     },
     "ad": {
-      "checkedAt": "2026-10-04T03:31:00+01:00",
-      "result": "Previously verified creative approval remains preserved; this run did not re-read the creative object because no creative change was indicated."
+      "checkedAt": "2026-10-04T04:03:26+01:00",
+      "result": "The campaign creative remains active and approved. Its current serving issues are campaign_not_active and ad_account_threshold_payment_failed."
     },
     "gmail": {
-      "checkedAt": "2026-10-04T03:29:17+01:00",
-      "result": "No new WebScan ad reply, bounce, opt-out, billing or delivery message appeared across the nine authorized inboxes. One unrelated Google account-security thread was excluded."
+      "checkedAt": "2026-10-04T04:03:26+01:00",
+      "result": "No new WebScan ad reply, bounce, opt-out, billing or delivery message appeared across the nine authorized inboxes after the preceding reconciliation."
     },
     "github": {
-      "checkedAt": "2026-10-04T03:31:00+01:00",
+      "checkedAt": "2026-10-04T04:03:26+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/ads/webscan-agency-white-label-36-test.json",
-      "priorBlobSha": "697eb9c32ba16301b4deacd39817955ecec4cf99"
+      "priorBlobSha": "bcafb4ac7770eaf24e03103476b1a3f2134dec60"
     }
   }
 }
