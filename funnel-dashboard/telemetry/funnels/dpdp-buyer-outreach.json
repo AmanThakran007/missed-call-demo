@@ -23,19 +23,19 @@
     "Lost": 1
   },
   "freshness": "LIVE",
-  "lastChecked": "2026-10-04T10:46:03+01:00",
+  "lastChecked": "2026-10-04T11:37:53+01:00",
   "blocker": null,
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T10:46:03+01:00",
+      "checkedAt": "2026-10-04T11:37:53+01:00",
       "account": "aman.thakran.consulting@gmail.com",
-      "result": "No incoming or Sent message appeared after the preceding DPDP reconciliation, including an in:anywhere check for incoming mail. Therefore there is no new human reply, positive reply, checklist request, call request, bounce or opt-out, and no outreach was sent during this monitoring-only pass. Bureau's earlier rejected address remains the single recorded bounce."
+      "result": "No incoming or Sent message appeared after the preceding DPDP reconciliation. Therefore there is no new human reply, positive reply, checklist request, call request, bounce or opt-out, and no outreach was sent during this monitoring-only pass. Bureau's earlier rejected address remains the single recorded bounce."
     },
     "github": {
-      "checkedAt": "2026-10-04T10:46:03+01:00",
+      "checkedAt": "2026-10-04T11:37:53+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/dpdp-buyer-outreach.json",
-      "priorBlobSha": "9aa4278323615203c15f047c50583910288b4141"
+      "priorBlobSha": "2dba505f83d974fe8f64a242cb70b3c2717c15d3"
     }
   }
 }
