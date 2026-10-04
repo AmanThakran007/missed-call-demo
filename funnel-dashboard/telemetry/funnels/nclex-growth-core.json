@@ -10,13 +10,13 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-04T11:51:48+01:00",
-  "nextRun": "2026-10-04T12:49:00+01:00",
+  "lastRun": "2026-10-04T12:50:47+01:00",
+  "nextRun": "2026-10-04T13:49:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE: Historical first-touch attempts to the 20 verified Growth Core prospects were reported as rejected by mail-action safety controls, but the original rejection output is unavailable in the current execution context. The scope cannot be independently classified as action-specific or campaign-wide and remains unresolved. No rejected action was retried.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T11:52:16+01:00",
+      "checkedAt": "2026-10-04T12:52:31+01:00",
       "accounts": [
         "amanthakranengland@gmail.com",
         "helpme.ecommerce@gmail.com",
@@ -29,16 +29,16 @@
         "bharatfareuk@gmail.com"
       ],
       "scope": "Recent mail across all nine connected inboxes for NCLEX Growth Core sends, replies, bounces, opt-outs, access or pricing questions, referral or partnership questions, demo requests and call requests.",
-      "result": "No Growth Core campaign send, human reply, campaign bounce, opt-out, referral or partnership question, access or pricing request, demo or call request, customer, or attributable revenue event was found. BedsidePath infrastructure, Search Console and historical test messages were excluded. The daily research ceiling of 20 prospects was already reached. No outreach was sent outside the permitted hour and no rejected action was retried."
+      "result": "No Growth Core campaign send, human reply, campaign bounce, opt-out, referral or partnership question, access or pricing request, demo or call request, customer, or attributable revenue event was found. One unrelated NCLEX Facebook group notification was excluded. The daily research ceiling of 20 prospects was already reached. This run started before Hourly Workflow V2 became effective and outside the prior permitted sending hour; no outreach was sent and no rejected action was retried."
     },
     "github": {
-      "checkedAt": "2026-10-04T11:52:16+01:00",
+      "checkedAt": "2026-10-04T12:52:31+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/nclex-growth-core.json",
-      "priorBlobSha": "cb46c0259af12a3b7a3b776b767f2cc66b2e1327"
+      "priorBlobSha": "09f215134ec2ac26cdd3f2af240a5c74abc435ca"
     },
     "sendingHoldDiagnosis": {
-      "checkedAt": "2026-10-04T11:52:16+01:00",
+      "checkedAt": "2026-10-04T12:52:31+01:00",
       "status": "HOLD_REASON_UNAVAILABLE",
       "classification": {
         "providerError": "NOT_EVIDENCED",
@@ -60,6 +60,20 @@
       "id": "6ac05de10e888191abc356440709e97e",
       "enabled": true,
       "result": "Monitoring automation is confirmed enabled. The unresolved sending restriction affects only outreach."
+    },
+    "privateLedger": {
+      "checkedAt": "2026-10-04T12:52:31+01:00",
+      "status": "PRIVATE_LEDGER_UNAVAILABLE",
+      "scope": "Campaign-owned persistent recipient ledger required for candidate states, ownership, suppression and SEND_PENDING evidence.",
+      "result": "Library searches for the campaign name, known campaign candidates and prospect-ledger titles did not identify a campaign-owned persistent ledger. No queue readiness, new qualification, recipient ownership or pending-send state was inferred."
+    },
+    "hourlyWorkflow": {
+      "checkedAt": "2026-10-04T12:52:31+01:00",
+      "version": "HOURLY_V2",
+      "effectiveAt": "2026-10-04T13:00:00+01:00",
+      "runJournalPath": "funnel-dashboard/telemetry/runs/nclex-growth-core.json",
+      "runJournalStatus": "AWAITING_FIRST_RUN",
+      "result": "This run began before the workflow effective time, so it did not acquire the V2 run journal or send. The first run starting at or after the effective time must acquire journal ownership before any send."
     }
   }
 }
