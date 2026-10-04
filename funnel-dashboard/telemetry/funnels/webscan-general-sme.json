@@ -285,7 +285,7 @@
       {
         "runId": "6aa199f3c2848191aa1e6d2a26d0d383_2026-10-04T04:59:07Z",
         "startedAt": "2026-10-04T05:59:07+01:00",
-        "finishedAt": "2026-10-04T06:00:39+01:00",
+        "finishedAt": "2026-10-04T06:02:13+01:00",
         "kind": "MONITORING",
         "measurementStatus": "COMPLETE",
         "candidatesAssessed": 0,
@@ -298,7 +298,7 @@
         "dueFollowUps": null,
         "firstTouchesSent": 0,
         "followUpsSent": 0,
-        "durationSeconds": 92
+        "durationSeconds": 186
       }
     ]
   }
