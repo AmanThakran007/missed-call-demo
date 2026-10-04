@@ -10,13 +10,13 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-04T03:34:11+01:00",
+  "lastRun": "2026-10-04T04:38:06+01:00",
   "nextRun": "2026-10-04T04:39:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE: Ten previously approved send attempts were blocked by mail-action safety controls, but the original rejection output is unavailable. The restriction cannot be classified as action-specific or campaign-wide and remains unresolved; monitoring stays active.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T03:34:11+01:00",
+      "checkedAt": "2026-10-04T04:38:06+01:00",
       "accounts": [
         "amanthakranengland@gmail.com",
         "helpme.ecommerce@gmail.com",
@@ -29,16 +29,16 @@
         "bharatfareuk@gmail.com"
       ],
       "scope": "All nine connected inboxes checked for recent UK resourcer replies, bounces, opt-outs, pricing or contract questions, ATS-access questions, pilot requests and call requests.",
-      "result": "No new campaign-related mail was found in any connected inbox. Two unrelated Google account-security notices were excluded. No outreach was sent outside the permitted hour."
+      "result": "No new campaign-related mail was found in any connected inbox. Two unrelated banking notices were excluded. No outreach was sent outside the permitted hour."
     },
     "github": {
-      "checkedAt": "2026-10-04T03:34:11+01:00",
+      "checkedAt": "2026-10-04T04:38:06+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/uk-resourcer-outreach.json",
-      "priorBlobSha": "16b3a5c0be88a3760f2b1e8c3efc94638cc242b3"
+      "priorBlobSha": "9603947cc262fb7a05e4f09cc1acddac2668c99f"
     },
     "holdDiagnosis": {
-      "checkedAt": "2026-10-04T03:34:11+01:00",
+      "checkedAt": "2026-10-04T04:38:06+01:00",
       "status": "HOLD_REASON_UNAVAILABLE",
       "classification": {
         "providerError": "NOT_EVIDENCED",
