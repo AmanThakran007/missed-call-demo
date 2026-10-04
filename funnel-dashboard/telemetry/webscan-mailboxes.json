@@ -5,7 +5,7 @@
   "checkedAt": "2026-10-04T13:10:25+01:00",
   "source": "Fully paginated Gmail Sent reconciliation across nine inboxes",
   "status": "SOURCE_RECONCILED",
-  "scope": "All nine Sent folders reconciled for the London day and rolling 24 hours; all counts fully paginated. Thirteen all-campaign sends today include five WebScan first touches, four DPDP messages and four BharatFare messages. Received-mail checks found no WebScan replies, bounces or opt-outs. Sent is not confirmed delivery.",
+  "scope": "Per-send reconciliation: Ecommerce inbox refreshed after a confirmed General SME first touch. Other rows preserve their latest verified evidence; aggregate totals remain supported by this coordinator run's full nine-inbox reconciliation plus confirmed incremental sends.",
   "effectiveDate": "2026-10-04",
   "stagedCapsPerInbox": [],
   "rows": [
@@ -50,8 +50,8 @@
     },
     {
       "mailbox": "Ecommerce inbox",
-      "allSentToday": 1,
-      "webscanFirstTouchesToday": 1,
+      "allSentToday": 2,
+      "webscanFirstTouchesToday": 2,
       "webscanFollowUpsToday": 0,
       "webscanInboundMessagesToday": 0,
       "webscanHumanRepliesToday": null,
@@ -60,8 +60,8 @@
       "configuredDailyCap": 112,
       "qualifyingDaysAtStage": 0,
       "sourceRead": "VERIFIED",
-      "allSentRolling24h": 1,
-      "remainingQuotaForEffectiveDate": 111,
+      "allSentRolling24h": 2,
+      "remainingQuotaForEffectiveDate": 110,
       "prospectQueue": {
         "status": "UNVERIFIED",
         "checkedAt": null,
@@ -77,17 +77,15 @@
         "pricingOrCall": null,
         "notInterested": null
       },
-      "skippedReasons": [
-        "OUTSIDE_AUTHORISED_GENERAL_SME_OUTREACH_WINDOW"
-      ],
+      "skippedReasons": [],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T13:10:25+01:00",
+      "checkedAt": "2026-10-04T13:12:25+01:00",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
-      "remainingQuotaToday": 111,
+      "remainingQuotaToday": 110,
       "nineInboxSendTest": "SENT_AND_HEADER_VERIFIED",
       "engagementCheckedAt": "2026-10-04T11:02:39Z",
-      "skippedReasonsCheckedAt": "2026-10-04T11:02:39Z"
+      "skippedReasonsCheckedAt": "2026-10-04T13:12:25+01:00"
     },
     {
       "mailbox": "BharatFare inbox",
@@ -384,27 +382,27 @@
     }
   ],
   "totals": {
-    "allSentToday": 13,
-    "allSentRolling24h": 33,
-    "webscanFirstTouchesToday": 5,
+    "allSentToday": 14,
+    "allSentRolling24h": 34,
+    "webscanFirstTouchesToday": 6,
     "webscanFollowUpsToday": 0,
     "webscanInboundMessagesToday": 0,
     "webscanHumanRepliesToday": null,
     "webscanBouncesToday": null,
     "webscanOptOutsToday": null,
-    "webscanTotalSentToday": 5,
-    "webscanOutboundToday": 5,
+    "webscanTotalSentToday": 6,
+    "webscanOutboundToday": 6,
     "configuredDailyCap": 1008,
     "configuredGeneralSmeDailyCap": 513,
-    "remainingQuotaForEffectiveDate": 1003,
-    "remainingQuotaToday": 1003
+    "remainingQuotaForEffectiveDate": 1002,
+    "remainingQuotaToday": 1002
   },
   "funnelFirstTouchesToday": {
     "webscan-general-sme": 4,
     "webscan-healthcare": 0,
     "webscan-professional-services": 0,
     "webscan-agency-white-label": 0,
-    "generalSme": 4
+    "generalSme": 5
   },
   "verification": {
     "gmailRead": "PASSED",
