@@ -258,12 +258,41 @@ function drawFunnelHealth(data,health){
  for(const r of health.rows){const f=data.funnels?.[r.id],a=r.followUpAudit||{};const details=node('details');details.appendChild(node('summary',r.name+' — evidence and next action'));noteAt(details,'Last scheduler run: '+(r.lastAutomationRun||'Unverified')+'. Next scheduler run: '+(r.enabled===false?'Paused':r.nextAutomationRun||'Not supplied by scheduler')+'.');noteAt(details,'Follow-up audit: '+(a.checkedAt||'Not recorded')+'. '+(a.summary||'Not audited.'));if(a.scope)noteAt(details,'Scope: '+a.scope);if(a.nextWindow)noteAt(details,'Next follow-up window: '+a.nextWindow);if(f?.blocker)noteAt(details,'Recorded blocker: '+f.blocker);root.appendChild(details)}
 }
 
+
+function researchRuns(production){
+ const seen=new Set();
+ return (Array.isArray(production?.runs)?production.runs:[]).filter(r=>{
+  if(!r.runId||seen.has(r.runId))return false;
+  seen.add(r.runId);return r.kind==='RESEARCH'&&r.measurementStatus==='COMPLETE'&&knownCount(r.candidatesAssessed)&&knownCount(r.newlyQualified)&&r.newlyQualified<=r.candidatesAssessed;
+ }).sort((a,b)=>Date.parse(a.startedAt)-Date.parse(b.startedAt));
+}
+function drawProspectProduction(data){
+ const root=document.getElementById('prospectProduction');if(!root)return;root.replaceChildren();
+ const fs=Object.entries(data.funnels||{}).filter(([id])=>['webscan-general-sme','webscan-healthcare','webscan-professional-services','webscan-agency-white-label'].includes(id));
+ if(!fs.length){noteAt(root,'Prospect measurement data unavailable.');return}
+ noteAt(root,'Newly qualified = a unique, previously unqualified business passing evidence, contact, ownership and suppression checks. Monitoring runs, duplicate businesses and rechecks do not count as new production.');
+ opsTable(root,['Funnel','Ready first emails','Due follow-ups','Last research run: assessed / newly qualified','Measured research runs','Average new per research run'],fs.map(([id,f])=>{
+  const p=f.prospectProduction,q=p?.queueAudit,runs=researchRuns(p),last=runs.at(-1);
+  const ready=q?.status==='VERIFIED'&&evidenceRecent(q.checkedAt);
+  const average=runs.length?(runs.reduce((n,r)=>n+r.newlyQualified,0)/runs.length).toFixed(1):'Not measured';
+  return [f.name,ready?shown(q.readyFirstTouches):'Unverified',ready?shown(q.dueFollowUps):'Unverified',last?shown(last.candidatesAssessed)+' / '+shown(last.newlyQualified):'Awaiting measured research run',runs.length?String(runs.length):'None recorded',average];
+ }));
+ const source=fs.find(([id])=>id==='webscan-general-sme')?.[1]?.prospectProduction?.sourceAudit;
+ if(source){noteAt(root,'Initial source audit · '+source.checkedAt);noteAt(root,source.summary);}
+ const logs=fs.flatMap(([id,f])=>(f.prospectProduction?.runs||[]).map(r=>({...r,funnel:f.name}))).sort((a,b)=>Date.parse(b.startedAt)-Date.parse(a.startedAt)).slice(0,20);
+ const details=node('details');details.appendChild(node('summary','Recent run measurements'));
+ if(!logs.length)noteAt(details,'Measurement is configured. No per-run research samples have been recorded yet; historical cumulative totals cannot establish a production rate.');
+ else opsTable(details,['Run time (UK)','Funnel','Mode / evidence','Assessed','New qualified','Duplicates / rejected','Ready after','First emails / follow-ups sent'],logs.map(r=>[r.startedAt&&Number.isFinite(Date.parse(r.startedAt))?fmtTime(new Date(r.startedAt)):'Unknown',r.funnel,(r.kind||'Unknown')+' / '+(r.measurementStatus||'UNVERIFIED'),shown(r.candidatesAssessed),shown(r.newlyQualified),shown(r.duplicatesRejected)+' / '+shown(r.rejected),shown(r.readyAfter),shown(r.firstTouchesSent)+' / '+shown(r.followUpsSent)]));
+ root.appendChild(details);
+ noteAt(root,'Ready stock requires a complete current queue audit. Newly qualified per run measures supply; it does not guarantee sends or sales. Research continues in the existing allowed windows.');
+}
+
 const originalRefresh=refresh;
 refresh=async function(){
   try{
     const [data,history,mailboxes,health]=await Promise.all([buildData(),loadHistory(),loadJson('telemetry/webscan-mailboxes.json'),loadJson('telemetry/funnel-health.json')]);
     set('activeFunnels',mailboxes?.automation ? mailboxes.automation.enabledTasks+' Enabled Automations · snapshot' : 'Automation count unverified');
-    drawGlance(data);drawMilestones(data);drawAttention(data);drawAds(data);drawGoals(data);drawConversionFunnel(data);drawReplyCentre(data);drawPriorities(data);drawCategoryGrid(data);drawSummary(data);drawTimeline(data);drawFunnels(data);drawTrends(history);drawWebscanMailboxes(mailboxes);drawWebscanOperations(mailboxes,data);drawFunnelHealth(data,health);
+    drawGlance(data);drawMilestones(data);drawAttention(data);drawAds(data);drawGoals(data);drawConversionFunnel(data);drawReplyCentre(data);drawPriorities(data);drawCategoryGrid(data);drawSummary(data);drawTimeline(data);drawFunnels(data);drawTrends(history);drawWebscanMailboxes(mailboxes);drawWebscanOperations(mailboxes,data);drawFunnelHealth(data,health);drawProspectProduction(data);
     document.getElementById('opsInboxFilter').onchange=()=>drawWebscanOperations(mailboxes,data);
     nextRefreshAt=Date.now()+REFRESH_MS;
   }catch(e){
