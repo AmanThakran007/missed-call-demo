@@ -2,21 +2,21 @@
   "id": "bharatfare-agent-partnerships",
   "name": "BharatFare Agent Partnerships",
   "category": "BharatFare / B2B Agent Partnerships",
-  "prospectsResearched": 0,
-  "firstEmailsSent": 0,
+  "prospectsResearched": 1,
+  "firstEmailsSent": 1,
   "followUpsSent": 0,
   "humanReplies": 0,
   "positiveReplies": 0,
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-04T09:46:02+01:00",
-  "nextRun": "2026-10-04T10:44:00+01:00",
+  "lastRun": "2026-10-04T11:47:24+01:00",
+  "nextRun": "2026-10-04T12:44:00+01:00",
   "freshness": "LIVE",
   "blocker": null,
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T09:47:00+01:00",
+      "checkedAt": "2026-10-04T11:48:12+01:00",
       "accounts": [
         "amanthakranengland@gmail.com",
         "helpme.ecommerce@gmail.com",
@@ -28,20 +28,29 @@
         "bharatfare.team@gmail.com",
         "bharatfareuk@gmail.com"
       ],
-      "scope": "Incremental recent inbound check across all nine connected inboxes for agent-partnership replies, bounces, opt-outs, partnership questions and call requests; prior verified campaign history preserved.",
-      "result": "No new agent-partnership human reply, bounce, opt-out, partnership question, call request or conversion was found. Six unrelated promotional or account-marketing messages were excluded. Supplier conversations remain excluded from this funnel. Verified cumulative campaign metrics remain unchanged. No outreach was sent outside the permitted hour."
+      "scope": "Campaign-history reconciliation across all nine connected inboxes for agent-partnership first touches, replies, bounces, opt-outs, partnership questions and call requests; supplier conversations excluded.",
+      "result": "One personalised Agent Partnerships first-touch was verified in the BharatFare inbox at 2026-10-04T10:45:14+01:00. It referenced a verified UK–India community/travel context and offered a trade/referral relationship or trial quote comparison. No reply, bounce, opt-out, partnership question, call request or conversion was found. No outreach was sent during this monitoring-only run."
     },
     "github": {
-      "checkedAt": "2026-10-04T09:47:00+01:00",
+      "checkedAt": "2026-10-04T11:48:12+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/bharatfare-agent-partnerships.json",
-      "priorBlobSha": "0fd61698d35afc942e56cd0d0505ec5cced395c2"
+      "priorBlobSha": "219c8fb505f91e380bea76249085f743bb771b3a"
     },
     "automation": {
       "checkedAt": "2026-10-04T03:39:22+01:00",
       "id": "6ac06178ad24819191667c45d1199447",
       "enabled": true,
       "result": "Monitoring automation is confirmed enabled."
+    },
+    "campaignHistory": {
+      "checkedAt": "2026-10-04T11:48:12+01:00",
+      "status": "VERIFIED",
+      "senderAlias": "BharatFare inbox",
+      "firstTouchesVerified": 1,
+      "followUpsVerified": 0,
+      "inboundHumanRepliesVerified": 0,
+      "note": "Sent evidence was read back from Gmail; cumulative metrics were corrected from zero without inferring any unverified events."
     }
   }
 }
