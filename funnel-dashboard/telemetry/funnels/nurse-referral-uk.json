@@ -20,13 +20,13 @@
     "Lost": 0
   },
   "draftsPending": 1,
-  "lastRun": "2026-10-04T03:40:40+01:00",
-  "nextRun": "2026-10-04T04:44:00+01:00",
+  "lastRun": "2026-10-04T05:48:39+01:00",
+  "nextRun": "2026-10-04T06:44:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE: One tailored follow-up draft remains unsent. A historical outbound rejection is recorded, but its original rejection output is unavailable, so the restriction cannot be classified or marked resolved. No rejected action was retried.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T03:40:40+01:00",
+      "checkedAt": "2026-10-04T05:49:20+01:00",
       "accounts": [
         "amanthakranengland@gmail.com",
         "helpme.ecommerce@gmail.com",
@@ -39,20 +39,20 @@
         "bharatfareuk@gmail.com"
       ],
       "scope": "Incremental recent inbound check across all nine connected inboxes for UK nurse-referral replies, bounces, opt-outs, eligibility or fee questions, commercial terms and call requests; prior verified thread state preserved.",
-      "result": "No new UK nurse-referral human reply, campaign bounce, opt-out, eligibility or fee question, terms update or call request. One unrelated card-billing notice was excluded. One tailored follow-up remains a draft; no outreach was sent."
+      "result": "No new UK nurse-referral human reply, campaign bounce, opt-out, eligibility or fee question, terms update or call request. Two unrelated banking notices were excluded. One tailored follow-up remains a draft; no outreach was sent."
     },
     "verifiedResearch": {
       "checkedAt": "2026-10-03T16:43:29+01:00",
       "result": "Nine additional verified UK referral-pathway prospects remain recorded in the private prospect ledger; no recipient-level details are exposed in public telemetry."
     },
     "github": {
-      "checkedAt": "2026-10-04T03:40:40+01:00",
+      "checkedAt": "2026-10-04T05:49:20+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/nurse-referral-uk.json",
-      "priorBlobSha": "3e289dcf9eed65a8e22b3b80b7df3c535f1462e3"
+      "priorBlobSha": "81580650a063819cb0bfcabf2ebc8fe6cc2f0e74"
     },
     "holdDiagnosis": {
-      "checkedAt": "2026-10-04T03:40:40+01:00",
+      "checkedAt": "2026-10-04T05:49:20+01:00",
       "status": "HOLD_REASON_UNAVAILABLE",
       "classification": {
         "providerError": "NOT_EVIDENCED",
