@@ -20,13 +20,13 @@
     "Lost": 0
   },
   "draftsPending": 2,
-  "lastRun": "2026-10-04T06:44:05+01:00",
-  "nextRun": "2026-10-04T07:39:00+01:00",
+  "lastRun": "2026-10-04T07:41:25+01:00",
+  "nextRun": "2026-10-04T08:39:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE: Historical first-touch send attempts were rejected by mail-action safety controls, but the original rejection output is unavailable in the current execution context. The restriction cannot be classified as action-specific or campaign-wide and remains unresolved; two drafts remain unsent. Monitoring is permitted.",
   "sourceChecks": {
     "gmailAllAccounts": {
-      "checkedAt": "2026-10-04T06:44:35+01:00",
+      "checkedAt": "2026-10-04T07:42:00+01:00",
       "accounts": [
         "amanthakranengland@gmail.com",
         "helpme.ecommerce@gmail.com",
@@ -39,24 +39,24 @@
         "bharatfareuk@gmail.com"
       ],
       "scope": "Incremental recent inbound check across all nine connected inboxes for appointment-setting replies, bounces, opt-outs, pricing or pilot questions and call/demo requests.",
-      "result": "No new appointment-setting reply, bounce, opt-out, pricing or pilot question, call/demo request or buying-intent event was found. One unrelated banking promotion and one unrelated social notification were excluded. No outreach was sent outside the permitted hour."
+      "result": "No new appointment-setting reply, bounce, opt-out, pricing or pilot question, call/demo request or buying-intent event was found. One unrelated credit-card promotion and one unrelated social notification were excluded. No outreach was sent outside the permitted hour."
     },
     "gmailPrimary": {
-      "checkedAt": "2026-10-04T06:44:35+01:00",
+      "checkedAt": "2026-10-04T07:42:00+01:00",
       "account": "amanthakran.dreams@gmail.com",
       "scope": "Incremental inbound monitoring for the appointment-setting funnel; prior verified Sent history preserved.",
       "result": "No new campaign activity was found; cumulative verified send metrics remain unchanged."
     },
     "gmailDrafts": {
-      "checkedAt": "2026-10-04T06:44:35+01:00",
+      "checkedAt": "2026-10-04T07:42:00+01:00",
       "account": "aman.thakran.consulting@gmail.com",
       "result": "Two verified unsent appointment-setting drafts remain in the Consulting inbox. They were not sent or modified in this monitoring-only run."
     },
     "github": {
-      "checkedAt": "2026-10-04T06:44:35+01:00",
+      "checkedAt": "2026-10-04T07:42:00+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/b2b-appointment-setting.json",
-      "priorBlobSha": "1e0677fa217236f85da563a75a7a15a3f5f7c35a"
+      "priorBlobSha": "b0a4a51537de38a30ebbc35fb1c04462d5422355"
     },
     "automation": {
       "checkedAt": "2026-10-04T03:42:43+01:00",
@@ -65,7 +65,7 @@
       "result": "Automation verified enabled; continuity policy preserved."
     },
     "holdDiagnosis": {
-      "checkedAt": "2026-10-04T06:44:35+01:00",
+      "checkedAt": "2026-10-04T07:42:00+01:00",
       "status": "HOLD_REASON_UNAVAILABLE",
       "classification": {
         "providerError": "NOT_EVIDENCED",
