@@ -9,9 +9,9 @@
   "status": "RUNNING",
   "runId": "6ac0616fa5008191adfe432561de7eff_2026-10-04T12:55:38+01:00",
   "startedAt": "2026-10-04T12:55:38+01:00",
-  "heartbeatAt": "2026-10-04T11:56:01.527Z",
+  "heartbeatAt": "2026-10-04T11:56:21.084Z",
   "finishedAt": null,
-  "phase": "RECONCILE",
+  "phase": "PREPARE",
   "outcome": null,
   "metrics": {
     "candidatesAssessed": null,
@@ -22,7 +22,7 @@
     "followUpsSent": null
   },
   "blockers": [],
-  "nextAction": "Reconcile prior pending sends, replies, suppressions and current-hour capacity.",
+  "nextAction": "Inspect the private supplier queue for due follow-ups and future-ready candidates; first-touch cumulative allowance is exhausted.",
   "lastCompleted": null,
   "history": []
 }
