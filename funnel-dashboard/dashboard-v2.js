@@ -162,19 +162,20 @@ function drawTrends(history){
 
 
 // Public dashboard: aggregate operational evidence only, never contact records.
-const inboxAliases=['England inbox','Ecommerce inbox','BharatFare inbox','8891 inbox','Dreams inbox','Consulting inbox'];
+function inboxAliases(s){return Object.keys(s?.sendingPolicy?.configuredDailyCapsByMailbox||{});}
 function knownCount(n){return Number.isInteger(n)&&n>=0}
 function sumKnown(rows,key){return rows.every(r=>knownCount(r[key]))?rows.reduce((n,r)=>n+r[key],0):null}
 function shown(n){return knownCount(n)?String(n):'Unverified'}
 function ukToday(){const p=londonParts();return p.year+'-'+p.month+'-'+p.day}
-function snapshotUsable(s){return !!s&&Array.isArray(s.rows)&&s.rows.length===6&&inboxAliases.every(a=>s.rows.filter(r=>r.mailbox===a).length===1)}
-function snapshotFresh(s){const age=Date.now()-Date.parse(s?.checkedAt);return Number.isFinite(age)&&age>=-300000&&age<=7200000&&s.date===ukToday()&&s.status==='SOURCE_RECONCILED'&&s.rows.every(r=>r.sourceRead==='VERIFIED')}
+function snapshotUsable(s){if(!s||!Array.isArray(s.rows)||!s.rows.length)return false;const names=s.rows.map(r=>r.mailbox);return names.every(n=>typeof n==='string'&&n.length>0)&&new Set(names).size===names.length;}
+function mailboxFresh(s,r){return (r.date||s.date)===ukToday()&&r.sourceRead==='VERIFIED'&&evidenceRecent(r.checkedAt||s.checkedAt);}
+function snapshotFresh(s){const age=Date.now()-Date.parse(s?.checkedAt);return Number.isFinite(age)&&age>=-300000&&age<=7200000&&s.date===ukToday()&&s.status==='SOURCE_RECONCILED'&&s.rows.every(r=>mailboxFresh(s,r))&&inboxAliases(s).every(a=>s.rows.some(r=>r.mailbox===a))}
 function progressFor(s,r){
  const outbound=knownCount(r.webscanFirstTouchesToday)&&knownCount(r.webscanFollowUpsToday)?r.webscanFirstTouchesToday+r.webscanFollowUpsToday:null;
- const active=s.date>=s.effectiveDate;
- const remaining=active&&snapshotFresh(s)&&knownCount(outbound)&&knownCount(r.configuredDailyCap)?Math.max(0,r.configuredDailyCap-outbound):null;
- const guard=120; // Fixed all-mail load guard; independent of WebScan quota.
- const headroom=snapshotFresh(s)&&knownCount(guard)&&knownCount(r.allSentToday)&&knownCount(r.allSentRolling24h)?Math.max(0,Math.min(guard-r.allSentToday,guard-r.allSentRolling24h)):null;
+ const active=ukToday()>=s.effectiveDate;
+ const remaining=active&&mailboxFresh(s,r)&&knownCount(outbound)&&knownCount(r.configuredDailyCap)?Math.max(0,r.configuredDailyCap-outbound):null;
+ const guard=s.sendingPolicy?.allMailLoadGuard??120; // Fixed all-mail load guard; independent of WebScan quota.
+ const headroom=mailboxFresh(s,r)&&knownCount(guard)&&knownCount(r.allSentToday)&&knownCount(r.allSentRolling24h)?Math.max(0,Math.min(guard-r.allSentToday,guard-r.allSentRolling24h)):null;
  return {outbound,remaining,headroom,active};
 }
 function node(tag,text,cls){const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e}
@@ -182,32 +183,36 @@ function noteAt(root,text){root.appendChild(node('p',text,'ops-note'))}
 function opsTable(root,headers,rows){const wrap=node('div',undefined,'ops-scroll');const table=node('table',undefined,'ops-table');const tr=table.createTHead().insertRow();headers.forEach(h=>{const th=node('th',h);th.scope='col';tr.appendChild(th)});const body=table.createTBody();rows.forEach(row=>{const tr=body.insertRow();row.forEach(v=>tr.appendChild(node('td',v)))});wrap.appendChild(table);root.appendChild(wrap)}
 function drawWebscanMailboxes(s){
  const host=document.getElementById('webscanMailboxes');host.replaceChildren();
- if(!snapshotUsable(s)){noteAt(host,'Six-inbox telemetry unavailable or incomplete. Counts and sending headroom are unverified.');return}
+ if(!snapshotUsable(s)){noteAt(host,'Inbox telemetry unavailable. Daily sent and remaining counts will appear after a successful source check.');return}
+ set('webscanMailboxTitle','Daily email counters · '+s.rows.length+' inboxes');
  const fresh=snapshotFresh(s);noteAt(host,(fresh?'SOURCE CHECKED':'STALE / PARTIAL SNAPSHOT')+' · '+s.checkedAt+' · UK date '+s.date+'. Sent records do not prove delivery.');
  const cards=node('div',undefined,'ops-cards');host.appendChild(cards);
- const states=[['Automation',s.automation?shown(s.automation.enabledWebscanTasks)+' WebScan tasks enabled':'Task status unverified'],['Data sync',fresh?'Source reconciled; JSON loaded':'Needs a fresh complete source check'],['Sending',s.verification?.futureScheduledSending==='PASSED'?'Verified by recorded send checks':'Six-inbox sending not yet verified']];
+ const countRows=s.rows.map(r=>progressFor(s,r));
+ const complete=snapshotFresh(s)&&countRows.every(p=>knownCount(p.outbound)&&knownCount(p.remaining));
+ const states=[['Outreach sent today',complete?countRows.reduce((n,p)=>n+p.outbound,0):'Unverified'],['Left today',complete?countRows.reduce((n,p)=>n+p.remaining,0):'Unverified'],['Daily limit',shown(s.sendingPolicy?.totalCap)],['Automation',s.automation?shown(s.automation.enabledWebscanTasks)+' WebScan tasks enabled':'Task status unverified'],['Data sync',fresh?'Source reconciled; JSON loaded':'Needs a fresh complete source check'],['Sending',s.verification?.futureScheduledSending==='PASSED'?'Verified by recorded send checks':'Sending not yet verified']];
  states.forEach(([title,value])=>{const card=node('div',undefined,'ops-card');card.append(node('span',title),node('strong',value));if(title==='Automation'&&s.automation)card.appendChild(node('small','Checked '+s.automation.checkedAt));cards.appendChild(card)});
  const all=sumKnown(s.rows,'allSentToday'),first=sumKnown(s.rows,'webscanFirstTouchesToday'),follow=sumKnown(s.rows,'webscanFollowUpsToday'),inbound=sumKnown(s.rows,'webscanInboundMessagesToday');
  const total=[first,follow,inbound].every(knownCount)?first+follow+inbound:null;
  noteAt(host,shown(all)+' all-campaign emails · '+shown(total)+' WebScan emails ('+shown(first)+' first touches + '+shown(follow)+' cold follow-ups + '+shown(inbound)+' inbound responses).');
- opsTable(host,['Inbox','All sent','WebScan outbound','Daily cap','Quota remaining','Load headroom','Volume policy'],s.rows.map(r=>{const p=progressFor(s,r);return [r.mailbox,shown(r.allSentToday),shown(p.outbound),shown(r.configuredDailyCap),p.active?shown(p.remaining):'Starts '+s.effectiveDate,shown(p.headroom),s.sendingPolicy?.mode==='FIXED_CAP'?'Fixed ceiling':shown(r.qualifyingDaysAtStage)+' / 3 qualifying days']}));
- noteAt(host,'Quota includes first touches and cold follow-ups. Load headroom includes all campaigns today and over 24 hours. Both are arithmetic ceilings, not permission to send. '+(s.sendingPolicy?.mode==='FIXED_CAP'?'Fixed starting ceiling: '+(s.sendingPolicy.capPerInbox??(s.sendingPolicy.capPerInboxMin+'–'+s.sendingPolicy.capPerInboxMax))+' per inbox, '+s.sendingPolicy.totalCap+' across six. No ramp.':'Stage progression: 25 → 30 → 40 → 50 per inbox; each increase needs three qualifying sending days.')+'');
+ opsTable(host,['Inbox','All emails sent today','Outreach sent today','Daily limit','Left today','Load headroom','Volume policy'],s.rows.map(r=>{const p=progressFor(s,r);return [r.mailbox,mailboxFresh(s,r)?shown(r.allSentToday):'Unverified',mailboxFresh(s,r)?shown(p.outbound):'Unverified',shown(r.configuredDailyCap),p.active?shown(p.remaining):'Starts '+s.effectiveDate,shown(p.headroom),s.sendingPolicy?.mode==='FIXED_CAP'?'Fixed ceiling':shown(r.qualifyingDaysAtStage)+' / 3 qualifying days']}));
+ noteAt(host,'Quota includes first touches and cold follow-ups. Load headroom includes all campaigns today and over 24 hours. Both are arithmetic ceilings, not permission to send. '+(s.sendingPolicy?.mode==='FIXED_CAP'?'Fixed starting ceiling: '+(s.sendingPolicy.capPerInbox??(s.sendingPolicy.capPerInboxMin+'–'+s.sendingPolicy.capPerInboxMax))+' per inbox, '+s.sendingPolicy.totalCap+' across '+s.rows.length+' inboxes. No ramp.':'Stage progression: 25 → 30 → 40 → 50 per inbox; each increase needs three qualifying sending days.')+'');
  const counters=node('div',undefined,'ops-cards');
  s.rows.forEach(r=>{
  const card=node('div',undefined,'ops-card');card.appendChild(node('span',r.mailbox));
  const today=ukToday(),started=today>=s.effectiveDate,rd=r.date||s.date,checked=r.checkedAt||s.checkedAt;
- const current=rd===today&&evidenceRecent(checked)&&r.sourceRead==='VERIFIED';
+ const current=mailboxFresh(s,r);
+ const engagementCurrent=current&&evidenceRecent(Object.hasOwn(r,'engagementCheckedAt')?r.engagementCheckedAt:checked);
  const sent=knownCount(r.webscanFirstTouchesToday)&&knownCount(r.webscanFollowUpsToday)?r.webscanFirstTouchesToday+r.webscanFollowUpsToday:null;
  const remaining=current&&knownCount(sent)&&knownCount(r.configuredDailyCap)?Math.max(0,r.configuredDailyCap-sent):null;
- card.appendChild(node('strong',!started?shown(r.configuredDailyCap)+' available from '+s.effectiveDate:remaining===null?'Remaining unverified':remaining+' remaining / '+r.configuredDailyCap));
- card.appendChild(node('small',!started?'Daily allowance starts tomorrow':current?shown(sent)+' WebScan outbound sent today':'Waiting for a current-day Gmail sync'));
+ card.appendChild(node('strong',!started?shown(r.configuredDailyCap)+' available from '+s.effectiveDate:remaining===null?'Remaining unverified':shown(sent)+' sent · '+remaining+' left today'));
+ card.appendChild(node('small',!started?'Daily allowance starts tomorrow':current?'Daily limit: '+r.configuredDailyCap+' · first touches + cold follow-ups':'Waiting for a current-day Gmail sync'));
  const bar=node('progress');bar.max=r.configuredDailyCap||50;bar.value=started&&current&&knownCount(sent)?Math.min(sent,bar.max):0;bar.setAttribute('aria-label',r.mailbox+' confirmed daily outbound sends');bar.style.cssText='width:100%;margin-top:12px;accent-color:var(--teal)';card.appendChild(bar);
  const stats=node('dl');stats.style.cssText='display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0;font-size:13px';
  const totalSent=knownCount(sent)&&knownCount(r.webscanInboundMessagesToday)?sent+r.webscanInboundMessagesToday:null;
- const metrics=[['WebScan sent today',current?shown(totalSent):'Unverified'],['Confirmed delivered','Not tracked'],['Bounces reported today',current?shown(r.webscanBouncesToday):'Unverified'],['Opened','Not tracked'],['Link clicks','Not tracked'],['Human replies today',current?shown(r.webscanHumanRepliesToday):'Unverified'],['Opt-outs today',current?shown(r.webscanOptOutsToday):'Unverified']];
+ const metrics=[['All emails sent today',current?shown(r.allSentToday):'Unverified'],['WebScan sent today',current?shown(totalSent):'Unverified'],['Confirmed delivered','Not tracked'],['Bounces reported today',engagementCurrent?shown(r.webscanBouncesToday):'Unverified'],['Opened','Not tracked'],['Link clicks','Not tracked'],['Human replies today',engagementCurrent?shown(r.webscanHumanRepliesToday):'Unverified'],['Opt-outs today',engagementCurrent?shown(r.webscanOptOutsToday):'Unverified']];
  metrics.forEach(([label,value])=>{const dt=node('dt',label);dt.style.color='var(--muted)';const dd=node('dd',value);dd.style.cssText='margin:0;text-align:right;font-weight:700';stats.append(dt,dd)});card.appendChild(stats);
  card.appendChild(node('small','Last source sync: '+checked));counters.appendChild(card);
- });host.appendChild(counters);
+ });host.insertBefore(counters,cards);
  noteAt(host,'Delivery and engagement: Gmail Sent confirms sending only. No bounce does not prove delivery or inbox placement. Delivery, opens and clicks are not tracked by this setup. Bounce, reply and opt-out figures are observed WebScan events for the displayed UK date, and may relate to earlier sends; they are not delivery or conversion rates. Sent today includes inbound responses, which do not consume the cold-outreach allowance.');
  noteAt(host,'Remaining decreases only after confirmed WebScan first touches or cold follow-ups are synced. Drafts and failed attempts do not consume quota. Page refreshes every 60 seconds; Gmail sync may lag. Each London day needs a fresh count before remaining is shown.');
  const details=node('details');details.appendChild(node('summary','Sending blockers and shortfall reasons'));
@@ -217,14 +222,18 @@ function drawWebscanMailboxes(s){
 function drawWebscanOperations(s,data){
  const queue=document.getElementById('prospectQueue'),reply=document.getElementById('replyCentre');queue.replaceChildren();reply.replaceChildren();
  if(!snapshotUsable(s)){noteAt(queue,'Queue evidence unavailable.');noteAt(reply,'Reply evidence unavailable.');return}
- const selected=document.getElementById('opsInboxFilter').value;
+ const filter=document.getElementById('opsInboxFilter'),previous=filter.value;
+ filter.replaceChildren();const allOption=node('option','All '+s.rows.length+' inboxes');allOption.value='all';filter.appendChild(allOption);
+ s.rows.forEach(r=>{const option=node('option',r.mailbox);option.value=r.mailbox;filter.appendChild(option)});
+ filter.value=s.rows.some(r=>r.mailbox===previous)?previous:'all';
+ const selected=filter.value;
  const rows=s.rows.filter(r=>selected==='all'||r.mailbox===selected);
  const freshEvidence=e=>snapshotFresh(s)&&e?.status==='VERIFIED'&&Number.isFinite(Date.parse(e.checkedAt))&&Math.abs(Date.parse(s.checkedAt)-Date.parse(e.checkedAt))<=7200000;
- noteAt(queue,'Ready means verified contact and business fit, six-inbox duplicate/suppression checks, one assigned sender and no unresolved sending block. Research totals alone do not qualify.');
+ noteAt(queue,'Ready means verified contact and business fit, all-inbox duplicate/suppression checks, one assigned sender and no unresolved sending block. Research totals alone do not qualify.');
  opsTable(queue,['Inbox','Ready','Awaiting verification','Blocked','Last queue check'],rows.map(r=>{const q=r.prospectQueue;const valid=freshEvidence(q);return [r.mailbox,valid?shown(q.ready):'Unverified',valid?shown(q.awaitingVerification):'Unverified',valid?shown(q.blocked):'Unverified',q?.checkedAt||'Not recorded']}));
  const researched=Object.entries(data.funnels||{}).filter(([id])=>id.startsWith('webscan-')).map(([,f])=>f.prospectsResearched);
  if(researched.length&&researched.every(knownCount))noteAt(queue,researched.reduce((a,b)=>a+b,0)+' prospects recorded as researched across WebScan funnels (cumulative; not a send-ready queue).');
- noteAt(reply,'All six inboxes in one view. Open actions require a thread audit; today’s received replies are a separate measure. Automated form alerts and self-tests are excluded.');
+ noteAt(reply,'All connected inboxes in one view. Open actions require a thread audit; today’s received replies are a separate measure. Automated form alerts and self-tests are excluded.');
  opsTable(reply,['Inbox','Human replies today','Needs answer','Interested','Pricing / call','Not interested','Last thread audit'],rows.map(r=>{const q=r.replyQueue;const valid=freshEvidence(q);return [r.mailbox,shown(r.webscanHumanRepliesToday),valid?shown(q.needsAnswer):'Unverified',valid?shown(q.interested):'Unverified',valid?shown(q.pricingOrCall):'Unverified',valid?shown(q.notInterested):'Unverified',q?.checkedAt||'Not recorded']}));
  noteAt(reply,'Reply categories can overlap. Missing audits are shown as unverified, never as an empty inbox. Contact details and message content stay outside this public dashboard.');
 }
@@ -265,4 +274,5 @@ refresh=async function(){
 
 refresh();
 setInterval(refresh,REFRESH_MS);
+
 
