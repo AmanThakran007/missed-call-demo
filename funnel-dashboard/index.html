@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-dashboard-version="2026-10-04T00:54:16.799Z">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -18,6 +18,7 @@
       <p class="sub">Verified telemetry only. No sample figures.</p>
     </div>
     <div class="header-status">
+      <a class="button" id="loadLatestDashboard" href="?refresh=20261004-mobile">Load latest dashboard</a>
       <div class="pill success" id="activeFunnels">Checking automations…</div>
       <div class="refresh-chip">
         <span class="pulse"></span>
@@ -218,9 +219,47 @@
     <span>Europe/London</span>
     <span>GBP</span>
     <span>Accurate values only</span>
+    <span>Updated 4 Oct · mobile refresh enabled</span>
   </footer>
 </main>
 <script src="dashboard-v2.js?v=20261004-prospect-production-1"></script>
+
+<script>
+(() => {
+  const version = document.documentElement.dataset.dashboardVersion;
+  const asset = document.querySelector('script[src*="dashboard-v2.js"]').getAttribute('src');
+  const link = document.getElementById('loadLatestDashboard');
+  function freshUrl() {
+    const url = new URL(location.href);
+    url.searchParams.set('refresh', Date.now().toString());
+    return url.href;
+  }
+  link.addEventListener('click', () => { link.href = freshUrl(); });
+  let checking = false;
+  async function checkForUpdate() {
+    if (checking || document.hidden) return;
+    checking = true;
+    try {
+      const url = new URL('index.html', location.href);
+      url.searchParams.set('check', Date.now().toString());
+      const response = await fetch(url.href, { cache: 'no-store' });
+      if (!response.ok) return;
+      const next = new DOMParser().parseFromString(await response.text(), 'text/html');
+      const nextVersion = next.documentElement.dataset.dashboardVersion;
+      const nextAsset = next.querySelector('script[src*="dashboard-v2.js"]')?.getAttribute('src');
+      if (!nextVersion || !nextAsset) return;
+      if (Date.parse(nextVersion) > Date.parse(version) ||
+          (nextVersion === version && nextAsset !== asset)) {
+        location.replace(freshUrl());
+      }
+    } catch (_) { /* Keep the current dashboard available when offline. */ }
+    finally { checking = false; }
+  }
+  window.addEventListener('pageshow', checkForUpdate);
+  document.addEventListener('visibilitychange', checkForUpdate);
+  setInterval(checkForUpdate, 60000);
+})();
+</script>
 </body>
 </html>
 
