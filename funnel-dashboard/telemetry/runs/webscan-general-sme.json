@@ -9,9 +9,9 @@
   "status": "RUNNING",
   "runId": "6aa199f3c2848191aa1e6d2a26d0d383_2026-10-04T12:00:38Z",
   "startedAt": "2026-10-04T13:00:38+01:00",
-  "heartbeatAt": "2026-10-04T13:03:00+01:00",
+  "heartbeatAt": "2026-10-04T13:13:00+01:00",
   "finishedAt": null,
-  "phase": "RECONCILE",
+  "phase": "SEND",
   "outcome": null,
   "metrics": {
     "candidatesAssessed": null,
@@ -60,5 +60,6 @@
       ],
       "nextAction": "Reconcile the 12:00-hour WebScan slot and candidate state in the next General SME run."
     }
-  ]
+  ],
+  "plannedCount": 3
 }
