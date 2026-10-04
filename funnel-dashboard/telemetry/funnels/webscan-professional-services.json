@@ -10,8 +10,8 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-04T01:39:15+01:00",
-  "nextRun": "2026-10-04T02:39:00+01:00",
+  "lastRun": "2026-10-04T05:40:25+01:00",
+  "nextRun": "2026-10-04T06:39:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE: Earlier personalized send attempts were rejected by safety controls, but the original rejection output is unavailable in the current execution context. No provider error or missing-business-information defect is independently evidenced, and the affected scope cannot be classified as action-specific versus campaign-wide. Sending remains held pending original rejection evidence or direct resolution evidence through the applicable process.",
   "sendingPolicy": {
@@ -77,7 +77,7 @@
   },
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T01:39:15+01:00",
+      "checkedAt": "2026-10-04T05:41:05+01:00",
       "accounts": [
         "amanthakranengland@gmail.com",
         "helpme.ecommerce@gmail.com",
@@ -89,15 +89,15 @@
         "bharatfare.team@gmail.com",
         "BharatFare UK inbox"
       ],
-      "scope": "All new mail after 2026-10-04T00:42:05+01:00 and London-day Sent history across all nine authorized inboxes, including Professional Services replies, bounces, opt-outs, buying-intent questions, call requests, and cross-inbox ownership evidence",
-      "result": "No Professional Services reply, bounce, opt-out, follow-up, buying-intent question, call request, or Sent message was found. Two Google account-security notices in the newly mapped inbox were excluded as unrelated. No outreach was sent outside the permitted outreach hour."
+      "scope": "Recent inbound monitoring across all nine authorized WebScan inboxes for Professional Services replies, bounces, opt-outs, buying-intent questions, call requests and provider restrictions.",
+      "result": "No Professional Services reply, bounce, opt-out, buying-intent question, call request, provider restriction or other funnel event was found. Two unrelated personal banking notices were excluded. No outreach was sent outside the permitted outreach hour."
     },
     "verifiedResearch": {
       "recordedAt": "2026-10-03T16:35:02+01:00",
       "result": "Preserved the verified cumulative total of 10 researched prospects; no email send was counted."
     },
     "holdDiagnosis": {
-      "checkedAt": "2026-10-04T01:39:15+01:00",
+      "checkedAt": "2026-10-04T05:41:05+01:00",
       "status": "HOLD_REASON_UNAVAILABLE",
       "classification": {
         "providerError": "NOT_EVIDENCED",
@@ -114,10 +114,10 @@
       "sendingConfirmed": false
     },
     "github": {
-      "checkedAt": "2026-10-04T01:39:15+01:00",
+      "checkedAt": "2026-10-04T05:41:05+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/webscan-professional-services.json",
-      "priorBlobSha": "0dc3a04720349039a9743fee8bd3d1f89a00a647"
+      "priorBlobSha": "360480db43411b2994e990e4a10544de4de9a67a"
     },
     "automation": {
       "checkedAt": "2026-10-04T01:39:15+01:00",
@@ -144,7 +144,7 @@
   "prospectProduction": {
     "schemaVersion": 1,
     "instrumentedAt": "2026-10-04T00:45:55.292Z",
-    "status": "AWAITING_FIRST_MEASURED_RUN",
+    "status": "MEASURING",
     "historicalRunCoverage": "INCOMPLETE",
     "historicalEvidence": {
       "prospectsResearched": 10,
@@ -158,8 +158,8 @@
       "summary": "Historical cumulative research is recorded, but the complete candidate-level source list and suppression/ownership evidence were not recovered. No verified ready-stock total."
     },
     "queueAudit": {
-      "status": "UNVERIFIED",
-      "checkedAt": null,
+      "status": "PARTIAL",
+      "checkedAt": "2026-10-04T05:41:05+01:00",
       "scope": "Complete current WebScan Professional Services candidate queue and nine-inbox ownership/suppression history",
       "readyFirstTouches": null,
       "dueFollowUps": null,
@@ -167,6 +167,25 @@
       "blocked": null,
       "byInbox": []
     },
-    "runs": []
+    "runs": [
+      {
+        "runId": "6ac06186b6708191bc15837a1b0009fe:2026-10-04T05:40:25+01:00",
+        "startedAt": "2026-10-04T05:40:25+01:00",
+        "finishedAt": "2026-10-04T05:41:05+01:00",
+        "kind": "MONITORING",
+        "measurementStatus": "PARTIAL",
+        "candidatesAssessed": 0,
+        "newlyQualified": 0,
+        "duplicatesRejected": 0,
+        "rejected": 0,
+        "awaitingVerification": null,
+        "readyBefore": null,
+        "readyAfter": null,
+        "dueFollowUps": null,
+        "firstTouchesSent": 0,
+        "followUpsSent": 0,
+        "durationSeconds": 40
+      }
+    ]
   }
 }
