@@ -10,13 +10,13 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-04T06:30:21+01:00",
-  "nextRun": "2026-10-04T07:30:00+01:00",
+  "lastRun": "2026-10-04T07:28:52+01:00",
+  "nextRun": "2026-10-04T08:30:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE; ADS_PAUSED_PAYMENT_FAILED: Earlier first-touch attempts remain unverified as sent because the original rejection output is unavailable in the current execution context. The £36 ad campaign remains paused because the account threshold payment failed.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T06:34:15+01:00",
+      "checkedAt": "2026-10-04T07:31:30+01:00",
       "accounts": [
         "amanthakranengland@gmail.com",
         "helpme.ecommerce@gmail.com",
@@ -29,24 +29,29 @@
         "bharatfareuk@gmail.com"
       ],
       "scope": "Recent inbound monitoring across all nine authorized WebScan inboxes for Agency White Label replies, bounces, opt-outs, demo requests, partnership questions, billing notices and provider restrictions.",
-      "result": "No new Agency White Label human reply, bounce, opt-out, demo request, partnership question, billing notice or provider restriction. One unrelated investment promotion and one unrelated social-network notification were excluded. No outreach was sent outside the approved hour."
+      "result": "No new Agency White Label human reply, bounce, opt-out, demo request, partnership question, billing notice or provider restriction. One unrelated credit-card promotion and one unrelated social-network notification were excluded. No outreach was sent outside the approved hour."
     },
     "adsManager": {
-      "checkedAt": "2026-10-04T06:34:15+01:00",
+      "checkedAt": "2026-10-04T07:31:30+01:00",
       "account": "WebRevenue Scan",
       "campaign": "WebScan Agency White Label - £36 Test",
-      "reportingPeriod": "Trailing 7 completed account-local days through the latest completed hour",
+      "reportingPeriod": "Trailing 48 completed account-local hours through the latest completed hour",
       "granularity": "campaign total",
       "result": "Campaign remains paused and inactive. Current blocking account issue is ad_account_threshold_payment_failed; campaign_not_active is also reported. Reporting returned 2,477 impressions, 11 clicks, £26.15 spend, 0.44% CTR, £2.38 CPC and £10.56 CPM."
     },
     "github": {
-      "checkedAt": "2026-10-04T06:34:15+01:00",
+      "checkedAt": "2026-10-04T07:31:30+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/webscan-agency-white-label.json",
-      "priorBlobSha": "4f73758fce2dfcca717ac9f75bd5a13a09748b27"
+      "priorBlobSha": "8a4b5aba53b2c579609c7d8bf3653f0d4a6fcdd5"
+    },
+    "privateLedger": {
+      "checkedAt": "2026-10-04T07:31:30+01:00",
+      "status": "PERSISTED",
+      "result": "The monitoring-only run record was appended with an optimistic version guard and the replacement succeeded. Queue readiness remains unverified because historical candidate-level ownership and suppression reconstruction is incomplete."
     },
     "sixInboxReconciliation": {
-      "checkedAt": "2026-10-04T06:34:15+01:00",
+      "checkedAt": "2026-10-04T07:31:30+01:00",
       "date": "2026-10-04",
       "scope": "Legacy-compatible key; current scope is recent inbound monitoring across all nine authorized WebScan inboxes. Complete London-day Sent and queue reconciliation was not performed in this monitoring-only run.",
       "accountsChecked": 9,
@@ -70,56 +75,20 @@
     "allMailboxLoadGuard": 120,
     "workflowTested": false,
     "mailboxCaps": [
-      {
-        "mailbox": "England inbox",
-        "configuredDailyCap": 112,
-        "agencyWhiteLabelCap": 11
-      },
-      {
-        "mailbox": "Ecommerce inbox",
-        "configuredDailyCap": 112,
-        "agencyWhiteLabelCap": 11
-      },
-      {
-        "mailbox": "BharatFare inbox",
-        "configuredDailyCap": 112,
-        "agencyWhiteLabelCap": 11
-      },
-      {
-        "mailbox": "8891 inbox",
-        "configuredDailyCap": 112,
-        "agencyWhiteLabelCap": 11
-      },
-      {
-        "mailbox": "Dreams inbox",
-        "configuredDailyCap": 112,
-        "agencyWhiteLabelCap": 11
-      },
-      {
-        "mailbox": "Consulting inbox",
-        "configuredDailyCap": 112,
-        "agencyWhiteLabelCap": 11
-      },
-      {
-        "mailbox": "India inbox",
-        "configuredDailyCap": 112,
-        "agencyWhiteLabelCap": 11
-      },
-      {
-        "mailbox": "BharatFare Team inbox",
-        "configuredDailyCap": 112,
-        "agencyWhiteLabelCap": 11
-      },
-      {
-        "mailbox": "BharatFare UK inbox",
-        "configuredDailyCap": 112,
-        "agencyWhiteLabelCap": 11
-      }
+      {"mailbox": "England inbox", "configuredDailyCap": 112, "agencyWhiteLabelCap": 11},
+      {"mailbox": "Ecommerce inbox", "configuredDailyCap": 112, "agencyWhiteLabelCap": 11},
+      {"mailbox": "BharatFare inbox", "configuredDailyCap": 112, "agencyWhiteLabelCap": 11},
+      {"mailbox": "8891 inbox", "configuredDailyCap": 112, "agencyWhiteLabelCap": 11},
+      {"mailbox": "Dreams inbox", "configuredDailyCap": 112, "agencyWhiteLabelCap": 11},
+      {"mailbox": "Consulting inbox", "configuredDailyCap": 112, "agencyWhiteLabelCap": 11},
+      {"mailbox": "India inbox", "configuredDailyCap": 112, "agencyWhiteLabelCap": 11},
+      {"mailbox": "BharatFare Team inbox", "configuredDailyCap": 112, "agencyWhiteLabelCap": 11},
+      {"mailbox": "BharatFare UK inbox", "configuredDailyCap": 112, "agencyWhiteLabelCap": 11}
     ],
     "inboxCount": 9
   },
   "holdDiagnosis": {
-    "checkedAt": "2026-10-04T06:34:15+01:00",
+    "checkedAt": "2026-10-04T07:31:30+01:00",
     "status": "HOLD_REASON_UNAVAILABLE",
     "evidence": "Historical run summaries confirm rejected send attempts, but the original tool rejection output is unavailable in the current execution context.",
     "scope": "Cannot classify the historical send restriction as action-specific versus campaign-wide from currently available direct evidence.",
@@ -145,7 +114,7 @@
     },
     "queueAudit": {
       "status": "PARTIAL",
-      "checkedAt": "2026-10-04T06:34:15+01:00",
+      "checkedAt": "2026-10-04T07:31:30+01:00",
       "scope": "Complete current WebScan Agency White Label candidate queue and nine-inbox ownership/suppression history",
       "readyFirstTouches": null,
       "dueFollowUps": null,
@@ -189,6 +158,24 @@
         "firstTouchesSent": 0,
         "followUpsSent": 0,
         "durationSeconds": 189
+      },
+      {
+        "runId": "6ac0618cc9488191a28d80f3c5601199:2026-10-04T07:28:52+01:00",
+        "startedAt": "2026-10-04T07:28:52+01:00",
+        "finishedAt": "2026-10-04T07:31:30+01:00",
+        "kind": "MONITORING",
+        "measurementStatus": "PARTIAL",
+        "candidatesAssessed": 0,
+        "newlyQualified": 0,
+        "duplicatesRejected": 0,
+        "rejected": 0,
+        "awaitingVerification": null,
+        "readyBefore": null,
+        "readyAfter": null,
+        "dueFollowUps": null,
+        "firstTouchesSent": 0,
+        "followUpsSent": 0,
+        "durationSeconds": 158
       }
     ]
   }
