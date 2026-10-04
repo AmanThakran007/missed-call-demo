@@ -22,28 +22,28 @@
     "Lost": 0
   },
   "freshness": "LIVE",
-  "lastChecked": "2026-10-04T01:07:20+01:00",
+  "lastChecked": "2026-10-04T02:07:00+01:00",
   "blocker": null,
   "inboundLeads": 1,
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T01:07:20+01:00",
-      "accountsChecked": 8,
-      "result": "All eight authorized inboxes were readable and Sent searches were fully paginated. The London calendar day has 0 sent messages across all eight accounts; the rolling 24-hour total is 31 (Dreams 24, Consulting 7, other six 0). No new WebScan first touch, follow-up, human reply, bounce or opt-out was found. No outreach was sent in this monitoring-only pass."
+      "checkedAt": "2026-10-04T02:07:00+01:00",
+      "accountsChecked": 9,
+      "result": "All nine authorized inboxes were readable and Sent searches were fully paginated. The London calendar day has 0 sent messages across all nine accounts; the rolling 24-hour total is 31 (Dreams 24, Consulting 7, other seven 0). No new WebScan first touch, follow-up, human reply, bounce or opt-out was found. No outreach was sent in this monitoring-only pass."
     },
     "verifiedResearch": {
       "checkedAt": "2026-10-03T19:11:52+01:00",
       "result": "Five new distinct UK SMEs were verified with public business contact routes and at least two current website/conversion issues each before the latest outreach window."
     },
     "googleDrive": {
-      "checkedAt": "2026-10-04T01:07:20+01:00",
-      "result": "A connected Google Drive search found no WebScan file; Gmail and GitHub remain the verified campaign and telemetry sources."
+      "checkedAt": "2026-10-04T02:07:00+01:00",
+      "result": "A connected Google Drive search found no WebScan file; Gmail, the private Library ledgers and GitHub remain the verified campaign and telemetry sources."
     },
     "github": {
-      "checkedAt": "2026-10-04T01:07:20+01:00",
+      "checkedAt": "2026-10-04T02:07:00+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/webscan-general-sme.json",
-      "priorBlobSha": "8e1cdd9e5f780ac78cdcdfc75f19125a2e8f33f1"
+      "priorBlobSha": "49fdabb1294dd22fa81d90036a4a47ec9985a8e5"
     },
     "twoInboxPolicy": {
       "checkedAt": "2026-10-03T21:05:11+01:00",
@@ -91,13 +91,13 @@
       ]
     },
     "sixInboxReconciliation": {
-      "checkedAt": "2026-10-04T01:07:20+01:00",
+      "checkedAt": "2026-10-04T02:07:00+01:00",
       "date": "2026-10-04",
-      "scope": "All six inboxes; fully paginated London-day and rolling-24-hour Sent counts; all four WebScan funnel records; targeted replies, delivery notices and opt-outs.",
-      "accountsChecked": 6,
-      "status": "SUPERSEDED",
+      "scope": "Compatibility key; current scope is all nine authorized inboxes, fully paginated London-day and rolling-24-hour Sent counts, all four WebScan funnel records, and targeted reply/delivery/opt-out checks.",
+      "accountsChecked": 9,
+      "status": "SOURCE_RECONCILED",
       "allSentToday": 0,
-      "allSentRolling24h": 39,
+      "allSentRolling24h": 31,
       "dailyWebScanFirstTouchesAllFunnels": 0,
       "dailyGeneralSmeFirstTouches": 0,
       "dailyWebScanFollowUps": 0,
@@ -107,20 +107,20 @@
       "dailyOptOuts": 0,
       "mailboxSnapshotPath": "funnel-dashboard/telemetry/webscan-mailboxes.json",
       "sendingPolicyMode": "FIXED_CAP",
-      "capPerInboxMin": 83,
-      "capPerInboxMax": 84,
-      "totalCap": 500,
-      "generalSmeAggregateCap": 248,
+      "capPerInboxMin": 112,
+      "capPerInboxMax": 112,
+      "totalCap": 1008,
+      "generalSmeAggregateCap": 513,
       "qualificationGateActive": false,
       "stagedCapsPerInbox": [],
       "scheduledSendingStatus": "NOT_YET_RUN",
       "senderHeaderChecks": "NOT_YET_RUN",
+      "newlyMappedInboxHeaderChecks": "PENDING_FIRST_SUCCESSFUL_SEND",
       "prospectQueueAudit": "UNVERIFIED",
       "replyQueueAudit": "UNVERIFIED",
       "effectiveDate": "2026-10-04",
       "publicDeploymentVisibility": "BLOCKED_BY_CLIENT",
-      "publicDeploymentResult": "Repository source write/readback is checked separately; public GitHub Pages visibility cannot be confirmed from this client.",
-      "result": "Superseded by the eight-inbox fixed-cap policy effective 4 October 2026; retained as historical schema context only."
+      "publicDeploymentResult": "Repository source write/readback is checked separately; public GitHub Pages visibility cannot be confirmed from this client."
     },
     "eightInboxReconciliation": {
       "checkedAt": "2026-10-04T01:07:20+01:00",
@@ -153,6 +153,39 @@
       "effectiveDate": "2026-10-04",
       "publicDeploymentVisibility": "BLOCKED_BY_CLIENT",
       "publicDeploymentResult": "Repository source write/readback is checked separately; public GitHub Pages visibility cannot be confirmed from this client."
+    },
+    "nineInboxReconciliation": {
+      "checkedAt": "2026-10-04T02:07:00+01:00",
+      "date": "2026-10-04",
+      "scope": "Compatibility key; current scope is all nine authorized inboxes, fully paginated London-day and rolling-24-hour Sent counts, all four WebScan funnel records, and targeted reply/delivery/opt-out checks.",
+      "accountsChecked": 9,
+      "status": "SOURCE_RECONCILED",
+      "allSentToday": 0,
+      "allSentRolling24h": 31,
+      "dailyWebScanFirstTouchesAllFunnels": 0,
+      "dailyGeneralSmeFirstTouches": 0,
+      "dailyWebScanFollowUps": 0,
+      "dailyWebScanInboundMessages": 0,
+      "dailyHumanReplies": 0,
+      "dailyBounces": 0,
+      "dailyOptOuts": 0,
+      "mailboxSnapshotPath": "funnel-dashboard/telemetry/webscan-mailboxes.json",
+      "sendingPolicyMode": "FIXED_CAP",
+      "capPerInboxMin": 112,
+      "capPerInboxMax": 112,
+      "totalCap": 1008,
+      "generalSmeAggregateCap": 513,
+      "qualificationGateActive": false,
+      "stagedCapsPerInbox": [],
+      "scheduledSendingStatus": "NOT_YET_RUN",
+      "senderHeaderChecks": "NOT_YET_RUN",
+      "newlyMappedInboxHeaderChecks": "PENDING_FIRST_SUCCESSFUL_SEND",
+      "prospectQueueAudit": "UNVERIFIED",
+      "replyQueueAudit": "UNVERIFIED",
+      "effectiveDate": "2026-10-04",
+      "publicDeploymentVisibility": "BLOCKED_BY_CLIENT",
+      "publicDeploymentResult": "Repository source write/readback is checked separately; public GitHub Pages visibility cannot be confirmed from this client.",
+      "compatibilityKey": false
     }
   },
   "sendingPolicy": {
@@ -167,14 +200,12 @@
     "generalSmeCapPerInbox": 57,
     "allMailLoadGuard": 120,
     "inboxCount": 9,
-    "workflowTested": false,
-    "aggregateFunnelCap": 513,
-    "funnelCapPerInbox": 57
+    "workflowTested": false
   },
   "prospectProduction": {
     "schemaVersion": 1,
     "instrumentedAt": "2026-10-04T00:45:55.292Z",
-    "status": "AWAITING_FIRST_MEASURED_RUN",
+    "status": "MEASURING",
     "historicalRunCoverage": "INCOMPLETE",
     "historicalEvidence": {
       "prospectsResearched": 21,
@@ -204,6 +235,25 @@
       "blocked": null,
       "byInbox": []
     },
-    "runs": []
+    "runs": [
+      {
+        "runId": "6aa199f3c2848191aa1e6d2a26d0d383_2026-10-04T01:02:13Z",
+        "startedAt": "2026-10-04T02:02:13+01:00",
+        "finishedAt": "2026-10-04T02:07:00+01:00",
+        "kind": "MONITORING",
+        "measurementStatus": "COMPLETE",
+        "candidatesAssessed": 0,
+        "newlyQualified": 0,
+        "duplicatesRejected": 0,
+        "rejected": 0,
+        "awaitingVerification": 0,
+        "readyBefore": null,
+        "readyAfter": null,
+        "dueFollowUps": null,
+        "firstTouchesSent": 0,
+        "followUpsSent": 0,
+        "durationSeconds": 287
+      }
+    ]
   }
 }
