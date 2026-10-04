@@ -5,13 +5,13 @@
   "automationId": "6ac0616fa5008191adfe432561de7eff",
   "workflowVersion": "HOURLY_V2",
   "configuredAt": "2026-10-04T11:44:55.636Z",
-  "effectiveAt": "2026-10-04T13:00:00+01:00",
-  "status": "AWAITING_FIRST_RUN",
-  "runId": null,
-  "startedAt": null,
-  "heartbeatAt": null,
+  "effectiveAt": "2026-10-04T11:54:45.158Z",
+  "status": "RUNNING",
+  "runId": "6ac0616fa5008191adfe432561de7eff_2026-10-04T12:55:38+01:00",
+  "startedAt": "2026-10-04T12:55:38+01:00",
+  "heartbeatAt": "2026-10-04T11:56:01.527Z",
   "finishedAt": null,
-  "phase": null,
+  "phase": "RECONCILE",
   "outcome": null,
   "metrics": {
     "candidatesAssessed": null,
@@ -22,7 +22,7 @@
     "followUpsSent": null
   },
   "blockers": [],
-  "nextAction": "Await the first scheduled run under the hourly policy; existing campaign holds remain authoritative.",
+  "nextAction": "Reconcile prior pending sends, replies, suppressions and current-hour capacity.",
   "lastCompleted": null,
   "history": []
 }
