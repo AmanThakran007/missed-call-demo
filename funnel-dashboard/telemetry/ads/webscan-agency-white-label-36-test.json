@@ -16,22 +16,22 @@
     "FIRST_SPEND",
     "FIRST_CLICK"
   ],
-  "lastChecked": "2026-10-04T09:32:48+01:00",
+  "lastChecked": "2026-10-04T10:09:45+01:00",
   "freshness": "LIVE",
   "blocker": "AD_ACCOUNT_THRESHOLD_PAYMENT_FAILED",
   "reportingWindow": {
     "type": "relative_completed_period",
     "description": "Trailing 7 completed account-local days through the latest completed hour",
-    "observedAt": "2026-10-04T09:32:48+01:00",
+    "observedAt": "2026-10-04T10:09:45+01:00",
     "result": "Campaign reporting returned 2,477 impressions, 11 clicks, £26.15 spend, 0.44% CTR, £2.38 CPC and £10.56 CPM."
   },
   "sourceChecks": {
     "campaignDelivery": {
-      "checkedAt": "2026-10-04T09:32:48+01:00",
-      "result": "Campaign remains paused and inactive. The blocking account issue is ad_account_threshold_payment_failed; campaign_not_active is also reported. Descendant delivery checks were partially skipped."
+      "checkedAt": "2026-10-04T10:09:45+01:00",
+      "result": "The campaign endpoint returned status paused. The previously recorded account threshold-payment blocker remains preserved from the latest delivery audit; this monitoring pass did not re-diagnose delivery."
     },
     "performanceApi": {
-      "checkedAt": "2026-10-04T09:32:48+01:00",
+      "checkedAt": "2026-10-04T10:09:45+01:00",
       "result": "Trailing 7 completed account-local days through the latest completed hour returned 2,477 impressions, 11 clicks, £26.15 spend, 0.44% CTR, £2.38 CPC and £10.56 CPM."
     },
     "ad": {
@@ -39,14 +39,14 @@
       "result": "The ad group remains active with no low-bid warning. The Agency White Label creative remains active and approved, but it is not serving because the parent campaign is paused and the account threshold payment failed."
     },
     "gmail": {
-      "checkedAt": "2026-10-04T09:32:48+01:00",
-      "result": "No new Agency White Label campaign reply, bounce, opt-out, ad-billing or delivery message appeared across the nine authorized inboxes; seven unrelated marketing or account-notification messages were excluded."
+      "checkedAt": "2026-10-04T10:09:45+01:00",
+      "result": "No new Agency White Label campaign reply, bounce, opt-out, ad-billing or delivery message appeared across the nine authorized inboxes; four unrelated consumer promotions/account messages received after the preceding coordinator check were excluded."
     },
     "github": {
-      "checkedAt": "2026-10-04T09:32:48+01:00",
+      "checkedAt": "2026-10-04T10:09:45+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/ads/webscan-agency-white-label-36-test.json",
-      "priorBlobSha": "8d8e0bd0be7c911bc9081f3d0221e41ef26ab9cf"
+      "priorBlobSha": "94d5efd2826287267674cc87d8d3ba42d7fcf1dc"
     }
   }
 }
