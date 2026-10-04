@@ -20,36 +20,36 @@
     "Lost": 0
   },
   "draftsPending": 2,
-  "lastRun": "2026-10-04T00:40:25+01:00",
+  "lastRun": "2026-10-04T01:35:39+01:00",
   "nextRun": "2026-10-04T01:39:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE: Historical first-touch send attempts were rejected by mail-action safety controls, but the original rejection output is unavailable in the current execution context. The restriction cannot be classified as action-specific or campaign-wide and remains unresolved; two drafts remain unsent. Monitoring is permitted.",
   "sourceChecks": {
     "gmailPrimary": {
-      "checkedAt": "2026-10-04T00:40:25+01:00",
+      "checkedAt": "2026-10-04T01:35:39+01:00",
       "account": "amanthakran.dreams@gmail.com",
-      "scope": "All new mail after 2026-10-03T23:41:29+01:00, including appointment-setting replies, bounces, opt-outs, pricing or pilot questions and call/demo requests",
-      "result": "No new mail was found. No appointment-setting reply, bounce, opt-out, pricing or pilot question, call/demo request, or sent first-touch was recorded. No outreach was sent because this run was outside the permitted outreach hour."
+      "scope": "All new mail after 2026-10-04T00:40:25+01:00, plus London-day Sent history, including appointment-setting replies, bounces, opt-outs, pricing or pilot questions and call/demo requests",
+      "result": "No new mail or Sent messages were found. No appointment-setting reply, bounce, opt-out, pricing or pilot question, call/demo request, or first-touch send was recorded. No outreach was sent outside the permitted outreach hour."
     },
     "gmailDrafts": {
-      "checkedAt": "2026-10-04T00:40:25+01:00",
+      "checkedAt": "2026-10-04T01:35:39+01:00",
       "account": "aman.thakran.consulting@gmail.com",
-      "result": "Two verified unsent appointment-setting drafts remain. No new campaign message, relevant bounce, reply or send was found."
+      "result": "Two verified unsent appointment-setting drafts remain. No new campaign message, relevant bounce, reply or London-day Sent message was found."
     },
     "github": {
-      "checkedAt": "2026-10-04T00:40:25+01:00",
+      "checkedAt": "2026-10-04T01:35:39+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/b2b-appointment-setting.json",
-      "priorBlobSha": "08b532d23c04d488f0bf6d09bce3fc4dd990945e"
+      "priorBlobSha": "a2aa937c86e3629539000279e83085cd1b7f77da"
     },
     "automation": {
-      "checkedAt": "2026-10-04T00:40:25+01:00",
+      "checkedAt": "2026-10-04T01:35:39+01:00",
       "id": "6ac05cb463648191a9f810de147b94ef",
       "enabled": true,
       "result": "Automation verified enabled; continuity policy preserved."
     },
     "holdDiagnosis": {
-      "checkedAt": "2026-10-04T00:40:25+01:00",
+      "checkedAt": "2026-10-04T01:35:39+01:00",
       "status": "HOLD_REASON_UNAVAILABLE",
       "classification": {
         "providerError": "NOT_EVIDENCED",
@@ -58,7 +58,7 @@
         "campaignWideHold": "UNDETERMINED"
       },
       "affectedScope": "Historical appointment-setting first-touch attempts; existing drafts remain unsent. Read-only monitoring remains permitted.",
-      "publicSummary": "Historical summaries confirm rejected send attempts, but the original rejection output is unavailable. No retry, inbox switch, bypass or recovery claim was made.",
+      "publicSummary": "Historical summaries confirm rejected send attempts, but the original rejection output remains unavailable. No retry, inbox switch, bypass or recovery claim was made.",
       "correctiveStep": "Retrieve the original rejection output or direct resolution evidence through the applicable safety-review process before attempting or classifying recovery.",
       "requiredEvidence": "Original mail-action rejection output or direct evidence that the relevant restriction has been resolved.",
       "diagnosticsCompleted": true,
