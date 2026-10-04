@@ -29,42 +29,42 @@
     "workflowTested": false,
     "mailboxCaps": [
       {
-        "mailbox": "amanthakranengland@gmail.com",
+        "mailbox": "England inbox",
         "configuredDailyCap": 112,
         "professionalServicesCap": 22
       },
       {
-        "mailbox": "helpme.ecommerce@gmail.com",
+        "mailbox": "Ecommerce inbox",
         "configuredDailyCap": 112,
         "professionalServicesCap": 22
       },
       {
-        "mailbox": "bharatfare@gmail.com",
+        "mailbox": "BharatFare inbox",
         "configuredDailyCap": 112,
         "professionalServicesCap": 22
       },
       {
-        "mailbox": "amanthakran8891@gmail.com",
+        "mailbox": "8891 inbox",
         "configuredDailyCap": 112,
         "professionalServicesCap": 22
       },
       {
-        "mailbox": "amanthakran.dreams@gmail.com",
+        "mailbox": "Dreams inbox",
         "configuredDailyCap": 112,
         "professionalServicesCap": 22
       },
       {
-        "mailbox": "aman.thakran.consulting@gmail.com",
+        "mailbox": "Consulting inbox",
         "configuredDailyCap": 112,
         "professionalServicesCap": 22
       },
       {
-        "mailbox": "amanthakranindia@gmail.com",
+        "mailbox": "India inbox",
         "configuredDailyCap": 112,
         "professionalServicesCap": 22
       },
       {
-        "mailbox": "bharatfare.team@gmail.com",
+        "mailbox": "BharatFare Team inbox",
         "configuredDailyCap": 112,
         "professionalServicesCap": 22
       },
@@ -140,5 +140,33 @@
       "newlyMappedInboxFirstSendVerification": "PENDING",
       "workflowTested": false
     }
+  },
+  "prospectProduction": {
+    "schemaVersion": 1,
+    "instrumentedAt": "2026-10-04T00:45:55.292Z",
+    "status": "AWAITING_FIRST_MEASURED_RUN",
+    "historicalRunCoverage": "INCOMPLETE",
+    "historicalEvidence": {
+      "prospectsResearched": 10,
+      "firstEmailsSent": 0,
+      "sourceTimestamp": "2026-10-04T01:39:15+01:00",
+      "scope": "Historical cumulative funnel telemetry; no complete candidate-level or per-run production audit."
+    },
+    "sourceAudit": {
+      "checkedAt": "2026-10-04T00:45:55.292Z",
+      "status": "PARTIAL",
+      "summary": "Historical cumulative research is recorded, but the complete candidate-level source list and suppression/ownership evidence were not recovered. No verified ready-stock total."
+    },
+    "queueAudit": {
+      "status": "UNVERIFIED",
+      "checkedAt": null,
+      "scope": "Complete current WebScan Professional Services candidate queue and nine-inbox ownership/suppression history",
+      "readyFirstTouches": null,
+      "dueFollowUps": null,
+      "awaitingVerification": null,
+      "blocked": null,
+      "byInbox": []
+    },
+    "runs": []
   }
 }
