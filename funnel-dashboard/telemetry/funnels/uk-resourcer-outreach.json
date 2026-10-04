@@ -10,35 +10,35 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-04T10:42:07+01:00",
-  "nextRun": "2026-10-04T11:39:00+01:00",
+  "lastRun": "2026-10-04T12:35:27+01:00",
+  "nextRun": "2026-10-04T13:39:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE: Ten previously approved send attempts were blocked by mail-action safety controls, but the original rejection output is unavailable. The restriction cannot be classified as action-specific or campaign-wide and remains unresolved; monitoring stays active.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T10:42:32+01:00",
+      "checkedAt": "2026-10-04T12:35:52+01:00",
       "accounts": [
-        "amanthakranengland@gmail.com",
-        "helpme.ecommerce@gmail.com",
-        "bharatfare@gmail.com",
-        "amanthakran8891@gmail.com",
-        "amanthakran.dreams@gmail.com",
-        "aman.thakran.consulting@gmail.com",
-        "amanthakranindia@gmail.com",
-        "bharatfare.team@gmail.com",
-        "bharatfareuk@gmail.com"
+        "England inbox",
+        "Ecommerce inbox",
+        "BharatFare inbox",
+        "8891 inbox",
+        "Dreams inbox",
+        "Consulting inbox",
+        "India inbox",
+        "BharatFare Team inbox",
+        "BharatFare UK inbox"
       ],
       "scope": "All nine connected inboxes checked for recent UK resourcer replies, bounces, opt-outs, pricing or contract questions, ATS-access questions, pilot requests and call requests.",
-      "result": "No new UK resourcer reply, bounce, opt-out, pricing or contract question, ATS-access question, pilot request or call request was found in any connected inbox. Seven unrelated promotional or account-marketing messages were excluded. No outreach or prospect research was performed outside the permitted hour; the ten previously rejected first-touch actions were not retried because the original rejection evidence remains unavailable."
+      "result": "No new UK resourcer reply, bounce, opt-out, pricing or contract question, ATS-access question, pilot request or call request was found. No outreach or prospect research was performed outside the permitted hour; the ten previously rejected first-touch actions were not retried because the original rejection evidence remains unavailable."
     },
     "github": {
-      "checkedAt": "2026-10-04T10:42:32+01:00",
+      "checkedAt": "2026-10-04T12:35:52+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/uk-resourcer-outreach.json",
-      "priorBlobSha": "933cfe154f1f2e9b9686615d838fddb4cd2c4677"
+      "priorBlobSha": "2203c4e5bf4e7593630d9ddaf0cf7839c6761cb4"
     },
     "holdDiagnosis": {
-      "checkedAt": "2026-10-04T10:42:32+01:00",
+      "checkedAt": "2026-10-04T12:35:52+01:00",
       "status": "HOLD_REASON_UNAVAILABLE",
       "classification": {
         "providerError": "NOT_EVIDENCED",
