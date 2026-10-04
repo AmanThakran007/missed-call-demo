@@ -16,38 +16,38 @@
     "FIRST_SPEND",
     "FIRST_CLICK"
   ],
-  "lastChecked": "2026-10-04T04:33:33+01:00",
+  "lastChecked": "2026-10-04T05:11:50+01:00",
   "freshness": "LIVE",
   "blocker": "AD_ACCOUNT_THRESHOLD_PAYMENT_FAILED",
   "reportingWindow": {
     "type": "absolute_completed_period",
     "startDate": "2026-10-02",
     "endDateExclusive": "2026-10-04",
-    "observedAt": "2026-10-04T04:33:33+01:00",
+    "observedAt": "2026-10-04T05:11:50+01:00",
     "result": "Campaign-level reporting returned 2,471 impressions, 11 clicks, £26.15 spend, 0.45% CTR and £2.38 CPC for the completed account-local period."
   },
   "sourceChecks": {
     "campaignDelivery": {
-      "checkedAt": "2026-10-04T04:33:33+01:00",
+      "checkedAt": "2026-10-04T05:11:50+01:00",
       "result": "Campaign remains paused and inactive. Current serving issues are campaign_not_active and ad_account_threshold_payment_failed; downstream checks were partially skipped."
     },
     "performanceApi": {
-      "checkedAt": "2026-10-04T04:33:33+01:00",
-      "result": "Completed-period campaign insights returned 2,471 impressions, 11 clicks, £26.15 spend, 0.45% CTR and £2.38 CPC. The impression total increased by 33 versus the prior read; clicks and spend were unchanged."
+      "checkedAt": "2026-10-04T05:11:50+01:00",
+      "result": "Completed-period campaign insights returned 2,471 impressions, 11 clicks, £26.15 spend, 0.45% CTR and £2.38 CPC. The impression total is 33 above the earlier 2,438 read; clicks and spend are unchanged."
     },
     "ad": {
-      "checkedAt": "2026-10-04T04:33:33+01:00",
+      "checkedAt": "2026-10-04T05:11:50+01:00",
       "result": "The campaign creative remains active and approved. Its current serving issues are campaign_not_active and ad_account_threshold_payment_failed."
     },
     "gmail": {
-      "checkedAt": "2026-10-04T04:30:43+01:00",
-      "result": "No new Agency White Label campaign reply, bounce, opt-out, ad-billing or delivery message appeared across the nine authorized inboxes. Two unrelated personal banking notices were excluded."
+      "checkedAt": "2026-10-04T05:11:50+01:00",
+      "result": "No new Agency White Label campaign reply, bounce, opt-out, ad-billing or delivery message appeared across the nine authorized inboxes."
     },
     "github": {
-      "checkedAt": "2026-10-04T04:33:33+01:00",
+      "checkedAt": "2026-10-04T05:11:50+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/ads/webscan-agency-white-label-36-test.json",
-      "priorBlobSha": "7e6637578dd2ea44d306286ce41eb0b6c9651858"
+      "priorBlobSha": "9fb92cfafd5394f471763a6825b82bd9519c89ef"
     }
   }
 }
