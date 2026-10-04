@@ -4,11 +4,11 @@
   "status": "PAUSED",
   "deliveryStatus": "INACTIVE",
   "lifetimeBudgetGbp": 36,
-  "spendGbp": 2.5,
+  "spendGbp": 26.15,
   "impressions": 2438,
   "clicks": 11,
   "ctr": 0.0045,
-  "cpcGbp": 2.5,
+  "cpcGbp": 2.38,
   "reviewStatus": "approved",
   "milestone": "FIRST_CLICK_RECORDED",
   "milestonesNotified": [
@@ -16,37 +16,36 @@
     "FIRST_SPEND",
     "FIRST_CLICK"
   ],
-  "lastChecked": "2026-10-04T00:05:53.602+01:00",
+  "lastChecked": "2026-10-04T01:07:20+01:00",
   "freshness": "LIVE",
   "blocker": "AD_ACCOUNT_THRESHOLD_PAYMENT_FAILED",
   "reportingWindow": {
-    "type": "preliminary_current_day",
-    "date": "2026-10-03",
-    "observedAt": "2026-10-03T18:07:43+01:00",
-    "result": "Ads Manager UI displayed 2,438 impressions, 11 clicks, £2.50 spend, 0.45% CTR and £2.50 average CPC. These directly observed preliminary values are preserved because the performance API returned no row."
+    "type": "trailing_completed_24_hours",
+    "observedAt": "2026-10-04T01:07:20+01:00",
+    "result": "Ads Manager performance feed returned 2,438 impressions, 11 clicks, £26.15 spend, 0.45% CTR and £2.38 CPC. These values supersede the earlier preliminary UI spend and CPC."
   },
   "sourceChecks": {
     "campaignDelivery": {
-      "checkedAt": "2026-10-04T00:05:53.602+01:00",
-      "result": "Campaign remains paused and inactive. Current serving issues are campaign_not_active and ad_account_threshold_payment_failed; no fresh 24-hour performance metrics were returned."
+      "checkedAt": "2026-10-04T01:07:20+01:00",
+      "result": "Campaign is paused and inactive. Current serving issues are campaign_not_active and ad_account_threshold_payment_failed."
     },
     "performanceApi": {
-      "checkedAt": "2026-10-04T00:05:53.602+01:00",
-      "result": "The trailing completed 24-hour request returned no spend, impression or click values. Preserved the previously verified preliminary Ads Manager UI metrics without recalculation."
+      "checkedAt": "2026-10-04T01:07:20+01:00",
+      "result": "The trailing completed 24-hour campaign response returned 2,438 impressions, 11 clicks, £26.15 spend, 0.45% CTR and £2.38 CPC."
     },
     "ad": {
-      "checkedAt": "2026-10-04T00:05:53.602+01:00",
-      "result": "Ad group and creative remain active. Creative review is approved. No low-bid warning was returned; serving remains blocked by the paused campaign and account threshold payment failure."
+      "checkedAt": "2026-10-04T01:07:20+01:00",
+      "result": "The campaign ad group and primary creative are active. Creative review is approved. No low-bid warning was returned; serving remains blocked by the paused campaign and account threshold payment failure."
     },
     "gmail": {
-      "checkedAt": "2026-10-04T00:05:53.602+01:00",
-      "result": "No new WebScan ad reply, bounce, opt-out, billing or delivery message was found across the six authorized inboxes. Newly received messages were unrelated security or marketing notices."
+      "checkedAt": "2026-10-04T01:07:20+01:00",
+      "result": "No new WebScan ad reply, bounce, opt-out, billing or delivery message was found across the eight authorized inboxes."
     },
     "github": {
-      "checkedAt": "2026-10-04T00:05:53.602+01:00",
+      "checkedAt": "2026-10-04T01:07:20+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/ads/webscan-agency-white-label-36-test.json",
-      "priorBlobSha": "588cb847618ef65e9af36f005ed32643d5d7881d"
+      "priorBlobSha": "37a043dde8f2107050ba0bee78376ae46529d39a"
     }
   }
 }
