@@ -6,13 +6,13 @@
   "workflowVersion": "HOURLY_V2",
   "configuredAt": "2026-10-04T11:44:55.636Z",
   "effectiveAt": "2026-10-04T11:54:45.158Z",
-  "status": "RUNNING",
+  "status": "PARTIAL",
   "runId": "6ac0616fa5008191adfe432561de7eff_2026-10-04T12:55:38+01:00",
   "startedAt": "2026-10-04T12:55:38+01:00",
-  "heartbeatAt": "2026-10-04T11:56:40.125Z",
-  "finishedAt": null,
-  "phase": "REPORTING",
-  "outcome": null,
+  "heartbeatAt": "2026-10-04T11:57:00.892Z",
+  "finishedAt": "2026-10-04T11:57:00.892Z",
+  "phase": "DONE",
+  "outcome": "RECONCILIATION_REQUIRED",
   "metrics": {
     "candidatesAssessed": null,
     "newlyQualified": null,
@@ -25,7 +25,47 @@
     "PRIVATE_LEDGER_UNAVAILABLE",
     "HOURLY_FIRST_TOUCH_CUMULATIVE_USED"
   ],
-  "nextAction": "Write verified cumulative telemetry, then close the run as partial without sending.",
-  "lastCompleted": null,
-  "history": []
+  "nextAction": "Restore or explicitly identify the campaign-owned private supplier ledger, then reconcile due follow-ups and future candidates on the next run. Do not resend the three first touches already verified today.",
+  "lastCompleted": {
+    "runId": "6ac0616fa5008191adfe432561de7eff_2026-10-04T12:55:38+01:00",
+    "startedAt": "2026-10-04T12:55:38+01:00",
+    "finishedAt": "2026-10-04T11:57:00.892Z",
+    "status": "PARTIAL",
+    "outcome": "RECONCILIATION_REQUIRED",
+    "metrics": {
+      "candidatesAssessed": null,
+      "newlyQualified": null,
+      "readyBefore": null,
+      "readyAfter": null,
+      "firstTouchesSent": 0,
+      "followUpsSent": 0
+    },
+    "blockers": [
+      "PRIVATE_LEDGER_UNAVAILABLE",
+      "HOURLY_FIRST_TOUCH_CUMULATIVE_USED"
+    ],
+    "nextAction": "Restore or explicitly identify the campaign-owned private supplier ledger, then reconcile due follow-ups and future candidates on the next run. Do not resend the three first touches already verified today."
+  },
+  "history": [
+    {
+      "runId": "6ac0616fa5008191adfe432561de7eff_2026-10-04T12:55:38+01:00",
+      "startedAt": "2026-10-04T12:55:38+01:00",
+      "finishedAt": "2026-10-04T11:57:00.892Z",
+      "status": "PARTIAL",
+      "outcome": "RECONCILIATION_REQUIRED",
+      "metrics": {
+        "candidatesAssessed": null,
+        "newlyQualified": null,
+        "readyBefore": null,
+        "readyAfter": null,
+        "firstTouchesSent": 0,
+        "followUpsSent": 0
+      },
+      "blockers": [
+        "PRIVATE_LEDGER_UNAVAILABLE",
+        "HOURLY_FIRST_TOUCH_CUMULATIVE_USED"
+      ],
+      "nextAction": "Restore or explicitly identify the campaign-owned private supplier ledger, then reconcile due follow-ups and future candidates on the next run. Do not resend the three first touches already verified today."
+    }
+  ]
 }
