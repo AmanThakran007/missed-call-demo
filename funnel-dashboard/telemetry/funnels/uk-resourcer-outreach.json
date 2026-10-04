@@ -10,13 +10,13 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-04T02:37:35+01:00",
-  "nextRun": "2026-10-04T03:39:00+01:00",
+  "lastRun": "2026-10-04T03:34:11+01:00",
+  "nextRun": "2026-10-04T04:39:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE: Ten previously approved send attempts were blocked by mail-action safety controls, but the original rejection output is unavailable. The restriction cannot be classified as action-specific or campaign-wide and remains unresolved; monitoring stays active.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T02:37:35+01:00",
+      "checkedAt": "2026-10-04T03:34:11+01:00",
       "accounts": [
         "amanthakranengland@gmail.com",
         "helpme.ecommerce@gmail.com",
@@ -28,17 +28,17 @@
         "bharatfare.team@gmail.com",
         "bharatfareuk@gmail.com"
       ],
-      "scope": "All nine connected inboxes checked for UK resourcer replies, bounces, opt-outs, pricing or contract questions, ATS-access questions, pilot requests and call requests from the prior three days; Dreams and Consulting additionally checked for all recent inbound mail and London-day campaign Sent history.",
-      "result": "No new campaign-related mail was found in any connected inbox. No recent inbound mail or London-day UK resourcer Sent messages were found in the two previously monitored campaign accounts. No outreach was sent outside the permitted hour."
+      "scope": "All nine connected inboxes checked for recent UK resourcer replies, bounces, opt-outs, pricing or contract questions, ATS-access questions, pilot requests and call requests.",
+      "result": "No new campaign-related mail was found in any connected inbox. Two unrelated Google account-security notices were excluded. No outreach was sent outside the permitted hour."
     },
     "github": {
-      "checkedAt": "2026-10-04T02:37:35+01:00",
+      "checkedAt": "2026-10-04T03:34:11+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/uk-resourcer-outreach.json",
-      "priorBlobSha": "414528c5534e698421225ec1c81298308a392d9e"
+      "priorBlobSha": "16b3a5c0be88a3760f2b1e8c3efc94638cc242b3"
     },
     "holdDiagnosis": {
-      "checkedAt": "2026-10-04T02:37:35+01:00",
+      "checkedAt": "2026-10-04T03:34:11+01:00",
       "status": "HOLD_REASON_UNAVAILABLE",
       "classification": {
         "providerError": "NOT_EVIDENCED",
@@ -55,7 +55,7 @@
       "sendingConfirmed": false
     },
     "automation": {
-      "checkedAt": "2026-10-04T02:37:35+01:00",
+      "checkedAt": "2026-10-04T03:34:11+01:00",
       "id": "6ac05c7458f0819191e9a7886b4e6fff",
       "enabled": true,
       "result": "Monitoring automation is confirmed enabled. The unresolved sending restriction does not pause read-only monitoring."
