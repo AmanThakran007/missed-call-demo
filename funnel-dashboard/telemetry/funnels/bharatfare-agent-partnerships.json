@@ -10,13 +10,13 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-04T11:47:24+01:00",
-  "nextRun": "2026-10-04T12:44:00+01:00",
+  "lastRun": "2026-10-04T12:43:41+01:00",
+  "nextRun": "2026-10-04T13:44:00+01:00",
   "freshness": "LIVE",
   "blocker": null,
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T11:48:12+01:00",
+      "checkedAt": "2026-10-04T12:44:23+01:00",
       "accounts": [
         "amanthakranengland@gmail.com",
         "helpme.ecommerce@gmail.com",
@@ -28,14 +28,14 @@
         "bharatfare.team@gmail.com",
         "bharatfareuk@gmail.com"
       ],
-      "scope": "Campaign-history reconciliation across all nine connected inboxes for agent-partnership first touches, replies, bounces, opt-outs, partnership questions and call requests; supplier conversations excluded.",
-      "result": "One personalised Agent Partnerships first-touch was verified in the BharatFare inbox at 2026-10-04T10:45:14+01:00. It referenced a verified UK–India community/travel context and offered a trade/referral relationship or trial quote comparison. No reply, bounce, opt-out, partnership question, call request or conversion was found. No outreach was sent during this monitoring-only run."
+      "scope": "One-time queue and campaign-history reconciliation across all nine connected inboxes for agent-partnership ownership, prior sends, replies, bounces, opt-outs, partnership questions and call requests; supplier conversations excluded.",
+      "result": "The only verified campaign-owned queue record was already contacted earlier today from its original BharatFare inbox. No additional verified unsent queue record or due follow-up was available, and no reply, bounce, opt-out, partnership question, call request or conversion was found. No email was sent; duplicate contact was suppressed."
     },
     "github": {
-      "checkedAt": "2026-10-04T11:48:12+01:00",
+      "checkedAt": "2026-10-04T12:44:23+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/bharatfare-agent-partnerships.json",
-      "priorBlobSha": "219c8fb505f91e380bea76249085f743bb771b3a"
+      "priorBlobSha": "ce627cfeed80a8dd3c0c724e1edff2802b575192"
     },
     "automation": {
       "checkedAt": "2026-10-04T03:39:22+01:00",
@@ -44,13 +44,25 @@
       "result": "Monitoring automation is confirmed enabled."
     },
     "campaignHistory": {
-      "checkedAt": "2026-10-04T11:48:12+01:00",
+      "checkedAt": "2026-10-04T12:44:23+01:00",
       "status": "VERIFIED",
       "senderAlias": "BharatFare inbox",
       "firstTouchesVerified": 1,
       "followUpsVerified": 0,
       "inboundHumanRepliesVerified": 0,
-      "note": "Sent evidence was read back from Gmail; cumulative metrics were corrected from zero without inferring any unverified events."
+      "note": "The one-time exception was reconciled against all nine inboxes. The only verified campaign record was already contacted; no unverified candidate was promoted into the queue."
+    },
+    "oneTimeImmediateOutreach": {
+      "requestedAt": "2026-10-04T12:28:19+01:00",
+      "checkedAt": "2026-10-04T12:44:23+01:00",
+      "status": "NO_ELIGIBLE_UNSENT_QUEUE",
+      "queueRecordsReviewed": 1,
+      "eligibleFirstTouches": 0,
+      "dueFollowUps": 0,
+      "firstTouchesSent": 0,
+      "followUpsSent": 0,
+      "duplicateRecordsSuppressed": 1,
+      "note": "Time-of-day exception applied only to the existing verified queue. No outreach was sent because no unused verified recipient remained."
     }
   }
 }
