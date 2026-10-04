@@ -2,8 +2,8 @@
   "id": "webscan-general-sme",
   "name": "WebScan General SME",
   "category": "WebScan",
-  "prospectsResearched": 21,
-  "firstEmailsSent": 21,
+  "prospectsResearched": 24,
+  "firstEmailsSent": 24,
   "followUpsSent": 0,
   "humanReplies": 0,
   "positiveReplies": 0,
@@ -14,7 +14,7 @@
   "optOuts": 0,
   "stageCounts": {
     "Prospect": 0,
-    "Contacted": 21,
+    "Contacted": 24,
     "Engaged": 0,
     "Qualified": 0,
     "CallProposal": 0,
@@ -22,28 +22,28 @@
     "Lost": 0
   },
   "freshness": "LIVE",
-  "lastChecked": "2026-10-04T08:08:06+01:00",
+  "lastChecked": "2026-10-04T09:17:11+01:00",
   "blocker": null,
   "inboundLeads": 1,
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T08:08:06+01:00",
+      "checkedAt": "2026-10-04T09:17:11+01:00",
       "accountsChecked": 9,
-      "result": "All nine authorized inboxes were readable and Sent searches were fully paginated. The London calendar day contains 0 Sent messages; the rolling 24-hour period contains 31 all-campaign Sent messages (24 Dreams, 7 Consulting). No new incoming message, WebScan first touch, follow-up, human reply, bounce or opt-out was found. No outreach was sent in this monitoring-only pass."
+      "result": "All nine authorized inboxes were readable and Sent searches were fully paginated. The London day contains 3 Sent messages and the rolling 24-hour period contains 29 all-campaign Sent messages (1 England, 1 Ecommerce, 1 BharatFare, 19 Dreams, 7 Consulting). The three London-day messages are verified General SME first touches with matching Sent From headers. Three newly received messages were retail promotions, not campaign replies, bounces or opt-outs."
     },
     "verifiedResearch": {
-      "checkedAt": "2026-10-03T19:11:52+01:00",
-      "result": "Five new distinct UK SMEs were verified with public business contact routes and at least two current website/conversion issues each before the latest outreach window."
+      "checkedAt": "2026-10-04T09:17:11+01:00",
+      "result": "Four distinct UK SMEs were assessed with current site and public-contact evidence. Three passed the fit, two-issue, cross-nine Gmail, four-ledger ownership/suppression and hold checks for the first time and were contacted; one was rejected as an existing cross-inbox contact."
     },
     "googleDrive": {
-      "checkedAt": "2026-10-04T08:08:06+01:00",
-      "result": "A connected Google Drive search found no WebScan General SME prospect ledger; Gmail, the private Library ledgers and GitHub remain the verified campaign and telemetry sources."
+      "checkedAt": "2026-10-04T09:17:11+01:00",
+      "result": "A connected Google Drive search found no WebScan General SME prospect ledger; Gmail, the version-guarded private Library ledgers and GitHub remain the verified campaign and telemetry sources."
     },
     "github": {
-      "checkedAt": "2026-10-04T08:08:06+01:00",
+      "checkedAt": "2026-10-04T09:17:11+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/webscan-general-sme.json",
-      "priorBlobSha": "d0e049876e00321e4409bf7b2783f58618b146c4"
+      "priorBlobSha": "f5a6f97fe65b80754d00379e4cc0249779e7b48f"
     },
     "twoInboxPolicy": {
       "checkedAt": "2026-10-03T21:05:11+01:00",
@@ -91,10 +91,10 @@
       ]
     },
     "sixInboxReconciliation": {
-      "checkedAt": "2026-10-04T08:08:06+01:00",
+      "checkedAt": "2026-10-04T09:17:11+01:00",
       "status": "PASSED",
       "currentScope": "ALL_NINE_INBOXES",
-      "result": "All nine inboxes were reconciled for the London day and rolling 24 hours. Aggregate Sent counts are 0 today and 31 rolling 24 hours. Public-safe mailbox totals were updated without exposing recipient or message identifiers."
+      "result": "All nine inboxes were reconciled for the London day and rolling 24 hours. Aggregate Sent counts are 3 today and 29 rolling 24 hours. Three General SME first touches and their authenticated Sent From headers were verified."
     },
     "eightInboxReconciliation": {
       "checkedAt": "2026-10-04T01:07:20+01:00",
@@ -129,15 +129,15 @@
       "publicDeploymentResult": "Repository source write/readback is checked separately; public GitHub Pages visibility cannot be confirmed from this client."
     },
     "nineInboxReconciliation": {
-      "checkedAt": "2026-10-04T08:08:06+01:00",
+      "checkedAt": "2026-10-04T09:17:11+01:00",
       "date": "2026-10-04",
       "scope": "Compatibility key; current scope is all nine authorized inboxes, fully paginated London-day and rolling-24-hour Sent counts, all four WebScan funnel records, and targeted reply/delivery/opt-out checks.",
       "accountsChecked": 9,
       "status": "SOURCE_RECONCILED",
-      "allSentToday": 0,
-      "allSentRolling24h": 31,
-      "dailyWebScanFirstTouchesAllFunnels": 0,
-      "dailyGeneralSmeFirstTouches": 0,
+      "allSentToday": 3,
+      "allSentRolling24h": 29,
+      "dailyWebScanFirstTouchesAllFunnels": 3,
+      "dailyGeneralSmeFirstTouches": 3,
       "dailyWebScanFollowUps": 0,
       "dailyWebScanInboundMessages": 0,
       "dailyHumanReplies": 0,
@@ -151,8 +151,8 @@
       "generalSmeAggregateCap": 513,
       "qualificationGateActive": false,
       "stagedCapsPerInbox": [],
-      "scheduledSendingStatus": "NOT_YET_RUN",
-      "senderHeaderChecks": "NOT_YET_RUN",
+      "scheduledSendingStatus": "PARTIAL_3_CONFIRMED",
+      "senderHeaderChecks": "PARTIAL_3_OF_9_VERIFIED",
       "newlyMappedInboxHeaderChecks": "PENDING_FIRST_SUCCESSFUL_SEND",
       "prospectQueueAudit": "UNVERIFIED",
       "replyQueueAudit": "UNVERIFIED",
@@ -335,6 +335,24 @@
         "firstTouchesSent": 0,
         "followUpsSent": 0,
         "durationSeconds": 190
+      },
+      {
+        "runId": "6aa199f3c2848191aa1e6d2a26d0d383_2026-10-04T08:00:21Z",
+        "startedAt": "2026-10-04T09:00:21+01:00",
+        "finishedAt": "2026-10-04T09:11:37+01:00",
+        "kind": "RESEARCH",
+        "measurementStatus": "COMPLETE",
+        "candidatesAssessed": 4,
+        "newlyQualified": 3,
+        "duplicatesRejected": 1,
+        "rejected": 0,
+        "awaitingVerification": 0,
+        "readyBefore": null,
+        "readyAfter": null,
+        "dueFollowUps": null,
+        "firstTouchesSent": 3,
+        "followUpsSent": 0,
+        "durationSeconds": 676
       }
     ]
   }
