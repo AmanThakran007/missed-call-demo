@@ -10,13 +10,13 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-04T03:45:41+01:00",
-  "nextRun": "2026-10-04T03:49:00+01:00",
+  "lastRun": "2026-10-04T04:47:07+01:00",
+  "nextRun": "2026-10-04T04:49:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE: Historical first-touch attempts to the 20 verified Growth Core prospects were reported as rejected by mail-action safety controls, but the original rejection output is unavailable in the current execution context. The scope cannot be independently classified as action-specific or campaign-wide and remains unresolved. No rejected action was retried.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T03:45:41+01:00",
+      "checkedAt": "2026-10-04T04:47:07+01:00",
       "accounts": [
         "amanthakranengland@gmail.com",
         "helpme.ecommerce@gmail.com",
@@ -28,17 +28,17 @@
         "bharatfare.team@gmail.com",
         "bharatfareuk@gmail.com"
       ],
-      "scope": "Recent inbound mail across all nine connected inboxes, including NCLEX Growth Core replies, bounces, opt-outs, access or pricing questions, referral or partnership questions, demo requests and call requests",
-      "result": "No Growth Core campaign send, human reply, campaign bounce, opt-out, referral or partnership question, access or pricing request, demo or call request, customer, or attributable revenue event was found. One unrelated ICICI card-billing notice was excluded. No outreach was sent outside the permitted hour."
+      "scope": "Recent inbound mail across all nine connected inboxes, including NCLEX Growth Core replies, bounces, opt-outs, access or pricing questions, referral or partnership questions, demo requests and call requests.",
+      "result": "No Growth Core campaign send, human reply, campaign bounce, opt-out, referral or partnership question, access or pricing request, demo or call request, customer, or attributable revenue event was found. Two unrelated banking notices were excluded. No outreach was sent outside the permitted hour."
     },
     "github": {
-      "checkedAt": "2026-10-04T03:45:41+01:00",
+      "checkedAt": "2026-10-04T04:47:07+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/nclex-growth-core.json",
-      "priorBlobSha": "8f235801d1a4213e231906925af9f80d2cfdfc4c"
+      "priorBlobSha": "d4944e573e5d13ca0fed9e75b828fd169c536bce"
     },
     "sendingHoldDiagnosis": {
-      "checkedAt": "2026-10-04T03:45:41+01:00",
+      "checkedAt": "2026-10-04T04:47:07+01:00",
       "status": "HOLD_REASON_UNAVAILABLE",
       "classification": {
         "providerError": "NOT_EVIDENCED",
