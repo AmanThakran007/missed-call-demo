@@ -10,44 +10,49 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-03T23:29:14+01:00",
-  "nextRun": "2026-10-03T23:30:00+01:00",
+  "lastRun": "2026-10-04T03:29:17+01:00",
+  "nextRun": "2026-10-04T04:30:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE; ADS_PAUSED_PAYMENT_FAILED: Earlier first-touch attempts remain unverified as sent because the original rejection output is unavailable in the current execution context. The £36 ad campaign remains paused because the account threshold payment failed.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-03T23:29:14+01:00",
+      "checkedAt": "2026-10-04T03:29:17+01:00",
       "accounts": [
         "amanthakranengland@gmail.com",
         "helpme.ecommerce@gmail.com",
         "bharatfare@gmail.com",
         "amanthakran8891@gmail.com",
         "amanthakran.dreams@gmail.com",
-        "aman.thakran.consulting@gmail.com"
+        "aman.thakran.consulting@gmail.com",
+        "amanthakranindia@gmail.com",
+        "bharatfare.team@gmail.com",
+        "bharatfareuk@gmail.com"
       ],
-      "scope": "All new mail since 2026-10-03T22:31:56+01:00, including Agency White Label replies, bounces, opt-outs, demo requests, partnership questions, billing notices and delivery restrictions",
-      "result": "No new Agency White Label human reply, bounce, opt-out, demo request, partnership question, billing notice or delivery restriction. No outreach was sent outside the approved hour."
+      "scope": "Recent inbound mail across all nine authorized WebScan inboxes, including Agency White Label replies, bounces, opt-outs, demo requests, partnership questions, billing notices and provider restrictions",
+      "result": "No new Agency White Label human reply, bounce, opt-out, demo request, partnership question, billing notice or provider restriction. One unrelated Google account-security thread was excluded. No outreach was sent outside the approved hour."
     },
     "adsManager": {
-      "checkedAt": "2026-10-03T23:29:14+01:00",
+      "checkedAt": "2026-10-04T03:31:00+01:00",
       "account": "WebRevenue Scan",
       "campaign": "WebScan Agency White Label - £36 Test",
-      "result": "Campaign remains paused and inactive. Current serving issues are campaign_not_active and ad_account_threshold_payment_failed. The ad group remains active with no low-bid warning, and the creative remains active and approved. The latest completed account-local day returned no performance row, so previously verified preliminary UI metrics remain preserved in the ad telemetry file."
+      "reportingPeriod": "Completed account-local interval 2026-10-02 through 2026-10-04 exclusive",
+      "granularity": "campaign total",
+      "result": "Campaign remains paused and inactive. Current blocking account issue is ad_account_threshold_payment_failed; campaign_not_active is also reported. Completed-period reporting remains 2,438 impressions, 11 clicks, £26.15 spend, 0.45% CTR and £2.38 CPC."
     },
     "github": {
-      "checkedAt": "2026-10-03T23:29:14+01:00",
+      "checkedAt": "2026-10-04T03:31:00+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/webscan-agency-white-label.json",
-      "priorBlobSha": "2105a30d2b2dfd0d3c230be5115ba1c0c1b50e6c"
+      "priorBlobSha": "3033adf129483ced98e3771c3271bfbe03e4b106"
     },
     "sixInboxReconciliation": {
-      "checkedAt": "2026-10-03T23:29:14+01:00",
-      "date": "2026-10-03",
-      "scope": "Read-only received-message and suppression checks across all six authorized WebScan inboxes. The mailbox-specific fixed-cap policy starts 2026-10-04 and has not yet completed a verified send and Sent-header read-back cycle.",
-      "accountsChecked": 6,
-      "status": "SOURCE_RECONCILED",
-      "dailyFirstTouches": 0,
-      "dailyFollowUps": 0,
+      "checkedAt": "2026-10-04T03:29:17+01:00",
+      "date": "2026-10-04",
+      "scope": "Legacy-compatible key; current scope is recent inbound monitoring across all nine authorized WebScan inboxes. Complete London-day Sent and queue reconciliation was not performed in this monitoring-only run.",
+      "accountsChecked": 9,
+      "status": "PARTIAL_MONITORING_ONLY",
+      "dailyFirstTouches": null,
+      "dailyFollowUps": null,
       "mailboxSnapshotPath": "funnel-dashboard/telemetry/webscan-mailboxes.json",
       "scheduledSendingStatus": "NOT_YET_RUN"
     }
@@ -114,7 +119,7 @@
     "inboxCount": 9
   },
   "holdDiagnosis": {
-    "checkedAt": "2026-10-03T23:29:14+01:00",
+    "checkedAt": "2026-10-04T03:29:17+01:00",
     "status": "HOLD_REASON_UNAVAILABLE",
     "evidence": "Historical run summaries confirm rejected send attempts, but the original tool rejection output is unavailable in the current execution context.",
     "scope": "Cannot classify the historical send restriction as action-specific versus campaign-wide from currently available direct evidence.",
@@ -125,7 +130,7 @@
   "prospectProduction": {
     "schemaVersion": 1,
     "instrumentedAt": "2026-10-04T00:45:55.292Z",
-    "status": "AWAITING_FIRST_MEASURED_RUN",
+    "status": "MEASURING",
     "historicalRunCoverage": "INCOMPLETE",
     "historicalEvidence": {
       "prospectsResearched": 20,
@@ -139,8 +144,8 @@
       "summary": "Historical cumulative research is recorded, but the complete candidate-level source list and suppression/ownership evidence were not recovered. No verified ready-stock total."
     },
     "queueAudit": {
-      "status": "UNVERIFIED",
-      "checkedAt": null,
+      "status": "PARTIAL",
+      "checkedAt": "2026-10-04T03:31:00+01:00",
       "scope": "Complete current WebScan Agency White Label candidate queue and nine-inbox ownership/suppression history",
       "readyFirstTouches": null,
       "dueFollowUps": null,
@@ -148,6 +153,25 @@
       "blocked": null,
       "byInbox": []
     },
-    "runs": []
+    "runs": [
+      {
+        "runId": "6ac0618cc9488191a28d80f3c5601199:2026-10-04T03:29:17+01:00",
+        "startedAt": "2026-10-04T03:29:17+01:00",
+        "finishedAt": "2026-10-04T03:31:00+01:00",
+        "kind": "MONITORING",
+        "measurementStatus": "PARTIAL",
+        "candidatesAssessed": 0,
+        "newlyQualified": 0,
+        "duplicatesRejected": 0,
+        "rejected": 0,
+        "awaitingVerification": null,
+        "readyBefore": null,
+        "readyAfter": null,
+        "dueFollowUps": null,
+        "firstTouchesSent": 0,
+        "followUpsSent": 0,
+        "durationSeconds": 103
+      }
+    ]
   }
 }
