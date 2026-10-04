@@ -6,27 +6,57 @@
   "workflowVersion": "HOURLY_V2",
   "configuredAt": "2026-10-04T11:44:55.636Z",
   "effectiveAt": "2026-10-04T11:54:45.158Z",
-  "status": "RUNNING",
+  "status": "COMPLETE",
   "runId": "6a9c56105c888191b0012a7e3317234a_2026-10-04T11:55:44Z",
   "startedAt": "2026-10-04T12:55:44+01:00",
-  "heartbeatAt": "2026-10-04T12:59:00+01:00",
-  "finishedAt": null,
-  "phase": "SEND",
-  "outcome": null,
+  "heartbeatAt": "2026-10-04T13:02:00+01:00",
+  "finishedAt": "2026-10-04T13:02:00+01:00",
+  "phase": "DONE",
+  "outcome": "SENT",
   "metrics": {
     "candidatesAssessed": 1,
     "newlyQualified": 1,
     "readyBefore": 0,
-    "readyAfter": 1,
-    "firstTouchesSent": 0,
+    "readyAfter": 0,
+    "firstTouchesSent": 1,
     "followUpsSent": 0
   },
-  "planned": {
-    "firstTouches": 1,
-    "followUps": 0
-  },
   "blockers": [],
-  "nextAction": "One verified first touch is recorded SEND_PENDING privately; perform the final Sent/suppression check, send individually, and verify the returned Sent record.",
-  "lastCompleted": null,
-  "history": []
+  "nextAction": "Reconcile replies and the next hourly allowance before preparing or sending another candidate; the 12:00 first-touch slot and follow-up allowance are fully consumed.",
+  "lastCompleted": {
+    "runId": "6a9c56105c888191b0012a7e3317234a_2026-10-04T11:55:44Z",
+    "startedAt": "2026-10-04T12:55:44+01:00",
+    "finishedAt": "2026-10-04T13:02:00+01:00",
+    "status": "COMPLETE",
+    "outcome": "SENT",
+    "metrics": {
+      "candidatesAssessed": 1,
+      "newlyQualified": 1,
+      "readyBefore": 0,
+      "readyAfter": 0,
+      "firstTouchesSent": 1,
+      "followUpsSent": 0
+    },
+    "blockers": [],
+    "nextAction": "Reconcile replies and the next hourly allowance before preparing or sending another candidate; the 12:00 first-touch slot and follow-up allowance are fully consumed."
+  },
+  "history": [
+    {
+      "runId": "6a9c56105c888191b0012a7e3317234a_2026-10-04T11:55:44Z",
+      "startedAt": "2026-10-04T12:55:44+01:00",
+      "finishedAt": "2026-10-04T13:02:00+01:00",
+      "status": "COMPLETE",
+      "outcome": "SENT",
+      "metrics": {
+        "candidatesAssessed": 1,
+        "newlyQualified": 1,
+        "readyBefore": 0,
+        "readyAfter": 0,
+        "firstTouchesSent": 1,
+        "followUpsSent": 0
+      },
+      "blockers": [],
+      "nextAction": "Reconcile replies and the next hourly allowance before preparing or sending another candidate; the 12:00 first-touch slot and follow-up allowance are fully consumed."
+    }
+  ]
 }
