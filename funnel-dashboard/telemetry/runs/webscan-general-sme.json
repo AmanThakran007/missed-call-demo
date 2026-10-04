@@ -6,23 +6,61 @@
   "workflowVersion": "HOURLY_V2",
   "configuredAt": "2026-10-04T11:44:55.636Z",
   "effectiveAt": "2026-10-04T11:54:45.158Z",
-  "status": "RUNNING",
+  "status": "PARTIAL",
   "runId": "6aa199f3c2848191aa1e6d2a26d0d383_2026-10-04T11:55:15Z",
   "startedAt": "2026-10-04T12:55:15+01:00",
-  "heartbeatAt": "2026-10-04T12:56:00+01:00",
-  "finishedAt": null,
-  "phase": "RECONCILE",
-  "outcome": null,
+  "heartbeatAt": "2026-10-04T12:56:20+01:00",
+  "finishedAt": "2026-10-04T12:56:20+01:00",
+  "phase": "DONE",
+  "outcome": "RECONCILIATION_REQUIRED",
   "metrics": {
     "candidatesAssessed": null,
     "newlyQualified": null,
     "readyBefore": null,
     "readyAfter": null,
-    "firstTouchesSent": null,
-    "followUpsSent": null
+    "firstTouchesSent": 0,
+    "followUpsSent": 0
   },
-  "blockers": [],
-  "nextAction": "Reconcile prior pending sends and fresh mailbox evidence, then prepare and send only the verified 12:00-hour allowance.",
-  "lastCompleted": null,
-  "history": []
+  "blockers": [
+    "RUN_INTERRUPTED_BY_NEWER_AUTOMATION_CONTEXT"
+  ],
+  "nextAction": "Reconcile the 12:00-hour WebScan slot and candidate state in the next General SME run; no WebScan message was sent in this partial run.",
+  "lastCompleted": {
+    "runId": "6aa199f3c2848191aa1e6d2a26d0d383_2026-10-04T11:55:15Z",
+    "finishedAt": "2026-10-04T12:56:20+01:00",
+    "status": "PARTIAL",
+    "outcome": "RECONCILIATION_REQUIRED",
+    "metrics": {
+      "candidatesAssessed": null,
+      "newlyQualified": null,
+      "readyBefore": null,
+      "readyAfter": null,
+      "firstTouchesSent": 0,
+      "followUpsSent": 0
+    },
+    "blockers": [
+      "RUN_INTERRUPTED_BY_NEWER_AUTOMATION_CONTEXT"
+    ]
+  },
+  "history": [
+    {
+      "runId": "6aa199f3c2848191aa1e6d2a26d0d383_2026-10-04T11:55:15Z",
+      "startedAt": "2026-10-04T12:55:15+01:00",
+      "finishedAt": "2026-10-04T12:56:20+01:00",
+      "status": "PARTIAL",
+      "outcome": "RECONCILIATION_REQUIRED",
+      "metrics": {
+        "candidatesAssessed": null,
+        "newlyQualified": null,
+        "readyBefore": null,
+        "readyAfter": null,
+        "firstTouchesSent": 0,
+        "followUpsSent": 0
+      },
+      "blockers": [
+        "RUN_INTERRUPTED_BY_NEWER_AUTOMATION_CONTEXT"
+      ],
+      "nextAction": "Reconcile the 12:00-hour WebScan slot and candidate state in the next General SME run."
+    }
+  ]
 }
