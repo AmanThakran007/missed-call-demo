@@ -10,28 +10,35 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-04T01:43:22+01:00",
-  "nextRun": "2026-10-04T02:39:00+01:00",
+  "lastRun": "2026-10-04T02:37:35+01:00",
+  "nextRun": "2026-10-04T03:39:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE: Ten previously approved send attempts were blocked by mail-action safety controls, but the original rejection output is unavailable. The restriction cannot be classified as action-specific or campaign-wide and remains unresolved; monitoring stays active.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T01:43:22+01:00",
+      "checkedAt": "2026-10-04T02:37:35+01:00",
       "accounts": [
+        "amanthakranengland@gmail.com",
+        "helpme.ecommerce@gmail.com",
+        "bharatfare@gmail.com",
+        "amanthakran8891@gmail.com",
         "amanthakran.dreams@gmail.com",
-        "aman.thakran.consulting@gmail.com"
+        "aman.thakran.consulting@gmail.com",
+        "amanthakranindia@gmail.com",
+        "bharatfare.team@gmail.com",
+        "bharatfareuk@gmail.com"
       ],
-      "scope": "All new mail after 2026-10-04T00:34:36+01:00 and London-day Sent history, including UK resourcer replies, bounces, opt-outs, pricing or contract questions, ATS-access questions, pilot requests and call requests",
-      "result": "No new mail or Sent messages were found in either monitored account. No UK resourcer campaign message, human reply, bounce, opt-out, pricing or contract question, ATS-access question, pilot request or call request was recorded. No outreach was sent outside the permitted hour."
+      "scope": "All nine connected inboxes checked for UK resourcer replies, bounces, opt-outs, pricing or contract questions, ATS-access questions, pilot requests and call requests from the prior three days; Dreams and Consulting additionally checked for all recent inbound mail and London-day campaign Sent history.",
+      "result": "No new campaign-related mail was found in any connected inbox. No recent inbound mail or London-day UK resourcer Sent messages were found in the two previously monitored campaign accounts. No outreach was sent outside the permitted hour."
     },
     "github": {
-      "checkedAt": "2026-10-04T01:43:22+01:00",
+      "checkedAt": "2026-10-04T02:37:35+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/uk-resourcer-outreach.json",
-      "priorBlobSha": "0d558de8191f1223ed16ec6cf20db80210b8b823"
+      "priorBlobSha": "414528c5534e698421225ec1c81298308a392d9e"
     },
     "holdDiagnosis": {
-      "checkedAt": "2026-10-04T01:43:22+01:00",
+      "checkedAt": "2026-10-04T02:37:35+01:00",
       "status": "HOLD_REASON_UNAVAILABLE",
       "classification": {
         "providerError": "NOT_EVIDENCED",
@@ -48,7 +55,7 @@
       "sendingConfirmed": false
     },
     "automation": {
-      "checkedAt": "2026-10-04T01:43:22+01:00",
+      "checkedAt": "2026-10-04T02:37:35+01:00",
       "id": "6ac05c7458f0819191e9a7886b4e6fff",
       "enabled": true,
       "result": "Monitoring automation is confirmed enabled. The unresolved sending restriction does not pause read-only monitoring."
