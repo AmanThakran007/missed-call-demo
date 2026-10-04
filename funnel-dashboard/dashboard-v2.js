@@ -12,7 +12,24 @@ function nextScheduledRun(id){const s=schedules[id];if(!s)return null;const now=
 function fmtTime(dt){if(!dt)return 'Awaiting schedule';return new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/London',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).format(dt)+' UK'}
 function humanUntil(dt){if(!dt)return '—';const ms=dt-new Date();if(ms<=0)return 'due now';const mins=Math.ceil(ms/60000);if(mins<60)return 'in '+mins+' min';const hrs=Math.floor(mins/60),rem=mins%60;if(hrs<24)return 'in '+hrs+'h'+(rem?' '+rem+'m':'');return 'in '+Math.floor(hrs/24)+'d'}
 async function loadJson(url){try{const r=await fetch(url+'?ts='+Date.now(),{cache:'no-store'});if(!r.ok)return null;return await r.json()}catch(e){return null}}
-async function buildData(){const base=(await loadJson(source))||{activeFunnels:15,funnels:{},ads:{}};const parts=await Promise.all(funnelIds.map(id=>loadJson('telemetry/funnels/'+id+'.json')));parts.forEach((p,i)=>{if(p){const id=funnelIds[i];base.funnels[id]=Object.assign({},base.funnels[id]||{},p);base.funnels[id].freshness=HourlyEvidence.freshness(p)}});const ad=await loadJson('telemetry/ads/webscan-agency-white-label-36-test.json');if(ad){base.ads=base.ads||{};base.ads['webscan-agency-white-label-36-test']=Object.assign({},base.ads['webscan-agency-white-label-36-test']||{},ad)}return base}
+async function buildData(){
+  const base=(await loadJson(source))||{activeFunnels:15,funnels:{},ads:{}};
+  base.funnels=base.funnels||{};
+  const parts=await Promise.all(funnelIds.map(id=>loadJson('telemetry/funnels/'+id+'.json')));
+  parts.forEach((p,i)=>{
+    const id=funnelIds[i];
+    if(p){
+      base.funnels[id]=Object.assign({},base.funnels[id]||{},p);
+      base.funnels[id].freshness=HourlyEvidence.freshness(p);
+    }else if(base.funnels[id]){
+      base.funnels[id].freshness='TELEMETRY_SYNC_BLOCKED';
+      base.funnels[id].blocker='Current source fetch failed. Displayed metrics are a saved snapshot. '+(base.funnels[id].blocker||'');
+    }
+  });
+  const ad=await loadJson('telemetry/ads/webscan-agency-white-label-36-test.json');
+  if(ad){base.ads=base.ads||{};base.ads['webscan-agency-white-label-36-test']=Object.assign({},base.ads['webscan-agency-white-label-36-test']||{},ad)}
+  return base;
+}
 function aggregate(data){const fs=Object.values(data.funnels||{});const sums={prospectsResearched:0,firstEmailsSent:0,followUpsSent:0,humanReplies:0,positiveReplies:0,callsDemosRequested:0,customersWon:0,revenueGbp:0};for(const f of fs){for(const k in sums)if(typeof f[k]==='number')sums[k]+=f[k]}return {fs,sums}}
 function drawGlance(data){const {fs,sums}=aggregate(data);const live=fs.filter(f=>f.freshness==='LIVE').length, waiting=fs.filter(f=>!f.freshness||f.freshness==='AWAITING_FIRST_SYNC').length;const ad=data.ads&&data.ads['webscan-agency-white-label-36-test'];const items=[['⚡','Fresh source records',live],['⏳','Awaiting Sync',waiting],['✉️','First Emails',sums.firstEmailsSent||'—'],['💬','Human Replies',sums.humanReplies||'—'],['🤝','Calls / Demos',sums.callsDemosRequested||'—'],['£','Revenue',sums.revenueGbp?money(sums.revenueGbp):'—']];document.getElementById('glanceStrip').innerHTML=items.map(x=>'<div class="glance-card"><div class="glance-icon">'+x[0]+'</div><span>'+x[1]+'</span><strong>'+x[2]+'</strong></div>').join('')}
 function drawMilestones(data){const {sums}=aggregate(data);const ad=data.ads&&data.ads['webscan-agency-white-label-36-test']||{};const ms=[['Campaign created',true,'£36 WebScan test configured'],['Ad eligible',ad.deliveryStatus==='ELIGIBLE'||ad.status==='ACTIVE','Campaign can serve'],['First impression',Number(ad.impressions)>0,'Waiting for first served impression'],['First click',Number(ad.clicks)>0,'Waiting for first click'],['First positive reply',sums.positiveReplies>0,'Across all outreach funnels'],['First call / demo',sums.callsDemosRequested>0,'Across all outreach funnels'],['First customer',sums.customersWon>0,'Confirmed revenue-generating conversion'],['First £1 revenue',sums.revenueGbp>0,'Confirmed attributable revenue']];const done=ms.filter(x=>x[1]).length;set('milestoneCount',done+'/'+ms.length);const circumference=195;const ring=document.getElementById('milestoneRing');if(ring)ring.style.strokeDashoffset=String(circumference-(circumference*done/ms.length));document.getElementById('milestones').innerHTML=ms.map(x=>'<div class="milestone '+(x[1]?'done':'waiting')+'"><div class="milestone-icon">'+(x[1]?'✓':'•')+'</div><div><div class="milestone-title">'+x[0]+'</div><div class="milestone-sub">'+x[2]+'</div></div><div class="milestone-state">'+(x[1]?'Done':'Waiting')+'</div></div>').join('')}
