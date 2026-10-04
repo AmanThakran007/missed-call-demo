@@ -10,69 +10,74 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-04T00:42:05+01:00",
-  "nextRun": "2026-10-04T01:39:00+01:00",
+  "lastRun": "2026-10-04T01:39:15+01:00",
+  "nextRun": "2026-10-04T02:39:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE: Earlier personalized send attempts were rejected by safety controls, but the original rejection output is unavailable in the current execution context. No provider error or missing-business-information defect is independently evidenced, and the affected scope cannot be classified as action-specific versus campaign-wide. Sending remains held pending original rejection evidence or direct resolution evidence through the applicable process.",
   "sendingPolicy": {
     "mode": "FIXED_CAP",
-    "capPerInbox": 100,
-    "capPerInboxMin": 100,
-    "capPerInboxMax": 100,
-    "totalCap": 800,
+    "capPerInbox": 112,
+    "capPerInboxMin": 112,
+    "capPerInboxMax": 112,
+    "totalCap": 1008,
     "effectiveDate": "2026-10-04",
     "stagedCapsPerInbox": [],
-    "aggregateFunnelCap": 160,
-    "funnelCapPerInbox": 20,
+    "aggregateFunnelCap": 198,
+    "funnelCapPerInbox": 22,
     "allMailboxLoadGuard": 120,
-    "inboxCount": 8,
+    "inboxCount": 9,
     "workflowTested": false,
     "mailboxCaps": [
       {
         "mailbox": "amanthakranengland@gmail.com",
-        "configuredDailyCap": 100,
-        "professionalServicesCap": 20
+        "configuredDailyCap": 112,
+        "professionalServicesCap": 22
       },
       {
         "mailbox": "helpme.ecommerce@gmail.com",
-        "configuredDailyCap": 100,
-        "professionalServicesCap": 20
+        "configuredDailyCap": 112,
+        "professionalServicesCap": 22
       },
       {
         "mailbox": "bharatfare@gmail.com",
-        "configuredDailyCap": 100,
-        "professionalServicesCap": 20
+        "configuredDailyCap": 112,
+        "professionalServicesCap": 22
       },
       {
         "mailbox": "amanthakran8891@gmail.com",
-        "configuredDailyCap": 100,
-        "professionalServicesCap": 20
+        "configuredDailyCap": 112,
+        "professionalServicesCap": 22
       },
       {
         "mailbox": "amanthakran.dreams@gmail.com",
-        "configuredDailyCap": 100,
-        "professionalServicesCap": 20
+        "configuredDailyCap": 112,
+        "professionalServicesCap": 22
       },
       {
         "mailbox": "aman.thakran.consulting@gmail.com",
-        "configuredDailyCap": 100,
-        "professionalServicesCap": 20
+        "configuredDailyCap": 112,
+        "professionalServicesCap": 22
       },
       {
         "mailbox": "amanthakranindia@gmail.com",
-        "configuredDailyCap": 100,
-        "professionalServicesCap": 20
+        "configuredDailyCap": 112,
+        "professionalServicesCap": 22
       },
       {
         "mailbox": "bharatfare.team@gmail.com",
-        "configuredDailyCap": 100,
-        "professionalServicesCap": 20
+        "configuredDailyCap": 112,
+        "professionalServicesCap": 22
+      },
+      {
+        "mailbox": "BharatFare UK inbox",
+        "configuredDailyCap": 112,
+        "professionalServicesCap": 22
       }
     ]
   },
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T00:42:05+01:00",
+      "checkedAt": "2026-10-04T01:39:15+01:00",
       "accounts": [
         "amanthakranengland@gmail.com",
         "helpme.ecommerce@gmail.com",
@@ -81,17 +86,18 @@
         "amanthakran.dreams@gmail.com",
         "aman.thakran.consulting@gmail.com",
         "amanthakranindia@gmail.com",
-        "bharatfare.team@gmail.com"
+        "bharatfare.team@gmail.com",
+        "BharatFare UK inbox"
       ],
-      "scope": "All new mail after 2026-10-03T23:35:16+01:00 across all eight authorized inboxes, including Professional Services replies, bounces, opt-outs, buying-intent questions, call requests, and cross-inbox ownership evidence",
-      "result": "No Professional Services reply, bounce, opt-out, follow-up, buying-intent question, or call request was found. Two promotional messages and four Google account-security notices were excluded as unrelated. No outreach was sent because this run was outside the permitted outreach hour."
+      "scope": "All new mail after 2026-10-04T00:42:05+01:00 and London-day Sent history across all nine authorized inboxes, including Professional Services replies, bounces, opt-outs, buying-intent questions, call requests, and cross-inbox ownership evidence",
+      "result": "No Professional Services reply, bounce, opt-out, follow-up, buying-intent question, call request, or Sent message was found. Two Google account-security notices in the newly mapped inbox were excluded as unrelated. No outreach was sent outside the permitted outreach hour."
     },
     "verifiedResearch": {
       "recordedAt": "2026-10-03T16:35:02+01:00",
       "result": "Preserved the verified cumulative total of 10 researched prospects; no email send was counted."
     },
     "holdDiagnosis": {
-      "checkedAt": "2026-10-04T00:42:05+01:00",
+      "checkedAt": "2026-10-04T01:39:15+01:00",
       "status": "HOLD_REASON_UNAVAILABLE",
       "classification": {
         "providerError": "NOT_EVIDENCED",
@@ -100,7 +106,7 @@
         "campaignWideHold": "UNDETERMINED"
       },
       "affectedScope": "Historical Professional Services send attempts; read-only monitoring remains permitted.",
-      "publicSummary": "Prior safety-control rejections remain unresolved. The original rejection output is missing, so the hold was not reclassified, corrected, retried, bypassed, or marked recovered.",
+      "publicSummary": "Prior safety-control rejections remain unresolved. The original rejection output is still missing, so the hold was not reclassified, corrected, retried, bypassed, or marked recovered.",
       "correctiveStep": "Retrieve the original rejection output or direct resolution evidence through the applicable safety-review process.",
       "requiredEvidence": "Original mail-action rejection output or direct evidence that the relevant restriction has been resolved.",
       "diagnosticsCompleted": true,
@@ -108,28 +114,31 @@
       "sendingConfirmed": false
     },
     "github": {
-      "checkedAt": "2026-10-04T00:42:05+01:00",
+      "checkedAt": "2026-10-04T01:39:15+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/webscan-professional-services.json",
-      "priorBlobSha": "3f2917f5966ebf0104bb1380f4805b4af0c4e729"
+      "priorBlobSha": "0dc3a04720349039a9743fee8bd3d1f89a00a647"
     },
     "automation": {
-      "checkedAt": "2026-10-04T00:42:05+01:00",
+      "checkedAt": "2026-10-04T01:39:15+01:00",
       "id": "6ac06186b6708191bc15837a1b0009fe",
       "enabled": true,
       "result": "Automation verified enabled; continuity policy preserved."
     },
     "eightInboxReconciliation": {
-      "checkedAt": "2026-10-04T00:42:05+01:00",
+      "checkedAt": "2026-10-04T01:39:15+01:00",
       "date": "2026-10-04",
-      "scope": "Read-only received-message and suppression monitoring across all eight authorized WebScan inboxes. The 800-message fixed-cap policy is recorded but has not been tested by a verified send/read-back cycle.",
-      "accountsChecked": 8,
+      "scope": "Compatibility field: current reconciliation scope is all nine authorized WebScan inboxes. Read-only received-message, suppression and London-day Sent monitoring completed; the 1,008-message fixed-cap policy has not been tested by a verified send/read-back cycle.",
+      "currentInboxScope": 9,
+      "accountsChecked": 9,
       "status": "SOURCE_RECONCILED",
       "dailyFirstTouches": 0,
       "dailyFollowUps": 0,
+      "dailyOutboundProfessionalServices": 0,
       "mailboxSnapshotPath": "funnel-dashboard/telemetry/webscan-mailboxes.json",
       "scheduledSendingStatus": "NOT_YET_RUN",
-      "newlyMappedInboxFirstSendVerification": "PENDING"
+      "newlyMappedInboxFirstSendVerification": "PENDING",
+      "workflowTested": false
     }
   }
 }
