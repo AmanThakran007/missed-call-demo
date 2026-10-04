@@ -20,39 +20,39 @@
     "Lost": 0
   },
   "draftsPending": 1,
-  "lastRun": "2026-10-04T10:48:43+01:00",
-  "nextRun": "2026-10-04T11:44:00+01:00",
+  "lastRun": "2026-10-04T11:39:19+01:00",
+  "nextRun": "2026-10-04T12:44:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE: One tailored follow-up draft remains unsent. A historical outbound rejection is recorded, but its original rejection output is unavailable, so the restriction cannot be classified or marked resolved. No rejected action was retried.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T10:49:24+01:00",
+      "checkedAt": "2026-10-04T11:39:58+01:00",
       "accounts": [
-        "amanthakranengland@gmail.com",
-        "helpme.ecommerce@gmail.com",
-        "bharatfare@gmail.com",
-        "amanthakran8891@gmail.com",
-        "amanthakran.dreams@gmail.com",
-        "aman.thakran.consulting@gmail.com",
-        "amanthakranindia@gmail.com",
-        "bharatfare.team@gmail.com",
-        "bharatfareuk@gmail.com"
+        "England inbox",
+        "Ecommerce inbox",
+        "BharatFare inbox",
+        "8891 inbox",
+        "Dreams inbox",
+        "Consulting inbox",
+        "India inbox",
+        "BharatFare Team inbox",
+        "BharatFare UK inbox"
       ],
       "scope": "Incremental recent inbound check across all nine connected inboxes for UK nurse-referral replies, bounces, opt-outs, eligibility or fee questions, commercial terms and call requests; prior verified thread state preserved.",
-      "result": "No new UK nurse-referral human reply, campaign bounce, opt-out, eligibility or fee question, terms update or call request. Nine unrelated promotional or account-marketing messages were excluded. One tailored follow-up remains a verified unsent draft; no outreach was sent outside the permitted hour."
+      "result": "No new UK nurse-referral human reply, campaign bounce, opt-out, eligibility or fee question, terms update or call request. Nine unrelated promotional or other-campaign messages were excluded. One tailored follow-up remains a verified unsent draft; no outreach was sent because the original rejection evidence remains unavailable and the denied action was not retried."
     },
     "verifiedResearch": {
       "checkedAt": "2026-10-03T16:43:29+01:00",
       "result": "Nine additional verified UK referral-pathway prospects remain recorded in the private prospect ledger; no recipient-level details are exposed in public telemetry."
     },
     "github": {
-      "checkedAt": "2026-10-04T10:49:24+01:00",
+      "checkedAt": "2026-10-04T11:39:58+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/nurse-referral-uk.json",
-      "priorBlobSha": "fa8496cd6149065c971c6e9eba7b8b8aab42e307"
+      "priorBlobSha": "f4676da87c60d79d264a05213c4c2d6919a377c6"
     },
     "holdDiagnosis": {
-      "checkedAt": "2026-10-04T10:49:24+01:00",
+      "checkedAt": "2026-10-04T11:39:58+01:00",
       "status": "HOLD_REASON_UNAVAILABLE",
       "classification": {
         "providerError": "NOT_EVIDENCED",
@@ -75,9 +75,9 @@
       "result": "Monitoring automation is confirmed enabled. The unresolved sending restriction does not pause read-only monitoring."
     },
     "gmailDrafts": {
-      "checkedAt": "2026-10-04T10:49:24+01:00",
-      "account": "amanthakran.dreams@gmail.com",
-      "result": "The active tailored nurse-referral follow-up remains an unsent draft. A separate obsolete historical initial-outreach draft is also present but is not counted as pending campaign work. Neither draft was modified or sent."
+      "checkedAt": "2026-10-04T11:39:58+01:00",
+      "account": "Dreams inbox",
+      "result": "One tailored nurse-referral follow-up remains an unsent draft. A separate obsolete historical initial-outreach draft is present but is not counted as pending campaign work. Neither draft was modified or sent."
     }
   }
 }
