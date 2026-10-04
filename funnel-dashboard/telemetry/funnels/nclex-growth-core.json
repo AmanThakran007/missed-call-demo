@@ -10,13 +10,13 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-04T05:44:40+01:00",
-  "nextRun": "2026-10-04T05:49:00+01:00",
+  "lastRun": "2026-10-04T06:52:51+01:00",
+  "nextRun": "2026-10-04T07:49:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE: Historical first-touch attempts to the 20 verified Growth Core prospects were reported as rejected by mail-action safety controls, but the original rejection output is unavailable in the current execution context. The scope cannot be independently classified as action-specific or campaign-wide and remains unresolved. No rejected action was retried.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T05:45:30+01:00",
+      "checkedAt": "2026-10-04T06:54:00+01:00",
       "accounts": [
         "amanthakranengland@gmail.com",
         "helpme.ecommerce@gmail.com",
@@ -29,16 +29,16 @@
         "bharatfareuk@gmail.com"
       ],
       "scope": "Recent inbound mail across all nine connected inboxes, including NCLEX Growth Core replies, bounces, opt-outs, access or pricing questions, referral or partnership questions, demo requests and call requests.",
-      "result": "No Growth Core campaign send, human reply, campaign bounce, opt-out, referral or partnership question, access or pricing request, demo or call request, customer, or attributable revenue event was found. Two unrelated banking notices were excluded. No outreach was sent outside the permitted hour."
+      "result": "No Growth Core campaign send, human reply, campaign bounce, opt-out, referral or partnership question, access or pricing request, demo or call request, customer, or attributable revenue event was found. One unrelated banking promotion and one unrelated social-network notification were excluded. No outreach was sent outside the permitted hour."
     },
     "github": {
-      "checkedAt": "2026-10-04T05:45:30+01:00",
+      "checkedAt": "2026-10-04T06:54:00+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/nclex-growth-core.json",
-      "priorBlobSha": "8b84ddd3af751b180c442b2c736300f340198611"
+      "priorBlobSha": "3a44a1cb04665e6e9bf876f38995367c2b727f3a"
     },
     "sendingHoldDiagnosis": {
-      "checkedAt": "2026-10-04T05:45:30+01:00",
+      "checkedAt": "2026-10-04T06:54:00+01:00",
       "status": "HOLD_REASON_UNAVAILABLE",
       "classification": {
         "providerError": "NOT_EVIDENCED",
