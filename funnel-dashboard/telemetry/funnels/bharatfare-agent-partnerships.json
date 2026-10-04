@@ -10,13 +10,13 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-04T07:47:03+01:00",
-  "nextRun": "2026-10-04T08:44:00+01:00",
+  "lastRun": "2026-10-04T08:40:47+01:00",
+  "nextRun": "2026-10-04T09:44:00+01:00",
   "freshness": "LIVE",
   "blocker": null,
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T07:47:30+01:00",
+      "checkedAt": "2026-10-04T08:41:44+01:00",
       "accounts": [
         "amanthakranengland@gmail.com",
         "helpme.ecommerce@gmail.com",
@@ -29,13 +29,13 @@
         "bharatfareuk@gmail.com"
       ],
       "scope": "Incremental recent inbound check across all nine connected inboxes for agent-partnership replies, bounces, opt-outs, partnership questions and call requests; prior verified campaign history preserved.",
-      "result": "No new agent-partnership human reply, bounce, opt-out, partnership question, call request or conversion was found. One unrelated credit-card promotion and one unrelated social notification were excluded. Supplier conversations remain excluded from this funnel. Verified cumulative campaign metrics remain unchanged. No outreach was sent outside the permitted hour."
+      "result": "No new agent-partnership human reply, bounce, opt-out, partnership question, call request or conversion was found. Three unrelated promotions and one unrelated social notification were excluded. Supplier conversations remain excluded from this funnel. Verified cumulative campaign metrics remain unchanged. No outreach was sent outside the permitted hour."
     },
     "github": {
-      "checkedAt": "2026-10-04T07:47:30+01:00",
+      "checkedAt": "2026-10-04T08:41:44+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/bharatfare-agent-partnerships.json",
-      "priorBlobSha": "27e3acc4802e061f994c319069ef3932115fbe73"
+      "priorBlobSha": "f2425418499d6533a986d4d91354409557dd7cc1"
     },
     "automation": {
       "checkedAt": "2026-10-04T03:39:22+01:00",
