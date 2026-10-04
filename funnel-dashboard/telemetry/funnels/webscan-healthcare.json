@@ -67,26 +67,57 @@
   "sendingPolicy": {
     "mode": "FIXED_CAP",
     "effectiveDate": "2026-10-04",
-    "capPerInbox": 100,
-    "capPerInboxMin": 100,
-    "capPerInboxMax": 100,
-    "totalCap": 800,
+    "capPerInbox": 112,
+    "capPerInboxMin": 112,
+    "capPerInboxMax": 112,
+    "totalCap": 1008,
     "stagedCapsPerInbox": [],
     "mailboxCaps": {
-      "amanthakranengland@gmail.com": 100,
-      "helpme.ecommerce@gmail.com": 100,
-      "bharatfare@gmail.com": 100,
-      "amanthakran8891@gmail.com": 100,
-      "amanthakran.dreams@gmail.com": 100,
-      "aman.thakran.consulting@gmail.com": 100,
-      "amanthakranindia@gmail.com": 100,
-      "bharatfare.team@gmail.com": 100
+      "England inbox": 112,
+      "Ecommerce inbox": 112,
+      "BharatFare inbox": 112,
+      "8891 inbox": 112,
+      "Dreams inbox": 112,
+      "Consulting inbox": 112,
+      "India inbox": 112,
+      "BharatFare Team inbox": 112,
+      "BharatFare UK inbox": 112
     },
-    "healthcareBudgetPerInbox": 20,
-    "aggregateHealthcareBudget": 160,
+    "healthcareBudgetPerInbox": 22,
+    "aggregateHealthcareBudget": 198,
     "allCampaignSentGuardPerInbox": 120,
-    "inboxCount": 8,
+    "inboxCount": 9,
     "workflowTested": false,
-    "note": "Caps are ceilings, not targets. Unused allowance is not transferable; due cold follow-ups use the Healthcare budget first. All suppression, ownership, sender-identity, Sent-history and delivery guards remain active. The two newly mapped inboxes require returned/Sent From-header and provider-restriction verification after their first successful WebScan send."
+    "note": "Caps are ceilings, not targets. Unused allowance is not transferable; due cold follow-ups use the Healthcare budget first. All suppression, ownership, sender-identity, Sent-history and delivery guards remain active. The two newly mapped inboxes require returned/Sent From-header and provider-restriction verification after their first successful WebScan send.",
+    "aggregateFunnelCap": 198,
+    "funnelCapPerInbox": 22
+  },
+  "prospectProduction": {
+    "schemaVersion": 1,
+    "instrumentedAt": "2026-10-04T00:45:55.292Z",
+    "status": "AWAITING_FIRST_MEASURED_RUN",
+    "historicalRunCoverage": "INCOMPLETE",
+    "historicalEvidence": {
+      "prospectsResearched": 11,
+      "firstEmailsSent": 1,
+      "sourceTimestamp": "2026-10-04T00:50:49+01:00",
+      "scope": "Historical cumulative funnel telemetry; no complete candidate-level or per-run production audit."
+    },
+    "sourceAudit": {
+      "checkedAt": "2026-10-04T00:45:55.292Z",
+      "status": "PARTIAL",
+      "summary": "Historical cumulative research is recorded, but the complete candidate-level source list and suppression/ownership evidence were not recovered. No verified ready-stock total."
+    },
+    "queueAudit": {
+      "status": "UNVERIFIED",
+      "checkedAt": null,
+      "scope": "Complete current WebScan Healthcare candidate queue and nine-inbox ownership/suppression history",
+      "readyFirstTouches": null,
+      "dueFollowUps": null,
+      "awaitingVerification": null,
+      "blocked": null,
+      "byInbox": []
+    },
+    "runs": []
   }
 }
