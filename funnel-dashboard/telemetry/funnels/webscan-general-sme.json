@@ -157,16 +157,53 @@
   },
   "sendingPolicy": {
     "mode": "FIXED_CAP",
-    "capPerInbox": 100,
-    "capPerInboxMin": 100,
-    "capPerInboxMax": 100,
-    "totalCap": 800,
+    "capPerInbox": 112,
+    "capPerInboxMin": 112,
+    "capPerInboxMax": 112,
+    "totalCap": 1008,
     "effectiveDate": "2026-10-04",
     "stagedCapsPerInbox": [],
-    "generalSmeAggregateCap": 400,
-    "generalSmeCapPerInbox": 50,
+    "generalSmeAggregateCap": 513,
+    "generalSmeCapPerInbox": 57,
     "allMailLoadGuard": 120,
-    "inboxCount": 8,
-    "workflowTested": false
+    "inboxCount": 9,
+    "workflowTested": false,
+    "aggregateFunnelCap": 513,
+    "funnelCapPerInbox": 57
+  },
+  "prospectProduction": {
+    "schemaVersion": 1,
+    "instrumentedAt": "2026-10-04T00:45:55.292Z",
+    "status": "AWAITING_FIRST_MEASURED_RUN",
+    "historicalRunCoverage": "INCOMPLETE",
+    "historicalEvidence": {
+      "prospectsResearched": 21,
+      "firstEmailsSent": 21,
+      "sourceTimestamp": "2026-10-04T01:07:20+01:00",
+      "scope": "Historical cumulative funnel telemetry; no complete candidate-level or per-run production audit."
+    },
+    "sourceAudit": {
+      "checkedAt": "2026-10-04T00:45:55.292Z",
+      "status": "PARTIAL",
+      "summary": "193 unique source domains found. Eight-row reviewed pilot: two already contacted, one missing eligible email, two need rechecking, three failed issue quality; zero unused email-ready first touches in that pilot only. Nine other prior exclusions. Wider queue remains unverified.",
+      "rawSourceDomains": 193,
+      "pilotRows": 8,
+      "pilotUnusedReadyFirstTouches": 0,
+      "pilotAlreadyContacted": 2,
+      "pilotMissingEmail": 1,
+      "pilotRecheck": 2,
+      "pilotRejected": 3
+    },
+    "queueAudit": {
+      "status": "UNVERIFIED",
+      "checkedAt": null,
+      "scope": "Complete current WebScan General SME candidate queue and nine-inbox ownership/suppression history",
+      "readyFirstTouches": null,
+      "dueFollowUps": null,
+      "awaitingVerification": null,
+      "blocked": null,
+      "byInbox": []
+    },
+    "runs": []
   }
 }
