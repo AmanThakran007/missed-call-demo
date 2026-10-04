@@ -10,13 +10,13 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-04T04:50:30+01:00",
+  "lastRun": "2026-10-04T05:47:13+01:00",
   "nextRun": "2026-10-04T05:49:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE: Two existing partnership enquiries remain awaiting external responses. Historical attempts covering seven researched targets and one follow-up were rejected by mail-action safety controls, but the original rejection output is unavailable, so the restriction cannot be classified or marked resolved. No blocked action was retried.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T04:50:30+01:00",
+      "checkedAt": "2026-10-04T05:48:10+01:00",
       "accounts": [
         "amanthakranengland@gmail.com",
         "helpme.ecommerce@gmail.com",
@@ -32,13 +32,13 @@
       "result": "No new nurse-referral human reply, bounce, opt-out, terms question, call request, customer or attributable revenue event was found. WorldWide HealthStaff remains awaiting a reply to the paid-advertising and referral-tracking question; Avant remains at the acknowledgement and review stage. Two unrelated banking notices were excluded. No outreach was sent outside the permitted hour."
     },
     "github": {
-      "checkedAt": "2026-10-04T04:50:30+01:00",
+      "checkedAt": "2026-10-04T05:48:10+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/nurse-referral-us.json",
-      "priorBlobSha": "5b7be17708d42a7339f9f03f9aaa28a1607a5348"
+      "priorBlobSha": "055a5d9ecdcd919cbd9266512a888db74527023d"
     },
     "sendingHoldDiagnosis": {
-      "checkedAt": "2026-10-04T04:50:30+01:00",
+      "checkedAt": "2026-10-04T05:48:10+01:00",
       "status": "HOLD_REASON_UNAVAILABLE",
       "classification": {
         "providerError": "NOT_EVIDENCED",
