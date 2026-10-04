@@ -20,36 +20,52 @@
     "Lost": 0
   },
   "draftsPending": 2,
-  "lastRun": "2026-10-04T01:35:39+01:00",
-  "nextRun": "2026-10-04T01:39:00+01:00",
+  "lastRun": "2026-10-04T03:42:43+01:00",
+  "nextRun": "2026-10-04T04:39:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE: Historical first-touch send attempts were rejected by mail-action safety controls, but the original rejection output is unavailable in the current execution context. The restriction cannot be classified as action-specific or campaign-wide and remains unresolved; two drafts remain unsent. Monitoring is permitted.",
   "sourceChecks": {
+    "gmailAllAccounts": {
+      "checkedAt": "2026-10-04T03:42:43+01:00",
+      "accounts": [
+        "amanthakranengland@gmail.com",
+        "helpme.ecommerce@gmail.com",
+        "bharatfare@gmail.com",
+        "amanthakran8891@gmail.com",
+        "amanthakran.dreams@gmail.com",
+        "aman.thakran.consulting@gmail.com",
+        "amanthakranindia@gmail.com",
+        "bharatfare.team@gmail.com",
+        "bharatfareuk@gmail.com"
+      ],
+      "scope": "Incremental recent inbound check across all nine connected inboxes for appointment-setting replies, bounces, opt-outs, pricing or pilot questions and call/demo requests.",
+      "result": "No new appointment-setting reply, bounce, opt-out, pricing or pilot question, call/demo request or buying-intent event was found. One unrelated card-billing notice was excluded. No outreach was sent outside the permitted hour."
+    },
     "gmailPrimary": {
       "checkedAt": "2026-10-04T01:35:39+01:00",
       "account": "amanthakran.dreams@gmail.com",
-      "scope": "All new mail after 2026-10-04T00:40:25+01:00, plus London-day Sent history, including appointment-setting replies, bounces, opt-outs, pricing or pilot questions and call/demo requests",
-      "result": "No new mail or Sent messages were found. No appointment-setting reply, bounce, opt-out, pricing or pilot question, call/demo request, or first-touch send was recorded. No outreach was sent outside the permitted outreach hour."
+      "scope": "Verified London-day Sent history and campaign-specific monitoring baseline.",
+      "result": "No appointment-setting Sent message was recorded; cumulative verified send metrics remain unchanged."
     },
     "gmailDrafts": {
       "checkedAt": "2026-10-04T01:35:39+01:00",
       "account": "aman.thakran.consulting@gmail.com",
-      "result": "Two verified unsent appointment-setting drafts remain. No new campaign message, relevant bounce, reply or London-day Sent message was found."
+      "result": "Two verified unsent appointment-setting drafts remain recorded. They were not sent or modified in this monitoring-only run."
     },
     "github": {
-      "checkedAt": "2026-10-04T01:35:39+01:00",
+      "checkedAt": "2026-10-04T03:42:43+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/b2b-appointment-setting.json",
-      "priorBlobSha": "a2aa937c86e3629539000279e83085cd1b7f77da"
+      "priorBlobSha": "ef5fd9ea923a27229bb808375076350b5654e8d5"
     },
     "automation": {
-      "checkedAt": "2026-10-04T01:35:39+01:00",
+      "checkedAt": "2026-10-04T03:42:43+01:00",
       "id": "6ac05cb463648191a9f810de147b94ef",
       "enabled": true,
       "result": "Automation verified enabled; continuity policy preserved."
     },
     "holdDiagnosis": {
-      "checkedAt": "2026-10-04T01:35:39+01:00",
+      "checkedAt": "2026-10-04T03:42:43+01:00",
       "status": "HOLD_REASON_UNAVAILABLE",
       "classification": {
         "providerError": "NOT_EVIDENCED",
