@@ -6,39 +6,43 @@
   "workflowVersion": "HOURLY_V2",
   "configuredAt": "2026-10-04T11:44:55.636Z",
   "effectiveAt": "2026-10-04T11:54:45.158Z",
-  "status": "RUNNING",
+  "status": "COMPLETE",
   "runId": "6aa199f3c2848191aa1e6d2a26d0d383_2026-10-04T12:00:38Z",
   "startedAt": "2026-10-04T13:00:38+01:00",
-  "heartbeatAt": "2026-10-04T13:13:00+01:00",
-  "finishedAt": null,
-  "phase": "SEND",
-  "outcome": null,
+  "heartbeatAt": "2026-10-04T13:16:00+01:00",
+  "finishedAt": "2026-10-04T13:16:00+01:00",
+  "phase": "DONE",
+  "outcome": "SENT",
   "metrics": {
-    "candidatesAssessed": null,
-    "newlyQualified": null,
-    "readyBefore": null,
-    "readyAfter": null,
-    "firstTouchesSent": null,
-    "followUpsSent": null
+    "candidatesAssessed": 15,
+    "newlyQualified": 3,
+    "readyBefore": 0,
+    "readyAfter": 0,
+    "firstTouchesSent": 3,
+    "followUpsSent": 0
   },
-  "blockers": [],
-  "nextAction": "Reconcile prior pending sends, replies, suppression, per-mailbox pacing and the private candidate ledger.",
+  "blockers": [
+    "HISTORICAL_QUEUE_RECONSTRUCTION_INCOMPLETE"
+  ],
+  "nextAction": "Prepare and verify the next General SME candidate cohort; recheck the seven current-site verification holds without retrying or reassigning any blocked prospect.",
   "lastCompleted": {
-    "runId": "6aa199f3c2848191aa1e6d2a26d0d383_2026-10-04T11:55:15Z",
-    "finishedAt": "2026-10-04T12:56:20+01:00",
-    "status": "PARTIAL",
-    "outcome": "RECONCILIATION_REQUIRED",
+    "runId": "6aa199f3c2848191aa1e6d2a26d0d383_2026-10-04T12:00:38Z",
+    "startedAt": "2026-10-04T13:00:38+01:00",
+    "finishedAt": "2026-10-04T13:16:00+01:00",
+    "status": "COMPLETE",
+    "outcome": "SENT",
     "metrics": {
-      "candidatesAssessed": null,
-      "newlyQualified": null,
-      "readyBefore": null,
-      "readyAfter": null,
-      "firstTouchesSent": 0,
+      "candidatesAssessed": 15,
+      "newlyQualified": 3,
+      "readyBefore": 0,
+      "readyAfter": 0,
+      "firstTouchesSent": 3,
       "followUpsSent": 0
     },
     "blockers": [
-      "RUN_INTERRUPTED_BY_NEWER_AUTOMATION_CONTEXT"
-    ]
+      "HISTORICAL_QUEUE_RECONSTRUCTION_INCOMPLETE"
+    ],
+    "nextAction": "Prepare and verify the next General SME candidate cohort; recheck the seven current-site verification holds without retrying or reassigning any blocked prospect."
   },
   "history": [
     {
@@ -59,7 +63,25 @@
         "RUN_INTERRUPTED_BY_NEWER_AUTOMATION_CONTEXT"
       ],
       "nextAction": "Reconcile the 12:00-hour WebScan slot and candidate state in the next General SME run."
+    },
+    {
+      "runId": "6aa199f3c2848191aa1e6d2a26d0d383_2026-10-04T12:00:38Z",
+      "startedAt": "2026-10-04T13:00:38+01:00",
+      "finishedAt": "2026-10-04T13:16:00+01:00",
+      "status": "COMPLETE",
+      "outcome": "SENT",
+      "metrics": {
+        "candidatesAssessed": 15,
+        "newlyQualified": 3,
+        "readyBefore": 0,
+        "readyAfter": 0,
+        "firstTouchesSent": 3,
+        "followUpsSent": 0
+      },
+      "blockers": [
+        "HISTORICAL_QUEUE_RECONSTRUCTION_INCOMPLETE"
+      ],
+      "nextAction": "Prepare and verify the next General SME candidate cohort; recheck the seven current-site verification holds without retrying or reassigning any blocked prospect."
     }
-  ],
-  "plannedCount": 3
+  ]
 }
