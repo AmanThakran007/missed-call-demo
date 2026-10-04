@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "funnelId": "nclex-growth-core",
+  "name": "NCLEX Growth Core",
+  "automationId": "6ac05de10e888191abc356440709e97e",
+  "workflowVersion": "HOURLY_V2",
+  "configuredAt": "2026-10-04T11:44:55.636Z",
+  "effectiveAt": "2026-10-04T13:00:00+01:00",
+  "status": "AWAITING_FIRST_RUN",
+  "runId": null,
+  "startedAt": null,
+  "heartbeatAt": null,
+  "finishedAt": null,
+  "phase": null,
+  "outcome": null,
+  "metrics": {
+    "candidatesAssessed": null,
+    "newlyQualified": null,
+    "readyBefore": null,
+    "readyAfter": null,
+    "firstTouchesSent": null,
+    "followUpsSent": null
+  },
+  "blockers": [],
+  "nextAction": "Await the first scheduled run under the hourly policy; existing campaign holds remain authoritative.",
+  "lastCompleted": null,
+  "history": []
+}
