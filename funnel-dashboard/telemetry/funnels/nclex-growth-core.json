@@ -10,28 +10,35 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-04T00:47:49+01:00",
-  "nextRun": "2026-10-04T01:49:00+01:00",
+  "lastRun": "2026-10-04T02:50:49+01:00",
+  "nextRun": "2026-10-04T03:49:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE: Historical first-touch attempts to the 20 verified Growth Core prospects were reported as rejected by mail-action safety controls, but the original rejection output is unavailable in the current execution context. The scope cannot be independently classified as action-specific or campaign-wide and remains unresolved. No rejected action was retried.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T00:47:49+01:00",
+      "checkedAt": "2026-10-04T02:50:49+01:00",
       "accounts": [
+        "amanthakranengland@gmail.com",
+        "helpme.ecommerce@gmail.com",
+        "bharatfare@gmail.com",
+        "amanthakran8891@gmail.com",
         "amanthakran.dreams@gmail.com",
-        "aman.thakran.consulting@gmail.com"
+        "aman.thakran.consulting@gmail.com",
+        "amanthakranindia@gmail.com",
+        "bharatfare.team@gmail.com",
+        "bharatfareuk@gmail.com"
       ],
-      "scope": "All new mail after 2026-10-03T22:54:15+01:00, including NCLEX Growth Core replies, bounces, opt-outs, access or pricing questions, referral or partnership questions, demo requests, and call requests",
-      "result": "No Growth Core campaign send, human reply, campaign bounce, opt-out, referral or partnership question, access or pricing request, demo or call request, customer, or attributable revenue event was found. Two promotional messages and one unrelated account-security notice were excluded. No outreach was sent outside the permitted hour."
+      "scope": "Recent inbound mail across all nine connected inboxes, including NCLEX Growth Core replies, bounces, opt-outs, access or pricing questions, referral or partnership questions, demo requests and call requests",
+      "result": "No Growth Core campaign send, human reply, campaign bounce, opt-out, referral or partnership question, access or pricing request, demo or call request, customer, or attributable revenue event was found. Google account-security notices were excluded as unrelated. No outreach was sent outside the permitted hour."
     },
     "github": {
-      "checkedAt": "2026-10-04T00:47:49+01:00",
+      "checkedAt": "2026-10-04T02:50:49+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/nclex-growth-core.json",
-      "priorBlobSha": "2cfd99530fde80538ca63108316591d278570795"
+      "priorBlobSha": "be4eeb917d538fc86e0c1ee6eea22259fd559fe2"
     },
     "sendingHoldDiagnosis": {
-      "checkedAt": "2026-10-04T00:47:49+01:00",
+      "checkedAt": "2026-10-04T02:50:49+01:00",
       "status": "HOLD_REASON_UNAVAILABLE",
       "classification": {
         "providerError": "NOT_EVIDENCED",
@@ -49,7 +56,7 @@
       "sendingConfirmed": false
     },
     "automation": {
-      "checkedAt": "2026-10-04T00:47:49+01:00",
+      "checkedAt": "2026-10-04T02:50:49+01:00",
       "id": "6ac05de10e888191abc356440709e97e",
       "enabled": true,
       "result": "Monitoring automation is confirmed enabled. The unresolved sending restriction affects only outreach."
