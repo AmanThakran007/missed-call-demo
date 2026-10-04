@@ -10,13 +10,13 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-04T10:45:01+01:00",
-  "nextRun": "2026-10-04T11:49:00+01:00",
+  "lastRun": "2026-10-04T11:51:48+01:00",
+  "nextRun": "2026-10-04T12:49:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE: Historical first-touch attempts to the 20 verified Growth Core prospects were reported as rejected by mail-action safety controls, but the original rejection output is unavailable in the current execution context. The scope cannot be independently classified as action-specific or campaign-wide and remains unresolved. No rejected action was retried.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T10:45:36+01:00",
+      "checkedAt": "2026-10-04T11:52:16+01:00",
       "accounts": [
         "amanthakranengland@gmail.com",
         "helpme.ecommerce@gmail.com",
@@ -28,17 +28,17 @@
         "bharatfare.team@gmail.com",
         "bharatfareuk@gmail.com"
       ],
-      "scope": "Recent inbound mail across all nine connected inboxes, including NCLEX Growth Core replies, bounces, opt-outs, access or pricing questions, referral or partnership questions, demo requests and call requests.",
-      "result": "No Growth Core campaign send, human reply, campaign bounce, opt-out, referral or partnership question, access or pricing request, demo or call request, customer, or attributable revenue event was found. Seven unrelated promotional or account-marketing messages were excluded. The daily research ceiling of 20 prospects was already reached, and no rejected send action was retried while the original rejection evidence remains unavailable."
+      "scope": "Recent mail across all nine connected inboxes for NCLEX Growth Core sends, replies, bounces, opt-outs, access or pricing questions, referral or partnership questions, demo requests and call requests.",
+      "result": "No Growth Core campaign send, human reply, campaign bounce, opt-out, referral or partnership question, access or pricing request, demo or call request, customer, or attributable revenue event was found. BedsidePath infrastructure, Search Console and historical test messages were excluded. The daily research ceiling of 20 prospects was already reached. No outreach was sent outside the permitted hour and no rejected action was retried."
     },
     "github": {
-      "checkedAt": "2026-10-04T10:45:36+01:00",
+      "checkedAt": "2026-10-04T11:52:16+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/nclex-growth-core.json",
-      "priorBlobSha": "ada000aeb99102aeb5bff3d5a84233023f5eacf1"
+      "priorBlobSha": "cb46c0259af12a3b7a3b776b767f2cc66b2e1327"
     },
     "sendingHoldDiagnosis": {
-      "checkedAt": "2026-10-04T10:45:36+01:00",
+      "checkedAt": "2026-10-04T11:52:16+01:00",
       "status": "HOLD_REASON_UNAVAILABLE",
       "classification": {
         "providerError": "NOT_EVIDENCED",
