@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "date": "2026-10-04",
   "timezone": "Europe/London",
-  "checkedAt": "2026-10-04T08:17:11Z",
-  "source": "Fully paginated Gmail Sent checks plus targeted received-mail checks across all nine connected inboxes",
+  "checkedAt": "2026-10-04T09:09:45Z",
+  "source": "Fully paginated Gmail Sent checks plus incremental received-mail checks across all nine connected inboxes",
   "status": "SOURCE_RECONCILED",
-  "scope": "London calendar-day and rolling-24-hour Sent counts were fully reconciled across all nine inboxes. Three General SME first touches were found in Gmail Sent and their From headers matched the selected authenticated accounts and truthful WebRevenue Scan display name. Three newly received messages were retail promotions, not campaign replies, bounces or opt-outs. Sent means present in Gmail Sent, not confirmed delivered.",
+  "scope": "London-day and rolling-24-hour Sent counts were fully reconciled across all nine inboxes. Three General SME first touches remain verified in Gmail Sent with matching authenticated From headers. Four messages received after the preceding coordinator check were consumer promotions/account mail, not WebScan replies, bounces or opt-outs. Sent means present in Gmail Sent, not confirmed delivered.",
   "effectiveDate": "2026-10-04",
   "stagedCapsPerInbox": [],
   "rows": [
@@ -38,14 +38,16 @@
         "pricingOrCall": null,
         "notInterested": null
       },
-      "skippedReasons": [],
+      "skippedReasons": [
+        "OUTSIDE_AUTHORISED_GENERAL_SME_OUTREACH_WINDOW"
+      ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T08:17:11Z",
+      "checkedAt": "2026-10-04T09:09:45Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 111,
       "nineInboxSendTest": "SENT_AND_HEADER_VERIFIED",
-      "engagementCheckedAt": "2026-10-04T07:08:06Z"
+      "engagementCheckedAt": "2026-10-04T09:09:45Z"
     },
     {
       "mailbox": "Ecommerce inbox",
@@ -76,14 +78,16 @@
         "pricingOrCall": null,
         "notInterested": null
       },
-      "skippedReasons": [],
+      "skippedReasons": [
+        "OUTSIDE_AUTHORISED_GENERAL_SME_OUTREACH_WINDOW"
+      ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T08:17:11Z",
+      "checkedAt": "2026-10-04T09:09:45Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 111,
       "nineInboxSendTest": "SENT_AND_HEADER_VERIFIED",
-      "engagementCheckedAt": "2026-10-04T07:08:06Z"
+      "engagementCheckedAt": "2026-10-04T09:09:45Z"
     },
     {
       "mailbox": "BharatFare inbox",
@@ -114,14 +118,16 @@
         "pricingOrCall": null,
         "notInterested": null
       },
-      "skippedReasons": [],
+      "skippedReasons": [
+        "OUTSIDE_AUTHORISED_GENERAL_SME_OUTREACH_WINDOW"
+      ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T08:17:11Z",
+      "checkedAt": "2026-10-04T09:09:45Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 111,
       "nineInboxSendTest": "SENT_AND_HEADER_VERIFIED",
-      "engagementCheckedAt": "2026-10-04T07:08:06Z"
+      "engagementCheckedAt": "2026-10-04T09:09:45Z"
     },
     {
       "mailbox": "8891 inbox",
@@ -153,15 +159,16 @@
         "notInterested": null
       },
       "skippedReasons": [
-        "NO_VERIFIED_UNSENT_GENERAL_SME_PROSPECT_ASSIGNED_THIS_WINDOW"
+        "NO_VERIFIED_UNSENT_GENERAL_SME_PROSPECT_ASSIGNED_THIS_WINDOW",
+        "OUTSIDE_AUTHORISED_GENERAL_SME_OUTREACH_WINDOW"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T08:17:11Z",
+      "checkedAt": "2026-10-04T09:09:45Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 112,
       "nineInboxSendTest": "NOT_YET_RUN",
-      "engagementCheckedAt": "2026-10-04T07:08:06Z"
+      "engagementCheckedAt": "2026-10-04T09:09:45Z"
     },
     {
       "mailbox": "Dreams inbox",
@@ -175,7 +182,7 @@
       "configuredDailyCap": 112,
       "qualifyingDaysAtStage": 0,
       "sourceRead": "VERIFIED",
-      "allSentRolling24h": 19,
+      "allSentRolling24h": 14,
       "remainingQuotaForEffectiveDate": 112,
       "prospectQueue": {
         "status": "UNVERIFIED",
@@ -193,15 +200,16 @@
         "notInterested": null
       },
       "skippedReasons": [
-        "NO_VERIFIED_UNSENT_GENERAL_SME_PROSPECT_ASSIGNED_THIS_WINDOW"
+        "NO_VERIFIED_UNSENT_GENERAL_SME_PROSPECT_ASSIGNED_THIS_WINDOW",
+        "OUTSIDE_AUTHORISED_GENERAL_SME_OUTREACH_WINDOW"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T08:17:11Z",
+      "checkedAt": "2026-10-04T09:09:45Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 112,
       "nineInboxSendTest": "NOT_YET_RUN",
-      "engagementCheckedAt": "2026-10-04T07:08:06Z"
+      "engagementCheckedAt": "2026-10-04T09:09:45Z"
     },
     {
       "mailbox": "Consulting inbox",
@@ -233,15 +241,16 @@
         "notInterested": null
       },
       "skippedReasons": [
-        "NO_VERIFIED_UNSENT_GENERAL_SME_PROSPECT_ASSIGNED_THIS_WINDOW"
+        "NO_VERIFIED_UNSENT_GENERAL_SME_PROSPECT_ASSIGNED_THIS_WINDOW",
+        "OUTSIDE_AUTHORISED_GENERAL_SME_OUTREACH_WINDOW"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T08:17:11Z",
+      "checkedAt": "2026-10-04T09:09:45Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 112,
       "nineInboxSendTest": "NOT_YET_RUN",
-      "engagementCheckedAt": "2026-10-04T07:08:06Z"
+      "engagementCheckedAt": "2026-10-04T09:09:45Z"
     },
     {
       "mailbox": "India inbox",
@@ -273,15 +282,16 @@
         "notInterested": null
       },
       "skippedReasons": [
-        "NO_VERIFIED_UNSENT_GENERAL_SME_PROSPECT_ASSIGNED_THIS_WINDOW"
+        "NO_VERIFIED_UNSENT_GENERAL_SME_PROSPECT_ASSIGNED_THIS_WINDOW",
+        "OUTSIDE_AUTHORISED_GENERAL_SME_OUTREACH_WINDOW"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T08:17:11Z",
+      "checkedAt": "2026-10-04T09:09:45Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 112,
       "nineInboxSendTest": "NOT_YET_RUN",
-      "engagementCheckedAt": "2026-10-04T07:08:06Z"
+      "engagementCheckedAt": "2026-10-04T09:09:45Z"
     },
     {
       "mailbox": "BharatFare Team inbox",
@@ -313,20 +323,21 @@
         "notInterested": null
       },
       "skippedReasons": [
-        "NO_VERIFIED_UNSENT_GENERAL_SME_PROSPECT_ASSIGNED_THIS_WINDOW"
+        "NO_VERIFIED_UNSENT_GENERAL_SME_PROSPECT_ASSIGNED_THIS_WINDOW",
+        "OUTSIDE_AUTHORISED_GENERAL_SME_OUTREACH_WINDOW"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T08:17:11Z",
+      "checkedAt": "2026-10-04T09:09:45Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 112,
       "nineInboxSendTest": "NOT_YET_RUN",
-      "engagementCheckedAt": "2026-10-04T07:08:06Z"
+      "engagementCheckedAt": "2026-10-04T09:09:45Z"
     },
     {
       "mailbox": "BharatFare UK inbox",
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T08:17:11Z",
+      "checkedAt": "2026-10-04T09:09:45Z",
       "sourceRead": "VERIFIED",
       "configuredDailyCap": 112,
       "configuredGeneralSmeDailyCap": 57,
@@ -351,7 +362,8 @@
         "notInterested": null
       },
       "skippedReasons": [
-        "NO_VERIFIED_UNSENT_GENERAL_SME_PROSPECT_ASSIGNED_THIS_WINDOW"
+        "NO_VERIFIED_UNSENT_GENERAL_SME_PROSPECT_ASSIGNED_THIS_WINDOW",
+        "OUTSIDE_AUTHORISED_GENERAL_SME_OUTREACH_WINDOW"
       ],
       "allSentToday": 0,
       "allSentRolling24h": 0,
@@ -361,12 +373,12 @@
       "webscanHumanRepliesToday": null,
       "webscanBouncesToday": null,
       "webscanOptOutsToday": null,
-      "engagementCheckedAt": "2026-10-04T07:08:06Z"
+      "engagementCheckedAt": "2026-10-04T09:09:45Z"
     }
   ],
   "totals": {
     "allSentToday": 3,
-    "allSentRolling24h": 29,
+    "allSentRolling24h": 24,
     "webscanFirstTouchesToday": 3,
     "webscanFollowUpsToday": 0,
     "webscanInboundMessagesToday": 0,
@@ -411,7 +423,7 @@
     "checkedAt": "2026-10-04T08:00:21Z",
     "enabledTasks": 15,
     "enabledWebscanTasks": 5,
-    "lastCoordinatorRun": "2026-10-04T08:17:11Z"
+    "lastCoordinatorRun": "2026-10-04T09:09:45Z"
   },
   "sendingPolicy": {
     "mode": "FIXED_CAP",
