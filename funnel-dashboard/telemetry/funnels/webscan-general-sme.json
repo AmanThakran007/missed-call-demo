@@ -422,7 +422,7 @@
         "awaitingVerification": 7,
         "readyBefore": 0,
         "readyAfter": 0,
-        "dueFollowUps": 0,
+        "dueFollowUps": null,
         "firstTouchesSent": 3,
         "followUpsSent": 0,
         "durationSeconds": 832,
