@@ -10,13 +10,13 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-04T11:45:24+01:00",
-  "nextRun": "2026-10-04T12:49:00+01:00",
+  "lastRun": "2026-10-04T12:53:00+01:00",
+  "nextRun": "2026-10-04T13:49:00+01:00",
   "freshness": "LIVE",
-  "blocker": "HOLD_REASON_UNAVAILABLE: Two existing partnership enquiries remain awaiting external responses. Historical attempts covering seven researched targets and one follow-up were rejected by mail-action safety controls, but the original rejection output is unavailable, so the restriction cannot be classified or marked resolved. No blocked action was retried.",
+  "blocker": "HOLD_REASON_UNAVAILABLE: Two existing partnership enquiries remain awaiting external responses. Historical attempts covering seven researched targets and one follow-up were rejected by mail-action safety controls, but the original rejection output is unavailable, so the restriction cannot be classified or marked resolved. No blocked action was retried. PRIVATE_LEDGER_UNAVAILABLE: A campaign-owned persistent recipient ledger for ownership, suppression and candidate-state evidence could not be identified, so no ready queue was claimed.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T11:45:48+01:00",
+      "checkedAt": "2026-10-04T12:53:51+01:00",
       "accounts": [
         "amanthakranengland@gmail.com",
         "helpme.ecommerce@gmail.com",
@@ -28,17 +28,17 @@
         "bharatfare.team@gmail.com",
         "bharatfareuk@gmail.com"
       ],
-      "scope": "Incremental recent mail across all nine connected inboxes, plus both active international nurse-referral conversations, including replies, bounces, opt-outs, terms questions and call requests.",
-      "result": "No new nurse-referral human reply, bounce, opt-out, terms question, call request, customer or attributable revenue event was found. Both existing partnership conversations remain awaiting external responses. No outreach or research was performed outside the permitted hour."
+      "scope": "Incremental recent mail across all nine connected inboxes, plus known US international nurse-referral targets and both active conversations, including sends, replies, bounces, opt-outs, terms questions and call requests.",
+      "result": "No new nurse-referral send, human reply, campaign bounce, opt-out, terms question, call request, customer or attributable revenue event was found. Both existing partnership conversations remain awaiting external responses. This run began before Hourly Workflow V2 became effective. No outreach was sent, no blocked action was retried and no candidate was represented as ready without persistent recipient-level evidence."
     },
     "github": {
-      "checkedAt": "2026-10-04T11:45:48+01:00",
+      "checkedAt": "2026-10-04T12:53:51+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/nurse-referral-us.json",
-      "priorBlobSha": "cdb81dea8487442fceafa5ef2da4f3d34bae8354"
+      "priorBlobSha": "b5f77cfc89dbe203f3ce0423b29b975040f2aac5"
     },
     "sendingHoldDiagnosis": {
-      "checkedAt": "2026-10-04T11:45:48+01:00",
+      "checkedAt": "2026-10-04T12:53:51+01:00",
       "status": "HOLD_REASON_UNAVAILABLE",
       "classification": {
         "providerError": "NOT_EVIDENCED",
@@ -59,6 +59,20 @@
       "id": "6ac0619b4ab081918c170563302ffb24",
       "enabled": true,
       "result": "Monitoring automation is confirmed enabled. The unresolved sending restriction affects only the previously rejected actions."
+    },
+    "privateLedger": {
+      "checkedAt": "2026-10-04T12:53:51+01:00",
+      "status": "PRIVATE_LEDGER_UNAVAILABLE",
+      "scope": "Campaign-owned persistent recipient ledger required for candidate states, ownership, suppression and SEND_PENDING evidence.",
+      "result": "Library title/content searches located an older nurse-referral research report but no campaign-owned stateful ledger. The report was not treated as a send ledger. No queue readiness, recipient ownership, new qualification or pending-send state was inferred."
+    },
+    "hourlyWorkflow": {
+      "checkedAt": "2026-10-04T12:53:51+01:00",
+      "version": "HOURLY_V2",
+      "effectiveAt": "2026-10-04T13:00:00+01:00",
+      "runJournalPath": "funnel-dashboard/telemetry/runs/nurse-referral-us.json",
+      "runJournalStatus": "AWAITING_FIRST_RUN",
+      "result": "This run began before the workflow effective time, so it did not acquire the V2 run journal or send. The first run starting at or after the effective time must acquire journal ownership before any send."
     }
   }
 }
