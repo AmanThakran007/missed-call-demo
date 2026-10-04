@@ -10,34 +10,41 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-04T01:41:23+01:00",
-  "nextRun": "2026-10-04T01:44:00+01:00",
+  "lastRun": "2026-10-04T02:44:21+01:00",
+  "nextRun": "2026-10-04T03:44:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE: Historical creator first-touch attempts were rejected by mail-action safety controls, but the original rejection output is unavailable in the current execution context. The restriction cannot be classified as action-specific or campaign-wide and remains unresolved. No sends were retried; monitoring remains enabled.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T01:41:23+01:00",
+      "checkedAt": "2026-10-04T02:44:21+01:00",
       "accounts": [
+        "amanthakranengland@gmail.com",
+        "helpme.ecommerce@gmail.com",
+        "bharatfare@gmail.com",
+        "amanthakran8891@gmail.com",
         "amanthakran.dreams@gmail.com",
-        "aman.thakran.consulting@gmail.com"
+        "aman.thakran.consulting@gmail.com",
+        "amanthakranindia@gmail.com",
+        "bharatfare.team@gmail.com",
+        "bharatfareuk@gmail.com"
       ],
-      "scope": "All new mail after 2026-10-04T00:43:18+01:00 and London-day Sent history, including creator/community replies, bounces, opt-outs, affiliate or referral questions, demo requests, product-access questions and buying intent",
-      "result": "No new mail or Sent messages were found in either monitored account. No NCLEX creator/community send, human reply, bounce, opt-out, affiliate/referral question, demo request, product-access question, call request or buying-intent event was recorded. No outreach was sent outside the permitted hour."
+      "scope": "All nine connected inboxes checked for NCLEX creator/community replies, bounces, opt-outs, affiliate or referral questions, demo requests, product-access questions and buying intent from the prior three days, plus all recent inbound mail from the prior four hours.",
+      "result": "No NCLEX creator/community send, human reply, bounce, opt-out, affiliate/referral question, demo request, product-access question, call request or buying-intent event was found. Unrelated marketing, travel, supplier, nurse-referral and account-security notices were excluded. No outreach was sent outside the permitted hour."
     },
     "automation": {
-      "checkedAt": "2026-10-04T01:41:23+01:00",
+      "checkedAt": "2026-10-04T02:44:21+01:00",
       "id": "6ac061a6b5188191ad6078d6a58936d0",
       "enabled": true,
       "result": "Monitoring automation was confirmed enabled. The unresolved sending restriction affects outreach only and does not pause monitoring."
     },
     "github": {
-      "checkedAt": "2026-10-04T01:41:23+01:00",
+      "checkedAt": "2026-10-04T02:44:21+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/nclex-creators.json",
-      "priorBlobSha": "f3b6f2c2481a7569fbeb32a2e07de0b4998de15e"
+      "priorBlobSha": "784a24c5d91f5e65ab2008a76cade4343c71cda7"
     },
     "holdDiagnosis": {
-      "checkedAt": "2026-10-04T01:41:23+01:00",
+      "checkedAt": "2026-10-04T02:44:21+01:00",
       "status": "HOLD_REASON_UNAVAILABLE",
       "classification": {
         "providerError": "NOT_EVIDENCED",
