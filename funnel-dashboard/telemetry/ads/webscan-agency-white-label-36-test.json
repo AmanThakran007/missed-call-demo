@@ -16,37 +16,37 @@
     "FIRST_SPEND",
     "FIRST_CLICK"
   ],
-  "lastChecked": "2026-10-04T12:34:14+01:00",
+  "lastChecked": "2026-10-04T13:15:00+01:00",
   "freshness": "LIVE",
   "blocker": "AD_ACCOUNT_THRESHOLD_PAYMENT_FAILED",
   "reportingWindow": {
     "type": "relative_completed_period",
     "description": "Trailing 7 completed account-local days",
-    "observedAt": "2026-10-04T12:34:14+01:00",
-    "result": "Campaign reporting returned 2,477 impressions, 11 clicks, £26.15 spend, 0.44% CTR, £2.38 CPC and £10.56 CPM."
+    "observedAt": "2026-10-04T13:15:00+01:00",
+    "result": "Current campaign reporting returned 2,477 impressions, 11 clicks, £26.15 spend, 0.44% CTR, £2.38 CPC and £10.56 CPM."
   },
   "sourceChecks": {
     "campaignDelivery": {
-      "checkedAt": "2026-10-04T12:34:14+01:00",
-      "result": "Direct delivery diagnosis confirms the campaign remains paused and inactive. The account threshold payment failure is a blocking account-level billing issue; downstream checks were skipped after the blocker was found."
+      "checkedAt": "2026-10-04T13:15:00+01:00",
+      "result": "Campaign status remains paused. The existing account threshold-payment blocker is preserved from the last direct delivery diagnosis; this metrics refresh did not re-diagnose billing."
     },
     "performanceApi": {
-      "checkedAt": "2026-10-04T12:34:14+01:00",
-      "result": "Trailing 7 completed account-local days returned 2,477 impressions, 11 clicks, £26.15 spend, 0.44% CTR, £2.38 CPC and £10.56 CPM."
+      "checkedAt": "2026-10-04T13:15:00+01:00",
+      "result": "Current Ads Manager campaign reporting returned 2,477 impressions, 11 clicks, £26.15 spend, 0.44% CTR, £2.38 CPC and £10.56 CPM; no metric change from the prior verified snapshot."
     },
     "ad": {
       "checkedAt": "2026-10-04T12:34:14+01:00",
       "result": "The ad group remains active with no low-bid warning. The Agency White Label creative remains active and approved, but both report serving issues inherited from the paused campaign and failed account threshold payment."
     },
     "gmail": {
-      "checkedAt": "2026-10-04T12:34:14+01:00",
-      "result": "No new Agency White Label reply, bounce, opt-out, demo request or partnership question appeared across the nine authorized inboxes."
+      "checkedAt": "2026-10-04T13:15:00+01:00",
+      "result": "All nine inboxes were checked for current-day inbound mail; no new Agency White Label reply, bounce, opt-out, demo request or partnership question was found."
     },
     "github": {
-      "checkedAt": "2026-10-04T12:34:14+01:00",
+      "checkedAt": "2026-10-04T13:15:00+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/ads/webscan-agency-white-label-36-test.json",
-      "priorBlobSha": "95b2d35fbcc9723590fa9c0986d6d0d6f5789001"
+      "priorBlobSha": "ff4223c52065a5574846e57e6bd315c29e2aa31d"
     }
   }
 }
