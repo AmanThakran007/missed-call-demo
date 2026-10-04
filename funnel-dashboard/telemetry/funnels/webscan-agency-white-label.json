@@ -54,48 +54,64 @@
   },
   "sendingPolicy": {
     "mode": "FIXED_CAP",
-    "capPerInbox": null,
-    "capPerInboxMin": 83,
-    "capPerInboxMax": 84,
-    "totalCap": 500,
+    "capPerInbox": 112,
+    "capPerInboxMin": 112,
+    "capPerInboxMax": 112,
+    "totalCap": 1008,
     "effectiveDate": "2026-10-04",
     "stagedCapsPerInbox": [],
-    "aggregateFunnelCap": 48,
-    "funnelCapPerInbox": 8,
+    "aggregateFunnelCap": 99,
+    "funnelCapPerInbox": 11,
     "allMailboxLoadGuard": 120,
     "workflowTested": false,
     "mailboxCaps": [
       {
-        "mailbox": "amanthakranengland@gmail.com",
-        "configuredDailyCap": 84,
-        "agencyWhiteLabelCap": 8
+        "mailbox": "England inbox",
+        "configuredDailyCap": 112,
+        "agencyWhiteLabelCap": 11
       },
       {
-        "mailbox": "helpme.ecommerce@gmail.com",
-        "configuredDailyCap": 84,
-        "agencyWhiteLabelCap": 8
+        "mailbox": "Ecommerce inbox",
+        "configuredDailyCap": 112,
+        "agencyWhiteLabelCap": 11
       },
       {
-        "mailbox": "bharatfare@gmail.com",
-        "configuredDailyCap": 83,
-        "agencyWhiteLabelCap": 8
+        "mailbox": "BharatFare inbox",
+        "configuredDailyCap": 112,
+        "agencyWhiteLabelCap": 11
       },
       {
-        "mailbox": "amanthakran8891@gmail.com",
-        "configuredDailyCap": 83,
-        "agencyWhiteLabelCap": 8
+        "mailbox": "8891 inbox",
+        "configuredDailyCap": 112,
+        "agencyWhiteLabelCap": 11
       },
       {
-        "mailbox": "amanthakran.dreams@gmail.com",
-        "configuredDailyCap": 83,
-        "agencyWhiteLabelCap": 8
+        "mailbox": "Dreams inbox",
+        "configuredDailyCap": 112,
+        "agencyWhiteLabelCap": 11
       },
       {
-        "mailbox": "aman.thakran.consulting@gmail.com",
-        "configuredDailyCap": 83,
-        "agencyWhiteLabelCap": 8
+        "mailbox": "Consulting inbox",
+        "configuredDailyCap": 112,
+        "agencyWhiteLabelCap": 11
+      },
+      {
+        "mailbox": "India inbox",
+        "configuredDailyCap": 112,
+        "agencyWhiteLabelCap": 11
+      },
+      {
+        "mailbox": "BharatFare Team inbox",
+        "configuredDailyCap": 112,
+        "agencyWhiteLabelCap": 11
+      },
+      {
+        "mailbox": "BharatFare UK inbox",
+        "configuredDailyCap": 112,
+        "agencyWhiteLabelCap": 11
       }
-    ]
+    ],
+    "inboxCount": 9
   },
   "holdDiagnosis": {
     "checkedAt": "2026-10-03T23:29:14+01:00",
@@ -105,5 +121,33 @@
     "requiredEvidence": "Original rejection output or a separately authorized send during the outreach window with Gmail Sent and From-header read-back verification.",
     "correctionVerified": false,
     "sendingConfirmed": false
+  },
+  "prospectProduction": {
+    "schemaVersion": 1,
+    "instrumentedAt": "2026-10-04T00:45:55.292Z",
+    "status": "AWAITING_FIRST_MEASURED_RUN",
+    "historicalRunCoverage": "INCOMPLETE",
+    "historicalEvidence": {
+      "prospectsResearched": 20,
+      "firstEmailsSent": 0,
+      "sourceTimestamp": "2026-10-03T23:29:14+01:00",
+      "scope": "Historical cumulative funnel telemetry; no complete candidate-level or per-run production audit."
+    },
+    "sourceAudit": {
+      "checkedAt": "2026-10-04T00:45:55.292Z",
+      "status": "PARTIAL",
+      "summary": "Historical cumulative research is recorded, but the complete candidate-level source list and suppression/ownership evidence were not recovered. No verified ready-stock total."
+    },
+    "queueAudit": {
+      "status": "UNVERIFIED",
+      "checkedAt": null,
+      "scope": "Complete current WebScan Agency White Label candidate queue and nine-inbox ownership/suppression history",
+      "readyFirstTouches": null,
+      "dueFollowUps": null,
+      "awaitingVerification": null,
+      "blocked": null,
+      "byInbox": []
+    },
+    "runs": []
   }
 }
