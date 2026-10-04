@@ -16,37 +16,37 @@
     "FIRST_SPEND",
     "FIRST_CLICK"
   ],
-  "lastChecked": "2026-10-04T08:08:06+01:00",
+  "lastChecked": "2026-10-04T08:31:42+01:00",
   "freshness": "LIVE",
   "blocker": "AD_ACCOUNT_THRESHOLD_PAYMENT_FAILED",
   "reportingWindow": {
     "type": "relative_completed_period",
     "description": "Trailing 7 completed account-local days through the latest completed hour",
-    "observedAt": "2026-10-04T08:08:06+01:00",
+    "observedAt": "2026-10-04T08:31:42+01:00",
     "result": "Campaign reporting returned 2,477 impressions, 11 clicks, £26.15 spend, 0.44% CTR, £2.38 CPC and £10.56 CPM."
   },
   "sourceChecks": {
     "campaignDelivery": {
-      "checkedAt": "2026-10-04T08:08:06+01:00",
+      "checkedAt": "2026-10-04T08:31:42+01:00",
       "result": "Campaign remains paused and inactive. The blocking account issue is ad_account_threshold_payment_failed; campaign_not_active is also reported. Descendant delivery checks were partially skipped."
     },
     "performanceApi": {
-      "checkedAt": "2026-10-04T08:08:06+01:00",
+      "checkedAt": "2026-10-04T08:31:42+01:00",
       "result": "Trailing 7 completed account-local days through the latest completed hour returned 2,477 impressions, 11 clicks, £26.15 spend, 0.44% CTR, £2.38 CPC and £10.56 CPM."
     },
     "ad": {
-      "checkedAt": "2026-10-04T07:05:11+01:00",
-      "result": "The Agency White Label creative remains paused and approved, and it is not serving because the parent campaign is paused and the account threshold payment failed."
+      "checkedAt": "2026-10-04T08:31:42+01:00",
+      "result": "The Agency White Label creative remains active and approved, but it is not serving because the parent campaign is paused and the account threshold payment failed."
     },
     "gmail": {
-      "checkedAt": "2026-10-04T08:08:06+01:00",
+      "checkedAt": "2026-10-04T08:31:42+01:00",
       "result": "No new Agency White Label campaign reply, bounce, opt-out, ad-billing or delivery message appeared across the nine authorized inboxes."
     },
     "github": {
-      "checkedAt": "2026-10-04T08:08:06+01:00",
+      "checkedAt": "2026-10-04T08:31:42+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/ads/webscan-agency-white-label-36-test.json",
-      "priorBlobSha": "0e563608948713e9f8c60f4a60c7b3ab2a86c395"
+      "priorBlobSha": "48b7af3c98b8a3a0471bf14d4364794a40c22d30"
     }
   }
 }
