@@ -9,20 +9,23 @@
   "status": "RUNNING",
   "runId": "6ac0616fa5008191adfe432561de7eff_2026-10-04T12:55:38+01:00",
   "startedAt": "2026-10-04T12:55:38+01:00",
-  "heartbeatAt": "2026-10-04T11:56:21.084Z",
+  "heartbeatAt": "2026-10-04T11:56:40.125Z",
   "finishedAt": null,
-  "phase": "PREPARE",
+  "phase": "REPORTING",
   "outcome": null,
   "metrics": {
     "candidatesAssessed": null,
     "newlyQualified": null,
     "readyBefore": null,
     "readyAfter": null,
-    "firstTouchesSent": null,
-    "followUpsSent": null
+    "firstTouchesSent": 0,
+    "followUpsSent": 0
   },
-  "blockers": [],
-  "nextAction": "Inspect the private supplier queue for due follow-ups and future-ready candidates; first-touch cumulative allowance is exhausted.",
+  "blockers": [
+    "PRIVATE_LEDGER_UNAVAILABLE",
+    "HOURLY_FIRST_TOUCH_CUMULATIVE_USED"
+  ],
+  "nextAction": "Write verified cumulative telemetry, then close the run as partial without sending.",
   "lastCompleted": null,
   "history": []
 }
