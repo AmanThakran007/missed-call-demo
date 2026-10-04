@@ -10,13 +10,13 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-04T11:26:04+01:00",
-  "nextRun": "2026-10-04T12:30:00+01:00",
+  "lastRun": "2026-10-04T12:30:48+01:00",
+  "nextRun": "2026-10-04T13:30:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE; QUEUE_RECONSTRUCTION_INCOMPLETE; ADS_PAUSED_PAYMENT_FAILED: Historical first-touch rejection evidence remains unavailable, the complete candidate-level ownership/suppression queue is not yet reconstructed, and the £36 ad campaign remains paused because the account threshold payment failed.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T11:30:52+01:00",
+      "checkedAt": "2026-10-04T12:34:14+01:00",
       "accounts": [
         "England inbox",
         "Ecommerce inbox",
@@ -28,27 +28,27 @@
         "BharatFare Team inbox",
         "BharatFare UK inbox"
       ],
-      "scope": "Recent inbound monitoring plus complete London-day Sent and rolling-24-hour load checks across all nine authorized WebScan inboxes for Agency White Label replies, bounces, opt-outs, demo requests, partnership questions and provider restrictions.",
-      "result": "No new Agency White Label human reply, bounce, opt-out, demo request, partnership question or provider restriction. Five unrelated promotional or account-marketing messages were excluded. Seven all-campaign messages were found in Sent today; none belonged to Agency White Label. All nine rolling-24-hour Sent counts remained below the 120-message load guard."
+      "scope": "Recent inbound monitoring across all nine authorized WebScan inboxes for Agency White Label replies, bounces, opt-outs, demo requests and partnership questions.",
+      "result": "No new Agency White Label human reply, bounce, opt-out, demo request or partnership question. Unrelated consumer promotions and a separate BharatFare supplier response were excluded."
     },
     "adsManager": {
-      "checkedAt": "2026-10-04T11:30:52+01:00",
+      "checkedAt": "2026-10-04T12:34:14+01:00",
       "account": "WebRevenue Scan",
       "campaign": "WebScan Agency White Label - £36 Test",
-      "reportingPeriod": "Trailing 7 completed account-local days through the latest completed hour",
+      "reportingPeriod": "Trailing 7 completed account-local days",
       "granularity": "campaign total",
-      "result": "Campaign remains paused and inactive. The blocking account issue is ad_account_threshold_payment_failed; campaign_not_active is also reported. Reporting returned 2,477 impressions, 11 clicks, £26.15 spend, 0.44% CTR, £2.38 CPC and £10.56 CPM. The ad group is active with no low-bid warning, and the creative remains active and approved."
+      "result": "Campaign remains paused and inactive. The blocking account issue is ad_account_threshold_payment_failed; campaign_not_active is also reported. Reporting returned 2,477 impressions, 11 clicks, £26.15 spend, 0.44% CTR, £2.38 CPC and £10.56 CPM. The ad group is active with no low-bid warning, and the Agency White Label creative remains active and approved."
     },
     "github": {
-      "checkedAt": "2026-10-04T11:30:52+01:00",
+      "checkedAt": "2026-10-04T12:34:14+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/webscan-agency-white-label.json",
-      "priorBlobSha": "3005382bc6fa6934b0c3249f7a23693755cd077c"
+      "priorBlobSha": "6ef16be0fa1bec526f9ec05f05c00ad69830c4fd"
     },
     "privateLedger": {
-      "checkedAt": "2026-10-04T11:30:52+01:00",
+      "checkedAt": "2026-10-04T12:34:14+01:00",
       "status": "PERSISTED",
-      "result": "The outreach-window run record was appended to the existing private ledger using version guard 8, persisted as version 9, and read back successfully. Queue readiness remains unverified because historical candidate-level ownership and suppression reconstruction is incomplete."
+      "result": "The monitoring run was appended to the existing private ledger using version guard 9, persisted as version 10, and read back successfully. Queue readiness remains unverified because historical candidate-level ownership and suppression reconstruction is incomplete."
     },
     "sixInboxReconciliation": {
       "checkedAt": "2026-10-04T11:30:52+01:00",
@@ -124,7 +124,7 @@
     "inboxCount": 9
   },
   "holdDiagnosis": {
-    "checkedAt": "2026-10-04T11:30:52+01:00",
+    "checkedAt": "2026-10-04T12:34:14+01:00",
     "status": "HOLD_REASON_UNAVAILABLE",
     "evidence": "Historical run summaries confirm rejected send attempts, but the original tool rejection output is unavailable in the current execution context.",
     "scope": "Cannot classify the historical send restriction as action-specific versus campaign-wide from currently available direct evidence.",
@@ -150,7 +150,7 @@
     },
     "queueAudit": {
       "status": "PARTIAL",
-      "checkedAt": "2026-10-04T11:30:52+01:00",
+      "checkedAt": "2026-10-04T12:34:14+01:00",
       "scope": "Complete current WebScan Agency White Label candidate queue and nine-inbox ownership/suppression history",
       "readyFirstTouches": null,
       "dueFollowUps": null,
@@ -284,6 +284,24 @@
         "firstTouchesSent": 0,
         "followUpsSent": 0,
         "durationSeconds": 288
+      },
+      {
+        "runId": "6ac0618cc9488191a28d80f3c5601199:2026-10-04T12:30:48+01:00",
+        "startedAt": "2026-10-04T12:30:48+01:00",
+        "finishedAt": "2026-10-04T12:33:12+01:00",
+        "kind": "MONITORING",
+        "measurementStatus": "PARTIAL",
+        "candidatesAssessed": 0,
+        "newlyQualified": 0,
+        "duplicatesRejected": 0,
+        "rejected": 0,
+        "awaitingVerification": null,
+        "readyBefore": null,
+        "readyAfter": null,
+        "dueFollowUps": null,
+        "firstTouchesSent": 0,
+        "followUpsSent": 0,
+        "durationSeconds": 144
       }
     ]
   }
