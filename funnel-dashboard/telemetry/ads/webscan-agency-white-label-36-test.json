@@ -16,37 +16,37 @@
     "FIRST_SPEND",
     "FIRST_CLICK"
   ],
-  "lastChecked": "2026-10-04T10:28:30+01:00",
+  "lastChecked": "2026-10-04T11:01:59+01:00",
   "freshness": "LIVE",
   "blocker": "AD_ACCOUNT_THRESHOLD_PAYMENT_FAILED",
   "reportingWindow": {
     "type": "relative_completed_period",
-    "description": "Trailing 7 completed account-local days through the latest completed hour",
-    "observedAt": "2026-10-04T10:28:30+01:00",
+    "description": "Trailing 7 completed account-local days",
+    "observedAt": "2026-10-04T11:01:59+01:00",
     "result": "Campaign reporting returned 2,477 impressions, 11 clicks, £26.15 spend, 0.44% CTR, £2.38 CPC and £10.56 CPM."
   },
   "sourceChecks": {
     "campaignDelivery": {
-      "checkedAt": "2026-10-04T10:28:30+01:00",
-      "result": "The campaign is paused and inactive. Current delivery checks report the blocking account issue ad_account_threshold_payment_failed and campaign_not_active; the delivery snapshot was partial because descendant checks were skipped, but direct ad-group and creative reads completed separately."
+      "checkedAt": "2026-10-04T11:01:59+01:00",
+      "result": "The campaign remains paused and inactive. The existing account payment-threshold blocker is preserved from the last direct delivery diagnosis; this run rechecked campaign status but did not re-diagnose delivery."
     },
     "performanceApi": {
-      "checkedAt": "2026-10-04T10:28:30+01:00",
-      "result": "Trailing 7 completed account-local days through the latest completed hour returned 2,477 impressions, 11 clicks, £26.15 spend, 0.44% CTR, £2.38 CPC and £10.56 CPM."
+      "checkedAt": "2026-10-04T11:01:59+01:00",
+      "result": "Trailing 7 completed account-local days returned 2,477 impressions, 11 clicks, £26.15 spend, 0.44% CTR, £2.38 CPC and £10.56 CPM."
     },
     "ad": {
-      "checkedAt": "2026-10-04T10:28:30+01:00",
+      "checkedAt": "2026-10-04T11:01:59+01:00",
       "result": "The ad group remains active with no low-bid warning. The Agency White Label creative remains active and approved, but both report serving issues inherited from the paused campaign and failed account threshold payment."
     },
     "gmail": {
-      "checkedAt": "2026-10-04T10:28:30+01:00",
-      "result": "No new Agency White Label campaign reply, bounce, opt-out, ad-billing or delivery message appeared across the nine authorized inboxes; eight unrelated promotional or account-marketing messages were excluded."
+      "checkedAt": "2026-10-04T11:01:59+01:00",
+      "result": "No new received mail appeared across the nine authorized inboxes after the preceding coordinator check. Four new all-campaign Sent messages were unrelated BharatFare travel/supplier activity."
     },
     "github": {
-      "checkedAt": "2026-10-04T10:28:30+01:00",
+      "checkedAt": "2026-10-04T11:01:59+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/ads/webscan-agency-white-label-36-test.json",
-      "priorBlobSha": "8db29af1506721cdfec37ee2837d95de4a57bcad"
+      "priorBlobSha": "55546e84e56ba1eb5fdbd0de73e8a615eee02dba"
     }
   }
 }
