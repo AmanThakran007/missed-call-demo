@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "date": "2026-10-04",
   "timezone": "Europe/London",
-  "checkedAt": "2026-10-04T00:07:20.000Z",
-  "source": "Fully paginated Gmail Sent checks plus targeted received-mail checks across all eight connected inboxes",
-  "status": "PARTIAL",
-  "scope": "Nine inboxes configured at 110 WebScan outbound messages each per London day. Existing eight-account counters retain their original evidence timestamps; the ninth account awaits Sent and ledger reconciliation. Aggregate activity and remaining quota are unknown until all nine accounts are reconciled.",
+  "checkedAt": "2026-10-04T00:28:18.652Z",
+  "source": "Fully paginated Gmail Sent checks across all nine connected inboxes",
+  "status": "SOURCE_RECONCILED",
+  "scope": "Sent counts verified for 4 October 2026, Europe/London, and rolling 24 hours. All nine inboxes have zero Sent messages today, so WebScan first touches, cold follow-ups and inbound sends today are zero. Reply, bounce and opt-out evidence retains its own earlier timestamp; the ninth account's engagement counters remain unknown. Sent does not prove delivery.",
   "effectiveDate": "2026-10-04",
   "stagedCapsPerInbox": [],
   "rows": [
@@ -43,11 +43,12 @@
         "OUTSIDE_ALLOWED_OUTREACH_HOUR"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T00:07:20.000Z",
+      "checkedAt": "2026-10-04T00:28:18.652Z",
       "configuredGeneralSmeDailyCap": 55,
       "qualificationGateActive": false,
       "remainingQuotaToday": 110,
-      "nineInboxSendTest": "NOT_YET_RUN"
+      "nineInboxSendTest": "NOT_YET_RUN",
+      "engagementCheckedAt": "2026-10-04T00:07:20.000Z"
     },
     {
       "mailbox": "Ecommerce inbox",
@@ -83,11 +84,12 @@
         "OUTSIDE_ALLOWED_OUTREACH_HOUR"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T00:07:20.000Z",
+      "checkedAt": "2026-10-04T00:28:18.652Z",
       "configuredGeneralSmeDailyCap": 55,
       "qualificationGateActive": false,
       "remainingQuotaToday": 110,
-      "nineInboxSendTest": "NOT_YET_RUN"
+      "nineInboxSendTest": "NOT_YET_RUN",
+      "engagementCheckedAt": "2026-10-04T00:07:20.000Z"
     },
     {
       "mailbox": "BharatFare inbox",
@@ -123,11 +125,12 @@
         "OUTSIDE_ALLOWED_OUTREACH_HOUR"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T00:07:20.000Z",
+      "checkedAt": "2026-10-04T00:28:18.652Z",
       "configuredGeneralSmeDailyCap": 55,
       "qualificationGateActive": false,
       "remainingQuotaToday": 110,
-      "nineInboxSendTest": "NOT_YET_RUN"
+      "nineInboxSendTest": "NOT_YET_RUN",
+      "engagementCheckedAt": "2026-10-04T00:07:20.000Z"
     },
     {
       "mailbox": "8891 inbox",
@@ -163,11 +166,12 @@
         "OUTSIDE_ALLOWED_OUTREACH_HOUR"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T00:07:20.000Z",
+      "checkedAt": "2026-10-04T00:28:18.652Z",
       "configuredGeneralSmeDailyCap": 55,
       "qualificationGateActive": false,
       "remainingQuotaToday": 110,
-      "nineInboxSendTest": "NOT_YET_RUN"
+      "nineInboxSendTest": "NOT_YET_RUN",
+      "engagementCheckedAt": "2026-10-04T00:07:20.000Z"
     },
     {
       "mailbox": "Dreams inbox",
@@ -203,11 +207,12 @@
         "OUTSIDE_ALLOWED_OUTREACH_HOUR"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T00:07:20.000Z",
+      "checkedAt": "2026-10-04T00:28:18.652Z",
       "configuredGeneralSmeDailyCap": 55,
       "qualificationGateActive": false,
       "remainingQuotaToday": 110,
-      "nineInboxSendTest": "NOT_YET_RUN"
+      "nineInboxSendTest": "NOT_YET_RUN",
+      "engagementCheckedAt": "2026-10-04T00:07:20.000Z"
     },
     {
       "mailbox": "Consulting inbox",
@@ -243,11 +248,12 @@
         "OUTSIDE_ALLOWED_OUTREACH_HOUR"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T00:07:20.000Z",
+      "checkedAt": "2026-10-04T00:28:18.652Z",
       "configuredGeneralSmeDailyCap": 55,
       "qualificationGateActive": false,
       "remainingQuotaToday": 110,
-      "nineInboxSendTest": "NOT_YET_RUN"
+      "nineInboxSendTest": "NOT_YET_RUN",
+      "engagementCheckedAt": "2026-10-04T00:07:20.000Z"
     },
     {
       "mailbox": "India inbox",
@@ -283,11 +289,12 @@
         "OUTSIDE_ALLOWED_OUTREACH_HOUR"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T00:07:20.000Z",
+      "checkedAt": "2026-10-04T00:28:18.652Z",
       "configuredGeneralSmeDailyCap": 55,
       "qualificationGateActive": false,
       "remainingQuotaToday": 110,
-      "nineInboxSendTest": "NOT_YET_RUN"
+      "nineInboxSendTest": "NOT_YET_RUN",
+      "engagementCheckedAt": "2026-10-04T00:07:20.000Z"
     },
     {
       "mailbox": "BharatFare Team inbox",
@@ -323,24 +330,25 @@
         "OUTSIDE_ALLOWED_OUTREACH_HOUR"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T00:07:20.000Z",
+      "checkedAt": "2026-10-04T00:28:18.652Z",
       "configuredGeneralSmeDailyCap": 55,
       "qualificationGateActive": false,
       "remainingQuotaToday": 110,
-      "nineInboxSendTest": "NOT_YET_RUN"
+      "nineInboxSendTest": "NOT_YET_RUN",
+      "engagementCheckedAt": "2026-10-04T00:07:20.000Z"
     },
     {
       "mailbox": "BharatFare UK inbox",
       "date": "2026-10-04",
-      "checkedAt": null,
-      "sourceRead": "UNVERIFIED",
+      "checkedAt": "2026-10-04T00:28:18.652Z",
+      "sourceRead": "VERIFIED",
       "configuredDailyCap": 110,
       "configuredGeneralSmeDailyCap": 55,
       "qualificationGateActive": false,
       "qualifyingDaysAtStage": 0,
       "nineInboxSendTest": "NOT_YET_RUN",
-      "remainingQuotaToday": null,
-      "remainingQuotaForEffectiveDate": null,
+      "remainingQuotaToday": 110,
+      "remainingQuotaForEffectiveDate": 110,
       "prospectQueue": {
         "status": "UNVERIFIED",
         "checkedAt": null,
@@ -356,34 +364,33 @@
         "pricingOrCall": null,
         "notInterested": null
       },
-      "skippedReasons": [
-        "NEW_MAILBOX_RECONCILIATION_PENDING"
-      ],
-      "allSentToday": null,
-      "allSentRolling24h": null,
-      "webscanFirstTouchesToday": null,
-      "webscanFollowUpsToday": null,
-      "webscanInboundMessagesToday": null,
+      "skippedReasons": [],
+      "allSentToday": 0,
+      "allSentRolling24h": 0,
+      "webscanFirstTouchesToday": 0,
+      "webscanFollowUpsToday": 0,
+      "webscanInboundMessagesToday": 0,
       "webscanHumanRepliesToday": null,
       "webscanBouncesToday": null,
-      "webscanOptOutsToday": null
+      "webscanOptOutsToday": null,
+      "engagementCheckedAt": null
     }
   ],
   "totals": {
-    "allSentToday": null,
-    "allSentRolling24h": null,
-    "webscanFirstTouchesToday": null,
-    "webscanFollowUpsToday": null,
-    "webscanInboundMessagesToday": null,
+    "allSentToday": 0,
+    "allSentRolling24h": 31,
+    "webscanFirstTouchesToday": 0,
+    "webscanFollowUpsToday": 0,
+    "webscanInboundMessagesToday": 0,
     "webscanHumanRepliesToday": null,
     "webscanBouncesToday": null,
     "webscanOptOutsToday": null,
-    "webscanTotalSentToday": null,
-    "webscanOutboundToday": null,
+    "webscanTotalSentToday": 0,
+    "webscanOutboundToday": 0,
     "configuredDailyCap": 990,
     "configuredGeneralSmeDailyCap": 495,
-    "remainingQuotaForEffectiveDate": null,
-    "remainingQuotaToday": null
+    "remainingQuotaForEffectiveDate": 990,
+    "remainingQuotaToday": 990
   },
   "funnelFirstTouchesToday": {
     "webscan-general-sme": 0,
@@ -392,10 +399,10 @@
     "webscan-agency-white-label": 0
   },
   "verification": {
-    "gmailRead": "PARTIAL",
-    "sentPagination": "PARTIAL",
-    "funnelFirstTouchReconciliation": "PENDING_NINTH_MAILBOX_RECONCILIATION",
-    "aggregateSumCheck": "PENDING_NINTH_MAILBOX_RECONCILIATION",
+    "gmailRead": "PASSED",
+    "sentPagination": "COMPLETE",
+    "funnelFirstTouchReconciliation": "ZERO_CONFIRMED_FROM_ALL_SENT",
+    "aggregateSumCheck": "PASSED_SENT_COUNTS",
     "mailboxLoadGuardEvidence": "RECHECK_BEFORE_SENDING",
     "futureScheduledSending": "NOT_YET_RUN",
     "senderHeaderChecks": "NOT_YET_RUN",
@@ -410,8 +417,7 @@
     "India inbox, BharatFare Team inbox and BharatFare UK inbox require first-successful-send From-header and provider-restriction verification before further WebScan sending from those accounts.",
     "Prospect and reply queues remain UNVERIFIED because a complete cross-eight private-ledger and thread audit has not succeeded; no queue count was inferred.",
     "Professional Services and Agency White Label retain recorded send-denial blockers; no blocked send was retried during this sync.",
-    "Public GitHub Pages deployment visibility remains unverified from this client environment.",
-    "BharatFare UK inbox is configured; its message counters and the nine-account activity totals await reconciliation."
+    "Public GitHub Pages deployment visibility remains unverified from this client environment."
   ],
   "automation": {
     "checkedAt": "2026-10-04T00:08:40.000Z",
