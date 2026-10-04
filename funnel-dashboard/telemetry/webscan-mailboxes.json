@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "date": "2026-10-04",
   "timezone": "Europe/London",
-  "checkedAt": "2026-10-04T05:01:08Z",
+  "checkedAt": "2026-10-04T06:05:11Z",
   "source": "Fully paginated Gmail Sent checks plus targeted received-mail checks across all nine connected inboxes",
   "status": "SOURCE_RECONCILED",
-  "scope": "London calendar-day and rolling-24-hour Sent counts are verified from Gmail across nine accounts. The London day contains 0 Sent messages; the rolling 24-hour period contains 31 all-campaign Sent messages (24 Dreams, 7 Consulting). WebScan counters for the London day remain zero from Gmail Sent and all four funnel records. No new campaign reply, bounce or opt-out appeared since the previous reconciliation. One unrelated social-network notification was excluded. Sent means present in Gmail Sent, not confirmed delivered.",
+  "scope": "London calendar-day and rolling-24-hour Sent counts are verified from Gmail across nine accounts. The London day contains 0 Sent messages; the rolling 24-hour period contains 31 all-campaign Sent messages (24 Dreams, 7 Consulting). WebScan counters for the London day remain zero from Gmail Sent and all four funnel records. No new campaign reply, bounce or opt-out appeared since the previous reconciliation. One unrelated Experian credit-card promotion was excluded. Sent means present in Gmail Sent, not confirmed delivered.",
   "effectiveDate": "2026-10-04",
   "stagedCapsPerInbox": [],
   "rows": [
@@ -42,12 +42,12 @@
         "OUTSIDE_ALLOWED_OUTREACH_HOUR"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T05:01:08Z",
+      "checkedAt": "2026-10-04T06:05:11Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 112,
       "nineInboxSendTest": "NOT_YET_RUN",
-      "engagementCheckedAt": "2026-10-04T05:01:08Z"
+      "engagementCheckedAt": "2026-10-04T06:05:11Z"
     },
     {
       "mailbox": "Ecommerce inbox",
@@ -82,12 +82,12 @@
         "OUTSIDE_ALLOWED_OUTREACH_HOUR"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T05:01:08Z",
+      "checkedAt": "2026-10-04T06:05:11Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 112,
       "nineInboxSendTest": "NOT_YET_RUN",
-      "engagementCheckedAt": "2026-10-04T05:01:08Z"
+      "engagementCheckedAt": "2026-10-04T06:05:11Z"
     },
     {
       "mailbox": "BharatFare inbox",
@@ -122,12 +122,12 @@
         "OUTSIDE_ALLOWED_OUTREACH_HOUR"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T05:01:08Z",
+      "checkedAt": "2026-10-04T06:05:11Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 112,
       "nineInboxSendTest": "NOT_YET_RUN",
-      "engagementCheckedAt": "2026-10-04T05:01:08Z"
+      "engagementCheckedAt": "2026-10-04T06:05:11Z"
     },
     {
       "mailbox": "8891 inbox",
@@ -162,12 +162,12 @@
         "OUTSIDE_ALLOWED_OUTREACH_HOUR"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T05:01:08Z",
+      "checkedAt": "2026-10-04T06:05:11Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 112,
       "nineInboxSendTest": "NOT_YET_RUN",
-      "engagementCheckedAt": "2026-10-04T05:01:08Z"
+      "engagementCheckedAt": "2026-10-04T06:05:11Z"
     },
     {
       "mailbox": "Dreams inbox",
@@ -202,12 +202,12 @@
         "OUTSIDE_ALLOWED_OUTREACH_HOUR"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T05:01:08Z",
+      "checkedAt": "2026-10-04T06:05:11Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 112,
       "nineInboxSendTest": "NOT_YET_RUN",
-      "engagementCheckedAt": "2026-10-04T05:01:08Z"
+      "engagementCheckedAt": "2026-10-04T06:05:11Z"
     },
     {
       "mailbox": "Consulting inbox",
@@ -242,12 +242,12 @@
         "OUTSIDE_ALLOWED_OUTREACH_HOUR"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T05:01:08Z",
+      "checkedAt": "2026-10-04T06:05:11Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 112,
       "nineInboxSendTest": "NOT_YET_RUN",
-      "engagementCheckedAt": "2026-10-04T05:01:08Z"
+      "engagementCheckedAt": "2026-10-04T06:05:11Z"
     },
     {
       "mailbox": "India inbox",
@@ -282,12 +282,12 @@
         "OUTSIDE_ALLOWED_OUTREACH_HOUR"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T05:01:08Z",
+      "checkedAt": "2026-10-04T06:05:11Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 112,
       "nineInboxSendTest": "NOT_YET_RUN",
-      "engagementCheckedAt": "2026-10-04T05:01:08Z"
+      "engagementCheckedAt": "2026-10-04T06:05:11Z"
     },
     {
       "mailbox": "BharatFare Team inbox",
@@ -322,17 +322,17 @@
         "OUTSIDE_ALLOWED_OUTREACH_HOUR"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T05:01:08Z",
+      "checkedAt": "2026-10-04T06:05:11Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 112,
       "nineInboxSendTest": "NOT_YET_RUN",
-      "engagementCheckedAt": "2026-10-04T05:01:08Z"
+      "engagementCheckedAt": "2026-10-04T06:05:11Z"
     },
     {
       "mailbox": "BharatFare UK inbox",
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T05:01:08Z",
+      "checkedAt": "2026-10-04T06:05:11Z",
       "sourceRead": "VERIFIED",
       "configuredDailyCap": 112,
       "configuredGeneralSmeDailyCap": 57,
@@ -367,7 +367,7 @@
       "webscanHumanRepliesToday": null,
       "webscanBouncesToday": null,
       "webscanOptOutsToday": null,
-      "engagementCheckedAt": "2026-10-04T05:01:08Z"
+      "engagementCheckedAt": "2026-10-04T06:05:11Z"
     }
   ],
   "totals": {
@@ -414,10 +414,10 @@
     "Public GitHub Pages deployment visibility remains unverified from this client environment."
   ],
   "automation": {
-    "checkedAt": "2026-10-04T05:01:08Z",
+    "checkedAt": "2026-10-04T06:05:11Z",
     "enabledTasks": 15,
     "enabledWebscanTasks": 5,
-    "lastCoordinatorRun": "2026-10-04T05:01:08Z"
+    "lastCoordinatorRun": "2026-10-04T06:05:11Z"
   },
   "sendingPolicy": {
     "mode": "FIXED_CAP",
