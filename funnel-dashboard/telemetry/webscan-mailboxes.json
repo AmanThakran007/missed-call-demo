@@ -11,8 +11,8 @@
   "rows": [
     {
       "mailbox": "England inbox",
-      "allSentToday": 0,
-      "webscanFirstTouchesToday": 0,
+      "allSentToday": 1,
+      "webscanFirstTouchesToday": 1,
       "webscanFollowUpsToday": 0,
       "webscanInboundMessagesToday": 0,
       "webscanHumanRepliesToday": null,
@@ -21,8 +21,8 @@
       "configuredDailyCap": 112,
       "qualifyingDaysAtStage": 0,
       "sourceRead": "VERIFIED",
-      "allSentRolling24h": 0,
-      "remainingQuotaForEffectiveDate": 112,
+      "allSentRolling24h": 1,
+      "remainingQuotaForEffectiveDate": 111,
       "prospectQueue": {
         "status": "UNVERIFIED",
         "checkedAt": null,
@@ -38,15 +38,13 @@
         "pricingOrCall": null,
         "notInterested": null
       },
-      "skippedReasons": [
-        "OUTSIDE_ALLOWED_OUTREACH_HOUR"
-      ],
+      "skippedReasons": [],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T07:08:06Z",
+      "checkedAt": "2026-10-04T08:06:39Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
-      "remainingQuotaToday": 112,
-      "nineInboxSendTest": "NOT_YET_RUN",
+      "remainingQuotaToday": 111,
+      "nineInboxSendTest": "SENT_AND_HEADER_VERIFIED",
       "engagementCheckedAt": "2026-10-04T07:08:06Z"
     },
     {
@@ -371,23 +369,23 @@
     }
   ],
   "totals": {
-    "allSentToday": 0,
-    "allSentRolling24h": 31,
-    "webscanFirstTouchesToday": 0,
+    "allSentToday": 1,
+    "allSentRolling24h": 32,
+    "webscanFirstTouchesToday": 1,
     "webscanFollowUpsToday": 0,
     "webscanInboundMessagesToday": 0,
     "webscanHumanRepliesToday": null,
     "webscanBouncesToday": null,
     "webscanOptOutsToday": null,
-    "webscanTotalSentToday": 0,
-    "webscanOutboundToday": 0,
+    "webscanTotalSentToday": 1,
+    "webscanOutboundToday": 1,
     "configuredDailyCap": 1008,
     "configuredGeneralSmeDailyCap": 513,
-    "remainingQuotaForEffectiveDate": 1008,
-    "remainingQuotaToday": 1008
+    "remainingQuotaForEffectiveDate": 1007,
+    "remainingQuotaToday": 1007
   },
   "funnelFirstTouchesToday": {
-    "webscan-general-sme": 0,
+    "webscan-general-sme": 1,
     "webscan-healthcare": 0,
     "webscan-professional-services": 0,
     "webscan-agency-white-label": 0
@@ -399,7 +397,7 @@
     "aggregateSumCheck": "PASSED",
     "mailboxLoadGuardEvidence": "RECHECK_BEFORE_SENDING",
     "futureScheduledSending": "NOT_YET_RUN",
-    "senderHeaderChecks": "NOT_YET_RUN",
+    "senderHeaderChecks": "PARTIAL_1_OF_9_VERIFIED",
     "newlyMappedMailboxHeaderChecks": "PENDING_FIRST_SUCCESSFUL_SEND",
     "unrelatedCampaignCumulativeMetrics": "NOT_AUDITED",
     "publicDeploymentVisibility": "BLOCKED_BY_CLIENT",
