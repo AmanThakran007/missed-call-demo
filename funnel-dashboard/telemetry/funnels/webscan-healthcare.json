@@ -2,7 +2,7 @@
   "id": "webscan-healthcare",
   "name": "WebScan Healthcare",
   "category": "WebScan / Healthcare",
-  "prospectsResearched": 11,
+  "prospectsResearched": 14,
   "firstEmailsSent": 1,
   "followUpsSent": 0,
   "humanReplies": 0,
@@ -10,13 +10,13 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-04T07:52:46+01:00",
-  "nextRun": "2026-10-04T08:48:00+01:00",
+  "lastRun": "2026-10-04T12:46:05+01:00",
+  "nextRun": "2026-10-04T13:48:00+01:00",
   "freshness": "LIVE",
   "blocker": null,
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T07:54:00+01:00",
+      "checkedAt": "2026-10-04T12:48:25+01:00",
       "accounts": [
         "amanthakranengland@gmail.com",
         "helpme.ecommerce@gmail.com",
@@ -28,14 +28,14 @@
         "bharatfare.team@gmail.com",
         "bharatfareuk@gmail.com"
       ],
-      "scope": "Incremental recent inbound monitoring across all nine authorised inboxes for Healthcare replies, bounces, opt-outs, questions, call requests and buying intent.",
-      "result": "No Healthcare campaign human reply, bounce, opt-out, follow-up, question, call request or buying-intent event was found. One unrelated credit-card promotion was excluded. No research or outreach was performed outside the permitted hour."
+      "scope": "Healthcare reply/suppression monitoring plus exact recipient and business/domain ownership checks across all nine authorised inboxes for three assessed candidates.",
+      "result": "No new Healthcare reply, bounce, opt-out, buying-intent question or call request was found. The prior confirmed first touch remained in its original Dreams thread. Three newly assessed candidates had no matching prior contact across the nine inboxes. No email was sent before the 13:00 HOURLY_V2 effective time."
     },
     "github": {
-      "checkedAt": "2026-10-04T07:54:00+01:00",
+      "checkedAt": "2026-10-04T12:48:25+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/webscan-healthcare.json",
-      "priorBlobSha": "8222c5f3cf80613dd61498b8b4e9d0748b0bb580"
+      "priorBlobSha": "6bb8cc2a4be18084f113c023c7c0c08a07bb945c"
     },
     "safetyReview": {
       "checkedAt": "2026-10-03T16:53:39+01:00",
@@ -65,11 +65,23 @@
       "workflowTested": false
     },
     "nineInboxMonitoring": {
-      "checkedAt": "2026-10-04T07:54:00+01:00",
+      "checkedAt": "2026-10-04T12:48:25+01:00",
       "status": "SOURCE_RECONCILED",
       "accountsChecked": 9,
-      "scope": "Recent inbound monitoring across all nine authorised WebScan inboxes; this monitoring-only run did not perform a London-day Sent-cap reconciliation because no send was attempted.",
-      "result": "No Healthcare campaign activity found. No outreach sent."
+      "scope": "Exact candidate ownership/suppression checks and incremental Healthcare monitoring across all nine authorised inboxes; no send-cap reconciliation was required because no send was attempted.",
+      "result": "Three candidate-level records passed cross-inbox duplicate/suppression checks; no new inbound campaign event and no outbound send."
+    },
+    "privateLedger": {
+      "checkedAt": "2026-10-04T12:48:25+01:00",
+      "status": "PERSISTED_AND_READ_BACK",
+      "libraryVersion": 3,
+      "result": "Recovered the existing contacted prospect and persisted three newly qualified candidate records with public contact evidence, verified site issues, single ownership, sender assignment and tailored drafts. Complete historical queue reconstruction remains partial."
+    },
+    "hourlyWorkflow": {
+      "checkedAt": "2026-10-04T12:48:25+01:00",
+      "version": "HOURLY_V2",
+      "effectiveAt": "2026-10-04T13:00:00+01:00",
+      "result": "This run prepared and reconciled candidates before the effective time. The run journal remains awaiting the first run starting at or after 13:00; no cold send was attempted."
     }
   },
   "sendingPolicy": {
@@ -103,28 +115,29 @@
   "prospectProduction": {
     "schemaVersion": 1,
     "instrumentedAt": "2026-10-04T00:45:55.292Z",
-    "status": "AWAITING_FIRST_MEASURED_RUN",
+    "status": "MEASURING",
     "historicalRunCoverage": "INCOMPLETE",
     "historicalEvidence": {
-      "prospectsResearched": 11,
+      "prospectsResearched": 14,
       "firstEmailsSent": 1,
-      "sourceTimestamp": "2026-10-04T00:50:49+01:00",
-      "scope": "Historical cumulative funnel telemetry; no complete candidate-level or per-run production audit."
+      "sourceTimestamp": "2026-10-04T12:48:25+01:00",
+      "scope": "Verified cumulative funnel telemetry plus candidate-level persistence for the current run; historical candidate coverage remains incomplete."
     },
     "sourceAudit": {
-      "checkedAt": "2026-10-04T00:45:55.292Z",
+      "checkedAt": "2026-10-04T12:48:25+01:00",
       "status": "PARTIAL",
-      "summary": "Historical cumulative research is recorded, but the complete candidate-level source list and suppression/ownership evidence were not recovered. No verified ready-stock total."
+      "summary": "Three new candidates and the existing contacted prospect are now persisted at candidate level. Earlier cumulative research still lacks complete historical candidate-level reconstruction."
     },
     "queueAudit": {
       "status": "PARTIAL",
-      "checkedAt": "2026-10-04T07:54:00+01:00",
-      "scope": "Complete current WebScan Healthcare candidate queue and nine-inbox ownership/suppression history",
+      "checkedAt": "2026-10-04T12:48:25+01:00",
+      "scope": "Complete current WebScan Healthcare queue and nine-inbox ownership/suppression history",
       "readyFirstTouches": null,
       "dueFollowUps": null,
       "awaitingVerification": null,
       "blocked": null,
-      "byInbox": []
+      "byInbox": [],
+      "note": "Three individually verified READY records exist privately, but complete historical queue coverage is still incomplete; unsupported whole-queue totals remain null."
     },
     "runs": [
       {
@@ -162,6 +175,24 @@
         "firstTouchesSent": 0,
         "followUpsSent": 0,
         "durationSeconds": 74
+      },
+      {
+        "runId": "6ac0618063a08191b12c9629a94a214a:2026-10-04T12:46:05+01:00",
+        "startedAt": "2026-10-04T12:46:05+01:00",
+        "finishedAt": "2026-10-04T12:48:25+01:00",
+        "kind": "RESEARCH",
+        "measurementStatus": "PARTIAL",
+        "candidatesAssessed": 3,
+        "newlyQualified": 3,
+        "duplicatesRejected": 0,
+        "rejected": 0,
+        "awaitingVerification": 0,
+        "readyBefore": null,
+        "readyAfter": null,
+        "dueFollowUps": null,
+        "firstTouchesSent": 0,
+        "followUpsSent": 0,
+        "durationSeconds": 140
       }
     ]
   }
