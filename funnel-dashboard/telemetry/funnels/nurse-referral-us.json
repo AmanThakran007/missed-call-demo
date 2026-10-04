@@ -10,28 +10,35 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-04T01:53:19+01:00",
-  "nextRun": "2026-10-04T02:49:00+01:00",
+  "lastRun": "2026-10-04T03:53:04+01:00",
+  "nextRun": "2026-10-04T04:49:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE: Two existing partnership enquiries remain awaiting external responses. Historical attempts covering seven researched targets and one follow-up were rejected by mail-action safety controls, but the original rejection output is unavailable, so the restriction cannot be classified or marked resolved. No blocked action was retried.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T01:53:19+01:00",
+      "checkedAt": "2026-10-04T03:53:04+01:00",
       "accounts": [
+        "amanthakranengland@gmail.com",
+        "helpme.ecommerce@gmail.com",
+        "bharatfare@gmail.com",
+        "amanthakran8891@gmail.com",
         "amanthakran.dreams@gmail.com",
-        "aman.thakran.consulting@gmail.com"
+        "aman.thakran.consulting@gmail.com",
+        "amanthakranindia@gmail.com",
+        "bharatfare.team@gmail.com",
+        "bharatfareuk@gmail.com"
       ],
-      "scope": "All new mail since the prior verified check plus the active international nurse-referral partner threads, including replies, bounces, opt-outs, terms questions and call requests",
-      "result": "No new nurse-referral human reply, bounce, opt-out, terms question, call request, customer or attributable revenue event was found. Three recent unrelated promotional or account-security messages were excluded. No outreach was sent outside the permitted hour."
+      "scope": "All new inbound mail since the prior verified check across all nine connected inboxes, plus the active WorldWide HealthStaff and Avant international nurse-referral threads, including replies, bounces, opt-outs, terms questions and call requests",
+      "result": "No new nurse-referral human reply, bounce, opt-out, terms question, call request, customer or attributable revenue event was found. WorldWide HealthStaff remains awaiting a reply to the paid-advertising and referral-tracking question; Avant remains at the acknowledgement and review stage. One unrelated ICICI card-billing notice was excluded. No outreach was sent outside the permitted hour."
     },
     "github": {
-      "checkedAt": "2026-10-04T01:53:19+01:00",
+      "checkedAt": "2026-10-04T03:53:04+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/nurse-referral-us.json",
-      "priorBlobSha": "9f10be0f895632286f5fbd85142e62cb4350c6eb"
+      "priorBlobSha": "07169afd119e5425e850ad67f5baddc7a3553a06"
     },
     "sendingHoldDiagnosis": {
-      "checkedAt": "2026-10-04T01:53:19+01:00",
+      "checkedAt": "2026-10-04T03:53:04+01:00",
       "status": "HOLD_REASON_UNAVAILABLE",
       "classification": {
         "providerError": "NOT_EVIDENCED",
