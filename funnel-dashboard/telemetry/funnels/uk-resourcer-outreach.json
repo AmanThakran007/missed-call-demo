@@ -10,13 +10,13 @@
   "callsDemosRequested": 0,
   "customersWon": 0,
   "revenueGbp": 0,
-  "lastRun": "2026-10-04T08:35:58+01:00",
-  "nextRun": "2026-10-04T09:39:00+01:00",
+  "lastRun": "2026-10-04T09:36:32+01:00",
+  "nextRun": "2026-10-04T10:39:00+01:00",
   "freshness": "LIVE",
   "blocker": "HOLD_REASON_UNAVAILABLE: Ten previously approved send attempts were blocked by mail-action safety controls, but the original rejection output is unavailable. The restriction cannot be classified as action-specific or campaign-wide and remains unresolved; monitoring stays active.",
   "sourceChecks": {
     "gmail": {
-      "checkedAt": "2026-10-04T08:36:48+01:00",
+      "checkedAt": "2026-10-04T09:37:30+01:00",
       "accounts": [
         "amanthakranengland@gmail.com",
         "helpme.ecommerce@gmail.com",
@@ -29,16 +29,16 @@
         "bharatfareuk@gmail.com"
       ],
       "scope": "All nine connected inboxes checked for recent UK resourcer replies, bounces, opt-outs, pricing or contract questions, ATS-access questions, pilot requests and call requests.",
-      "result": "No new UK resourcer reply, bounce, opt-out, pricing or contract question, ATS-access question, pilot request or call request was found in any connected inbox. Three unrelated promotions and one unrelated social notification were excluded. No outreach was sent outside the permitted hour."
+      "result": "No new UK resourcer reply, bounce, opt-out, pricing or contract question, ATS-access question, pilot request or call request was found in any connected inbox. Six unrelated promotional or account-marketing messages were excluded. The ten previously rejected first-touch actions were not retried because the original rejection evidence remains unavailable."
     },
     "github": {
-      "checkedAt": "2026-10-04T08:36:48+01:00",
+      "checkedAt": "2026-10-04T09:37:30+01:00",
       "repository": "AmanThakran007/missed-call-demo",
       "path": "funnel-dashboard/telemetry/funnels/uk-resourcer-outreach.json",
-      "priorBlobSha": "ea7b9737283ca4b8c0eb350420b60ee74cb1ef2f"
+      "priorBlobSha": "5fb1ac944b8206bf574ac2609b9bfbdff35c27bd"
     },
     "holdDiagnosis": {
-      "checkedAt": "2026-10-04T08:36:48+01:00",
+      "checkedAt": "2026-10-04T09:37:30+01:00",
       "status": "HOLD_REASON_UNAVAILABLE",
       "classification": {
         "providerError": "NOT_EVIDENCED",
