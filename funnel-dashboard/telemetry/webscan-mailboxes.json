@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "date": "2026-10-04",
   "timezone": "Europe/London",
-  "checkedAt": "2026-10-04T07:08:06Z",
+  "checkedAt": "2026-10-04T08:17:11Z",
   "source": "Fully paginated Gmail Sent checks plus targeted received-mail checks across all nine connected inboxes",
   "status": "SOURCE_RECONCILED",
-  "scope": "London calendar-day and rolling-24-hour Sent counts are verified from Gmail across nine accounts. The London day contains 0 Sent messages; the rolling 24-hour period contains 31 all-campaign Sent messages (24 Dreams, 7 Consulting). WebScan counters for the London day remain zero from Gmail Sent and all four funnel records. No new incoming message, campaign reply, bounce or opt-out appeared since the previous reconciliation. Sent means present in Gmail Sent, not confirmed delivered.",
+  "scope": "London calendar-day and rolling-24-hour Sent counts were fully reconciled across all nine inboxes. Three General SME first touches were found in Gmail Sent and their From headers matched the selected authenticated accounts and truthful WebRevenue Scan display name. Three newly received messages were retail promotions, not campaign replies, bounces or opt-outs. Sent means present in Gmail Sent, not confirmed delivered.",
   "effectiveDate": "2026-10-04",
   "stagedCapsPerInbox": [],
   "rows": [
@@ -40,7 +40,7 @@
       },
       "skippedReasons": [],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T08:06:39Z",
+      "checkedAt": "2026-10-04T08:17:11Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 111,
@@ -78,7 +78,7 @@
       },
       "skippedReasons": [],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T08:08:22Z",
+      "checkedAt": "2026-10-04T08:17:11Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 111,
@@ -116,7 +116,7 @@
       },
       "skippedReasons": [],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T08:10:19Z",
+      "checkedAt": "2026-10-04T08:17:11Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 111,
@@ -153,10 +153,10 @@
         "notInterested": null
       },
       "skippedReasons": [
-        "OUTSIDE_ALLOWED_OUTREACH_HOUR"
+        "NO_VERIFIED_UNSENT_GENERAL_SME_PROSPECT_ASSIGNED_THIS_WINDOW"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T07:08:06Z",
+      "checkedAt": "2026-10-04T08:17:11Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 112,
@@ -175,7 +175,7 @@
       "configuredDailyCap": 112,
       "qualifyingDaysAtStage": 0,
       "sourceRead": "VERIFIED",
-      "allSentRolling24h": 24,
+      "allSentRolling24h": 19,
       "remainingQuotaForEffectiveDate": 112,
       "prospectQueue": {
         "status": "UNVERIFIED",
@@ -193,10 +193,10 @@
         "notInterested": null
       },
       "skippedReasons": [
-        "OUTSIDE_ALLOWED_OUTREACH_HOUR"
+        "NO_VERIFIED_UNSENT_GENERAL_SME_PROSPECT_ASSIGNED_THIS_WINDOW"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T07:08:06Z",
+      "checkedAt": "2026-10-04T08:17:11Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 112,
@@ -233,10 +233,10 @@
         "notInterested": null
       },
       "skippedReasons": [
-        "OUTSIDE_ALLOWED_OUTREACH_HOUR"
+        "NO_VERIFIED_UNSENT_GENERAL_SME_PROSPECT_ASSIGNED_THIS_WINDOW"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T07:08:06Z",
+      "checkedAt": "2026-10-04T08:17:11Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 112,
@@ -273,10 +273,10 @@
         "notInterested": null
       },
       "skippedReasons": [
-        "OUTSIDE_ALLOWED_OUTREACH_HOUR"
+        "NO_VERIFIED_UNSENT_GENERAL_SME_PROSPECT_ASSIGNED_THIS_WINDOW"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T07:08:06Z",
+      "checkedAt": "2026-10-04T08:17:11Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 112,
@@ -313,10 +313,10 @@
         "notInterested": null
       },
       "skippedReasons": [
-        "OUTSIDE_ALLOWED_OUTREACH_HOUR"
+        "NO_VERIFIED_UNSENT_GENERAL_SME_PROSPECT_ASSIGNED_THIS_WINDOW"
       ],
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T07:08:06Z",
+      "checkedAt": "2026-10-04T08:17:11Z",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 112,
@@ -326,7 +326,7 @@
     {
       "mailbox": "BharatFare UK inbox",
       "date": "2026-10-04",
-      "checkedAt": "2026-10-04T07:08:06Z",
+      "checkedAt": "2026-10-04T08:17:11Z",
       "sourceRead": "VERIFIED",
       "configuredDailyCap": 112,
       "configuredGeneralSmeDailyCap": 57,
@@ -351,7 +351,7 @@
         "notInterested": null
       },
       "skippedReasons": [
-        "OUTSIDE_ALLOWED_OUTREACH_HOUR"
+        "NO_VERIFIED_UNSENT_GENERAL_SME_PROSPECT_ASSIGNED_THIS_WINDOW"
       ],
       "allSentToday": 0,
       "allSentRolling24h": 0,
@@ -366,7 +366,7 @@
   ],
   "totals": {
     "allSentToday": 3,
-    "allSentRolling24h": 34,
+    "allSentRolling24h": 29,
     "webscanFirstTouchesToday": 3,
     "webscanFollowUpsToday": 0,
     "webscanInboundMessagesToday": 0,
@@ -391,8 +391,8 @@
     "sentPagination": "COMPLETE",
     "funnelFirstTouchReconciliation": "PASSED",
     "aggregateSumCheck": "PASSED",
-    "mailboxLoadGuardEvidence": "RECHECK_BEFORE_SENDING",
-    "futureScheduledSending": "NOT_YET_RUN",
+    "mailboxLoadGuardEvidence": "PASSED_AT_RECONCILIATION",
+    "futureScheduledSending": "PARTIAL_3_CONFIRMED",
     "senderHeaderChecks": "PARTIAL_3_OF_9_VERIFIED",
     "newlyMappedMailboxHeaderChecks": "PENDING_FIRST_SUCCESSFUL_SEND",
     "unrelatedCampaignCumulativeMetrics": "NOT_AUDITED",
@@ -401,17 +401,17 @@
     "replyQueueAudit": "UNVERIFIED"
   },
   "blockers": [
-    "The fixed-cap nine-inbox workflow is active from 4 October 2026 but remains untested until new-policy sends and Sent-header readback succeed.",
-    "India inbox, BharatFare Team inbox and BharatFare UK inbox require first-successful-send From-header and provider-restriction verification before further WebScan sending from those accounts.",
-    "Prospect and reply queues remain UNVERIFIED because complete cross-nine private-ledger and thread audits have not succeeded; no queue count was inferred.",
+    "Three General SME sends from established inboxes were confirmed in Gmail Sent with matching authenticated From headers; the full nine-inbox workflow remains only partially tested.",
+    "India inbox, BharatFare Team inbox and BharatFare UK inbox still require first-successful-send From-header and provider-restriction verification before further WebScan sending from those accounts.",
+    "Prospect and reply queues remain UNVERIFIED because complete cross-nine historical reconstruction and all-funnel queue/thread audits are not yet complete; no queue count was inferred.",
     "Professional Services and Agency White Label retain recorded send-denial blockers; no blocked send was retried during this sync.",
     "Public GitHub Pages deployment visibility remains unverified from this client environment."
   ],
   "automation": {
-    "checkedAt": "2026-10-04T07:08:06Z",
+    "checkedAt": "2026-10-04T08:00:21Z",
     "enabledTasks": 15,
     "enabledWebscanTasks": 5,
-    "lastCoordinatorRun": "2026-10-04T07:08:06Z"
+    "lastCoordinatorRun": "2026-10-04T08:17:11Z"
   },
   "sendingPolicy": {
     "mode": "FIXED_CAP",
