@@ -1,8 +1,32 @@
 {
   "source": "Outreach Ledger / Activity",
-  "syncedAt": "2026-10-05T23:18:09+01:00",
+  "syncedAt": "2026-10-06T00:50:00+01:00",
   "privacy": "Aggregate public-safe events only; recipient identities and Gmail IDs omitted.",
   "events": [
+    {
+      "at": "2026-10-06T00:50:00+01:00",
+      "event": "SEND_RUN_SUMMARY",
+      "funnel": "WebScan Worldwide",
+      "summary": "One-time authorised run: 10/10 READY sent; Dreams 1, Ecommerce 5, India 4; no safety block; normal working-hours rule restored."
+    },
+    {
+      "at": "2026-10-06T00:50:00+01:00",
+      "event": "FIRST_TOUCH_SENT",
+      "funnel": "WebScan General SME",
+      "summary": "10 verified first touches completed with Gmail Sent evidence; public snapshot omits recipient identities and message IDs."
+    },
+    {
+      "at": "2026-10-06T00:36:21+01:00",
+      "event": "SEND_RUN_SUMMARY",
+      "funnel": "WebScan Worldwide",
+      "summary": "10 READY assessed; 0 sent under normal hours because all were outside recipient-local window."
+    },
+    {
+      "at": "2026-10-06T00:22:03+01:00",
+      "event": "REPLY_MONITOR_CLEAR",
+      "funnel": "Outreach REPLY Monitor 6-9",
+      "summary": "No new eligible replies, opt-outs, bounces, provider warnings or pending sends found."
+    },
     {
       "at": "2026-10-05T23:18:09+01:00",
       "event": "REPLY_MONITOR_CLEAR",
@@ -26,18 +50,6 @@
       "event": "SEND_RUN_SUMMARY",
       "funnel": "WebScan General SME",
       "summary": "3 eligible candidates assessed; 0 sent after messaging safety block."
-    },
-    {
-      "at": "2026-10-05T19:35:00+01:00",
-      "event": "SEND_RUN_SUMMARY",
-      "funnel": "WebScan Worldwide",
-      "summary": "3 confirmed sends; pacing preserved."
-    },
-    {
-      "at": "2026-10-05T17:26:22+01:00",
-      "event": "SEND_RUN_SUMMARY",
-      "funnel": "WebScan Worldwide",
-      "summary": "15 confirmed sends across Dreams, Ecommerce and India; Gmail Sent IDs reconciled privately."
     }
   ]
 }
