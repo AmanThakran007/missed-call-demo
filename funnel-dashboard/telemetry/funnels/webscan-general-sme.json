@@ -3,7 +3,7 @@
   "name": "WebScan General SME",
   "category": "WebScan",
   "prospectsResearched": 27,
-  "firstEmailsSent": 28,
+  "firstEmailsSent": 68,
   "followUpsSent": 0,
   "humanReplies": 0,
   "positiveReplies": 0,
@@ -546,5 +546,10 @@
       "readyAssigned": 21,
       "nurseReferralPriority": true
     }
+  },
+  "telemetrySync": {
+    "checkedAt": "2026-10-05T20:27:00+01:00",
+    "source": "Outreach Ledger",
+    "note": "Cumulative first-email count reconciled from the authoritative ledger."
   }
 }
