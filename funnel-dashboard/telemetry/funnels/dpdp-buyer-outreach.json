@@ -1,1 +1,50 @@
-{"id":"dpdp-buyer-outreach","name":"DPDP Buyer Outreach","category":"DPDP","firstEmailsSent":16,"followUpsSent":12,"humanReplies":0,"positiveReplies":0,"checklistRequests":0,"callRequests":0,"callsDemosRequested":0,"customersWon":0,"revenueGbp":0,"bounces":1,"optOuts":0,"stageCounts":{"Prospect":0,"Contacted":15,"Engaged":0,"Qualified":0,"CallProposal":0,"Won":0,"Lost":1},"freshness":"LIVE","lastChecked":"2026-10-04T13:01:00+01:00","blocker":null,"sourceChecks":{"gmail":{"checkedAt":"2026-10-04T13:01:00+01:00","account":"aman.thakran.consulting@gmail.com","result":"HOURLY_V2 reconciliation verified four London-day Sent messages: one new first touch and three earlier cold follow-ups. The new first touch was read back with the expected recipient, subject, SENT label and actual From header \"Aman Thakran | WebRevenue Scan\" <aman.thakran.consulting@gmail.com>. Fresh London-day searches found no incoming reply, delivery failure or opt-out."},"googleDrive":{"checkedAt":"2026-10-04T12:57:00+01:00","result":"A connected Drive search found no DPDP campaign ledger; the version-guarded private Library file remains the candidate evidence source."},"github":{"checkedAt":"2026-10-04T13:01:00+01:00","repository":"AmanThakran007/missed-call-demo","path":"funnel-dashboard/telemetry/funnels/dpdp-buyer-outreach.json","priorBlobSha":"29eb9b132bcf47dd2d497c24f7f9d8e701b5ac4a"}}}
+{
+  "id": "dpdp-buyer-outreach",
+  "name": "DPDP Buyer Outreach",
+  "category": "DPDP",
+  "firstEmailsSent": 16,
+  "followUpsSent": 12,
+  "humanReplies": 0,
+  "positiveReplies": 0,
+  "checklistRequests": 0,
+  "callRequests": 0,
+  "callsDemosRequested": 0,
+  "customersWon": 0,
+  "revenueGbp": 0,
+  "bounces": 1,
+  "optOuts": 0,
+  "stageCounts": {
+    "Prospect": 0,
+    "Contacted": 15,
+    "Engaged": 0,
+    "Qualified": 0,
+    "CallProposal": 0,
+    "Won": 0,
+    "Lost": 1
+  },
+  "freshness": "LIVE",
+  "lastChecked": "2026-10-04T13:01:00+01:00",
+  "blocker": null,
+  "sourceChecks": {
+    "gmail": {
+      "checkedAt": "2026-10-04T13:01:00+01:00",
+      "account": "aman.thakran.consulting@gmail.com",
+      "result": "HOURLY_V2 reconciliation verified four London-day Sent messages: one new first touch and three earlier cold follow-ups. The new first touch was read back with the expected recipient, subject, SENT label and actual From header \"Aman Thakran | WebRevenue Scan\" <aman.thakran.consulting@gmail.com>. Fresh London-day searches found no incoming reply, delivery failure or opt-out."
+    },
+    "googleDrive": {
+      "checkedAt": "2026-10-04T12:57:00+01:00",
+      "result": "A connected Drive search found no DPDP campaign ledger; the version-guarded private Library file remains the candidate evidence source."
+    },
+    "github": {
+      "checkedAt": "2026-10-04T13:01:00+01:00",
+      "repository": "AmanThakran007/missed-call-demo",
+      "path": "funnel-dashboard/telemetry/funnels/dpdp-buyer-outreach.json",
+      "priorBlobSha": "29eb9b132bcf47dd2d497c24f7f9d8e701b5ac4a"
+    }
+  },
+  "telemetrySync": {
+    "checkedAt": "2026-10-05T20:27:00+01:00",
+    "source": "Outreach Ledger",
+    "note": "Cumulative first-email count reconciled from the authoritative ledger."
+  }
+}
