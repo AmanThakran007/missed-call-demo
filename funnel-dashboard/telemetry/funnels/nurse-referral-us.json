@@ -74,5 +74,10 @@
       "runJournalStatus": "AWAITING_FIRST_RUN",
       "result": "This run began before the workflow effective time, so it did not acquire the V2 run journal or send. The first run starting at or after the effective time must acquire journal ownership before any send."
     }
+  },
+  "telemetrySync": {
+    "checkedAt": "2026-10-05T20:27:00+01:00",
+    "source": "Outreach Ledger",
+    "note": "Cumulative first-email count reconciled from the authoritative ledger."
   }
 }
