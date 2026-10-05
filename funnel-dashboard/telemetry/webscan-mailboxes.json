@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "date": "2026-10-05",
   "timezone": "Europe/London",
-  "checkedAt": "2026-10-05T15:22:03+01:00",
+  "checkedAt": "2026-10-05T15:29:43+01:00",
   "source": "Fully paginated Gmail Sent reconciliation across nine inboxes",
-  "status": "PARTIAL_TARGETED_RECOVERY",
-  "scope": "Targeted recovery telemetry only. Dreams inbox has one verified WebScan General SME first touch at 15:22 UK. Other mailbox/day totals were not fully reconciled in this update and must not be treated as current-day verified totals.",
+  "status": "PARTIAL_TARGETED_PROOF_UPDATE",
+  "scope": "Targeted 5-Oct deliverability proof update. Ecommerce and India each passed 5/5 self-tests to 8891 Inbox; their PROOF_HOLDs were lifted in Outreach Ledger Controls. Full nine-inbox day totals remain unreconciled.",
   "effectiveDate": "2026-10-04",
   "stagedCapsPerInbox": [],
   "rows": [
@@ -59,15 +59,15 @@
       "webscanOptOutsToday": null,
       "configuredDailyCap": 40,
       "qualifyingDaysAtStage": 0,
-      "sourceRead": "STALE_PRIOR_DAY_NOT_RECONCILED",
+      "sourceRead": "VERIFIED_PROOF_RESULT",
       "allSentRolling24h": null,
       "remainingQuotaForEffectiveDate": null,
       "prospectQueue": {
-        "status": "UNVERIFIED",
-        "checkedAt": null,
-        "ready": null,
+        "status": "PARTIAL",
+        "checkedAt": "2026-10-05T15:29:43+01:00",
+        "ready": 33,
         "awaitingVerification": null,
-        "blocked": null
+        "blocked": 0
       },
       "replyQueue": {
         "status": "UNVERIFIED",
@@ -77,15 +77,28 @@
         "pricingOrCall": null,
         "notInterested": null
       },
-      "skippedReasons": [],
+      "skippedReasons": [
+        "PROOF_PASSED_HOLD_LIFTED",
+        "FULL_DAY_MAILBOX_RECONCILIATION_PENDING"
+      ],
       "date": "2026-10-05",
-      "checkedAt": null,
+      "checkedAt": "2026-10-05T15:29:43+01:00",
       "configuredGeneralSmeDailyCap": null,
       "qualificationGateActive": false,
       "remainingQuotaToday": null,
       "nineInboxSendTest": "SENT_AND_HEADER_VERIFIED",
       "engagementCheckedAt": "2026-10-04T11:02:39Z",
-      "skippedReasonsCheckedAt": "2026-10-04T13:12:25+01:00"
+      "skippedReasonsCheckedAt": "2026-10-05T15:29:43+01:00",
+      "proofHold": false,
+      "proofTest": {
+        "checkedAt": "2026-10-05T15:29:43+01:00",
+        "recipient": "amanthakran8891@gmail.com",
+        "sent": 5,
+        "inbox": 5,
+        "promotions": 0,
+        "spam": 0,
+        "result": "PASSED"
+      }
     },
     {
       "mailbox": "BharatFare inbox",
@@ -264,15 +277,15 @@
       "webscanOptOutsToday": null,
       "configuredDailyCap": 40,
       "qualifyingDaysAtStage": 0,
-      "sourceRead": "STALE_PRIOR_DAY_NOT_RECONCILED",
+      "sourceRead": "VERIFIED_PROOF_RESULT",
       "allSentRolling24h": null,
       "remainingQuotaForEffectiveDate": null,
       "prospectQueue": {
-        "status": "UNVERIFIED",
-        "checkedAt": null,
-        "ready": null,
+        "status": "PARTIAL",
+        "checkedAt": "2026-10-05T15:29:43+01:00",
+        "ready": 21,
         "awaitingVerification": null,
-        "blocked": null
+        "blocked": 0
       },
       "replyQueue": {
         "status": "UNVERIFIED",
@@ -283,17 +296,27 @@
         "notInterested": null
       },
       "skippedReasons": [
-        "NO_VERIFIED_UNSENT_GENERAL_SME_PROSPECT_ASSIGNED_THIS_WINDOW",
-        "OUTSIDE_AUTHORISED_GENERAL_SME_OUTREACH_WINDOW"
+        "PROOF_PASSED_HOLD_LIFTED",
+        "FULL_DAY_MAILBOX_RECONCILIATION_PENDING"
       ],
       "date": "2026-10-05",
-      "checkedAt": null,
+      "checkedAt": "2026-10-05T15:29:43+01:00",
       "configuredGeneralSmeDailyCap": null,
       "qualificationGateActive": false,
       "remainingQuotaToday": null,
       "nineInboxSendTest": "NOT_YET_RUN",
       "engagementCheckedAt": "2026-10-04T11:02:39Z",
-      "skippedReasonsCheckedAt": "2026-10-04T11:02:39Z"
+      "skippedReasonsCheckedAt": "2026-10-05T15:29:43+01:00",
+      "proofHold": false,
+      "proofTest": {
+        "checkedAt": "2026-10-05T15:29:43+01:00",
+        "recipient": "amanthakran8891@gmail.com",
+        "sent": 5,
+        "inbox": 5,
+        "promotions": 0,
+        "spam": 0,
+        "result": "PASSED"
+      }
     },
     {
       "mailbox": "BharatFare Team inbox",
@@ -452,8 +475,8 @@
       },
       "Ecommerce inbox": {
         "cap": 40,
-        "hold": true,
-        "note": "PROOF_HOLD until proof requirements are satisfied."
+        "hold": false,
+        "note": "PROOF PASSED 2026-10-05; 5/5 landed in Inbox."
       },
       "England inbox": {
         "cap": 0,
@@ -462,8 +485,8 @@
       },
       "India inbox": {
         "cap": 40,
-        "hold": true,
-        "note": "Shared with Nurse Referral US; PROOF_HOLD remains; Nurse priority."
+        "hold": false,
+        "note": "PROOF PASSED 2026-10-05; 5/5 landed in Inbox. Nurse Referral US retains shared-cap priority."
       }
     },
     "supplierOnly": {
