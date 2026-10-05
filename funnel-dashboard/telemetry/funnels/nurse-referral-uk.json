@@ -3,7 +3,7 @@
   "name": "Nurse Referral UK",
   "category": "Nurse Referral",
   "prospectsResearched": 14,
-  "firstEmailsSent": 5,
+  "firstEmailsSent": 4,
   "followUpsSent": 0,
   "humanReplies": 1,
   "positiveReplies": 1,
@@ -79,5 +79,10 @@
       "account": "Dreams inbox",
       "result": "One tailored nurse-referral follow-up remains an unsent draft. A separate obsolete historical initial-outreach draft is present but is not counted as pending campaign work. Neither draft was modified or sent."
     }
+  },
+  "telemetrySync": {
+    "checkedAt": "2026-10-05T20:27:00+01:00",
+    "source": "Outreach Ledger",
+    "note": "Cumulative first-email count reconciled from the authoritative ledger."
   }
 }
