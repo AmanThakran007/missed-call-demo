@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07111f">
+<title>Live Funnel Dashboard — Direct</title>
+<style>
+:root{--bg:#050b14;--panel:#0d1a2b;--line:#233247;--text:#f8fafc;--muted:#94a3b8;--teal:#2dd4bf}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#050b14,#081322);color:var(--text);font-family:Inter,system-ui,sans-serif}
+.app{max-width:980px;margin:auto;padding:18px}.top{padding:20px;border:1px solid var(--line);border-radius:20px;background:var(--panel)}
+.eyebrow{font-size:11px;letter-spacing:.16em;color:var(--teal);font-weight:900}.top h1{margin:6px 0 6px;font-size:30px}.sub{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}.card{padding:16px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}
+.card span{display:block;color:var(--muted);font-size:11px}.card strong{display:block;font-size:24px;margin-top:6px}
+.status{margin-top:16px;padding:14px;border:1px solid var(--line);border-radius:14px;background:var(--panel);color:var(--muted);font-size:12px}
+@media(max-width:700px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:420px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="app">
+<section class="top">
+<div class="eyebrow">AMAN OPERATIONS · DIRECT MODE</div>
+<h1>Live Funnel Dashboard</h1>
+<p class="sub">Bypasses GitHub Pages deployment and reads the latest committed telemetry directly from GitHub.</p>
+<div class="grid">
+<div class="card"><span>Sent Today</span><strong id="sentToday">—</strong></div>
+<div class="card"><span>First Emails (All time)</span><strong id="sentAll">—</strong></div>
+<div class="card"><span>Human Replies</span><strong id="replies">—</strong></div>
+<div class="card"><span>Revenue</span><strong id="revenue">—</strong></div>
+</div>
+<div class="status" id="status">Loading latest telemetry…</div>
+</section>
+</main>
+<script>
+const BASE='https://raw.githubusercontent.com/AmanThakran007/missed-call-demo/main/funnel-dashboard/';
+const funnelIds=['dpdp-buyer-outreach','b2b-appointment-setting','webscan-general-sme','webscan-healthcare','webscan-professional-services','webscan-agency-white-label','uk-resourcer-outreach','nurse-referral-uk','nurse-referral-us','nclex-growth-core','nclex-colleges','nclex-creators','nclex-recruiter-partnerships','bharatfare-supplier-outreach','bharatfare-agent-partnerships'];
+async function get(path){const r=await fetch(BASE+path+'?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error(path+' '+r.status);return r.json()}
+async function refresh(){
+ try{
+  const base=await get('telemetry.json');
+  const parts=await Promise.all(funnelIds.map(id=>get('telemetry/funnels/'+id+'.json').catch(()=>null)));
+  const replies=parts.reduce((n,f)=>n+(Number(f&&f.humanReplies)||0),0);
+  const revenue=parts.reduce((n,f)=>n+(Number(f&&f.revenueGbp)||0),0);
+  document.getElementById('sentToday').textContent=base.ledgerSnapshot?.sentToday ?? '—';
+  document.getElementById('sentAll').textContent=base.ledgerSnapshot?.sentAll ?? parts.reduce((n,f)=>n+(Number(f&&f.firstEmailsSent)||0),0);
+  document.getElementById('replies').textContent=replies;
+  document.getElementById('revenue').textContent='£'+revenue.toFixed(0);
+  document.getElementById('status').textContent='Updated '+new Date().toLocaleTimeString('en-GB')+' · refreshes every 60 seconds · source: latest GitHub main branch';
+ }catch(e){document.getElementById('status').textContent='Refresh error: '+e.message}
+}
+refresh();setInterval(refresh,60000);
+</script>
+</body>
+</html>
