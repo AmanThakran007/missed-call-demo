@@ -22,7 +22,7 @@
     "Lost": 0
   },
   "freshness": "LIVE",
-  "lastChecked": "2026-10-05T15:22:03+01:00",
+  "lastChecked": "2026-10-05T15:29:43+01:00",
   "blocker": null,
   "inboundLeads": 1,
   "sourceChecks": {
@@ -187,8 +187,7 @@
       },
       "Ecommerce inbox": {
         "cap": 40,
-        "hold": true,
-        "holdReason": "PROOF_HOLD"
+        "hold": false
       },
       "England inbox": {
         "cap": 0,
@@ -196,8 +195,8 @@
       },
       "India inbox": {
         "cap": 40,
-        "hold": true,
-        "holdReason": "PROOF_HOLD; Nurse Referral US priority"
+        "hold": false,
+        "note": "Nurse Referral US priority on shared capacity."
       }
     },
     "note": "Rows must remain on their assigned inbox. Supplier-only BharatFare inboxes are not WebScan General SME senders under current Controls. Agency Pack domain mailboxes are excluded."
@@ -521,6 +520,31 @@
       "blockedOutsideLocalWindow": 1,
       "blockedProofHold": 3,
       "agencyPackCollisionOnRecoveredRow": false
+    }
+  },
+  "proofStatus": {
+    "checkedAt": "2026-10-05T15:29:43+01:00",
+    "recipient": "amanthakran8891@gmail.com",
+    "ecommerce": {
+      "result": "PASSED",
+      "sent": 5,
+      "inbox": 5,
+      "promotions": 0,
+      "spam": 0,
+      "holdLifted": true,
+      "cap": 40,
+      "readyAssigned": 33
+    },
+    "india": {
+      "result": "PASSED",
+      "sent": 5,
+      "inbox": 5,
+      "promotions": 0,
+      "spam": 0,
+      "holdLifted": true,
+      "cap": 40,
+      "readyAssigned": 21,
+      "nurseReferralPriority": true
     }
   }
 }
