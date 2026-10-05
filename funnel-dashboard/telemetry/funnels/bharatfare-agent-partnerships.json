@@ -3,7 +3,7 @@
   "name": "BharatFare Agent Partnerships",
   "category": "BharatFare / B2B Agent Partnerships",
   "prospectsResearched": 1,
-  "firstEmailsSent": 1,
+  "firstEmailsSent": 10,
   "followUpsSent": 0,
   "humanReplies": 0,
   "positiveReplies": 0,
@@ -64,5 +64,10 @@
       "duplicateRecordsSuppressed": 1,
       "note": "Time-of-day exception applied only to the existing verified queue. No outreach was sent because no unused verified recipient remained."
     }
+  },
+  "telemetrySync": {
+    "checkedAt": "2026-10-05T20:27:00+01:00",
+    "source": "Outreach Ledger",
+    "note": "Cumulative first-email count reconciled from the authoritative ledger."
   }
 }
