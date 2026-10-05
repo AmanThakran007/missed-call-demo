@@ -3,7 +3,7 @@
   "name": "BharatFare Supplier Outreach",
   "category": "BharatFare / Supplier Acquisition",
   "prospectsResearched": 20,
-  "firstEmailsSent": 15,
+  "firstEmailsSent": 9,
   "followUpsSent": 3,
   "humanReplies": 3,
   "positiveReplies": 3,
@@ -83,5 +83,10 @@
       "followUpsSentThisRun": 0,
       "result": "First-touch cumulative allowance was fully used before this run. Due-follow-up eligibility could not be verified without the campaign-owned private ledger, so no follow-up was sent."
     }
+  },
+  "telemetrySync": {
+    "checkedAt": "2026-10-05T20:27:00+01:00",
+    "source": "Outreach Ledger",
+    "note": "Cumulative first-email count reconciled from the authoritative ledger."
   }
 }
