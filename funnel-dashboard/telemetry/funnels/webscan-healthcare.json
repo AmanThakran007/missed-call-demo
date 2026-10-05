@@ -3,7 +3,7 @@
   "name": "WebScan Healthcare",
   "category": "WebScan / Healthcare",
   "prospectsResearched": 14,
-  "firstEmailsSent": 1,
+  "firstEmailsSent": 2,
   "followUpsSent": 0,
   "humanReplies": 0,
   "positiveReplies": 0,
@@ -195,5 +195,10 @@
         "durationSeconds": 140
       }
     ]
+  },
+  "telemetrySync": {
+    "checkedAt": "2026-10-05T20:27:00+01:00",
+    "source": "Outreach Ledger",
+    "note": "Cumulative first-email count reconciled from the authoritative ledger."
   }
 }
