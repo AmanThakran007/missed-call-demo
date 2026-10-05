@@ -3,46 +3,48 @@
   "funnelId": "webscan-general-sme",
   "name": "WebScan General SME",
   "automationId": "6aa199f3c2848191aa1e6d2a26d0d383",
-  "workflowVersion": "HOURLY_V2",
+  "workflowVersion": "SEND_ONLY_QUEUE_SCAN_FIX_2026-10-05",
   "configuredAt": "2026-10-04T11:44:55.636Z",
   "effectiveAt": "2026-10-04T11:54:45.158Z",
   "status": "COMPLETE",
-  "runId": "6aa199f3c2848191aa1e6d2a26d0d383_2026-10-04T12:00:38Z",
-  "startedAt": "2026-10-04T13:00:38+01:00",
-  "heartbeatAt": "2026-10-04T13:16:00+01:00",
-  "finishedAt": "2026-10-04T13:16:00+01:00",
+  "runId": "manual-recovery_2026-10-05T15:22:03+01:00",
+  "startedAt": "2026-10-05T15:22:03+01:00",
+  "heartbeatAt": "2026-10-05T15:22:03+01:00",
+  "finishedAt": "2026-10-05T15:22:03+01:00",
   "phase": "DONE",
   "outcome": "SENT",
   "metrics": {
-    "candidatesAssessed": 15,
-    "newlyQualified": 3,
-    "readyBefore": 0,
-    "readyAfter": 0,
-    "firstTouchesSent": 3,
+    "candidatesAssessed": 5,
+    "newlyQualified": 0,
+    "readyBefore": 80,
+    "readyAfter": 79,
+    "firstTouchesSent": 1,
     "followUpsSent": 0
   },
   "blockers": [
-    "HISTORICAL_QUEUE_RECONSTRUCTION_INCOMPLETE"
+    "ONE_ROW_OUTSIDE_LOCAL_WINDOW",
+    "THREE_ROWS_ON_PROOF_HOLD"
   ],
-  "nextAction": "Prepare and verify the next General SME candidate cohort; recheck the seven current-site verification holds without retrying or reassigning any blocked prospect.",
+  "nextAction": "Allow the corrected scheduled SEND job to continue scanning later READY rows; keep existing inbox holds/caps in force.",
   "lastCompleted": {
-    "runId": "6aa199f3c2848191aa1e6d2a26d0d383_2026-10-04T12:00:38Z",
-    "startedAt": "2026-10-04T13:00:38+01:00",
-    "finishedAt": "2026-10-04T13:16:00+01:00",
+    "runId": "manual-recovery_2026-10-05T15:22:03+01:00",
+    "startedAt": "2026-10-05T15:22:03+01:00",
+    "finishedAt": "2026-10-05T15:22:03+01:00",
     "status": "COMPLETE",
     "outcome": "SENT",
     "metrics": {
-      "candidatesAssessed": 15,
-      "newlyQualified": 3,
-      "readyBefore": 0,
-      "readyAfter": 0,
-      "firstTouchesSent": 3,
+      "candidatesAssessed": 5,
+      "newlyQualified": 0,
+      "readyBefore": 80,
+      "readyAfter": 79,
+      "firstTouchesSent": 1,
       "followUpsSent": 0
     },
     "blockers": [
-      "HISTORICAL_QUEUE_RECONSTRUCTION_INCOMPLETE"
+      "ONE_ROW_OUTSIDE_LOCAL_WINDOW",
+      "THREE_ROWS_ON_PROOF_HOLD"
     ],
-    "nextAction": "Prepare and verify the next General SME candidate cohort; recheck the seven current-site verification holds without retrying or reassigning any blocked prospect."
+    "nextAction": "Allow the corrected scheduled SEND job to continue scanning later READY rows; keep existing inbox holds/caps in force."
   },
   "history": [
     {
@@ -82,6 +84,26 @@
         "HISTORICAL_QUEUE_RECONSTRUCTION_INCOMPLETE"
       ],
       "nextAction": "Prepare and verify the next General SME candidate cohort; recheck the seven current-site verification holds without retrying or reassigning any blocked prospect."
+    },
+    {
+      "runId": "manual-recovery_2026-10-05T15:22:03+01:00",
+      "startedAt": "2026-10-05T15:22:03+01:00",
+      "finishedAt": "2026-10-05T15:22:03+01:00",
+      "status": "COMPLETE",
+      "outcome": "SENT",
+      "metrics": {
+        "candidatesAssessed": 5,
+        "newlyQualified": 0,
+        "readyBefore": 80,
+        "readyAfter": 79,
+        "firstTouchesSent": 1,
+        "followUpsSent": 0
+      },
+      "blockers": [
+        "ONE_ROW_OUTSIDE_LOCAL_WINDOW",
+        "THREE_ROWS_ON_PROOF_HOLD"
+      ],
+      "nextAction": "Allow the corrected scheduled SEND job to continue scanning later READY rows; keep existing inbox holds/caps in force."
     }
   ]
 }
