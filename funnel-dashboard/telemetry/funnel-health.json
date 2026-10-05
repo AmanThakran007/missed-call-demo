@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-04T10:58:45.815Z",
-  "scope": "Scheduler snapshot and corresponding funnel telemetry review. All 16 dashboard rows matched: 14 enabled and 2 paused; scheduler next-run values remain null and were not inferred. Existing thread-audit evidence and audit checkedAt timestamps are preserved without a new Gmail thread audit. RECOVERED: BharatFare Supplier Outreach telemetry 11:37 UK follows scheduler activity 11:38 UK; BharatFare Agent Partnerships telemetry 11:47 UK follows scheduler activity 11:48 UK. PERSISTENT_TELEMETRY_GAPS: WebScan Healthcare remains at 07:52 UK despite scheduler activity at 11:46 UK, almost four cycles behind; WebScan Professional Services remains at 09:34 UK despite scheduler activity at 11:46 UK, more than two cycles behind. ONE_CYCLE_TELEMETRY_GAPS: NCLEX Creators remains at 10:41 UK versus scheduler activity 11:46 UK; UK Resourcer Outreach remains at 10:42 UK versus scheduler activity 11:46 UK. WebScan Agency White Label, General SME/Inbound Leads, Nurse Referral UK and US, NCLEX Growth Core, B2B Appointment Setting, DPDP Buyer Outreach, Supplier Outreach and Agent Partnerships have current records. MAILBOX_COUNTER_CURRENT: webscan-mailboxes.json checked 11:01 UK records 7 all-campaign Sent messages for the London day, including 3 verified WebScan first touches, and 28 all-campaign Sent messages for the rolling 24-hour period from fully paginated nine-inbox Gmail evidence. NCLEX Colleges and NCLEX Recruiter Partnerships remain paused after the recorded 15-active-task plan-limit rejection. Existing sending holds remain unresolved. Run-level completion/error transcripts and public GitHub Pages visibility remain unavailable.",
+  "checkedAt": "2026-10-05T15:22:03+01:00",
+  "scope": "Targeted WebScan General SME health update only. Other funnel rows retain their previous timestamps and may be stale. WebScan Worldwide SEND is enabled; queue-scan starvation was corrected and one recovery send was Gmail-verified and written to the Outreach Ledger.",
   "rows": [
     {
       "id": "dpdp-buyer-outreach",
@@ -41,9 +41,9 @@
       "id": "webscan-general-sme",
       "name": "WebScan General SME",
       "enabled": true,
-      "lastAutomationRun": "2026-10-04T10:04:47.240334+00:00",
+      "lastAutomationRun": "2026-10-05T13:54:02.863351+00:00",
       "nextAutomationRun": null,
-      "checkedAt": "2026-10-04T10:58:45.815Z",
+      "checkedAt": "2026-10-05T15:22:03+01:00",
       "followUpAudit": {
         "status": "NOT_DUE",
         "checkedAt": "2026-10-03T20:44:08.478Z",
@@ -53,6 +53,17 @@
         "scope": "21 current WebScan first-touch threads dated 3 October only; older trades outreach excluded.",
         "checkedThreads": 21,
         "nextWindow": "2026-10-06 to 2026-10-07"
+      },
+      "sendRecovery": {
+        "status": "RECOVERED",
+        "checkedAt": "2026-10-05T15:22:03+01:00",
+        "issue": "READY_QUEUE_SCAN_STARVATION",
+        "verifiedFirstTouchesSent": 1,
+        "verifiedInbox": "Dreams inbox",
+        "gmailMessageId": "1a10c715a9a4d453",
+        "readyBefore": 80,
+        "readyAfter": 79,
+        "agencyPackCollision": false
       }
     },
     {
