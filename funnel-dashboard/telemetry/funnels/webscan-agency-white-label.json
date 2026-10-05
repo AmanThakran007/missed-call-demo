@@ -3,7 +3,7 @@
   "name": "WebScan Agency White Label",
   "category": "WebScan / Agency White Label",
   "prospectsResearched": 20,
-  "firstEmailsSent": 0,
+  "firstEmailsSent": 50,
   "followUpsSent": 0,
   "humanReplies": 0,
   "positiveReplies": 0,
@@ -304,5 +304,10 @@
         "durationSeconds": 144
       }
     ]
+  },
+  "telemetrySync": {
+    "checkedAt": "2026-10-05T20:27:00+01:00",
+    "source": "Outreach Ledger",
+    "note": "Cumulative first-email count reconciled from the authoritative ledger."
   }
 }
