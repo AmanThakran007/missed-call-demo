@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "date": "2026-10-04",
+  "date": "2026-10-05",
   "timezone": "Europe/London",
-  "checkedAt": "2026-10-04T13:10:25+01:00",
+  "checkedAt": "2026-10-05T15:22:03+01:00",
   "source": "Fully paginated Gmail Sent reconciliation across nine inboxes",
-  "status": "SOURCE_RECONCILED",
-  "scope": "Per-send reconciliation: BharatFare inbox refreshed after a confirmed General SME first touch. Other rows preserve verified evidence from this coordinator run; aggregate totals include the three confirmed hourly General SME sends.",
+  "status": "PARTIAL_TARGETED_RECOVERY",
+  "scope": "Targeted recovery telemetry only. Dreams inbox has one verified WebScan General SME first touch at 15:22 UK. Other mailbox/day totals were not fully reconciled in this update and must not be treated as current-day verified totals.",
   "effectiveDate": "2026-10-04",
   "stagedCapsPerInbox": [],
   "rows": [
@@ -171,7 +171,7 @@
     {
       "mailbox": "Dreams inbox",
       "allSentToday": 3,
-      "webscanFirstTouchesToday": 0,
+      "webscanFirstTouchesToday": 1,
       "webscanFollowUpsToday": 0,
       "webscanInboundMessagesToday": 0,
       "webscanHumanRepliesToday": null,
@@ -179,12 +179,12 @@
       "webscanOptOutsToday": null,
       "configuredDailyCap": 112,
       "qualifyingDaysAtStage": 0,
-      "sourceRead": "VERIFIED",
+      "sourceRead": "PARTIAL_VERIFIED_RECOVERY_SEND",
       "allSentRolling24h": 16,
       "remainingQuotaForEffectiveDate": 112,
       "prospectQueue": {
-        "status": "UNVERIFIED",
-        "checkedAt": null,
+        "status": "PARTIAL",
+        "checkedAt": "2026-10-05T15:22:03+01:00",
         "ready": null,
         "awaitingVerification": null,
         "blocked": null
@@ -198,17 +198,18 @@
         "notInterested": null
       },
       "skippedReasons": [
-        "NO_VERIFIED_UNSENT_GENERAL_SME_PROSPECT_ASSIGNED_THIS_WINDOW",
-        "OUTSIDE_AUTHORISED_GENERAL_SME_OUTREACH_WINDOW"
+        "TARGETED_RECOVERY_SEND_VERIFIED",
+        "FULL_DAY_MAILBOX_RECONCILIATION_PENDING"
       ],
-      "date": "2026-10-04",
-      "checkedAt": "2026-10-04T13:10:25+01:00",
+      "date": "2026-10-05",
+      "checkedAt": "2026-10-05T15:22:03+01:00",
       "configuredGeneralSmeDailyCap": 57,
       "qualificationGateActive": false,
       "remainingQuotaToday": 112,
       "nineInboxSendTest": "NOT_YET_RUN",
       "engagementCheckedAt": "2026-10-04T11:02:39Z",
-      "skippedReasonsCheckedAt": "2026-10-04T11:02:39Z"
+      "skippedReasonsCheckedAt": "2026-10-05T15:22:03+01:00",
+      "recoveryVerifiedGmailMessageId": "1a10c715a9a4d453"
     },
     {
       "mailbox": "Consulting inbox",
@@ -380,20 +381,21 @@
     }
   ],
   "totals": {
-    "allSentToday": 15,
-    "allSentRolling24h": 35,
-    "webscanFirstTouchesToday": 7,
+    "allSentToday": null,
+    "allSentRolling24h": null,
+    "webscanFirstTouchesToday": 1,
     "webscanFollowUpsToday": 0,
-    "webscanInboundMessagesToday": 0,
+    "webscanInboundMessagesToday": null,
     "webscanHumanRepliesToday": null,
     "webscanBouncesToday": null,
     "webscanOptOutsToday": null,
-    "webscanTotalSentToday": 7,
-    "webscanOutboundToday": 7,
-    "configuredDailyCap": 1008,
-    "configuredGeneralSmeDailyCap": 513,
-    "remainingQuotaForEffectiveDate": 1001,
-    "remainingQuotaToday": 1001
+    "webscanTotalSentToday": 1,
+    "webscanOutboundToday": 1,
+    "configuredDailyCap": null,
+    "configuredGeneralSmeDailyCap": null,
+    "remainingQuotaForEffectiveDate": null,
+    "remainingQuotaToday": null,
+    "note": "Only the single verified recovery WebScan send is current for 5 Oct; full nine-inbox reconciliation pending."
   },
   "funnelFirstTouchesToday": {
     "webscan-general-sme": 4,
@@ -403,24 +405,23 @@
     "generalSme": 6
   },
   "verification": {
-    "gmailRead": "PASSED",
-    "sentPagination": "COMPLETE",
-    "funnelFirstTouchReconciliation": "PASSED",
-    "aggregateSumCheck": "PASSED",
+    "gmailRead": "PARTIAL_TARGETED",
+    "sentPagination": "NOT_RUN_FOR_ALL_NINE",
+    "funnelFirstTouchReconciliation": "PARTIAL_RECOVERY_SEND_ONLY",
+    "aggregateSumCheck": "NOT_RUN",
     "mailboxLoadGuardEvidence": "PASSED_AT_RECONCILIATION",
     "futureScheduledSending": "PARTIAL_3_CONFIRMED",
     "senderHeaderChecks": "PARTIAL_3_OF_9_VERIFIED",
     "newlyMappedMailboxHeaderChecks": "PENDING_FIRST_SUCCESSFUL_SEND",
     "unrelatedCampaignCumulativeMetrics": "NOT_AUDITED",
     "publicDeploymentVisibility": "VERIFIED_CODE_2026_10_04",
-    "prospectQueueAudit": "UNVERIFIED",
+    "prospectQueueAudit": "PARTIAL",
     "replyQueueAudit": "UNVERIFIED"
   },
   "blockers": [
-    "Four General SME first touches today are confirmed in Gmail Sent across three inboxes. Full nine-inbox sending remains partially tested.",
-    "India inbox, BharatFare Team inbox and BharatFare UK inbox still require first-successful-send From-header and provider-restriction verification before further WebScan sending from those accounts.",
-    "Prospect and reply queues remain UNVERIFIED because complete cross-nine historical reconstruction and all-funnel queue/thread audits are not yet complete; no queue count was inferred.",
-    "Professional Services and Agency White Label retain recorded send-denial blockers; no blocked send was retried during this sync."
+    "Full nine-inbox London-day reconciliation has not been run for 5 October in this targeted telemetry update.",
+    "Existing Controls holds/caps remain authoritative; this telemetry update does not release any sender hold.",
+    "One Dreams General SME recovery send is verified with Gmail message ID 1a10c715a9a4d453."
   ],
   "automation": {
     "checkedAt": "2026-10-04T08:00:21Z",
