@@ -167,18 +167,40 @@
     }
   },
   "sendingPolicy": {
-    "mode": "FIXED_CAP",
-    "capPerInbox": 112,
-    "capPerInboxMin": 112,
-    "capPerInboxMax": 112,
-    "totalCap": 1008,
-    "effectiveDate": "2026-10-04",
-    "stagedCapsPerInbox": [],
-    "generalSmeAggregateCap": 513,
-    "generalSmeCapPerInbox": 57,
-    "allMailLoadGuard": 120,
-    "inboxCount": 9,
-    "workflowTested": false
+    "mode": "OUTREACH_LEDGER_CONTROLS",
+    "effectiveDate": "2026-10-05",
+    "source": "Outreach Ledger Controls tab",
+    "workflowTested": true,
+    "verifiedRecoverySendAt": "2026-10-05T15:22:03+01:00",
+    "currentWebscanSenders": {
+      "Dreams inbox": {
+        "cap": 20,
+        "hold": false
+      },
+      "Consulting inbox": {
+        "cap": 0,
+        "hold": true
+      },
+      "8891 inbox": {
+        "cap": 0,
+        "hold": true
+      },
+      "Ecommerce inbox": {
+        "cap": 40,
+        "hold": true,
+        "holdReason": "PROOF_HOLD"
+      },
+      "England inbox": {
+        "cap": 0,
+        "hold": true
+      },
+      "India inbox": {
+        "cap": 40,
+        "hold": true,
+        "holdReason": "PROOF_HOLD; Nurse Referral US priority"
+      }
+    },
+    "note": "Rows must remain on their assigned inbox. Supplier-only BharatFare inboxes are not WebScan General SME senders under current Controls. Agency Pack domain mailboxes are excluded."
   },
   "prospectProduction": {
     "schemaVersion": 1,
