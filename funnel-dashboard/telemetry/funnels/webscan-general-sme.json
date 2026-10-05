@@ -3,7 +3,7 @@
   "name": "WebScan General SME",
   "category": "WebScan",
   "prospectsResearched": 27,
-  "firstEmailsSent": 27,
+  "firstEmailsSent": 28,
   "followUpsSent": 0,
   "humanReplies": 0,
   "positiveReplies": 0,
@@ -14,7 +14,7 @@
   "optOuts": 0,
   "stageCounts": {
     "Prospect": 0,
-    "Contacted": 27,
+    "Contacted": 28,
     "Engaged": 0,
     "Qualified": 0,
     "CallProposal": 0,
@@ -22,7 +22,7 @@
     "Lost": 0
   },
   "freshness": "LIVE",
-  "lastChecked": "2026-10-04T13:15:30+01:00",
+  "lastChecked": "2026-10-05T15:22:03+01:00",
   "blocker": null,
   "inboundLeads": 1,
   "sourceChecks": {
@@ -160,6 +160,10 @@
       "publicDeploymentVisibility": "BLOCKED_BY_CLIENT",
       "publicDeploymentResult": "Repository source write/readback is checked separately; public GitHub Pages visibility cannot be confirmed from this client.",
       "compatibilityKey": false
+    },
+    "recoverySend": {
+      "checkedAt": "2026-10-05T15:22:03+01:00",
+      "result": "One General SME recovery first touch was verified in Gmail Sent and written back to the Outreach Ledger with Gmail message ID 1a10c715a9a4d453. This targeted recovery did not perform a fresh full nine-inbox reconciliation, so older aggregate Gmail totals elsewhere in this file remain historical."
     }
   },
   "sendingPolicy": {
@@ -201,14 +205,14 @@
     },
     "queueAudit": {
       "status": "PARTIAL",
-      "checkedAt": "2026-10-04T13:14:30+01:00",
-      "scope": "This run's fifteen-candidate General SME cohort plus fresh nine-inbox recipient checks; whole historical campaign queue remains unreconstructed.",
-      "readyFirstTouches": null,
+      "checkedAt": "2026-10-05T15:22:03+01:00",
+      "scope": "Current Outreach Ledger WebScan General SME READY queue after targeted recovery send.",
+      "readyFirstTouches": 79,
       "dueFollowUps": null,
       "awaitingVerification": null,
       "blocked": null,
       "byInbox": [],
-      "note": "Three newly qualified candidates were sent and verified. Seven assessed candidates remain pending current-site verification; whole-queue totals remain unsupported."
+      "note": "80 READY rows were present before recovery; one eligible Dreams row was sent and verified, leaving 79 READY. Full blocker classification for all remaining rows was not completed in this targeted recovery."
     },
     "runs": [
       {
@@ -443,7 +447,58 @@
             "followUpsSent": 0
           }
         ]
+      },
+      {
+        "runId": "manual-recovery_2026-10-05T15:22:03+01:00",
+        "startedAt": "2026-10-05T15:22:03+01:00",
+        "finishedAt": "2026-10-05T15:22:03+01:00",
+        "kind": "RECOVERY_SEND",
+        "measurementStatus": "PARTIAL",
+        "candidatesAssessed": 5,
+        "newlyQualified": 0,
+        "duplicatesRejected": 0,
+        "rejected": 0,
+        "awaitingVerification": null,
+        "readyBefore": 80,
+        "readyAfter": 79,
+        "dueFollowUps": null,
+        "firstTouchesSent": 1,
+        "followUpsSent": 0,
+        "durationSeconds": null,
+        "byInbox": [
+          {
+            "mailbox": "Dreams inbox",
+            "firstTouchesSent": 1,
+            "followUpsSent": 0
+          }
+        ],
+        "blockers": [
+          "ONE_ROW_OUTSIDE_LOCAL_WINDOW",
+          "THREE_ROWS_ON_PROOF_HOLD"
+        ],
+        "note": "Manual recovery execution after queue-scan starvation diagnosis; not a scheduled research run."
       }
     ]
+  },
+  "recovery": {
+    "checkedAt": "2026-10-05T15:22:03+01:00",
+    "status": "RECOVERED",
+    "issue": "READY_QUEUE_SCAN_STARVATION",
+    "fix": "SEND now skips blocked/ineligible READY rows and continues scanning later rows; Agency Pack collision blocks only an actual matching ownership record.",
+    "verifiedSend": {
+      "inbox": "Dreams inbox",
+      "gmailMessageId": "1a10c715a9a4d453",
+      "ledgerStatus": "SENT",
+      "activityEvent": "FIRST_TOUCH_SENT"
+    },
+    "queueSnapshot": {
+      "readyBefore": 80,
+      "readyAfter": 79,
+      "firstFiveAssessed": 5,
+      "sent": 1,
+      "blockedOutsideLocalWindow": 1,
+      "blockedProofHold": 3,
+      "agencyPackCollisionOnRecoveredRow": false
+    }
   }
 }
