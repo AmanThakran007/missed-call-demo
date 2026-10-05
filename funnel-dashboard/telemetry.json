@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T03:55:00+01:00",
+  "generatedAt": "2026-10-05T20:27:00+01:00",
   "activeFunnels": 15,
   "ads": {
     "webscan-agency-white-label-36-test": {
@@ -93,5 +93,11 @@
       "category": "BharatFare",
       "freshness": "AWAITING_FIRST_SYNC"
     }
+  },
+  "ledgerSnapshot": {
+    "source": "Outreach Ledger",
+    "syncedAt": "2026-10-05T20:27:00+01:00",
+    "sentToday": 90,
+    "sentAll": 160
   }
 }
